@@ -1,0 +1,565 @@
+/* =========================================================
+   CONFIGURAÇÃO DO TEMA (EXTREMAMENTE FÁCIL DE MUDAR)
+   Instruções: Para mudar a cara do site para uma nova clínica,
+   basta alterar as cores aqui no :root. O site inteiro se adapta!
+========================================================= */
+:root {
+  /* Cores Principais */
+  --color-primary: #4FBAAB;    /* Verde Menta / Clínico */
+  --color-primary-dark: #3A9C8E;
+  --color-primary-light: #E0F2F0; /* Fundo de seções claras */
+  
+  --color-secondary: #FF9B9B;  /* Rosa Suave (Acolhedor) */
+  
+  /* Cores de Fundo e Textos */
+  --color-bg: #FFFFFF;
+  --color-surface: #F8FAFC;
+  --color-text: #334155;
+  --color-text-muted: #64748B;
+  
+  /* Formas (Arredondamento) */
+  --border-radius: 16px;
+  --border-radius-lg: 30px;
+  
+  /* Tipografia */
+  --font-main: 'Nunito', sans-serif; /* Fonte amigável e arredondada */
+}
+
+/* =========================================================
+   BASE E RESET
+========================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.text-center { text-align: center; }
+.bg-light { background-color: var(--color-surface); }
+
+.section {
+  padding: 80px 0;
+}
+
+.section-header {
+  margin-bottom: 50px;
+}
+
+.section-header h2 {
+  font-size: 2.2rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 10px;
+}
+
+/* =========================================================
+   BOTÕES
+========================================================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 50px; /* Botões arredondados (amigáveis) */
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+  box-shadow: 0 4px 14px rgba(79, 186, 171, 0.4);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-primary-light);
+}
+
+.btn-large {
+  padding: 16px 32px;
+  font-size: 1.1rem;
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+.navbar {
+  padding: 20px 0;
+  background-color: var(--color-bg);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-primary-dark);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--color-primary);
+}
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+.hero {
+  padding: 80px 0;
+  background: linear-gradient(to right, var(--color-bg), var(--color-surface));
+}
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.badge {
+  display: inline-block;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  color: var(--color-primary-dark);
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  margin-bottom: 30px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.hero-image-placeholder {
+  position: relative;
+  height: 500px;
+}
+
+.floating-card {
+  position: absolute;
+  bottom: 30px;
+  left: -30px;
+  background: white;
+  padding: 15px 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.floating-card strong {
+  display: block;
+  color: var(--color-text);
+}
+
+.floating-card span {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+/* =========================================================
+   SOBRE
+========================================================= */
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-text h2 {
+  font-size: 2.2rem;
+  color: var(--color-primary-dark);
+}
+
+.crm {
+  display: inline-block;
+  color: var(--color-text-muted);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.check-list {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.check-list li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.check-list i {
+  color: var(--color-primary);
+}
+
+/* =========================================================
+   GRID E CARDS (Especialidades)
+========================================================= */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.card {
+  background-color: var(--color-bg);
+  padding: 40px 30px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+  border: 1px solid #E2E8F0;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  border-color: var(--color-primary-light);
+}
+
+.card .icon {
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* =========================================================
+   CONVÊNIOS E FOOTER
+========================================================= */
+.convenios-logos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.logo-box {
+  padding: 15px 30px;
+  background: white;
+  border-radius: 10px;
+  font-weight: 700;
+  color: #94A3B8;
+  border: 1px solid #E2E8F0;
+}
+
+.footer {
+  background-color: var(--color-primary-dark);
+  color: white;
+  padding: 60px 0 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer h3, .footer h4 {
+  margin-bottom: 15px;
+}
+
+.footer p {
+  color: var(--color-primary-light);
+  margin-bottom: 10px;
+}
+
+.footer i {
+  width: 20px;
+}
+
+.copyright {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 20px;
+  font-size: 0.9rem;
+}
+
+/* =========================================================
+   AGENDADOR (WIDGET TIPO APP)
+========================================================= */
+#agendamento {
+  background-color: var(--color-surface);
+}
+
+.scheduler-container {
+  background: white;
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+  overflow: hidden;
+  max-width: 900px;
+  margin: 0 auto;
+  border: 1px solid #E2E8F0;
+}
+
+.scheduler-header {
+  background-color: var(--color-primary-dark);
+  color: white;
+  padding: 40px;
+  text-align: center;
+}
+
+.scheduler-header h2 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.scheduler-body {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.step-card {
+  border: 1px solid #E2E8F0;
+  border-radius: var(--border-radius);
+  padding: 30px;
+  transition: all 0.3s;
+}
+
+.step-card.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  background-color: #F8FAFC;
+}
+
+.step-card.active {
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 15px rgba(79, 186, 171, 0.1);
+}
+
+.step-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.step-number {
+  width: 35px;
+  height: 35px;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+/* Calendário */
+.calendar-wrapper {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  text-align: center;
+}
+
+.calendar-grid.days span {
+  font-weight: 700;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.calendar-grid.dates span {
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.calendar-grid.dates span:hover:not(.empty) {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary-dark);
+}
+
+.calendar-grid.dates span.selected {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.calendar-grid.dates span.empty {
+  cursor: default;
+}
+
+/* Horários */
+.time-slots {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 15px;
+}
+
+.time-slot {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: var(--color-text);
+}
+
+.time-slot:hover {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary-light);
+}
+
+.time-slot.selected {
+  background-color: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+/* Formulário */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--color-text);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.w-100 { width: 100%; }
+.mt-3 { margin-top: 15px; }
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .hero-layout, .about-layout, .grid-3, .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .nav-links { display: none; }
+  .floating-card { display: none; }
+  .hero-text h1 { font-size: 2.2rem; }
+}

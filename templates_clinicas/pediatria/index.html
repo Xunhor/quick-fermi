@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- ==========================================
+         CONFIGURAÇÕES BÁSICAS (Fácil de alterar)
+         ========================================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nome da Clínica | Pediatria Humanizada</title>
+    <meta name="description" content="Especialistas no cuidado infantil. Puericultura, vacinas e pediatria geral. Agende sua consulta online.">
+    
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Ícones (FontAwesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ==========================================
+         CABEÇALHO / NAVEGAÇÃO
+         ========================================== -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-stethoscope"></i>
+                <!-- NOME DA CLÍNICA AQUI -->
+                <span>Clínica Sorriso Infantil</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="#sobre">Sobre o Doutor</a></li>
+                <li><a href="#especialidades">Especialidades</a></li>
+                <li><a href="#convenios">Convênios</a></li>
+            </ul>
+            
+            <!-- LINK DO WHATSAPP AQUI -->
+            <a href="#agendamento" class="btn btn-primary">Agendar Consulta</a>
+        </div>
+    </nav>
+
+    <!-- ==========================================
+         SEÇÃO HERO (PRIMEIRA TELA)
+         ========================================== -->
+    <header class="hero">
+        <div class="container hero-layout">
+            <div class="hero-text">
+                <span class="badge">Amor e Ciência lado a lado</span>
+                <!-- TÍTULO PRINCIPAL -->
+                <h1>Cuidado humanizado para quem você mais ama.</h1>
+                <p>Nossa missão é garantir o desenvolvimento saudável do seu filho, com um atendimento afetuoso, sem pressa e sempre focado no bem-estar da família.</p>
+                
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-large">Agendar Agora</button>
+                    <a href="#sobre" class="btn btn-outline btn-large">Conhecer a Clínica</a>
+                </div>
+            </div>
+            <div class="hero-image-placeholder">
+                <!-- Para o cliente, basta colocar a imagem na pasta e trocar o src -->
+                <div class="img-mock" style="background-color: var(--color-surface); height: 100%; border-radius: 30px; display: flex; align-items: center; justify-content: center; color: var(--color-primary); border: 2px dashed var(--color-primary);">
+                    <i class="fa-solid fa-image fa-3x"></i>
+                    <p style="margin-left: 10px;">[Foto de Criança Sorrindo]</p>
+                </div>
+                <div class="floating-card">
+                    <i class="fa-solid fa-star" style="color: #FFD700;"></i>
+                    <div>
+                        <strong>Excelente</strong>
+                        <span>+500 avaliações</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         SEÇÃO: SOBRE O DOUTOR
+         ========================================== -->
+    <section id="sobre" class="section bg-light">
+        <div class="container about-layout">
+            <div class="about-image">
+                <div class="img-mock" style="background-color: #E2E8F0; width: 100%; aspect-ratio: 3/4; border-radius: 20px; display: flex; align-items: center; justify-content: center; color: #64748B;">
+                    <p>[Foto do Pediatra]</p>
+                </div>
+            </div>
+            <div class="about-text">
+                <h2>Dr. Nome do Pediatra</h2>
+                <span class="crm">CRM-PA 12345 | RQE 6789</span>
+                <p>Com mais de 10 anos de experiência dedicados à saúde infantil, meu foco é criar um ambiente seguro onde os pais se sintam acolhidos para tirar todas as dúvidas.</p>
+                <ul class="check-list">
+                    <li><i class="fa-solid fa-check-circle"></i> Especialista pela Sociedade Brasileira de Pediatria</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Foco em Puericultura e desenvolvimento neurológico</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Atendimento humanizado e sem pressa</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SEÇÃO: ESPECIALIDADES
+         ========================================== -->
+    <section id="especialidades" class="section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Nossas Especialidades</h2>
+                <p>Tudo que o seu filho precisa para crescer forte e saudável.</p>
+            </div>
+            
+            <div class="grid-3">
+                <div class="card service-card">
+                    <div class="icon"><i class="fa-solid fa-baby"></i></div>
+                    <h3>Puericultura</h3>
+                    <p>Acompanhamento periódico do crescimento, desenvolvimento, alimentação e vacinas do bebê.</p>
+                </div>
+                <div class="card service-card">
+                    <div class="icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <h3>Pediatria Geral</h3>
+                    <p>Diagnóstico e tratamento de doenças comuns da infância com precisão e cuidado.</p>
+                </div>
+                <div class="card service-card">
+                    <div class="icon"><i class="fa-solid fa-syringe"></i></div>
+                    <h3>Orientações Vacinais</h3>
+                    <p>Consultoria completa sobre o calendário vacinal para manter seu filho sempre protegido.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SEÇÃO: CONVÊNIOS E CONTATO
+         ========================================== -->
+    <section id="convenios" class="section bg-light">
+        <div class="container text-center">
+            <h2>Convênios Aceitos</h2>
+            <div class="convenios-logos">
+                <span class="logo-box">Unimed</span>
+                <span class="logo-box">Bradesco Saúde</span>
+                <span class="logo-box">SulAmérica</span>
+                <span class="logo-box">Amil</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SEÇÃO: MOTOR DE AGENDAMENTO
+         ========================================== -->
+    <section id="agendamento" class="section">
+        <div class="container">
+            <div class="scheduler-container">
+                <div class="scheduler-header">
+                    <h2>Agende a Consulta do seu Filho</h2>
+                    <p>Rápido, fácil e sem esperar no telefone.</p>
+                </div>
+                
+                <div class="scheduler-body">
+                    <!-- Step 1: Data -->
+                    <div class="step-card" id="step-1">
+                        <div class="step-title">
+                            <span class="step-number">1</span>
+                            <h3>Escolha a Data</h3>
+                        </div>
+                        <div class="calendar-wrapper">
+                            <div class="calendar-header">
+                                <button class="btn-icon">&lt;</button>
+                                <strong>Agosto 2026</strong>
+                                <button class="btn-icon">&gt;</button>
+                            </div>
+                            <div class="calendar-grid days">
+                                <span>D</span><span>S</span><span>T</span><span>Q</span><span>Q</span><span>S</span><span>S</span>
+                            </div>
+                            <div class="calendar-grid dates" id="calendar-dates">
+                                <!-- Gerado via JS -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Horário -->
+                    <div class="step-card disabled" id="step-2">
+                        <div class="step-title">
+                            <span class="step-number">2</span>
+                            <h3>Escolha o Horário</h3>
+                        </div>
+                        <div class="time-slots" id="time-slots-container">
+                            <p class="empty-state">Selecione uma data primeiro.</p>
+                            <!-- Gerado via JS -->
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Dados -->
+                    <div class="step-card disabled" id="step-3">
+                        <div class="step-title">
+                            <span class="step-number">3</span>
+                            <h3>Seus Dados</h3>
+                        </div>
+                        <div class="form-group">
+                            <label>Nome do Paciente (Criança)</label>
+                            <input type="text" id="patient-name" placeholder="Ex: Lucas Silva" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label>Nome do Responsável</label>
+                            <input type="text" id="parent-name" placeholder="Ex: Maria Silva" disabled>
+                        </div>
+                        <button id="btn-finish-booking" class="btn btn-primary btn-large w-100 mt-3" disabled>
+                            <i class="fa-brands fa-whatsapp"></i> Solicitar Agendamento via WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         RODAPÉ
+         ========================================== -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <h3>Clínica Sorriso Infantil</h3>
+                <p>Cuidando do futuro, hoje.</p>
+            </div>
+            <div>
+                <h4>Contato</h4>
+                <p><i class="fa-solid fa-phone"></i> (91) 3000-0000</p>
+                <p><i class="fa-brands fa-whatsapp"></i> (91) 90000-0000</p>
+                <p><i class="fa-solid fa-envelope"></i> contato@clinica.com.br</p>
+            </div>
+            <div>
+                <h4>Localização</h4>
+                <p><i class="fa-solid fa-map-marker-alt"></i> Av. Conselheiro Furtado, 1234<br>Belém - PA, 66000-000</p>
+            </div>
+        </div>
+        <div class="container text-center copyright">
+            <p>&copy; 2026 Clínica Sorriso Infantil. Todos os direitos reservados. | Desenvolvido por <strong>[Nome da Sua Agência]</strong></p>
+        </div>
+    </footer>
+
+    <script src="js/script.js?v=2" charset="UTF-8"></script>
+</body>
+</html>
