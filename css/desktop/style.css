@@ -22,13 +22,68 @@
 .nav-actions { display: flex; align-items: center; gap: 12px; }
 .nav-desktop-cta { display: inline-flex; }
 
-/* Theme Toggle Button (Borderless Minimalist) */
-.nav-toggle {
-  background: transparent; border: none; padding: 6px 10px;
-  color: var(--text-muted); font-size: 1.05rem; cursor: pointer;
-  transition: var(--transition); display: inline-flex; align-items: center; justify-content: center;
+/* Theme Toggle Pill */
+.theme-pill {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
-.nav-toggle:hover { color: var(--text-main); }
+.pill-track {
+  display: flex;
+  align-items: center;
+  width: 52px;
+  height: 28px;
+  border-radius: 999px;
+  background: #E5E5E5;
+  border: 1px solid #D4D4D4;
+  padding: 3px;
+  transition: background 0.4s ease, border-color 0.4s ease;
+  position: relative;
+}
+.pill-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.4s ease;
+  position: relative;
+  transform: translateX(0);
+}
+.pill-icon {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.pill-icon svg { width: 11px; height: 11px; }
+.pill-moon { opacity: 1; transform: rotate(0deg); color: #555; }
+.pill-sun  { opacity: 0; transform: rotate(-45deg) scale(0.6); color: #F59E0B; }
+
+/* Dark state */
+body.dark-theme .pill-track {
+  background: #222222;
+  border-color: #333333;
+}
+body.dark-theme .pill-thumb {
+  transform: translateX(24px);
+  background: #000000;
+}
+body.dark-theme .pill-moon { opacity: 0; transform: rotate(45deg) scale(0.6); }
+body.dark-theme .pill-sun  { opacity: 1; transform: rotate(0deg) scale(1); }
+
+/* Hover glow */
+.theme-pill:hover .pill-track { border-color: #999; }
+body.dark-theme .theme-pill:hover .pill-track { border-color: #555; }
 
 /* Hamburger Button */
 .mobile-menu-toggle {

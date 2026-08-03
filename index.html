@@ -60,7 +60,18 @@
 
             <div class="nav-actions">
                 <a href="https://wa.me/559192432044?text=Ol%C3%A1%20Rui%2C%20gostaria%20de%20um%20diagn%C3%B3stico%20gratuito%20para%20o%20site%20da%20minha%20empresa." target="_blank" rel="noopener noreferrer" class="btn btn-primary nav-desktop-cta">Falar no WhatsApp</a>
-                <button id="theme-toggle" class="nav-toggle" aria-label="Alternar Tema"><i class="fa-regular fa-moon"></i></button>
+                <button id="theme-toggle" class="theme-pill" aria-label="Alternar Tema">
+                    <span class="pill-track">
+                        <span class="pill-thumb">
+                            <span class="pill-icon pill-moon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z" fill="currentColor"/></svg>
+                            </span>
+                            <span class="pill-icon pill-sun">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="5" fill="currentColor"/><line x1="12" y1="2" x2="12" y2="4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="20" x2="12" y2="22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="2" y1="12" x2="4" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="20" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                            </span>
+                        </span>
+                    </span>
+                </button>
                 <button id="mobile-menu-btn" class="mobile-menu-toggle" aria-label="Abrir Menu">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -641,25 +652,16 @@
 
     <!-- SCRIPT DE TEMA (DARK / LIGHT TOGGLE) & MENU MOBILE -->
     <script>
-        // 1. Dark/Light Theme Toggle
+        // 1. Dark/Light Theme Toggle (CSS handles icon swap automatically)
         const themeToggle = document.getElementById('theme-toggle');
-        const icon = themeToggle.querySelector('i');
-        
+
         if (document.documentElement.classList.contains('dark-theme')) {
             document.body.classList.add('dark-theme');
-            icon.classList.replace('fa-moon', 'fa-sun');
         }
 
         themeToggle.addEventListener('click', () => {
             document.body.classList.toggle('dark-theme');
-            
-            if (document.body.classList.contains('dark-theme')) {
-                localStorage.setItem('theme', 'dark');
-                icon.classList.replace('fa-moon', 'fa-sun');
-            } else {
-                localStorage.setItem('theme', 'light');
-                icon.classList.replace('fa-sun', 'fa-moon');
-            }
+            localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light');
         });
 
         // 2. Mobile Hamburger Menu Toggle
