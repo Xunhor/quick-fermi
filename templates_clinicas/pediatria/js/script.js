@@ -18,7 +18,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 /* =========================================================
    LÓGICA DO MOTOR DE AGENDAMENTO (WHATSAPP MVP)
 ========================================================= */
-const WHATSAPP_NUMBER = "559191302044"; // Número de teste fornecido pelo usuário
+const WHATSAPP_NUMBER = "559192432044"; // WhatsApp Oficial Boomo / Templates
 
 // Estado do agendamento
 let selectedDate = null;

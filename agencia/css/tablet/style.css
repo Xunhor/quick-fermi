@@ -1,0 +1,16 @@
+  .hero-content, .benefits-split { grid-template-columns: 1fr; text-align: center; }
+  .hero-text p { margin: 0 auto 40px auto; }
+  .hero-actions { justify-content: center; }
+  .hero-visual { margin-top: 60px; }
+  
+  .bento-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: auto; }
+  .col-2, .col-3 { grid-column: span 2; }
+  .row-2 { grid-row: span 1; }
+  
+  .clean-list { text-align: left; }
+  .nav-links { display: none; }
+  .hero-text h1 { font-size: 3rem; }
+  .cta-bento h2 { font-size: 2rem; }
+  .footer-content { flex-direction: column; gap: 30px; text-align: center; }
+  .footer-links p { text-align: center; }
+  .solutions-bento { grid-template-columns: repeat(2, 1fr); }

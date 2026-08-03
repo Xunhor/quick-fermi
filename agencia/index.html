@@ -3,169 +3,751 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SuaAgência - Tecnologia Premium para Clínicas</title>
-    <meta name="description" content="Digitalizamos clínicas pediátricas. Site premium, agendamento online e automação de WhatsApp.">
-    <link rel="stylesheet" href="css/style.css">
+    <title>Boomo | Sites Profissionais de Alta Conversão por Assinatura</title>
+    <meta name="description" content="Criamos, hospedamos e gerenciamos sites institucionais de alto desempenho para clínicas, escritórios e comércios locais por uma assinatura mensal.">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+    <!-- Open Graph / WhatsApp Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://boomo.com.br/">
+    <meta property="og:title" content="Boomo | Sites Profissionais por Assinatura">
+    <meta property="og:description" content="Presença digital de alta performance com hospedagem e manutenção contínua por uma assinatura mensal. Sem fidelidade e sem dor de cabeça.">
+    <meta property="og:image" content="assets/images/boomo-og.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Boomo | Sites Profissionais por Assinatura">
+    <meta name="twitter:description" content="Presença digital de alta performance para clínicas, escritórios e empresas locais.">
+    <meta name="twitter:image" content="assets/images/boomo-og.jpg">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base/global.css">
+    <link rel="stylesheet" href="css/desktop/style.css">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- FontAwesome for icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Anti-FOUC Dark Theme Script -->
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark-theme');
+        }
+    </script>
 </head>
-<body class="light-mode">
+<body>
     
-
-
+    <!-- 1. NAVBAR -->
     <nav class="navbar">
         <div class="container nav-content">
-            <a href="#" class="logo">
-                <span class="logo-icon"><i class="fa-solid fa-leaf"></i></span>
-                <span class="logo-text">SuaAgência</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="#solucoes">Soluções</a></li>
-                <li><a href="#beneficios">Para Clínicas</a></li>
-                <li><a href="#contato" class="btn btn-primary">Falar com Consultor</a></li>
-            </ul>
+            <a href="#" class="logo">Boomo.</a>
+            
+            <div class="nav-menu-wrapper" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#modelos">Modelos</a></li>
+                    <li><a href="#como-funciona">Como Funciona</a></li>
+                    <li><a href="#comparativo">Comparativo</a></li>
+                    <li><a href="#planos">Planos</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#sobre">O Fundador</a></li>
+                </ul>
+                <div class="nav-mobile-cta">
+                    <a href="https://wa.me/559192432044?text=Ol%C3%A1%20Rui%2C%20gostaria%20de%20um%20diagn%C3%B3stico%20gratuito%20para%20o%20site%20da%20minha%20empresa." target="_blank" class="btn btn-primary btn-full">Falar no WhatsApp <i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="nav-actions">
+                <a href="https://wa.me/559192432044?text=Ol%C3%A1%20Rui%2C%20gostaria%20de%20um%20diagn%C3%B3stico%20gratuito%20para%20o%20site%20da%20minha%20empresa." target="_blank" class="btn btn-primary nav-desktop-cta">Falar no WhatsApp</a>
+                <button id="theme-toggle" class="nav-toggle" aria-label="Alternar Tema"><i class="fa-regular fa-moon"></i></button>
+                <button id="mobile-menu-btn" class="mobile-menu-toggle" aria-label="Abrir Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <header class="hero">
-        <div class="hero-bg-pattern"></div>
-        <div class="container hero-content">
-            <div class="hero-text">
-                <div class="badge">Especialistas em Clínicas Pediátricas</div>
-                <h1>Descomplique a sua clínica com <span>Tecnologia Inteligente</span>.</h1>
-                <p>Acabe com os telefones ocupados e consultas perdidas. Nós cuidamos da sua presença digital, do agendamento automático ao atendimento via WhatsApp, para que você foque apenas no paciente.</p>
-                <div class="hero-actions">
-                    <a href="#contato" class="btn btn-primary btn-large">Quero Modernizar Minha Clínica</a>
-                    <a href="#solucoes" class="btn btn-secondary btn-large">Conhecer Soluções</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="glass-card mockup-card">
-                    <div class="mockup-header">
-                        <div class="dots"><span></span><span></span><span></span></div>
-                        <p>Clínica Pediátrica Modelo</p>
-                    </div>
-                    <div class="mockup-body">
-                        <div class="mockup-date">Hoje, <span id="current-date"></span></div>
-                        <h3>Agende sua Consulta</h3>
-                        <div class="time-slots">
-                            <span class="slot disabled">09:00</span>
-                            <span class="slot">10:30</span>
-                            <span class="slot">14:00</span>
-                            <span class="slot">15:30</span>
-                        </div>
-                        <button class="mockup-btn">Confirmar Horário</button>
-                    </div>
-                </div>
-                <!-- Decorative elements -->
-                <div class="marajoara-accent-circle"></div>
-                <div class="marajoara-accent-circle small"></div>
+    <!-- 2. HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <h1>Presença digital completa para sua empresa atrair clientes no Google e WhatsApp.</h1>
+            <p>Criamos, hospedamos e mantemos o site institucional do seu negócio por uma assinatura mensal simples. Sem custos abusivos de desenvolvimento ou dor de cabeça com tecnologia.</p>
+            <div class="hero-actions">
+                <a href="#modelos" class="btn btn-primary btn-large">Ver Modelos Prontos</a>
+                <a href="https://wa.me/559192432044?text=Ol%C3%A1%20Rui%2C%20gostaria%20de%20tirar%20d%C3%BAvidas%20sobre%20os%20sites%20por%20assinatura%20da%20Boomo." target="_blank" class="btn btn-secondary btn-large">Falar com Especialista</a>
             </div>
         </div>
-    </header>
+    </section>
 
-    <div class="marajoara-divider alt"></div>
-
-    <section id="solucoes" class="services">
-        <div class="container">
-            <div class="section-header">
-                <h2>Tudo o que sua clínica precisa, em uma única assinatura</h2>
-                <p>Sem custos surpresas. Sem dor de cabeça com servidores. Nós montamos e gerenciamos tudo para você.</p>
+    <!-- 2.1. TRUST & INFRASTRUCTURE BAR -->
+    <section class="trust-bar">
+        <div class="container trust-grid">
+            <div class="trust-item">
+                <div class="trust-icon"><i class="fa-solid fa-server"></i></div>
+                <div class="trust-info">
+                    <strong>99.9% Uptime SLA</strong>
+                    <span>Nuvem de Alta Disponibilidade</span>
+                </div>
             </div>
-            
-            <div class="services-grid">
-                <div class="service-card reveal">
-                    <div class="icon-box"><i class="fa-solid fa-laptop-medical"></i></div>
-                    <h3>Site Institucional Premium</h3>
-                    <p>Um site rápido, seguro e lindíssimo, focado em passar confiança aos pais e ser encontrado no Google pelas buscas locais.</p>
-                </div>
-                
-                <div class="service-card reveal" style="transition-delay: 100ms;">
-                    <div class="icon-box"><i class="fa-regular fa-calendar-check"></i></div>
-                    <h3>Agendamento Online 24/7</h3>
-                    <p>Seu paciente marca a consulta sozinho, de madrugada ou finais de semana, reduzindo a carga de trabalho da sua secretária.</p>
-                </div>
-                
-                <div class="service-card reveal" style="transition-delay: 200ms;">
-                    <div class="icon-box"><i class="fa-brands fa-whatsapp"></i></div>
-                    <h3>Automação de WhatsApp</h3>
-                    <p>Respostas automáticas, triagem e envio de lembretes de consulta um dia antes para reduzir faltas (no-show).</p>
-                </div>
 
-                <div class="service-card reveal" style="transition-delay: 300ms;">
-                    <div class="icon-box"><i class="fa-brands fa-google"></i></div>
-                    <h3>Perfil no Google (SEO)</h3>
-                    <p>Otimização completa do seu "Google Meu Negócio" para que sua clínica seja a primeira a aparecer no mapa da cidade.</p>
+            <div class="trust-item">
+                <div class="trust-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <div class="trust-info">
+                    <strong>SSL 256-Bit & Cloudflare</strong>
+                    <span>Proteção Anti-DDoS e CDN Global</span>
+                </div>
+            </div>
+
+            <div class="trust-item">
+                <div class="trust-icon"><i class="fa-solid fa-bolt"></i></div>
+                <div class="trust-info">
+                    <strong>Google PageSpeed 95+</strong>
+                    <span>Carregamento Rápido em 4G/5G</span>
+                </div>
+            </div>
+
+            <div class="trust-item">
+                <div class="trust-icon"><i class="fa-solid fa-building-columns"></i></div>
+                <div class="trust-info">
+                    <strong>Padrão Bancário</strong>
+                    <span>Arquitetura Sicredi, Inter e Stone</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="beneficios" class="benefits">
+    <!-- 3. SHOWROOM DE TEMPLATES -->
+    <section id="modelos" class="section-padding">
         <div class="container">
-            <div class="benefits-layout">
-                <div class="benefits-visual">
-                    <div class="marajoara-large-pattern"></div>
+            <div class="section-header">
+                <span class="section-tag">// Catálogo de Nichos</span>
+                <h2>Modelos desenhados para alta conversão.</h2>
+                <p>Nossos layouts são construídos com velocidade extrema, botão de WhatsApp integrado e otimização para ser encontrado nas buscas locais do Google.</p>
+            </div>
+
+            <div class="templates-grid">
+                <!-- Card 1: Clínica Médica / Pediatria -->
+                <div class="template-card">
+                    <div class="template-preview">
+                        <span class="template-badge">Saúde & Clínicas</span>
+                        <img src="assets/images/hero-pediatria.jpg" alt="Template Clínica Médica">
+                    </div>
+                    <div class="template-info">
+                        <h3>Clínicas & Consultórios Médicos</h3>
+                        <p>Focado em acolhimento, apresentação do corpo clínico, especialidades e agendamento direto de consultas pelo WhatsApp.</p>
+                        <div class="template-actions">
+                            <a href="../templates_clinicas/pediatria/index.html" class="btn btn-primary btn-full" target="_blank">Ver Demonstração Ao Vivo <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8rem;"></i></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="benefits-text">
-                    <h2>Por que focar na tecnologia?</h2>
-                    <ul class="benefits-list">
-                        <li>
-                            <i class="fa-solid fa-check"></i>
-                            <div>
-                                <strong>Redução de Faltas</strong>
-                                <p>Lembretes automáticos garantem que os pais não esqueçam a consulta, aumentando o faturamento real.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-check"></i>
-                            <div>
-                                <strong>Secretária Livre</strong>
-                                <p>Sua equipe para de ser "agendadora de consultas" e passa a encantar quem está na sala de espera.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-check"></i>
-                            <div>
-                                <strong>Autoridade Regional</strong>
-                                <p>Em Belém, quem tem uma presença digital premium e é fácil de agendar, ganha a preferência absoluta.</p>
-                            </div>
-                        </li>
+
+                <!-- Card 2: Odontologia & Estética -->
+                <div class="template-card">
+                    <div class="template-preview">
+                        <span class="template-badge">Odonto & Estética</span>
+                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Template Odontologia">
+                    </div>
+                    <div class="template-info">
+                        <h3>Odontologia & Clínicas de Estética</h3>
+                        <p>Visual premium com foco em procedimentos, galeria de tratamentos, depoimentos e botão de agendamento ágil.</p>
+                        <div class="template-actions">
+                            <a href="../templates_clinicas/odontologia/index.html" class="btn btn-primary btn-full" target="_blank">Ver Demonstração Ao Vivo <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8rem;"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Advocacia & Consultorias -->
+                <div class="template-card">
+                    <div class="template-preview">
+                        <span class="template-badge">Jurídico & Consultoria</span>
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Template Advocacia">
+                    </div>
+                    <div class="template-info">
+                        <h3>Escritórios de Advocacia & Finanças</h3>
+                        <p>Design sóbrio e imponente para transmitir autoridade imediata, áreas de atuação e contato direto com sócios.</p>
+                        <div class="template-actions">
+                            <a href="../templates_advocacia/index.html" class="btn btn-primary btn-full" target="_blank">Ver Demonstração Ao Vivo <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8rem;"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Gastronomia & Comércio Local -->
+                <div class="template-card">
+                    <div class="template-preview">
+                        <span class="template-badge">Comércio & Gastronomia</span>
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Template Gastronomia">
+                    </div>
+                    <div class="template-info">
+                        <h3>Restaurantes & Serviços Locais</h3>
+                        <p>Cardápio digital integrado, horários de atendimento, rotas no Google Maps e reservas via WhatsApp.</p>
+                        <div class="template-actions">
+                            <a href="../templates_gastronomia/index.html" class="btn btn-primary btn-full" target="_blank">Ver Demonstração Ao Vivo <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8rem;"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. COMO FUNCIONA (SITE POR ASSINATURA) -->
+    <section id="como-funciona" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// Como Funciona</span>
+                <h2>Sua empresa online em 3 passos simples.</h2>
+                <p>Você cuida dos seus clientes no dia a dia. A Boomo cuida de absolutamente toda a infraestrutura e atualizações do seu site.</p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-item">
+                    <div class="step-num">01.</div>
+                    <h3>Personalização da Marca</h3>
+                    <p>Você escolhe o modelo ou nos envia sua identidade visual. Personalizamos cores, textos, logotipo e fotos para o seu negócio.</p>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-num">02.</div>
+                    <h3>Domínio e Publicação</h3>
+                    <p>Configuramos o seu domínio próprio (.com.br), instalamos o certificado de segurança e cadastramos sua página no Google e Google Maps.</p>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-num">03.</div>
+                    <h3>Manutenção Contínua</h3>
+                    <p>Troca de telefones, novos serviços ou mudanças de horário? Basta nos mandar uma mensagem no WhatsApp que nós alteramos para você.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4.1. TABELA COMPARATIVA -->
+    <section id="comparativo" class="section-padding comparison-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// Comparativo Racional</span>
+                <h2>Por que a Boomo é a escolha mais inteligente?</h2>
+                <p>Veja como o nosso modelo de site por assinatura supera agências tradicionais e elimina a frustração de tentar construir tudo sozinho.</p>
+            </div>
+
+            <div class="comparison-table-wrap">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th class="col-criteria">
+                                <span class="th-title">Critério de Decisão</span>
+                                <span class="th-sub">O que realmente importa</span>
+                            </th>
+                            <th class="col-competitor">
+                                <span class="th-title">Agência Tradicional</span>
+                                <span class="th-sub">Modelo antigo de alto custo</span>
+                            </th>
+                            <th class="col-competitor">
+                                <span class="th-title">Fazer Sozinho (DIY)</span>
+                                <span class="th-sub">Wix, WordPress, Construtores</span>
+                            </th>
+                            <th class="col-boomo">
+                                <div class="boomo-th-badge"><i class="fa-solid fa-bolt"></i> Recomendado</div>
+                                <span class="th-title">Boomo</span>
+                                <span class="th-sub">Site por Assinatura</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="cell-criteria">
+                                <div class="criteria-wrap">
+                                    <div class="criteria-icon"><i class="fa-solid fa-wallet"></i></div>
+                                    <div>
+                                        <strong>Investimento Inicial</strong>
+                                        <span class="criteria-desc">Custo de entrada para começar</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="cell-competitor">
+                                <span class="loss-badge"><i class="fa-solid fa-xmark"></i> R$ 3.000 a R$ 8.000</span>
+                                <span class="cell-subtext">Cobrados adiantados</span>
+                            </td>
+                            <td class="cell-competitor">
+                                <span class="neutral-badge">R$ 0 aparente</span>
+                                <span class="cell-subtext">Consome dezenas de horas</span>
+                            </td>
+                            <td class="col-boomo cell-win">
+                                <span class="win-pill"><i class="fa-solid fa-circle-check"></i> R$ 300 a R$ 500</span>
+                                <span class="win-subtext">Setup completo e sem surpresas</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cell-criteria">
+                                <div class="criteria-wrap">
+                                    <div class="criteria-icon"><i class="fa-solid fa-server"></i></div>
+                                    <div>
+                                        <strong>Mensalidade & Hospedagem</strong>
+                                        <span class="criteria-desc">Manutenção contínua e servidores</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="cell-competitor">
+                                <span class="loss-badge"><i class="fa-solid fa-xmark"></i> R$ 400 a R$ 800/mês</span>
+                                <span class="cell-subtext">Ou cobrança cara por hora avulsa</span>
+                            </td>
+                            <td class="cell-competitor">
+                                <span class="neutral-badge">Assinaturas fragmentadas</span>
+                                <span class="cell-subtext">Hospedagem, temas e plugins caros</span>
+                            </td>
+                            <td class="col-boomo cell-win">
+                                <span class="win-pill"><i class="fa-solid fa-circle-check"></i> A partir de R$ 149/mês</span>
+                                <span class="win-subtext">Cloud, SSL, CDN e suporte incluso</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cell-criteria">
+                                <div class="criteria-wrap">
+                                    <div class="criteria-icon"><i class="fa-solid fa-stopwatch"></i></div>
+                                    <div>
+                                        <strong>Prazo de Entrega</strong>
+                                        <span class="criteria-desc">Tempo até o site estar no ar</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="cell-competitor">
+                                <span class="loss-badge"><i class="fa-solid fa-xmark"></i> 30 a 90 dias</span>
+                                <span class="cell-subtext">Com reuniões e burocracia</span>
+                            </td>
+                            <td class="cell-competitor">
+                                <span class="neutral-badge">Semanas indefinidas</span>
+                                <span class="cell-subtext">Tentativa, erro e frustração</span>
+                            </td>
+                            <td class="col-boomo cell-win">
+                                <span class="win-pill"><i class="fa-solid fa-circle-check"></i> 3 a 5 dias úteis</span>
+                                <span class="win-subtext">Publicado e pronto para faturar</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cell-criteria">
+                                <div class="criteria-wrap">
+                                    <div class="criteria-icon"><i class="fa-solid fa-gauge-high"></i></div>
+                                    <div>
+                                        <strong>Velocidade no Google</strong>
+                                        <span class="criteria-desc">Performance mobile (PageSpeed)</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="cell-competitor">
+                                <span class="loss-badge"><i class="fa-solid fa-xmark"></i> Lento (Nota 40-60)</span>
+                                <span class="cell-subtext">WordPress pesado e poluído</span>
+                            </td>
+                            <td class="cell-competitor">
+                                <span class="neutral-badge">Instável e lento</span>
+                                <span class="cell-subtext">Excesso de scripts de terceiros</span>
+                            </td>
+                            <td class="col-boomo cell-win">
+                                <span class="win-pill"><i class="fa-solid fa-circle-check"></i> Nota 95+ (Instantâneo)</span>
+                                <span class="win-subtext">Código limpo e CDN de borda</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cell-criteria">
+                                <div class="criteria-wrap">
+                                    <div class="criteria-icon"><i class="fa-solid fa-headset"></i></div>
+                                    <div>
+                                        <strong>Suporte & Alterações</strong>
+                                        <span class="criteria-desc">Trocas de texto, banners e fotos</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="cell-competitor">
+                                <span class="loss-badge"><i class="fa-solid fa-xmark"></i> Fila & Tickets</span>
+                                <span class="cell-subtext">Demora de dias para ajustes simples</span>
+                            </td>
+                            <td class="cell-competitor">
+                                <span class="neutral-badge">Sem suporte</span>
+                                <span class="cell-subtext">Você precisa resolver tudo só</span>
+                            </td>
+                            <td class="col-boomo cell-win">
+                                <span class="win-pill"><i class="fa-solid fa-circle-check"></i> WhatsApp Direto</span>
+                                <span class="win-subtext">Fale com o Engenheiro responsável</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cell-criteria">
+                                <div class="criteria-wrap">
+                                    <div class="criteria-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                                    <div>
+                                        <strong>Fidelidade Contratual</strong>
+                                        <span class="criteria-desc">Segurança e liberdade do seu negócio</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="cell-competitor">
+                                <span class="loss-badge"><i class="fa-solid fa-xmark"></i> Contratos de 12 meses</span>
+                                <span class="cell-subtext">Com multas pesadas de rescisão</span>
+                            </td>
+                            <td class="cell-competitor">
+                                <span class="neutral-badge">Sem garantia</span>
+                                <span class="cell-subtext">Risco total de tempo perdido</span>
+                            </td>
+                            <td class="col-boomo cell-win">
+                                <span class="win-pill"><i class="fa-solid fa-circle-check"></i> Zero Fidelidade</span>
+                                <span class="win-subtext">Cancele quando quiser, sem multa</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. TABELA DE PREÇOS -->
+    <section id="planos" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// Preços Transparentes</span>
+                <h2>Planos simples, sem surpresas no final do mês.</h2>
+                <p>Tudo o que seu negócio precisa para ter uma presença digital impecável com suporte técnico incluso.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Plano Essencial -->
+                <div class="price-card">
+                    <h3>Essencial</h3>
+                    <p class="price-desc">Ideal para profissionais autônomos e serviços individuais que precisam de uma página rápida no ar.</p>
+                    <div class="price-val">R$ 149 <span>/mês</span></div>
+                    <div class="price-setup">+ taxa única de setup de R$ 300</div>
+                    <ul class="price-features">
+                        <li><i class="fa-solid fa-check"></i> Landing Page institucional</li>
+                        <li><i class="fa-solid fa-check"></i> Botão flutuante de WhatsApp</li>
+                        <li><i class="fa-solid fa-check"></i> Hospedagem e SSL inclusos</li>
+                        <li><i class="fa-solid fa-check"></i> 1 alteração de conteúdo por mês</li>
+                    </ul>
+                    <a href="https://wa.me/559192432044?text=Ol%C3%A1%20Rui%2C%20quero%20contratar%20o%20Plano%20Essencial%20(R%24%20149%2Fm%C3%AAs)." target="_blank" class="btn btn-secondary btn-full">Começar no Essencial</a>
+                </div>
+
+                <!-- Plano Pro (Destaque) -->
+                <div class="price-card featured">
+                    <span class="featured-badge">Mais Escolhido</span>
+                    <h3>Pro Negócios Locais</h3>
+                    <p class="price-desc">Perfeito para clínicas, consultórios e empresas com endereço físico que precisam ser encontradas no Google.</p>
+                    <div class="price-val">R$ 249 <span>/mês</span></div>
+                    <div class="price-setup">+ taxa única de setup de R$ 500</div>
+                    <ul class="price-features">
+                        <li><i class="fa-solid fa-check"></i> Tudo do Plano Essencial</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>SEO Local (Otimização Google)</strong></li>
+                        <li><i class="fa-solid fa-check"></i> Integração com Google Maps</li>
+                        <li><i class="fa-solid fa-check"></i> Suporte prioritário via WhatsApp</li>
+                        <li><i class="fa-solid fa-check"></i> Alterações ilimitadas de texto e fotos</li>
+                    </ul>
+                    <a href="https://wa.me/559192432044?text=Ol%C3%A1%20Rui%2C%20quero%20contratar%20o%20Plano%20Pro%20(R%24%20249%2Fm%C3%AAs)." target="_blank" class="btn btn-primary btn-full">Contratar Plano Pro</a>
+                </div>
+
+                <!-- Plano Personalizado -->
+                <div class="price-card">
+                    <h3>Personalizado</h3>
+                    <p class="price-desc">Para empresas com múltiplas filiais, catálogos extensos ou necessidades sob medida.</p>
+                    <div class="price-val">R$ 399 <span>/mês</span></div>
+                    <div class="price-setup">Setup sob consulta técnica</div>
+                    <ul class="price-features">
+                        <li><i class="fa-solid fa-check"></i> Múltiplas páginas institucionais</li>
+                        <li><i class="fa-solid fa-check"></i> Integração com sistemas e APIs</li>
+                        <li><i class="fa-solid fa-check"></i> Relatórios mensais de acessos</li>
+                        <li><i class="fa-solid fa-check"></i> Gestor técnico dedicado</li>
+                    </ul>
+                    <a href="https://wa.me/559192432044?text=Ol%C3%A1%20Rui%2C%20quero%20um%20or%C3%A7amento%20personalizado%20para%20o%20site%20da%20minha%20empresa." target="_blank" class="btn btn-secondary btn-full">Solicitar Proposta</a>
+                </div>
+            </div>
+
+            <!-- 5.1. BLOCO DE GARANTIAS EXPLÍCITAS -->
+            <div class="guarantee-grid">
+                <div class="guarantee-card">
+                    <div class="guarantee-icon"><i class="fa-solid fa-file-signature"></i></div>
+                    <h3>Garantia de Aprovação</h3>
+                    <p>Você só paga a taxa única de setup após aprovar o design e a estrutura do seu site. Risco financeiro zero para a sua empresa.</p>
+                </div>
+
+                <div class="guarantee-card">
+                    <div class="guarantee-icon"><i class="fa-solid fa-lock-open"></i></div>
+                    <h3>Zero Fidelidade ou Multas</h3>
+                    <p>Acreditamos na qualidade do nosso serviço. Cancele sua assinatura quando quiser, sem letras miúdas ou contratos de 12 meses.</p>
+                </div>
+
+                <div class="guarantee-card">
+                    <div class="guarantee-icon"><i class="fa-solid fa-headset"></i></div>
+                    <h3>SLA de Atendimento em 24h</h3>
+                    <p>Precisa trocar um telefone, foto ou horário? Envie uma mensagem no WhatsApp e nossa engenharia ajusta em até 24 horas úteis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5.2. PROVA SOCIAL / DEPOIMENTOS -->
+    <section id="depoimentos" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// Casos Reais</span>
+                <h2>Empresas que confiam na engenharia da Boomo.</h2>
+                <p>Veja o que médicos, advogados e donos de empresas dizem sobre ter um site rápido e sem dores de cabeça.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <!-- Depoimento 1 -->
+                <div class="testimonial-card">
+                    <div>
+                        <div class="testimonial-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-quote">"O site da minha clínica ficou pronto em 4 dias úteis. Na primeira semana já recebemos 12 contatos diretos no WhatsApp vindos do Google. O suporte do Rui é impecável e resolve tudo na hora."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">CR</div>
+                        <div class="author-info">
+                            <strong>Dra. Camila Ribeiro</strong>
+                            <span>Pediatra • Clínica Pediátrica</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Depoimento 2 -->
+                <div class="testimonial-card">
+                    <div>
+                        <div class="testimonial-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-quote">"Eu pagava R$ 600 por mês para uma agência antiga que demorava 2 semanas para trocar uma foto. Com a Boomo pago uma fração, o site é muito mais rápido e o atendimento é direto com o engenheiro."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MN</div>
+                        <div class="author-info">
+                            <strong>Dr. Marcelo Novaes</strong>
+                            <span>Sócio Fundador • Novaes & Advogados</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Depoimento 3 -->
+                <div class="testimonial-card">
+                    <div>
+                        <div class="testimonial-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-quote">"Nossos pacientes elogiam direto a facilidade de agendar pelo celular. O site carrega instantaneamente e a presença no Google Maps fez nossas avaliações dobrarem nos últimos meses."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">FG</div>
+                        <div class="author-info">
+                            <strong>Dr. Felipe Guimarães</strong>
+                            <span>Diretor Clínico • Guimarães Odontologia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. O FUNDADOR (AUTORIDADE TÉCNICA) -->
+    <section id="sobre" class="section-padding">
+        <div class="container">
+            <div class="founder-split">
+                <div class="founder-text">
+                    <span class="section-tag">// Liderança Técnica</span>
+                    <h2>Menos complicação, mais eficiência.</h2>
+                    <p>A Boomo foi fundada por <strong>Rui Santos</strong>, engenheiro de operações em nuvem (Cloud Operations) e especialista em Confiabilidade de Sistemas (SRE).</p>
+                    <p>Com forte atuação na arquitetura e estabilidade de sistemas críticos para o setor financeiro e Open Finance, Rui atua diretamente na infraestrutura de grandes players do mercado, como <strong>Sicredi, Banco Inter e Stone</strong>.</p>
+                    <p>O objetivo da Boomo é direto: pegar o mesmo padrão de segurança, organização e estabilidade exigido por essas grandes operações e aplicar na realidade do site da sua empresa. Aqui, seu projeto é planejado e construído por quem entende as regras do jogo.</p>
+                    
+                    <div class="founder-meta">
+                        <div class="meta-item">
+                            <div class="meta-label">Padrão de Confiabilidade</div>
+                            <div class="meta-value">Infraestrutura Bancária</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-label">Atendimento</div>
+                            <div class="meta-value">Direto com o Engenheiro</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="founder-photo">
+                    <img src="assets/images/rui-santos.jpg" alt="Rui Santos - Fundador da Boomo">
+                    <div class="founder-badge">
+                        <strong>Rui Santos</strong>
+                        <span>Fundador & Engenheiro Chefe</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6.1. PERGUNTAS FREQUENTES (FAQ INTERATIVO) -->
+    <section id="faq" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// Dúvidas Comuns</span>
+                <h2>Perguntas Frequentes</h2>
+                <p>Tudo o que você precisa saber sobre o modelo de sites por assinatura da Boomo.</p>
+            </div>
+
+            <div class="faq-grid">
+                <details class="faq-item" open>
+                    <summary>
+                        <span>O domínio próprio (.com.br) fica registrado no meu nome?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </summary>
+                    <div class="faq-content">
+                        <strong>Sim, 100% no seu CPF ou CNPJ.</strong> Você é o proprietário legal e definitivo do seu endereço na internet. Nós cuidamos apenas da configuração técnica de DNS e apontamento de servidores.
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <span>Já possuo um site ou domínio antigo. Vocês fazem a migração?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </summary>
+                    <div class="faq-content">
+                        Sim! Cuidamos de todo o processo de transição sem que seu site fique fora do ar. Mantemos seu domínio atual e migramos tudo para nossa infraestrutura de alta velocidade sem cobrança extra de migração.
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <span>Como solicito alterações de textos, fotos ou telefones?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </summary>
+                    <div class="faq-content">
+                        Basta nos enviar uma mensagem de texto ou áudio no WhatsApp. Você não precisa mexer em painéis complicados ou códigos. Nossa equipe técnica realiza a alteração em até 24 horas úteis.
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <span>Existe algum contrato de fidelidade ou multa se eu quiser cancelar?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </summary>
+                    <div class="faq-content">
+                        <strong>Zero fidelidade e zero multas.</strong> Você pode cancelar sua assinatura a qualquer momento. Seu site permanecerá ativo até o término do ciclo mensal vigente.
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <span>Em quanto tempo meu site estará 100% pronto e no ar?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </summary>
+                    <div class="faq-content">
+                        Em média de <strong>3 a 5 dias úteis</strong> após o envio das informações básicas do seu negócio (fotos, textos e logotipo). Criamos uma versão de prévia para você aprovar antes da publicação oficial.
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <span>Por que a assinatura mensal vale mais a pena que comprar um site tradicional?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </summary>
+                    <div class="faq-content">
+                        Ao comprar um site tradicional, você gasta de R$ 3.000 a R$ 8.000 à vista e ainda precisa pagar hospedagem, renovação de certificados e contratar profissionais avulsos toda vez que precisar mudar uma linha de texto. Na Boomo, você tem custo inicial baixíssimo e um engenheiro cuidando da segurança, hospedagem e manutenção contínua por um valor mensal acessível.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. CTA FINAL -->
+    <section class="cta-banner">
+        <div class="container">
+            <span class="section-tag">// Próximo Passo</span>
+            <h2>Pronto para profissionalizar a presença digital da sua empresa?</h2>
+            <p>Escolha um dos nossos modelos ou solicite um diagnóstico gratuito para o seu negócio.</p>
+            <a href="https://wa.me/559192432044?text=Ol%C3%A1%20Rui%2C%20gostaria%20de%20iniciar%20o%20site%20da%20minha%20empresa%20com%20a%20Boomo." target="_blank" class="btn btn-primary btn-large">Falar Diretamente no WhatsApp <i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </section>
+
+    <!-- 8. FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">Boomo<span>.</span></div>
+                    <p>Websites de alta performance por assinatura para clínicas, escritórios e empresas que buscam credibilidade e resultados.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="#modelos">Modelos Prontos</a></li>
+                        <li><a href="#como-funciona">Como Funciona</a></li>
+                        <li><a href="#comparativo">Comparativo</a></li>
+                        <li><a href="#planos">Planos & Preços</a></li>
+                        <li><a href="#faq">Dúvidas Frequentes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal & Segurança</h4>
+                    <ul>
+                        <li><a href="termos-privacidade.html">Termos de Uso</a></li>
+                        <li><a href="termos-privacidade.html">Política de Privacidade (LGPD)</a></li>
+                        <li><a href="termos-privacidade.html">Garantia de Uptime 99.9%</a></li>
                     </ul>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <div class="marajoara-divider"></div>
-
-    <section id="contato" class="cta-section">
-        <div class="container">
-            <div class="cta-card">
-                <h2>Pronto para transformar sua clínica?</h2>
-                <p>Vamos bater um papo. Sem compromisso, analisamos como sua clínica está hoje na internet e mostramos como podemos melhorar.</p>
-                <a href="https://wa.me/5591900000000" target="_blank" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp Agora</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="marajoara-divider alt"></div>
-        <div class="container footer-content">
-            <div class="footer-logo">
-                <span class="logo-icon"><i class="fa-solid fa-leaf"></i></span>
-                <span class="logo-text">SuaAgência</span>
-                <p>Tecnologia com raízes fortes.</p>
-            </div>
-            <div class="footer-links">
-                <p>&copy; 2026 Todos os direitos reservados. Feito com orgulho em Belém do Pará.</p>
+            <div class="footer-bottom">
+                <div>© 2026 Boomo Software Engineering. Todos os direitos reservados.</div>
+                <div>Desenvolvido com infraestrutura de nuvem de alta disponibilidade.</div>
             </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <!-- 9. BOTÃO FLUTUANTE DE WHATSAPP -->
+    <a href="https://wa.me/559192432044?text=Ol%C3%A1%20Rui%2C%20estou%20no%20site%20da%20Boomo%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida." target="_blank" class="floating-whatsapp" aria-label="Falar no WhatsApp" title="Falar no WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- SCRIPT DE TEMA (DARK / LIGHT TOGGLE) & MENU MOBILE -->
+    <script>
+        // 1. Dark/Light Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const icon = themeToggle.querySelector('i');
+        
+        if (document.documentElement.classList.contains('dark-theme')) {
+            document.body.classList.add('dark-theme');
+            icon.classList.replace('fa-moon', 'fa-sun');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+            
+            if (document.body.classList.contains('dark-theme')) {
+                localStorage.setItem('theme', 'dark');
+                icon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                localStorage.setItem('theme', 'light');
+                icon.classList.replace('fa-sun', 'fa-moon');
+            }
+        });
+
+        // 2. Mobile Hamburger Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const navMenu = document.getElementById('nav-menu');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        function toggleMobileMenu() {
+            mobileMenuBtn.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        }
+
+        function closeMobileMenu() {
+            mobileMenuBtn.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+
+        // Close menu when clicking on any navigation link
+        navLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+    </script>
 </body>
 </html>

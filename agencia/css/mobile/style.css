@@ -1,0 +1,52 @@
+/* MOBILE OVERRIDES (Max-width: 768px) */
+
+/* Typography */
+.hero-text h1 { font-size: 2.2rem; margin-bottom: 15px; }
+.hero-text p { font-size: 1rem; margin-bottom: 30px; }
+.section-header h2 { font-size: 2rem; }
+.cta-bento h2 { font-size: 2.2rem; }
+.bento-card h3 { font-size: 1.3rem; }
+
+/* Spacings (Reduce massive desktop paddings) */
+.hero { padding: 60px 0 40px 0; }
+.section-light, .section-gray, .section-dark, .section-cta { padding: 60px 0; }
+.bento-card { padding: 24px; }
+.cta-bento { padding: 40px 20px; }
+.glass-timeline { padding: 24px; }
+.sol-card { padding: 20px; }
+.section-header { margin-bottom: 30px; }
+
+/* Grid Layouts */
+.bento-grid { grid-template-columns: 1fr; gap: 15px; }
+.col-2, .col-3 { grid-column: span 1; }
+.solutions-bento { grid-template-columns: 1fr; gap: 15px; }
+.markets-flex { flex-direction: column; }
+.benefits-split { gap: 40px; }
+
+/* Hero Visual Fixes (Prevent horizontal scroll) */
+.glass-bento { padding: 20px; }
+/* Hide floating badges on mobile to prevent clipping and clutter */
+.glass-badge { 
+    display: none !important;
+}
+.bento-body { height: 160px; }
+.pulse-ring { width: 30px; height: 30px; }
+
+/* Clean List Fixes */
+.clean-list li { font-size: 1rem; margin-bottom: 15px; }
+
+/* Buttons */
+.btn-large, .btn-huge { padding: 14px 24px; font-size: 1rem; width: 100%; }
+.hero-actions { flex-direction: column; gap: 10px; width: 100%; }
+.hero-actions .btn { width: 100%; }
+
+/* Navigation */
+.nav-content { padding: 10px 0; }
+.logo { font-size: 1.2rem; }
+
+/* Modal Mobile Fixes */
+.modal-bento { padding: 30px 20px; border-radius: 20px 20px 0 0; position: absolute; bottom: 0; max-height: 85vh; transform: translateY(100%); }
+.modal-overlay.active .modal-bento { transform: translateY(0); }
+.radio-content { padding: 15px; }
+.radio-content span { font-size: 1rem; }
+.modal-header h3 { font-size: 1.8rem; }

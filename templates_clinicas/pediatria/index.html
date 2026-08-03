@@ -1,242 +1,351 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <!-- ==========================================
-         CONFIGURAÇÕES BÁSICAS (Fácil de alterar)
-         ========================================== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nome da Clínica | Pediatria Humanizada</title>
-    <meta name="description" content="Especialistas no cuidado infantil. Puericultura, vacinas e pediatria geral. Agende sua consulta online.">
+    <title>Clínica Pequenos Passos | Pediatria Humanizada & Neonatologia</title>
+    <meta name="description" content="Acompanhamento pediátrico humanizado, puericultura, vacinas sem trauma e neonatologia com foco no bem-estar da criança e da família.">
     
+    <link rel="icon" type="image/svg+xml" href="../../agencia/assets/favicon.svg">
+
+    <!-- Open Graph / WhatsApp Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Clínica Pequenos Passos | Pediatria Humanizada & Neonatologia">
+    <meta property="og:description" content="Acompanhamento pediátrico humanizado, puericultura, vacinas sem trauma e neonatologia com foco no bem-estar da criança e da família.">
+    <meta property="og:image" content="assets/images/hero-clinic.jpg">
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     
-    <!-- Fontes do Google -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Ícones (FontAwesome) -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- ==========================================
-         CABEÇALHO / NAVEGAÇÃO
-         ========================================== -->
+    <!-- 1. NAVBAR -->
     <nav class="navbar">
-        <div class="container nav-content">
-            <a href="#" class="logo">
-                <i class="fa-solid fa-stethoscope"></i>
-                <!-- NOME DA CLÍNICA AQUI -->
-                <span>Clínica Sorriso Infantil</span>
+        <div class="container nav-container">
+            <a href="#" class="brand-logo">
+                <span class="brand-name">Pequenos Passos</span>
+                <span class="brand-tagline">Pediatria Humanizada & Neonatologia</span>
             </a>
             
-            <ul class="nav-links">
-                <li><a href="#sobre">Sobre o Doutor</a></li>
-                <li><a href="#especialidades">Especialidades</a></li>
-                <li><a href="#convenios">Convênios</a></li>
-            </ul>
-            
-            <!-- LINK DO WHATSAPP AQUI -->
-            <a href="#agendamento" class="btn btn-primary">Agendar Consulta</a>
+            <div class="nav-menu-wrapper" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#especialidades">Especialidades</a></li>
+                    <li><a href="#diferenciais">O Consultório</a></li>
+                    <li><a href="#pediatra">A Pediatra</a></li>
+                    <li><a href="#localizacao">Onde Estamos</a></li>
+                </ul>
+                <div class="nav-mobile-cta">
+                    <a href="https://wa.me/559192432044?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20pedi%C3%A1trica." target="_blank" class="btn btn-primary btn-full">
+                        <i class="fa-brands fa-whatsapp"></i> Agendar Consulta
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav-actions">
+                <a href="https://wa.me/559192432044?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20pedi%C3%A1trica." target="_blank" class="btn btn-primary nav-desktop-cta">Agendar Consulta</a>
+                <button id="mobile-menu-btn" class="mobile-menu-toggle" aria-label="Abrir Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <!-- ==========================================
-         SEÇÃO HERO (PRIMEIRA TELA)
-         ========================================== -->
+    <!-- 2. HERO SECTION -->
     <header class="hero">
-        <div class="container hero-layout">
-            <div class="hero-text">
-                <span class="badge">Amor e Ciência lado a lado</span>
-                <!-- TÍTULO PRINCIPAL -->
-                <h1>Cuidado humanizado para quem você mais ama.</h1>
-                <p>Nossa missão é garantir o desenvolvimento saudável do seu filho, com um atendimento afetuoso, sem pressa e sempre focado no bem-estar da família.</p>
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fa-solid fa-heart-pulse"></i> Pediatria com Acolhimento & Segurança
+                </div>
+                <h1>Cuidando do futuro do seu filho com <span>ciência, afeto e tranquilidade.</span></h1>
+                <p>Consultas sem pressa, suporte direto para emergências cotidianas e um ambiente acolhedor planejado especialmente para a infância.</p>
                 
-                <div class="hero-actions">
-                    <button class="btn btn-primary btn-large">Agendar Agora</button>
-                    <a href="#sobre" class="btn btn-outline btn-large">Conhecer a Clínica</a>
+                <div class="hero-ctas">
+                    <a href="https://wa.me/559192432044?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20meu%20filho." target="_blank" class="btn btn-primary btn-large">
+                        <i class="fa-brands fa-whatsapp"></i> Agendar pelo WhatsApp
+                    </a>
+                    <a href="#especialidades" class="btn btn-secondary btn-large">Conhecer Serviços</a>
                 </div>
             </div>
-            <div class="hero-image-placeholder">
-                <!-- Para o cliente, basta colocar a imagem na pasta e trocar o src -->
-                <div class="img-mock" style="background-color: var(--color-surface); height: 100%; border-radius: 30px; display: flex; align-items: center; justify-content: center; color: var(--color-primary); border: 2px dashed var(--color-primary);">
-                    <i class="fa-solid fa-image fa-3x"></i>
-                    <p style="margin-left: 10px;">[Foto de Criança Sorrindo]</p>
-                </div>
-                <div class="floating-card">
-                    <i class="fa-solid fa-star" style="color: #FFD700;"></i>
-                    <div>
-                        <strong>Excelente</strong>
-                        <span>+500 avaliações</span>
+
+            <div class="hero-image-wrap">
+                <img src="assets/images/hero-pediatria.jpg" alt="Pediatra acolhendo criança em consulta" class="hero-img">
+                <div class="hero-floating-badge">
+                    <div class="floating-icon-wrap">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="floating-badge-text">
+                        <strong>Nota 5.0 no Google</strong>
+                        <span>+600 famílias acompanhadas</span>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- ==========================================
-         SEÇÃO: SOBRE O DOUTOR
-         ========================================== -->
-    <section id="sobre" class="section bg-light">
-        <div class="container about-layout">
-            <div class="about-image">
-                <div class="img-mock" style="background-color: #E2E8F0; width: 100%; aspect-ratio: 3/4; border-radius: 20px; display: flex; align-items: center; justify-content: center; color: #64748B;">
-                    <p>[Foto do Pediatra]</p>
-                </div>
+    <!-- 3. STATS BAR -->
+    <section class="stats-bar">
+        <div class="container stats-grid">
+            <div class="stat-item">
+                <h3>+12 Anos</h3>
+                <p>De Dedicação à Pediatria</p>
             </div>
-            <div class="about-text">
-                <h2>Dr. Nome do Pediatra</h2>
-                <span class="crm">CRM-PA 12345 | RQE 6789</span>
-                <p>Com mais de 10 anos de experiência dedicados à saúde infantil, meu foco é criar um ambiente seguro onde os pais se sintam acolhidos para tirar todas as dúvidas.</p>
-                <ul class="check-list">
-                    <li><i class="fa-solid fa-check-circle"></i> Especialista pela Sociedade Brasileira de Pediatria</li>
-                    <li><i class="fa-solid fa-check-circle"></i> Foco em Puericultura e desenvolvimento neurológico</li>
-                    <li><i class="fa-solid fa-check-circle"></i> Atendimento humanizado e sem pressa</li>
-                </ul>
+            <div class="stat-item">
+                <h3>+5.000</h3>
+                <p>Consultas Realizadas</p>
+            </div>
+            <div class="stat-item">
+                <h3>SBP & CRM</h3>
+                <p>Membro Titular Especialista</p>
+            </div>
+            <div class="stat-item">
+                <h3>100% Sem Pressa</h3>
+                <p>Média de 1h por Consulta</p>
             </div>
         </div>
     </section>
 
-    <!-- ==========================================
-         SEÇÃO: ESPECIALIDADES
-         ========================================== -->
-    <section id="especialidades" class="section">
+    <!-- 4. ESPECIALIDADES / SERVIÇOS -->
+    <section id="especialidades" class="section-padding">
         <div class="container">
-            <div class="section-header text-center">
-                <h2>Nossas Especialidades</h2>
-                <p>Tudo que o seu filho precisa para crescer forte e saudável.</p>
+            <div class="section-header">
+                <span class="section-tag">// Cuidados Completos</span>
+                <h2>Especialidades para cada fase da infância</h2>
+                <p>Acompanhamento preventivo integral para garantir o crescimento físico, neurológico e emocional saudável.</p>
             </div>
-            
-            <div class="grid-3">
-                <div class="card service-card">
-                    <div class="icon"><i class="fa-solid fa-baby"></i></div>
-                    <h3>Puericultura</h3>
-                    <p>Acompanhamento periódico do crescimento, desenvolvimento, alimentação e vacinas do bebê.</p>
+
+            <div class="services-grid">
+                <!-- Card 1: Puericultura -->
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Puericultura e Crescimento" class="service-img">
+                    <div class="service-body">
+                        <h3>Puericultura & Desenvolvimento</h3>
+                        <p>Monitoramento detalhado de marcos motores, ganho de peso, estatura e orientações individualizadas para cada salto de desenvolvimento.</p>
+                        <a href="https://wa.me/559192432044?text=Quero%20agendar%20uma%20consulta%20de%20Puericultura." target="_blank" class="service-link">Agendar Puericultura <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
                 </div>
-                <div class="card service-card">
-                    <div class="icon"><i class="fa-solid fa-heart-pulse"></i></div>
-                    <h3>Pediatria Geral</h3>
-                    <p>Diagnóstico e tratamento de doenças comuns da infância com precisão e cuidado.</p>
+
+                <!-- Card 2: Consulta Neonatal -->
+                <div class="service-card">
+                    <div class="service-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Consulta Neonatal e Primeiros Dias" class="service-img">
+                    </div>
+                    <div class="service-body">
+                        <h3>Primeiros Dias do Bebê</h3>
+                        <p>Atendimento acolhedor na primeira semana de vida: suporte na amamentação, ganho de peso, triagem de icterícia e orientações para os pais de primeira viagem.</p>
+                        <a href="https://wa.me/559192432044?text=Quero%20agendar%20consulta%20de%20Rec%C3%A9m-Nascido." target="_blank" class="service-link">Agendar para Recém-Nascido <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
                 </div>
-                <div class="card service-card">
-                    <div class="icon"><i class="fa-solid fa-syringe"></i></div>
-                    <h3>Orientações Vacinais</h3>
-                    <p>Consultoria completa sobre o calendário vacinal para manter seu filho sempre protegido.</p>
+
+                <!-- Card 3: Imunização -->
+                <div class="service-card">
+                    <div class="service-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Vacinação Sem Dor" class="service-img">
+                    </div>
+                    <div class="service-body">
+                        <h3>Vacinação com Métodos Sem Trauma</h3>
+                        <p>Aplicação de vacinas com dispositivos que diminuem a dor e o medo (dispositivos de vibração e alívio térmico), tornando a experiência serena.</p>
+                        <a href="https://wa.me/559192432044?text=Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20Vacinas." target="_blank" class="service-link">Consultar Calendário Vacinal <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 4: Alergias & Imunidade -->
+                <div class="service-card">
+                    <div class="service-img-wrap">
+                        <img src="assets/images/alergia-imunidade.jpg" alt="Alergias & Imunidade Pediátrica" class="service-img">
+                    </div>
+                    <div class="service-body">
+                        <h3>Alergias & Imunidade Infantil</h3>
+                        <p>Diagnóstico e manejo de alergias alimentares (APLV), dermatites, rinite, asma e suporte a quadros de infecções respiratórias frequentes.</p>
+                        <a href="https://wa.me/559192432044?text=Quero%20agendar%20avalia%C3%A7%C3%A3o%20de%20Alergias." target="_blank" class="service-link">Agendar Investigação <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 5: Introdução Alimentar -->
+                <div class="service-card">
+                    <div class="service-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1596541223130-5d31a73fb6c6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Introdução Alimentar" class="service-img">
+                    </div>
+                    <div class="service-body">
+                        <h3>Introdução Alimentar & Nutrição</h3>
+                        <p>Orientação completa para os 6 meses (método BLW e participativo), prevenindo seletividade alimentar e garantindo uma relação saudável com a comida.</p>
+                        <a href="https://wa.me/559192432044?text=Quero%20orienta%C3%A7%C3%A3o%20sobre%20Introdu%C3%A7%C3%A3o%20Alimentar." target="_blank" class="service-link">Consultoria Alimentar <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 6: Queixas Agudas & Encaixes -->
+                <div class="service-card">
+                    <div class="service-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Atendimento de Intercorrências" class="service-img">
+                    </div>
+                    <div class="service-body">
+                        <h3>Encaixes para Febre & Sintomas Agudos</h3>
+                        <p>Horários reservados na agenda diária para avaliar febre súbita, tosse, vômitos ou quedas sem a necessidade de esperar horas em um pronto-socorro.</p>
+                        <a href="https://wa.me/559192432044?text=Preciso%20de%20um%20encaixe%20urgente%20para%20hoje." target="_blank" class="service-link">Solicitar Encaixe no Dia <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==========================================
-         SEÇÃO: CONVÊNIOS E CONTATO
-         ========================================== -->
-    <section id="convenios" class="section bg-light">
-        <div class="container text-center">
-            <h2>Convênios Aceitos</h2>
-            <div class="convenios-logos">
-                <span class="logo-box">Unimed</span>
-                <span class="logo-box">Bradesco Saúde</span>
-                <span class="logo-box">SulAmérica</span>
-                <span class="logo-box">Amil</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==========================================
-         SEÇÃO: MOTOR DE AGENDAMENTO
-         ========================================== -->
-    <section id="agendamento" class="section">
+    <!-- 5. O CONSULTÓRIO / DIFERENCIAIS -->
+    <section id="diferenciais" class="section-padding differentials-section">
         <div class="container">
-            <div class="scheduler-container">
-                <div class="scheduler-header">
-                    <h2>Agende a Consulta do seu Filho</h2>
-                    <p>Rápido, fácil e sem esperar no telefone.</p>
+            <div class="section-header">
+                <span class="section-tag">// Pensado para Crianças</span>
+                <h2>Um consultório onde seu filho se sente em casa</h2>
+                <p>Eliminamos o medo de médico com uma estrutura acolhedora, divertida e com alto rigor de higiene.</p>
+            </div>
+
+            <div class="differentials-grid">
+                <div class="diff-card">
+                    <div class="diff-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+                    <h3>Brinquedoteca Lúdica</h3>
+                    <p>Espaço de espera interativo com brinquedos educativos esterilizados e livros para transformar a visita em um momento divertido.</p>
                 </div>
+
+                <div class="diff-card">
+                    <div class="diff-icon"><i class="fa-solid fa-person-breastfeeding"></i></div>
+                    <h3>Espaço Amamentação & Fraldário</h3>
+                    <p>Sala privativa e confortável para amamentar, trocar fraldas e aquecer mamadeiras com tranquilidade antes ou após o atendimento.</p>
+                </div>
+
+                <div class="diff-card">
+                    <div class="diff-icon"><i class="fa-solid fa-comments"></i></div>
+                    <h3>Canal Direto no WhatsApp</h3>
+                    <p>Suporte pós-consulta direto com a equipe para dúvidas sobre receitas, febre e intercorrências do tratamento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. A PEDIATRA -->
+    <section id="pediatra" class="section-padding doctor-section">
+        <div class="container doctor-grid">
+            <div class="doctor-img-wrap">
+                <img src="assets/images/dra-carolina.jpg" alt="Dra. Carolina Vasconcelos Pediatra" class="doctor-img">
+            </div>
+
+            <div class="doctor-info">
+                <span class="section-tag">// Conheça a Especialista</span>
+                <h2>Dra. Carolina Vasconcelos</h2>
+                <span class="doctor-credentials">CRM/SP 142.980 | RQE 89.231 • Pediatria & Neonatologia</span>
+                <p>Formada pela Faculdade de Medicina da USP com residência médica no Instituto da Criança do Hospital das Clínicas (ICr-HCFMUSP), a Dra. Carolina atua há mais de 12 anos combinando rigor científico de ponta com um olhar empático sobre a rotina real das famílias.</p>
                 
-                <div class="scheduler-body">
-                    <!-- Step 1: Data -->
-                    <div class="step-card" id="step-1">
-                        <div class="step-title">
-                            <span class="step-number">1</span>
-                            <h3>Escolha a Data</h3>
-                        </div>
-                        <div class="calendar-wrapper">
-                            <div class="calendar-header">
-                                <button class="btn-icon">&lt;</button>
-                                <strong>Agosto 2026</strong>
-                                <button class="btn-icon">&gt;</button>
-                            </div>
-                            <div class="calendar-grid days">
-                                <span>D</span><span>S</span><span>T</span><span>Q</span><span>Q</span><span>S</span><span>S</span>
-                            </div>
-                            <div class="calendar-grid dates" id="calendar-dates">
-                                <!-- Gerado via JS -->
-                            </div>
-                        </div>
-                    </div>
+                <ul class="doctor-highlights">
+                    <li><i class="fa-solid fa-circle-check"></i> Membro Titular da Sociedade Brasileira de Pediatria (SBP)</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Especialista em Cuidados Intensivos Neonatais e Prematuros</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Consultora em Amamentação e Sono Infantil</li>
+                </ul>
 
-                    <!-- Step 2: Horário -->
-                    <div class="step-card disabled" id="step-2">
-                        <div class="step-title">
-                            <span class="step-number">2</span>
-                            <h3>Escolha o Horário</h3>
-                        </div>
-                        <div class="time-slots" id="time-slots-container">
-                            <p class="empty-state">Selecione uma data primeiro.</p>
-                            <!-- Gerado via JS -->
-                        </div>
-                    </div>
-
-                    <!-- Step 3: Dados -->
-                    <div class="step-card disabled" id="step-3">
-                        <div class="step-title">
-                            <span class="step-number">3</span>
-                            <h3>Seus Dados</h3>
-                        </div>
-                        <div class="form-group">
-                            <label>Nome do Paciente (Criança)</label>
-                            <input type="text" id="patient-name" placeholder="Ex: Lucas Silva" disabled>
-                        </div>
-                        <div class="form-group">
-                            <label>Nome do Responsável</label>
-                            <input type="text" id="parent-name" placeholder="Ex: Maria Silva" disabled>
-                        </div>
-                        <button id="btn-finish-booking" class="btn btn-primary btn-large w-100 mt-3" disabled>
-                            <i class="fa-brands fa-whatsapp"></i> Solicitar Agendamento via WhatsApp
-                        </button>
-                    </div>
-                </div>
+                <a href="https://wa.me/559192432044?text=Ol%C3%A1%20Dra.%20Carolina%2C%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" class="btn btn-primary btn-large">
+                    <i class="fa-brands fa-whatsapp"></i> Falar com a Dra. Carolina
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- ==========================================
-         RODAPÉ
-         ========================================== -->
-    <footer class="footer">
-        <div class="container footer-grid">
-            <div>
-                <h3>Clínica Sorriso Infantil</h3>
-                <p>Cuidando do futuro, hoje.</p>
+    <!-- 6. LOCALIZAÇÃO E AGENDAMENTO -->
+    <section id="localizacao" class="section-padding location-section">
+        <div class="container location-grid">
+            <div class="location-info">
+                <div class="section-header align-left">
+                    <span class="section-tag">// Consultório & Acolhimento</span>
+                    <h2>Um espaço pensado para o conforto do seu bebê</h2>
+                    <p>Ambiente esterilizado, brinquedoteca higienizada, trocador completo e estacionamento privativo com manobrista.</p>
+                </div>
+
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <strong>Endereço</strong>
+                            <span>Alameda Santos, 1827 - Sala 804 - Jardins, São Paulo - SP</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-clock"></i>
+                        <div>
+                            <strong>Horário de Atendimento</strong>
+                            <span>Segunda a Sexta: 08h às 19h | Sábados (Plantão Puericultura): 08h às 13h</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <div>
+                            <strong>WhatsApp Direto da Recepção</strong>
+                            <span>(91) 9243-2044</span>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://wa.me/559192432044?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Pequenos%20Passos." target="_blank" class="btn btn-primary btn-large">
+                    <i class="fa-brands fa-whatsapp"></i> Iniciar Agendamento no WhatsApp
+                </a>
             </div>
-            <div>
-                <h4>Contato</h4>
-                <p><i class="fa-solid fa-phone"></i> (91) 3000-0000</p>
-                <p><i class="fa-brands fa-whatsapp"></i> (91) 90000-0000</p>
-                <p><i class="fa-solid fa-envelope"></i> contato@clinica.com.br</p>
-            </div>
-            <div>
-                <h4>Localização</h4>
-                <p><i class="fa-solid fa-map-marker-alt"></i> Av. Conselheiro Furtado, 1234<br>Belém - PA, 66000-000</p>
+
+            <div class="map-box">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.065845946864!2d-46.66642732384742!3d-23.56608886389366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAlameda%20Santos%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
-        <div class="container text-center copyright">
-            <p>&copy; 2026 Clínica Sorriso Infantil. Todos os direitos reservados. | Desenvolvido por <strong>[Nome da Sua Agência]</strong></p>
+    </section>
+
+    <!-- 7. FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <div class="brand-name">Pequenos Passos</div>
+                    <div class="brand-tagline">Pediatria Humanizada & Neonatologia</div>
+                </div>
+                <div>
+                    <a href="https://wa.me/559192432044" target="_blank" class="btn btn-primary">Agendamento Online</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>© 2026 Clínica Pequenos Passos. Todos os direitos reservados. Responsável Técnica: Dra. Carolina Albuquerque - CRM/SP 182.491 • RQE 98.112.</div>
+                <div>Desenvolvido com tecnologia <a href="../../agencia/index.html" target="_blank"><strong>Boomo</strong></a>.</div>
+            </div>
         </div>
     </footer>
 
-    <script src="js/script.js?v=2" charset="UTF-8"></script>
+    <!-- BOTÃO FLUTUANTE DE WHATSAPP -->
+    <a href="https://wa.me/559192432044?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20na%20Cl%C3%ADnica%20Pequenos%20Passos." class="whatsapp-float" target="_blank" aria-label="Falar no WhatsApp" title="Falar no WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- SCRIPT MENU MOBILE -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const navMenu = document.getElementById('nav-menu');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        function toggleMobileMenu() {
+            mobileMenuBtn.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        }
+
+        function closeMobileMenu() {
+            mobileMenuBtn.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+    </script>
 </body>
 </html>
