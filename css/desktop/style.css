@@ -778,14 +778,27 @@ body.dark-theme .theme-pill:hover .pill-track { border-color: rgba(255, 255, 255
   background: var(--bg-surface);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
-  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  transition: border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
 }
 .faq-item:hover {
   border-color: rgba(0, 0, 0, 0.2);
   box-shadow: var(--shadow-md);
 }
+body.dark-theme .faq-item:hover {
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.faq-item[open] {
+  border-color: rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+body.dark-theme .faq-item[open] {
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
 .faq-item summary {
-  padding: 20px 24px;
+  padding: 22px 24px;
   font-weight: 600;
   font-size: 1.05rem;
   color: var(--text-main);
@@ -796,24 +809,65 @@ body.dark-theme .theme-pill:hover .pill-track { border-color: rgba(255, 255, 255
   align-items: center;
   user-select: none;
   letter-spacing: -0.01em;
+  transition: color 0.2s ease;
 }
 .faq-item summary::-webkit-details-marker { display: none; }
-.faq-item summary i {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  transition: transform 0.25s ease;
+.faq-item summary::-moz-list-bullet { list-style-type: none; }
+
+.faq-item summary .faq-icon-wrap {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-left: 16px;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, border-color 0.2s ease;
 }
-.faq-item[open] summary i {
+body.dark-theme .faq-item summary .faq-icon-wrap {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.faq-item summary .faq-icon-wrap i {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+}
+
+.faq-item[open] summary .faq-icon-wrap {
   transform: rotate(180deg);
-  color: var(--text-main);
+  background: var(--text-main);
+  border-color: var(--text-main);
 }
+.faq-item[open] summary .faq-icon-wrap i {
+  color: var(--bg-surface);
+}
+
 .faq-content {
-  padding: 0 24px 20px 24px;
+  padding: 0 24px 22px 24px;
   color: var(--text-muted);
-  font-size: 0.95rem;
-  line-height: 1.7;
+  font-size: 0.96rem;
+  line-height: 1.75;
   border-top: 1px solid var(--border-color);
-  padding-top: 16px;
+  padding-top: 18px;
+}
+
+.faq-item[open] .faq-content {
+  animation: faqSlideDown 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes faqSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* 15. FLOATING WHATSAPP BUTTON (Apple Glass Shadow) */

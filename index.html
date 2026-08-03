@@ -36,6 +36,99 @@
             document.documentElement.classList.add('dark-theme');
         }
     </script>
+
+    <!-- Schema.org JSON-LD Structured Data (Organization, WebSite, FAQPage) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://boomo.com.br/#organization",
+          "name": "Boomo",
+          "url": "https://boomo.com.br/",
+          "logo": "https://boomo.com.br/assets/favicon.svg",
+          "founder": {
+            "@type": "Person",
+            "name": "Rui Santos",
+            "jobTitle": "Cloud Operations & SRE Specialist"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+55-91-9243-2044",
+            "contactType": "customer service",
+            "areaServed": "BR",
+            "availableLanguage": "Portuguese"
+          },
+          "description": "Desenvolvimento, hospedagem e manutenção de sites institucionais por assinatura para empresas locais, clínicas e escritórios."
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://boomo.com.br/#website",
+          "url": "https://boomo.com.br/",
+          "name": "Boomo - Sites Profissionais por Assinatura",
+          "publisher": {
+            "@id": "https://boomo.com.br/#organization"
+          },
+          "inLanguage": "pt-BR"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://boomo.com.br/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "O domínio próprio (.com.br) fica registrado no meu nome?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sim, 100% no seu CPF ou CNPJ. Você é o proprietário legal e definitivo do seu endereço na internet. Nós cuidamos apenas da configuração técnica de DNS e apontamento de servidores."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Já possuo um site ou domínio antigo. Vocês fazem a migração?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sim! Cuidamos de todo o processo de transição sem que seu site fique fora do ar. Mantemos seu domínio atual e migramos tudo para nossa infraestrutura de alta velocidade sem cobrança extra de migração."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Como solicito alterações de textos, fotos ou telefones?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Basta nos enviar uma mensagem de texto ou áudio no WhatsApp. Você não precisa mexer em painéis complicados ou códigos. Nossa equipe técnica realiza a alteração em até 24 horas úteis."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Existe algum contrato de fidelidade ou multa se eu quiser cancelar?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Zero fidelidade e zero multas. Você pode cancelar sua assinatura a qualquer momento. Seu site permanecerá ativo até o término do ciclo mensal vigente."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Em quanto tempo meu site estará 100% pronto e no ar?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Em média de 3 a 5 dias úteis após o envio das informações básicas do seu negócio (fotos, textos e logotipo). Criamos uma versão de prévia para você aprovar antes da publicação oficial."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Por que a assinatura mensal vale mais a pena que comprar um site tradicional?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ao comprar um site tradicional, você gasta de R$ 3.000 a R$ 8.000 à vista e ainda precisa pagar hospedagem, renovação de certificados e contratar profissionais avulsos toda vez que precisar mudar uma linha de texto. Na Boomo, você tem custo inicial baixíssimo e um engenheiro cuidando da segurança, hospedagem e manutenção contínua por um valor mensal acessível."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     
@@ -542,7 +635,7 @@
                 <details class="faq-item" open>
                     <summary>
                         <span>O domínio próprio (.com.br) fica registrado no meu nome?</span>
-                        <i class="fa-solid fa-chevron-down"></i>
+                        <span class="faq-icon-wrap"><i class="fa-solid fa-chevron-down"></i></span>
                     </summary>
                     <div class="faq-content">
                         <strong>Sim, 100% no seu CPF ou CNPJ.</strong> Você é o proprietário legal e definitivo do seu endereço na internet. Nós cuidamos apenas da configuração técnica de DNS e apontamento de servidores.
@@ -552,7 +645,7 @@
                 <details class="faq-item">
                     <summary>
                         <span>Já possuo um site ou domínio antigo. Vocês fazem a migração?</span>
-                        <i class="fa-solid fa-chevron-down"></i>
+                        <span class="faq-icon-wrap"><i class="fa-solid fa-chevron-down"></i></span>
                     </summary>
                     <div class="faq-content">
                         Sim! Cuidamos de todo o processo de transição sem que seu site fique fora do ar. Mantemos seu domínio atual e migramos tudo para nossa infraestrutura de alta velocidade sem cobrança extra de migração.
@@ -562,7 +655,7 @@
                 <details class="faq-item">
                     <summary>
                         <span>Como solicito alterações de textos, fotos ou telefones?</span>
-                        <i class="fa-solid fa-chevron-down"></i>
+                        <span class="faq-icon-wrap"><i class="fa-solid fa-chevron-down"></i></span>
                     </summary>
                     <div class="faq-content">
                         Basta nos enviar uma mensagem de texto ou áudio no WhatsApp. Você não precisa mexer em painéis complicados ou códigos. Nossa equipe técnica realiza a alteração em até 24 horas úteis.
@@ -572,7 +665,7 @@
                 <details class="faq-item">
                     <summary>
                         <span>Existe algum contrato de fidelidade ou multa se eu quiser cancelar?</span>
-                        <i class="fa-solid fa-chevron-down"></i>
+                        <span class="faq-icon-wrap"><i class="fa-solid fa-chevron-down"></i></span>
                     </summary>
                     <div class="faq-content">
                         <strong>Zero fidelidade e zero multas.</strong> Você pode cancelar sua assinatura a qualquer momento. Seu site permanecerá ativo até o término do ciclo mensal vigente.
@@ -582,7 +675,7 @@
                 <details class="faq-item">
                     <summary>
                         <span>Em quanto tempo meu site estará 100% pronto e no ar?</span>
-                        <i class="fa-solid fa-chevron-down"></i>
+                        <span class="faq-icon-wrap"><i class="fa-solid fa-chevron-down"></i></span>
                     </summary>
                     <div class="faq-content">
                         Em média de <strong>3 a 5 dias úteis</strong> após o envio das informações básicas do seu negócio (fotos, textos e logotipo). Criamos uma versão de prévia para você aprovar antes da publicação oficial.
@@ -592,7 +685,7 @@
                 <details class="faq-item">
                     <summary>
                         <span>Por que a assinatura mensal vale mais a pena que comprar um site tradicional?</span>
-                        <i class="fa-solid fa-chevron-down"></i>
+                        <span class="faq-icon-wrap"><i class="fa-solid fa-chevron-down"></i></span>
                     </summary>
                     <div class="faq-content">
                         Ao comprar um site tradicional, você gasta de R$ 3.000 a R$ 8.000 à vista e ainda precisa pagar hospedagem, renovação de certificados e contratar profissionais avulsos toda vez que precisar mudar uma linha de texto. Na Boomo, você tem custo inicial baixíssimo e um engenheiro cuidando da segurança, hospedagem e manutenção contínua por um valor mensal acessível.
@@ -684,9 +777,18 @@
 
         mobileMenuBtn.addEventListener('click', toggleMobileMenu);
 
-        // Close menu when clicking on any navigation link
-        navLinks.forEach(link => {
-            link.addEventListener('click', closeMobileMenu);
+        // 3. Smooth FAQ Accordion (Single-open interaction)
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            item.addEventListener('toggle', () => {
+                if (item.open) {
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.open) {
+                            otherItem.removeAttribute('open');
+                        }
+                    });
+                }
+            });
         });
     </script>
 </body>
