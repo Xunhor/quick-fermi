@@ -267,84 +267,42 @@ body.dark-theme .theme-pill:hover .pill-track { border-color: rgba(255, 255, 255
   box-shadow: var(--shadow-lg);
 }
 
-/* macOS Safari Window Bar */
+/* Template Preview */
 .template-preview {
   position: relative;
   width: 100%;
-  background: var(--bg-secondary);
-  border-bottom: 1px solid var(--border-color);
-  display: flex;
-  flex-direction: column;
-}
-.mac-window-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 16px;
-  background: var(--bg-secondary);
-  border-bottom: 1px solid var(--border-color);
-  gap: 12px;
-}
-.mac-dots {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.mac-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  display: inline-block;
-}
-.dot-close { background: #FF5F56; border: 1px solid #E0443E; }
-.dot-min   { background: #FFBD2E; border: 1px solid #DEA123; }
-.dot-max   { background: #27C93F; border: 1px solid #1AAB29; }
-
-.mac-address-bar {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--bg-surface);
-  padding: 4px 14px;
-  border-radius: 6px;
-  border: 1px solid var(--border-color);
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--text-muted);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
-}
-.mac-address-bar i {
-  font-size: 0.65rem;
-  color: #10B981;
-}
-
-.template-badge {
-  background: rgba(0, 0, 0, 0.05);
-  backdrop-filter: blur(8px);
-  border: 1px solid var(--border-color);
-  padding: 3px 8px;
-  border-radius: 6px;
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  color: var(--text-main);
-  font-weight: 600;
-}
-
-.preview-img-wrap {
-  width: 100%;
   aspect-ratio: 16/10;
   overflow: hidden;
-  background: #000;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
 }
-.preview-img-wrap img {
+.template-preview img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: top;
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.template-card:hover .preview-img-wrap img {
-  transform: scale(1.04);
+.template-card:hover .template-preview img {
+  transform: scale(1.05);
+}
+
+.template-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(18, 18, 20, 0.75);
+  color: #FFFFFF;
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .template-info {
