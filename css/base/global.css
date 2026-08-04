@@ -58,7 +58,7 @@ body {
 }
 
 /* Smooth Apple Theme Shift on Major Structural Containers */
-.navbar, .hero, .trust-bar, .template-card, .price-card, .guarantee-card, .faq-item, footer, .comparison-table-wrap, .step-item {
+.navbar, .hero, .trust-bar, .showroom-viewport, .price-card, .guarantee-card, .timeline-step-card, .faq-item, footer, .comparison-table-wrap {
   transition: background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease, color 0.4s ease;
 }
 
