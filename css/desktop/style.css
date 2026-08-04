@@ -186,6 +186,15 @@ body.dark-theme .theme-pill:hover .pill-track { border-color: rgba(255, 255, 255
   transform: scale(1.02);
   box-shadow: var(--shadow-md);
 }
+
+/* WhatsApp CTA — borda verde sutil que ancora o botão no dark mode */
+.btn-whatsapp {
+  border-color: rgba(37, 211, 102, 0.45);
+}
+.btn-whatsapp:hover {
+  border-color: #25D366;
+  box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.12), var(--shadow-md);
+}
 .btn-large { padding: 14px 30px; font-size: 1rem; font-weight: 600; }
 .btn-full { width: 100%; }
 
@@ -1610,6 +1619,14 @@ body.dark-theme .btn-secondary {
 body.dark-theme .btn-secondary:hover {
   border-color: #FFFFFF;
   background: rgba(255, 255, 255, 0.1);
+}
+body.dark-theme .btn-whatsapp {
+  border-color: rgba(37, 211, 102, 0.6);
+}
+body.dark-theme .btn-whatsapp:hover {
+  border-color: #25D366;
+  background: rgba(37, 211, 102, 0.08);
+  box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.15), var(--shadow-md);
 }
 body.dark-theme .mac-window-bar {
   background: #1C1C1E;
