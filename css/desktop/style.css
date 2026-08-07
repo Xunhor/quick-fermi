@@ -1252,6 +1252,7 @@ body.dark-theme .guarantee-card:hover {
   flex-direction: column;
   gap: 14px;
   max-width: 850px;
+  margin: 0 auto;
 }
 .faq-item {
   border: 1px solid var(--border-color);
