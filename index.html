@@ -184,115 +184,159 @@
                     <a href="#modelos" class="btn btn-primary btn-large">Ver Modelos Prontos <i class="fa-solid fa-arrow-right"></i></a>
                     <a href="https://wa.me/559192432044?text=Ol%C3%A1%20Rui%2C%20gostaria%20de%20conversar%20sobre%20o%20site%20da%20minha%20empresa." target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-large btn-whatsapp">Falar Direto no WhatsApp</a>
                 </div>
-                
-                <!-- Sleek Integrated Trust Bar Inline -->
-                <div class="hero-trust-inline reveal delay-3">
-                    <div class="trust-inline-item">
-                        <i class="fa-solid fa-clock"></i>
-                        <span>No Ar em <strong>3 Dias</strong></span>
-                    </div>
-                    <span class="trust-sep">•</span>
-                    <div class="trust-inline-item">
-                        <i class="fa-solid fa-bolt"></i>
-                        <span><strong>0.4s</strong> PageSpeed</span>
-                    </div>
-                    <span class="trust-sep">•</span>
-                    <div class="trust-inline-item">
-                        <i class="fa-solid fa-shield-halved"></i>
-                        <span><strong>99.9%</strong> Uptime Cloud</span>
-                    </div>
-                    <span class="trust-sep">•</span>
-                    <div class="trust-inline-item">
-                        <i class="fa-solid fa-code"></i>
-                        <span><strong>Código Próprio</strong> (Sem WordPress)</span>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- 3. SHOWROOM INTERATIVO DE MODELOS (A VITRINE DEFINITIVA) -->
-    <section id="modelos" class="section-padding showroom-section">
+    <!-- 3. SHOWROOM CARROSSEL DE MODELOS -->
+    <section id="modelos" class="showroom-carousel-section">
         <div class="container">
             <div class="section-header text-center reveal">
-                <h2>Modelos prontos para o seu segmento.</h2>
-                <p>Navegue pelas demonstrações reais. Cada modelo já vem estruturado, otimizado para celulares e pronto para receber clientes no WhatsApp.</p>
+                <h2>Veja como o seu novo site vai ficar.</h2>
+                <p>Navegue pelos modelos reais desenvolvidos para empresas e profissionais. Totalmente customizáveis para a sua marca.</p>
             </div>
 
-            <!-- Segmented Control Bar -->
-            <div class="showroom-tabs-wrap reveal delay-1">
-                <div class="segmented-pills-bar" role="tablist">
-                    <button class="segmented-pill active" data-tab="saude">
+            <!-- Segmented Category Switcher (Synced with Carousel) -->
+            <div class="carousel-categories-wrap reveal delay-1">
+                <div class="carousel-pills" role="tablist">
+                    <button class="carousel-pill active" data-index="0">
                         <i class="fa-solid fa-heart-pulse"></i> Clínicas & Saúde
                     </button>
-                    <button class="segmented-pill" data-tab="odonto">
-                        <i class="fa-solid fa-tooth"></i> Odonto & Estética
+                    <button class="carousel-pill" data-index="1">
+                        <i class="fa-solid fa-tooth"></i> Odontologia & Estética
                     </button>
-                    <button class="segmented-pill" data-tab="juridico">
+                    <button class="carousel-pill" data-index="2">
                         <i class="fa-solid fa-scale-balanced"></i> Advocacia & Finanças
                     </button>
-                    <button class="segmented-pill" data-tab="gastronomia">
-                        <i class="fa-solid fa-utensils"></i> Restaurantes & Gastronomia
+                    <button class="carousel-pill" data-index="3">
+                        <i class="fa-solid fa-utensils"></i> Gastronomia & Cafés
                     </button>
                 </div>
             </div>
+        </div>
 
-            <!-- Atmospheric Illuminated Window Frame -->
-            <div class="showroom-display-wrapper reveal delay-2">
-                <div class="showcase-glow-backdrop"></div>
-                
-                <div class="showcase-window">
-                    <!-- Browser Window Header -->
-                    <div class="showcase-window-header">
-                        <div class="window-controls">
-                            <span class="ctrl ctrl-close"></span>
-                            <span class="ctrl ctrl-min"></span>
-                            <span class="ctrl ctrl-expand"></span>
-                        </div>
-                        <div class="window-address-bar">
-                            <i class="fa-solid fa-lock"></i>
-                            <span id="showroom-domain">clinicapediatrica.com.br</span>
-                        </div>
-                        <div class="window-meta">
-                            <span class="badge-status-live">● No Ar</span>
-                            <span class="badge-speed-metric" id="showroom-speed"><i class="fa-solid fa-bolt"></i> 0.38s</span>
-                        </div>
-                    </div>
+        <!-- Carousel Viewport & Track -->
+        <div class="carousel-viewport-container reveal delay-2">
+            <button class="carousel-nav-btn prev-btn" id="carousel-prev" aria-label="Modelo anterior">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="carousel-nav-btn next-btn" id="carousel-next" aria-label="Próximo modelo">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
 
-                    <!-- Screen Viewport: Full Responsive Interactive Showcase -->
-                    <div class="showroom-viewport" id="showroom-viewport">
-                        <div class="showroom-split">
-                            <div class="showroom-info-col">
-                                <div class="showroom-badge" id="showroom-badge">
-                                    <i class="fa-solid fa-certificate"></i> Demonstração Médica
+            <div class="carousel-track-wrapper" id="carousel-track-wrap">
+                <div class="carousel-track" id="carousel-track">
+                    
+                    <!-- Slide 1: Saúde & Pediatria -->
+                    <div class="carousel-slide active" data-index="0" data-link="templates/pediatria/index.html">
+                        <div class="mockup-window-card">
+                            <div class="mockup-window-topbar">
+                                <div class="mockup-dots">
+                                    <span></span><span></span><span></span>
                                 </div>
-                                <h3 class="showroom-title" id="showroom-title">Clínicas & Consultórios Médicos</h3>
-                                <p class="showroom-desc" id="showroom-desc">Apresentação do corpo clínico, especialidades médicas atendidas, convênios e botão direto para agendamento no WhatsApp.</p>
-                                
-                                <div class="showroom-features" id="showroom-features">
-                                    <span class="feat-pill"><i class="fa-solid fa-bolt"></i> 0.4s Abertura</span>
-                                    <span class="feat-pill"><i class="fa-solid fa-mobile-screen"></i> 100% Mobile</span>
-                                    <span class="feat-pill"><i class="fa-brands fa-whatsapp"></i> WhatsApp Direto</span>
+                                <div class="mockup-address">
+                                    <i class="fa-solid fa-lock"></i>
+                                    <span>clinicapediatrica.com.br</span>
                                 </div>
-
-                                <div class="showroom-actions">
-                                    <a href="templates/pediatria/index.html" id="showroom-link" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
-                                        Abrir Demonstração Ao Vivo <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                <div class="mockup-topbar-right">
+                                    <a href="templates/pediatria/index.html" target="_blank" rel="noopener noreferrer" class="mockup-topbar-cta">
+                                        <span>Abrir Site</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
                                     </a>
                                 </div>
                             </div>
-
-                            <div class="showroom-media-col">
-                                <div class="showroom-media-frame">
-                                    <img src="templates/pediatria/assets/images/hero-pediatria.jpg" alt="Preview do Modelo" id="showroom-img">
-                                    <div class="showroom-floating-tag" id="showroom-tag">
-                                        <i class="fa-solid fa-circle-check"></i> Pronto para Uso
-                                    </div>
+                            <a href="templates/pediatria/index.html" target="_blank" rel="noopener noreferrer" class="mockup-content" title="Clique para abrir demonstração">
+                                <div class="mockup-iframe-scaler">
+                                    <iframe src="templates/pediatria/index.html" class="mockup-iframe" tabindex="-1" loading="lazy" title="Preview Clínica & Pediatria"></iframe>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
+
+                    <!-- Slide 2: Odontologia -->
+                    <div class="carousel-slide" data-index="1" data-link="templates/odontologia/index.html">
+                        <div class="mockup-window-card">
+                            <div class="mockup-window-topbar">
+                                <div class="mockup-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <div class="mockup-address">
+                                    <i class="fa-solid fa-lock"></i>
+                                    <span>auradentalsaude.com.br</span>
+                                </div>
+                                <div class="mockup-topbar-right">
+                                    <a href="templates/odontologia/index.html" target="_blank" rel="noopener noreferrer" class="mockup-topbar-cta">
+                                        <span>Abrir Site</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="templates/odontologia/index.html" target="_blank" rel="noopener noreferrer" class="mockup-content" title="Clique para abrir demonstração">
+                                <div class="mockup-iframe-scaler">
+                                    <iframe src="templates/odontologia/index.html" class="mockup-iframe" tabindex="-1" loading="lazy" title="Preview Odontologia & Estética"></iframe>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Advocacia -->
+                    <div class="carousel-slide" data-index="2" data-link="templates/advocacia/index.html">
+                        <div class="mockup-window-card">
+                            <div class="mockup-window-topbar">
+                                <div class="mockup-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <div class="mockup-address">
+                                    <i class="fa-solid fa-lock"></i>
+                                    <span>marquesadvocacia.com.br</span>
+                                </div>
+                                <div class="mockup-topbar-right">
+                                    <a href="templates/advocacia/index.html" target="_blank" rel="noopener noreferrer" class="mockup-topbar-cta">
+                                        <span>Abrir Site</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="templates/advocacia/index.html" target="_blank" rel="noopener noreferrer" class="mockup-content" title="Clique para abrir demonstração">
+                                <div class="mockup-iframe-scaler">
+                                    <iframe src="templates/advocacia/index.html" class="mockup-iframe" tabindex="-1" loading="lazy" title="Preview Advocacia & Finanças"></iframe>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4: Gastronomia -->
+                    <div class="carousel-slide" data-index="3" data-link="templates/gastronomia/index.html">
+                        <div class="mockup-window-card">
+                            <div class="mockup-window-topbar">
+                                <div class="mockup-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <div class="mockup-address">
+                                    <i class="fa-solid fa-lock"></i>
+                                    <span>bistroestrada.com.br</span>
+                                </div>
+                                <div class="mockup-topbar-right">
+                                    <a href="templates/gastronomia/index.html" target="_blank" rel="noopener noreferrer" class="mockup-topbar-cta">
+                                        <span>Abrir Site</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="templates/gastronomia/index.html" target="_blank" rel="noopener noreferrer" class="mockup-content" title="Clique para abrir demonstração">
+                                <div class="mockup-iframe-scaler">
+                                    <iframe src="templates/gastronomia/index.html" class="mockup-iframe" tabindex="-1" loading="lazy" title="Preview Restaurantes & Gastronomia"></iframe>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
+            </div>
+
+            <!-- Dots Pagination Indicator -->
+            <div class="carousel-pagination" id="carousel-dots">
+                <button class="dot active" data-index="0" aria-label="Slide 1"></button>
+                <button class="dot" data-index="1" aria-label="Slide 2"></button>
+                <button class="dot" data-index="2" aria-label="Slide 3"></button>
+                <button class="dot" data-index="3" aria-label="Slide 4"></button>
             </div>
         </div>
     </section>
@@ -308,29 +352,29 @@
             <div class="timeline-connected-grid reveal delay-1">
                 <div class="timeline-step-card has-spotlight">
                     <div class="step-header-row">
-                        <span class="timeline-day-pill">Dia 01</span>
-                        <span class="timeline-step-icon"><i class="fa-solid fa-layer-group"></i></span>
+                        <span class="step-number">01</span>
+                        <span class="step-timing">15 min</span>
                     </div>
-                    <h3>Escolha & Alinhamento</h3>
+                    <h3>Escolha & Envio</h3>
                     <p>Você escolhe o modelo e nos envia pelo WhatsApp suas informações (logo, fotos, serviços e horários). Leva menos de 15 minutos.</p>
                 </div>
 
                 <div class="timeline-step-card has-spotlight">
                     <div class="step-header-row">
-                        <span class="timeline-day-pill">Dia 02</span>
-                        <span class="timeline-step-icon"><i class="fa-solid fa-code"></i></span>
+                        <span class="step-number">02</span>
+                        <span class="step-timing">48 horas</span>
                     </div>
-                    <h3>Engenharia & Otimização</h3>
-                    <p>Nossa equipe estrutura seu site sob medida, otimiza imagens em alta resolução, configura velocidade 0.4s e integra o WhatsApp.</p>
+                    <h3>Personalização & Ajustes</h3>
+                    <p>Nossa equipe estrutura o site sob medida para sua marca, otimiza o carregamento instantâneo e configura o botão de WhatsApp.</p>
                 </div>
 
                 <div class="timeline-step-card has-spotlight">
                     <div class="step-header-row">
-                        <span class="timeline-day-pill">Dia 03</span>
-                        <span class="timeline-step-icon"><i class="fa-solid fa-globe"></i></span>
+                        <span class="step-number">03</span>
+                        <span class="step-timing">Dia 03</span>
                     </div>
                     <h3>Aprovação & Publicação</h3>
-                    <p>Você avalia a página pronta. Após sua aprovação, conectamos seu domínio próprio (.com.br) com SSL e indexamos no Google.</p>
+                    <p>Você avalia a página pronta. Após sua aprovação, conectamos seu domínio próprio (.com.br) com SSL e o site está no ar.</p>
                 </div>
             </div>
         </div>
@@ -357,7 +401,7 @@
                         <li><i class="fa-solid fa-check"></i> Hospedagem e SSL inclusos</li>
                         <li><i class="fa-solid fa-check"></i> 1 alteração de conteúdo por mês</li>
                     </ul>
-                    <a href="https://wa.me/559192432044?text=Ol%C3%A1%20Rui%2C%20quero%20contratar%20o%20Plano%20Essencial%20(R%24%20149%2Fm%C3%AAs)." target="_blank" class="btn btn-secondary btn-full">Começar no Essencial</a>
+                    <a href="https://app.abacatepay.com/pay/bill_P30yCnMLBgmcdqacsCQmwkfN" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-full">Assinar Plano Essencial <i class="fa-solid fa-arrow-right" style="margin-left: 6px; font-size: 0.85em;"></i></a>
                 </div>
 
                 <!-- Plano Pro (Destaque) -->
@@ -374,7 +418,7 @@
                         <li><i class="fa-solid fa-check"></i> Suporte prioritário via WhatsApp</li>
                         <li><i class="fa-solid fa-check"></i> Alterações ilimitadas de texto e fotos</li>
                     </ul>
-                    <a href="https://wa.me/559192432044?text=Ol%C3%A1%20Rui%2C%20quero%20contratar%20o%20Plano%20Pro%20(R%24%20249%2Fm%C3%AAs)." target="_blank" class="btn btn-primary btn-full">Contratar Plano Pro</a>
+                    <a href="https://app.abacatepay.com/pay/bill_m2SJrCYXcFP2GNr2an1YRCYJ" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-full">Assinar Plano Pro <i class="fa-solid fa-arrow-right" style="margin-left: 6px; font-size: 0.85em;"></i></a>
                 </div>
 
                 <!-- Plano Personalizado -->
@@ -980,111 +1024,184 @@
             });
         });
 
-        // 7. Interactive Showroom Tab Switcher Engine
-        const nichesData = {
-            saude: {
-                domain: 'clinicapediatrica.com.br',
-                speed: '0.38s',
-                badge: '<i class="fa-solid fa-certificate"></i> Demonstração Médica',
-                title: 'Clínicas & Consultórios Médicos',
-                desc: 'Apresentação do corpo clínico, especialidades médicas atendidas, convênios e botão direto para agendamento no WhatsApp.',
-                features: `
-                    <span class="feat-pill"><i class="fa-solid fa-bolt"></i> 0.4s Abertura</span>
-                    <span class="feat-pill"><i class="fa-solid fa-mobile-screen"></i> 100% Mobile</span>
-                    <span class="feat-pill"><i class="fa-brands fa-whatsapp"></i> WhatsApp Direto</span>
-                `,
-                img: 'templates/pediatria/assets/images/hero-pediatria.jpg',
-                tag: '<i class="fa-solid fa-circle-check"></i> Pronto para Uso',
-                link: 'templates/pediatria/index.html'
-            },
-            odonto: {
-                domain: 'auradentalsaude.com.br',
-                speed: '0.41s',
-                badge: '<i class="fa-solid fa-tooth"></i> Demonstração Odontológica',
-                title: 'Odontologia & Estética Avançada',
-                desc: 'Apresentação dos tratamentos, equipe de dentistas, galeria de casos clínicos, endereço e agendamento rápido de avaliação.',
-                features: `
-                    <span class="feat-pill"><i class="fa-solid fa-images"></i> Galeria de Casos</span>
-                    <span class="feat-pill"><i class="fa-solid fa-calendar-check"></i> Agendamento Ágil</span>
-                    <span class="feat-pill"><i class="fa-brands fa-google"></i> SEO Google</span>
-                `,
-                img: 'templates/odontologia/assets/images/hero-odontologia.jpg',
-                tag: '<i class="fa-solid fa-circle-check"></i> Pronto para Uso',
-                link: 'templates/odontologia/index.html'
-            },
-            juridico: {
-                domain: 'marquesadvocacia.com.br',
-                speed: '0.35s',
-                badge: '<i class="fa-solid fa-scale-balanced"></i> Demonstração Jurídica',
-                title: 'Advocacia, Finanças & Consultorias',
-                desc: 'Apresentação clara das áreas de atuação do escritório, perfil dos sócios e canal de atendimento seguro pelo WhatsApp.',
-                features: `
-                    <span class="feat-pill"><i class="fa-solid fa-shield-halved"></i> Segurança SSL</span>
-                    <span class="feat-pill"><i class="fa-solid fa-scale-balanced"></i> Áreas de Atuação</span>
-                    <span class="feat-pill"><i class="fa-solid fa-lock"></i> Contato Seguro</span>
-                `,
-                img: 'templates/advocacia/assets/images/hero-advocacia.jpg',
-                tag: '<i class="fa-solid fa-circle-check"></i> Pronto para Uso',
-                link: 'templates/advocacia/index.html'
-            },
-            gastronomia: {
-                domain: 'bistroestrada.com.br',
-                speed: '0.39s',
-                badge: '<i class="fa-solid fa-utensils"></i> Demonstração Gastronomia',
-                title: 'Restaurantes, Cafés & Gastronomia',
-                desc: 'Cardápio digital de fácil leitura no celular, integração de rota no Google Maps e reservas de mesas direto pelo WhatsApp.',
-                features: `
-                    <span class="feat-pill"><i class="fa-solid fa-utensils"></i> Cardápio Digital</span>
-                    <span class="feat-pill"><i class="fa-solid fa-map-location-dot"></i> Google Maps</span>
-                    <span class="feat-pill"><i class="fa-solid fa-clock"></i> Horários & Rotas</span>
-                `,
-                img: 'templates/gastronomia/assets/images/hero-gastronomia.jpg',
-                tag: '<i class="fa-solid fa-circle-check"></i> Pronto para Uso',
-                link: 'templates/gastronomia/index.html'
+        // 7. High-Performance Website Mockup Carousel Engine (Single Template View + Autoplay + Drag)
+        const carouselTrack = document.getElementById('carousel-track');
+        const carouselSlides = document.querySelectorAll('.carousel-slide');
+        const carouselPills = document.querySelectorAll('.carousel-pill');
+        const carouselDots = document.querySelectorAll('.carousel-pagination .dot');
+        const prevBtn = document.getElementById('carousel-prev');
+        const nextBtn = document.getElementById('carousel-next');
+        const trackWrapper = document.getElementById('carousel-track-wrap');
+        const viewportContainer = document.querySelector('.carousel-viewport-container');
+
+        let currentSlide = 0;
+        const totalSlides = carouselSlides.length;
+        let autoplayTimer = null;
+        const AUTOPLAY_DELAY = 5000; // 5 seconds per template
+
+        function updateIframeScales() {
+            const scalers = document.querySelectorAll('.mockup-iframe-scaler');
+            scalers.forEach(scaler => {
+                const parent = scaler.parentElement;
+                if (parent && parent.offsetWidth > 0) {
+                    const scale = parent.offsetWidth / 1366;
+                    scaler.style.transform = `scale(${scale})`;
+                }
+            });
+        }
+
+        function updateCarousel(index) {
+            if (index < 0) index = totalSlides - 1;
+            if (index >= totalSlides) index = 0;
+            currentSlide = index;
+
+            carouselSlides.forEach((slide, idx) => {
+                slide.classList.toggle('active', idx === currentSlide);
+            });
+
+            carouselPills.forEach((pill, idx) => {
+                pill.classList.toggle('active', idx === currentSlide);
+            });
+
+            carouselDots.forEach((dot, idx) => {
+                dot.classList.toggle('active', idx === currentSlide);
+            });
+
+            // Exact 1-slide translation
+            if (carouselTrack) {
+                carouselTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
             }
-        };
+            updateIframeScales();
+        }
 
-        const segmentedPills = document.querySelectorAll('.segmented-pill');
-        const showroomViewport = document.getElementById('showroom-viewport');
-        const showroomDomain = document.getElementById('showroom-domain');
-        const showroomSpeed = document.getElementById('showroom-speed');
-        const showroomBadge = document.getElementById('showroom-badge');
-        const showroomTitle = document.getElementById('showroom-title');
-        const showroomDesc = document.getElementById('showroom-desc');
-        const showroomFeatures = document.getElementById('showroom-features');
-        const showroomLink = document.getElementById('showroom-link');
-        const showroomImg = document.getElementById('showroom-img');
-        const showroomTag = document.getElementById('showroom-tag');
+        function startAutoplay() {
+            stopAutoplay();
+            autoplayTimer = setInterval(() => {
+                updateCarousel(currentSlide + 1);
+            }, AUTOPLAY_DELAY);
+        }
 
-        if (segmentedPills.length && showroomViewport) {
-            segmentedPills.forEach(pill => {
+        function stopAutoplay() {
+            if (autoplayTimer) {
+                clearInterval(autoplayTimer);
+                autoplayTimer = null;
+            }
+        }
+
+        function resetAutoplay() {
+            stopAutoplay();
+            startAutoplay();
+        }
+
+        if (carouselSlides.length) {
+            window.addEventListener('load', () => {
+                updateIframeScales();
+                updateCarousel(0);
+                startAutoplay();
+            });
+            window.addEventListener('resize', () => {
+                updateIframeScales();
+                updateCarousel(currentSlide);
+            });
+            setTimeout(() => {
+                updateIframeScales();
+                updateCarousel(0);
+                startAutoplay();
+            }, 100);
+
+            // Pause autoplay on hover/focus
+            if (viewportContainer) {
+                viewportContainer.addEventListener('mouseenter', stopAutoplay);
+                viewportContainer.addEventListener('mouseleave', startAutoplay);
+            }
+
+            // Category Pill clicks
+            carouselPills.forEach((pill) => {
                 pill.addEventListener('click', () => {
-                    const tabKey = pill.getAttribute('data-tab');
-                    const data = nichesData[tabKey];
-                    if (!data) return;
-
-                    segmentedPills.forEach(p => p.classList.remove('active'));
-                    pill.classList.add('active');
-
-                    showroomViewport.style.opacity = '0.35';
-                    showroomViewport.style.transform = 'scale(0.99)';
-
-                    setTimeout(() => {
-                        if (showroomDomain) showroomDomain.textContent = data.domain;
-                        if (showroomSpeed) showroomSpeed.innerHTML = `<i class="fa-solid fa-bolt"></i> ${data.speed}`;
-                        if (showroomBadge) showroomBadge.innerHTML = data.badge;
-                        if (showroomTitle) showroomTitle.textContent = data.title;
-                        if (showroomDesc) showroomDesc.textContent = data.desc;
-                        if (showroomFeatures) showroomFeatures.innerHTML = data.features;
-                        if (showroomImg) showroomImg.src = data.img;
-                        if (showroomTag) showroomTag.innerHTML = data.tag;
-                        if (showroomLink) showroomLink.href = data.link;
-
-                        showroomViewport.style.opacity = '1';
-                        showroomViewport.style.transform = 'scale(1)';
-                    }, 140);
+                    const idx = parseInt(pill.getAttribute('data-index'), 10);
+                    updateCarousel(idx);
+                    resetAutoplay();
                 });
             });
+
+            // Pagination Dot clicks
+            carouselDots.forEach((dot) => {
+                dot.addEventListener('click', () => {
+                    const idx = parseInt(dot.getAttribute('data-index'), 10);
+                    updateCarousel(idx);
+                    resetAutoplay();
+                });
+            });
+
+            // Arrow Controls
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => {
+                    updateCarousel(currentSlide - 1);
+                    resetAutoplay();
+                });
+            }
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    updateCarousel(currentSlide + 1);
+                    resetAutoplay();
+                });
+            }
+
+            // Touch & Mouse Dragging / Swipe
+            let startX = 0;
+            let isDragging = false;
+
+            if (trackWrapper) {
+                // Touch events
+                trackWrapper.addEventListener('touchstart', (e) => {
+                    stopAutoplay();
+                    startX = e.touches[0].clientX;
+                    isDragging = true;
+                }, { passive: true });
+
+                trackWrapper.addEventListener('touchend', (e) => {
+                    if (!isDragging) return;
+                    const endX = e.changedTouches[0].clientX;
+                    const diff = startX - endX;
+                    if (Math.abs(diff) > 40) {
+                        if (diff > 0) {
+                            updateCarousel(currentSlide + 1);
+                        } else {
+                            updateCarousel(currentSlide - 1);
+                        }
+                    }
+                    isDragging = false;
+                    resetAutoplay();
+                }, { passive: true });
+
+                // Desktop Mouse Drag
+                let mouseStartX = 0;
+                let isMouseDown = false;
+
+                trackWrapper.addEventListener('mousedown', (e) => {
+                    stopAutoplay();
+                    mouseStartX = e.clientX;
+                    isMouseDown = true;
+                });
+
+                trackWrapper.addEventListener('mouseup', (e) => {
+                    if (!isMouseDown) return;
+                    const diff = mouseStartX - e.clientX;
+                    if (Math.abs(diff) > 50) {
+                        if (diff > 0) {
+                            updateCarousel(currentSlide + 1);
+                        } else {
+                            updateCarousel(currentSlide - 1);
+                        }
+                    }
+                    isMouseDown = false;
+                    resetAutoplay();
+                });
+
+                trackWrapper.addEventListener('mouseleave', () => {
+                    isMouseDown = false;
+                });
+            }
         }
     </script>
 </body>

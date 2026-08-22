@@ -16,7 +16,7 @@
   
   --brand-accent: #0071E3;
   --brand-accent-hover: #0077ED;
-  --brand-teal: #10B981;
+  --brand-teal: var(--text-main);
   
   --border-color: rgba(0, 0, 0, 0.08);
   --border-subtle: rgba(0, 0, 0, 0.04);
