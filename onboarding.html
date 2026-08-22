@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onboarding | Boomo</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base/global.css">
+    <link rel="stylesheet" href="css/desktop/style.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Anti-FOUC Dark Theme Script -->
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark-theme');
+        }
+    </script>
+
+    <style>
+        /* Form Specific Styles */
+        .onboarding-section {
+            padding: 80px 0 120px 0;
+            min-height: 100vh;
+        }
+        .onboarding-container {
+            max-width: 720px;
+            margin: 0 auto;
+            background: var(--bg-surface);
+            padding: 48px;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-lg);
+        }
+        .onboarding-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .onboarding-header i {
+            font-size: 3rem;
+            color: var(--text-main);
+            margin-bottom: 16px;
+        }
+        .onboarding-header h1 {
+            font-size: 2.2rem;
+            letter-spacing: -0.03em;
+            margin-bottom: 12px;
+        }
+        .onboarding-header p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .alert-box {
+            background: rgba(34, 211, 238, 0.05);
+            border: 1px solid rgba(34, 211, 238, 0.2);
+            padding: 16px 20px;
+            border-radius: var(--radius-md);
+            margin-bottom: 32px;
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+        .alert-box i {
+            color: #38BDF8;
+            margin-top: 4px;
+        }
+        .alert-box p {
+            margin: 0;
+            font-size: 0.88rem;
+            color: var(--text-main);
+        }
+        .form-group {
+            margin-bottom: 24px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+        .form-group label span {
+            color: #EF4444;
+        }
+        .form-control {
+            width: 100%;
+            padding: 14px 16px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: #38BDF8;
+            box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+        }
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+        /* Minimalist Navbar override */
+        .navbar-minimal {
+            justify-content: center !important;
+            padding: 24px 0;
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body class="dark-theme"> <!-- Default dark theme applied for premium look -->
+
+    <!-- Minimalist Navbar -->
+    <nav class="navbar navbar-minimal">
+        <div class="container" style="display: flex; justify-content: center;">
+            <a href="index.html" class="logo">Boomo<span>.</span></a>
+        </div>
+    </nav>
+
+    <section class="onboarding-section">
+        <div class="container">
+            <div class="onboarding-container reveal">
+                <div class="onboarding-header">
+                    <i class="fa-regular fa-circle-check"></i>
+                    <h1>Bem-vindo ao Boomo.</h1>
+                    <p>Seu pagamento foi confirmado com sucesso. Agora, precisamos de alguns materiais para que nossa engenharia comece a construir a sua página.</p>
+                </div>
+
+                <div class="alert-box">
+                    <i class="fa-solid fa-stopwatch"></i>
+                    <p><strong>Atenção ao Prazo:</strong> O seu prazo de entrega de <strong>3 dias úteis</strong> começará a ser contado automaticamente assim que você finalizar e enviar este formulário completo.</p>
+                </div>
+
+                <!-- Formspree Integration Placeholder -->
+                <form action="https://formspree.io/f/SEU_ID_AQUI" method="POST" enctype="multipart/form-data">
+                    
+                    <div class="form-group">
+                        <label for="companyName">Nome da Empresa / Profissional <span>*</span></label>
+                        <input type="text" id="companyName" name="companyName" class="form-control" placeholder="Ex: Clínica Odonto Prime ou Dr. João Silva" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="whatsapp">Número do WhatsApp para o site <span>*</span></label>
+                        <input type="tel" id="whatsapp" name="whatsapp" class="form-control" placeholder="(00) 00000-0000" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="instagram">Link do Instagram</label>
+                        <input type="url" id="instagram" name="instagram" class="form-control" placeholder="https://instagram.com/seu.perfil">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="colors">Quais as cores principais da sua marca? <span>*</span></label>
+                        <input type="text" id="colors" name="colors" class="form-control" placeholder="Ex: Azul marinho e Branco" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="services">Descreva seus principais serviços <span>*</span></label>
+                        <textarea id="services" name="services" class="form-control" placeholder="Explique brevemente o que você faz e quais os diferenciais da sua empresa. Usaremos isso para criar os textos da página (Copywriting)." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="logo">Envie sua Logomarca (Opcional)</label>
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: -4px; margin-bottom: 8px;">Envie o link do Google Drive da sua logo, ou faremos o upload direto via WhatsApp após o envio.</p>
+                        <input type="text" id="logo" name="logo_link" class="form-control" placeholder="Link do Google Drive (ou deixe em branco)">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full" style="padding: 16px; font-size: 1.05rem; margin-top: 16px;">
+                        Enviar Material e Iniciar Projeto <i class="fa-solid fa-rocket" style="margin-left: 8px;"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simple Reveal Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const reveals = document.querySelectorAll('.reveal');
+            setTimeout(() => {
+                reveals.forEach(el => el.classList.add('revealed'));
+            }, 100);
+        });
+    </script>
+</body>
+</html>
