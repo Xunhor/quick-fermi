@@ -148,7 +148,7 @@ body {
   font-size: 1.2rem; color: var(--text-muted); line-height: 1.6;
   margin-bottom: 36px; max-width: 540px;
 }
-.hero-ctas { display: flex; gap: 16px; align-items: center; }
+.hero-actions { display: flex; gap: 16px; align-items: center; }
 
 .hero-image-wrapper {
   position: relative;
@@ -428,7 +428,7 @@ footer {
 
   .hero-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
   .hero p { margin: 0 auto 36px auto; }
-  .hero-ctas { justify-content: center; }
+  .hero-actions { justify-content: center; }
   .hero-floating-card { left: 20px; bottom: 20px; }
   .treatments-grid, .diff-grid { grid-template-columns: 1fr; }
   .about-grid, .location-grid { grid-template-columns: 1fr; }
@@ -436,11 +436,11 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .hero { padding: 60px 0; }
-  .hero h1 { font-size: 2.2rem; line-height: 1.2; }
+  .hero { padding: 40px 0 60px 0; }
+  .hero h1 { font-size: 1.85rem; line-height: 1.25; letter-spacing: -0.02em; }
   .treatments-grid, .diff-grid { grid-template-columns: 1fr; }
-  .hero-ctas { flex-direction: column; width: 100%; }
-  .hero-ctas .btn { width: 100%; }
+  .hero-actions { display: flex; flex-direction: column; width: 100%; gap: 12px; }
+  .hero-actions .btn { width: 100%; justify-content: center; padding: 14px 20px; font-size: 0.95rem; }
   .stats-grid { grid-template-columns: 1fr; gap: 16px; }
   .footer-top, .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
   .whatsapp-float { bottom: 20px; right: 20px; width: 48px; height: 48px; font-size: 1.4rem; }
