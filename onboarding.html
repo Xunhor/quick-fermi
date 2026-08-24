@@ -119,57 +119,75 @@
 </head>
 <body class="dark-theme"> <!-- Default dark theme applied for premium look -->
 
+    <!-- Minimal Navbar -->
+    <nav class="navbar navbar-minimal">
+        <div class="container text-center" style="display: flex; justify-content: center;">
+            <a href="index.html" class="logo">Boomo<span>.</span></a>
+        </div>
+    </nav>
 
     <section class="onboarding-section">
         <div class="container">
             <div class="onboarding-container reveal">
                 <div class="onboarding-header">
-                    <i class="fa-regular fa-circle-check"></i>
-                    <h1>Bem-vindo ao Boomo.</h1>
-                    <p>Seu pagamento foi confirmado com sucesso. Agora, precisamos de alguns materiais para que nossa engenharia comece a construir a sua página.</p>
+                    <i class="fa-regular fa-circle-check" style="color: #10B981;"></i>
+                    <h1>Pagamento Confirmado.</h1>
+                    <p>Agora precisamos de algumas informações para que nossa engenharia comece a construir a sua máquina de vendas.</p>
                 </div>
 
                 <div class="alert-box">
                     <i class="fa-solid fa-stopwatch"></i>
-                    <p><strong>Atenção ao Prazo:</strong> O seu prazo de entrega de <strong>3 dias úteis</strong> começará a ser contado automaticamente assim que você finalizar e enviar este formulário completo.</p>
+                    <p><strong>Atenção ao Prazo:</strong> O seu prazo de entrega de <strong>3 dias úteis</strong> começará a ser contado automaticamente assim que você enviar este formulário completo.</p>
                 </div>
 
-                <!-- Formspree Integration Placeholder -->
                 <form action="https://formspree.io/f/mzepwvpa" method="POST" enctype="multipart/form-data">
                     
                     <div class="form-group">
-                        <label for="companyName">Nome da Empresa / Profissional <span>*</span></label>
+                        <label for="template">Qual segmento mais se aproxima do seu negócio? <span>*</span></label>
+                        <select id="template" name="template" class="form-control" required style="appearance: auto;">
+                            <option value="" disabled selected>Selecione um segmento...</option>
+                            <option value="estetica">Estética, Saúde e Beleza</option>
+                            <option value="odontologia">Odontologia & Clínica</option>
+                            <option value="advocacia">Advocacia & Assessoria Jurídica</option>
+                            <option value="contabilidade">Contabilidade, Finanças e B2B</option>
+                            <option value="outro">Outro (Faremos um layout sob medida)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="companyName">Nome da Empresa ou Profissional <span>*</span></label>
                         <input type="text" id="companyName" name="companyName" class="form-control" placeholder="Ex: Clínica Odonto Prime ou Dr. João Silva" required>
                     </div>
 
-                    <div class="form-group">
-                        <label for="whatsapp">Número do WhatsApp para o site <span>*</span></label>
-                        <input type="tel" id="whatsapp" name="whatsapp" class="form-control" placeholder="(00) 00000-0000" required>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+                        <div class="form-group">
+                            <label for="whatsapp">WhatsApp para Vendas <span>*</span></label>
+                            <input type="tel" id="whatsapp" name="whatsapp" class="form-control" placeholder="(00) 00000-0000" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="instagram">Link do Instagram</label>
+                            <input type="url" id="instagram" name="instagram" class="form-control" placeholder="https://instagram.com/seu.perfil">
+                        </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="instagram">Link do Instagram</label>
-                        <input type="url" id="instagram" name="instagram" class="form-control" placeholder="https://instagram.com/seu.perfil">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="colors">Quais as cores principais da sua marca? <span>*</span></label>
-                        <input type="text" id="colors" name="colors" class="form-control" placeholder="Ex: Azul marinho e Branco" required>
+                        <label for="colors">Quais as cores da sua marca? <span>*</span></label>
+                        <input type="text" id="colors" name="colors" class="form-control" placeholder="Ex: Azul marinho e Dourado" required>
                     </div>
 
                     <div class="form-group">
                         <label for="services">Descreva seus principais serviços <span>*</span></label>
-                        <textarea id="services" name="services" class="form-control" placeholder="Explique brevemente o que você faz e quais os diferenciais da sua empresa. Usaremos isso para criar os textos da página (Copywriting)." required></textarea>
+                        <textarea id="services" name="services" class="form-control" placeholder="Explique brevemente o que você faz, quem é seu cliente ideal e quais seus maiores diferenciais. Nossa equipe de Copywriting usará isso para escrever os textos do site." required></textarea>
                     </div>
 
                     <div class="form-group">
-                        <label for="logo">Envie sua Logomarca (Opcional)</label>
-                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: -4px; margin-bottom: 8px;">Envie o link do Google Drive da sua logo, ou faremos o upload direto via WhatsApp após o envio.</p>
-                        <input type="text" id="logo" name="logo_link" class="form-control" placeholder="Link do Google Drive (ou deixe em branco)">
+                        <label for="logo">Link da Logomarca (Google Drive / Dropbox)</label>
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: -4px; margin-bottom: 8px;">Se preferir, deixe em branco e envie a logo direto no nosso WhatsApp depois.</p>
+                        <input type="text" id="logo" name="logo_link" class="form-control" placeholder="Cole o link aqui...">
                     </div>
 
                     <button type="submit" class="btn btn-primary btn-full" style="padding: 16px; font-size: 1.05rem; margin-top: 16px;">
-                        Enviar Material e Iniciar Projeto <i class="fa-solid fa-rocket" style="margin-left: 8px;"></i>
+                        Enviar e Iniciar Projeto <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i>
                     </button>
                 </form>
             </div>
