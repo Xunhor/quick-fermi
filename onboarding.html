@@ -26,12 +26,15 @@
     <style>
         /* Form Specific Styles */
         .onboarding-section {
-            padding: 80px 0 120px 0;
+            padding: 60px 20px 100px 20px;
             min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .onboarding-container {
-            max-width: 720px;
-            margin: 0 auto;
+            width: 100%;
+            max-width: 640px;
             background: var(--bg-surface);
             padding: 48px;
             border-radius: var(--radius-lg);
@@ -44,13 +47,14 @@
         }
         .onboarding-header i {
             font-size: 3rem;
-            color: var(--text-main);
+            color: #10B981;
             margin-bottom: 16px;
         }
         .onboarding-header h1 {
             font-size: 2.2rem;
             letter-spacing: -0.03em;
             margin-bottom: 12px;
+            color: var(--text-main);
         }
         .onboarding-header p {
             color: var(--text-muted);
@@ -75,9 +79,15 @@
             margin: 0;
             font-size: 0.88rem;
             color: var(--text-main);
+            line-height: 1.5;
         }
         .form-group {
             margin-bottom: 24px;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
         }
         .form-group label {
             display: block;
@@ -109,26 +119,29 @@
             resize: vertical;
             min-height: 120px;
         }
-        /* Minimalist Navbar override */
-        .navbar-minimal {
-            justify-content: center !important;
-            padding: 24px 0;
-            border-bottom: none;
+        
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .onboarding-section {
+                padding: 40px 16px;
+            }
+            .onboarding-container {
+                padding: 32px 24px;
+            }
+            .onboarding-header h1 {
+                font-size: 1.8rem;
+            }
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
         }
     </style>
 </head>
-<body class="dark-theme"> <!-- Default dark theme applied for premium look -->
-
-    <!-- Minimal Navbar -->
-    <nav class="navbar navbar-minimal">
-        <div class="container text-center" style="display: flex; justify-content: center;">
-            <a href="index.html" class="logo">Boomo<span>.</span></a>
-        </div>
-    </nav>
+<body class="dark-theme">
 
     <section class="onboarding-section">
-        <div class="container">
-            <div class="onboarding-container reveal">
+        <div class="onboarding-container reveal">
                 <div class="onboarding-header">
                     <i class="fa-regular fa-circle-check" style="color: #10B981;"></i>
                     <h1>Pagamento Confirmado.</h1>
@@ -159,7 +172,7 @@
                         <input type="text" id="companyName" name="companyName" class="form-control" placeholder="Ex: Clínica Odonto Prime ou Dr. João Silva" required>
                     </div>
 
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+                    <div class="form-row">
                         <div class="form-group">
                             <label for="whatsapp">WhatsApp para Vendas <span>*</span></label>
                             <input type="tel" id="whatsapp" name="whatsapp" class="form-control" placeholder="(00) 00000-0000" required>
@@ -191,7 +204,6 @@
                     </button>
                 </form>
             </div>
-        </div>
     </section>
 
     <!-- Simple Reveal Script -->
