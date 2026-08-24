@@ -1531,9 +1531,15 @@ footer {
 }
 
 @media (max-width: 768px) {
+  /* Typographic & Spacing Micro-Polishes */
+  p { line-height: 1.65; }
+  .container { padding: 0 24px; }
+  .price-card { padding: 32px 24px !important; }
+  .comparison-cards-mobile { margin-bottom: 24px; }
+  
   .hero { padding: 60px 0 50px 0; }
   .hero-header-block { margin-bottom: 32px; }
-  .hero-headline { font-size: 2.2rem; letter-spacing: -0.03em; line-height: 1.15; }
+  .hero-headline { font-size: 2.1rem; letter-spacing: -0.03em; line-height: 1.15; }
   .hero-subtext { font-size: 1.02rem; margin-bottom: 24px; }
   .hero-actions { flex-direction: column; width: 100%; }
   .hero-actions .btn { width: 100%; }
