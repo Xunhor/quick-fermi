@@ -1644,11 +1644,29 @@ footer {
     display: none; /* Gestures / swipe are used on mobile */
   }
   .carousel-track-wrapper {
-    border-radius: 12px;
+    border-radius: 24px;
+    max-width: 340px; /* Largura de um celular */
+    margin: 0 auto;
   }
+  
+  /* Faz o iframe renderizar a versão mobile nativa no celular */
+  .mockup-content {
+    aspect-ratio: 9 / 18 !important; /* Proporção de celular vertical */
+  }
+  .mockup-iframe-scaler {
+    width: 100% !important;
+    height: 100% !important;
+    transform: none !important; /* Desativa a escala JS */
+  }
+  .mockup-iframe {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
   .mockup-window-topbar {
     padding: 8px 10px;
     gap: 6px;
+    justify-content: center;
   }
   .mockup-dots {
     display: none;
