@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós | Boomo</title>
+    
+    <script>
+        // Check theme immediately to prevent flash
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark-theme');
+        }
+    </script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base/reset.css">
+    <link rel="stylesheet" href="css/base/global.css">
+    <link rel="stylesheet" href="css/desktop/style.css?v=2">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <!-- 1. NAVBAR -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">Boomo.</a>
+            
+            <div class="nav-menu-wrapper" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html#modelos">Modelos</a></li>
+                    <li><a href="index.html#como-funciona">Como Funciona</a></li>
+                    <li><a href="index.html#planos">Planos</a></li>
+                    <li><a href="index.html#comparativo">Comparativo</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="index.html#faq">FAQ</a></li>
+                </ul>
+                <div class="nav-mobile-cta">
+                    <a href="https://wa.me/559192432044" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-full">Falar no WhatsApp <i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-pill" aria-label="Alternar Tema">
+                    <span class="pill-track">
+                        <span class="pill-thumb">
+                            <span class="pill-icon pill-moon"><i class="fa-solid fa-moon"></i></span>
+                            <span class="pill-icon pill-sun"><i class="fa-solid fa-sun"></i></span>
+                        </span>
+                    </span>
+                </button>
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SOBRE NÓS E FUNDADOR -->
+    <section class="section-padding" style="padding-top: 180px; min-height: 80vh;">
+        <div class="container">
+            
+            <!-- HEADER DA EMPRESA -->
+            <div class="section-header text-center reveal">
+                <span class="section-tag">Nossa Missão</span>
+                <h2>Tecnologia de ponta para negócios locais.</h2>
+                <p>Nascemos para acabar com os sites lentos, caros e inseguros que as agências tradicionais empurram para clínicas e escritórios. Entregamos presença digital corporativa por um preço acessível.</p>
+            </div>
+
+            <!-- SEÇÃO DO FUNDADOR (EXTRAÍDA DO INDEX) -->
+            <div class="founder-split reveal" style="margin-top: 80px;">
+                <div class="founder-text">
+                    <h2>Menos complicação, mais eficiência.</h2>
+                    <p>A Boomo foi fundada por <strong>Rui Santos</strong>, engenheiro de operações em nuvem (Cloud Operations) e especialista em Confiabilidade de Sistemas (SRE).</p>
+                    <p>Com forte atuação na arquitetura e estabilidade de sistemas críticos para o setor financeiro e Open Finance, Rui atua diretamente na infraestrutura de grandes players do mercado, como <strong>Sicredi, Banco Inter e Stone</strong>.</p>
+                    <p>O objetivo da Boomo é direto: pegar o mesmo padrão de segurança, organização e estabilidade exigido por essas grandes operações e aplicar na realidade do site da sua empresa. Aqui, seu projeto é planejado e construído por quem entende as regras do jogo.</p>
+                    
+                    <div class="founder-badges">
+                        <div class="f-badge">
+                            <span class="f-badge-label">Engenharia</span>
+                            <span class="f-badge-val">SRE & Cloud Operations</span>
+                        </div>
+                        <div class="f-badge">
+                            <span class="f-badge-label">Atendimento</span>
+                            <span class="f-badge-val">Direto com o Engenheiro</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="founder-photo-col">
+                    <div class="founder-photo">
+                        <img src="assets/images/rui-santos.jpg" alt="Rui Santos - Fundador da Boomo" loading="lazy">
+                        <div class="founder-badge">
+                            <strong>Rui Santos</strong>
+                            <span>Fundador & Engenheiro Chefe</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 8. FOOTER SIMPLIFICADO -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">Boomo.</a>
+                    <p>Sites profissionais por assinatura para clínicas, escritórios e empresas locais.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="index.html#modelos">Templates</a></li>
+                        <li><a href="index.html#planos">Preços</a></li>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>© 2026 Boomo Software Engineering. Todos os direitos reservados.</div>
+                <div>Desenvolvido com infraestrutura de nuvem de alta disponibilidade.</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT DE TEMA (DARK / LIGHT TOGGLE) & MENU MOBILE -->
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        if (document.documentElement.classList.contains('dark-theme')) {
+            document.body.classList.add('dark-theme');
+        }
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+            localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light');
+        });
+
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const navMenu = document.getElementById('nav-menu');
+
+        function toggleMobileMenu() {
+            mobileMenuBtn.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        }
+        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+
+        const navbar = document.querySelector('.navbar');
+        function handleNavbarScroll() {
+            if (window.scrollY > 20) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        }
+        window.addEventListener('scroll', handleNavbarScroll, { passive: true });
+        handleNavbarScroll();
+
+        // Reveal animation fallback
+        const revealElements = document.querySelectorAll('.reveal');
+        revealElements.forEach(el => el.classList.add('revealed'));
+    </script>
+</body>
+</html>
