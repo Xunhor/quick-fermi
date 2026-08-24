@@ -1661,8 +1661,11 @@ footer {
     max-width: 100%; 
     margin: 0;
     overflow: visible; 
-    box-shadow: none;
-    background: transparent;
+    box-shadow: none !important;
+    background: transparent !important;
+  }
+  body.dark-theme .carousel-track-wrapper {
+    box-shadow: none !important;
   }
   .carousel-track {
     display: flex;
@@ -1693,6 +1696,13 @@ footer {
   }
   
   /* BENTO CARD UI PARA O CELULAR (PADRÃO APPLE/FRAMER) */
+  .mockup-window-card {
+    background: transparent !important;
+  }
+  body.dark-theme .mockup-window-card {
+    background: transparent !important;
+  }
+
   .mobile-template-card {
     display: flex;
     flex-direction: column;
