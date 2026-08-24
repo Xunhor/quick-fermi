@@ -1572,17 +1572,22 @@ footer {
   }
 
   /* Carousel & Modelos Showroom on Mobile */
-  .carousel-pills-nav {
-    width: 100%;
+  .carousel-categories-wrap {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    padding: 4px 16px;
+    padding: 4px 20px;
     margin-bottom: 20px;
     display: flex;
     justify-content: flex-start;
   }
-  .carousel-pills-nav::-webkit-scrollbar {
+  .carousel-categories-wrap::-webkit-scrollbar {
     display: none;
   }
   .carousel-pills {
@@ -1595,7 +1600,7 @@ footer {
     border-radius: 0;
     box-shadow: none;
     width: max-content;
-    margin: 0 auto;
+    margin: 0;
   }
   .carousel-pill {
     flex-shrink: 0;
@@ -1658,7 +1663,8 @@ footer {
   }
   
   .section-padding { padding: 64px 0; }
-  .section-header h2 { font-size: 2rem; }
+  .section-header h2 { font-size: 1.75rem; letter-spacing: -0.02em; line-height: 1.2; }
+  .section-header p { font-size: 0.95rem; }
   
   .all-inclusive-grid { grid-template-columns: 1fr; gap: 14px; }
   .inclusive-item { padding: 18px 16px; }
@@ -1666,8 +1672,25 @@ footer {
   .trust-grid { grid-template-columns: 1fr; gap: 16px; }
   .trust-item { padding: 14px; background: var(--bg-surface); border-radius: var(--radius-sm); border: 1px solid var(--border-color); }
   
+  /* Comparison Table Mobile Fix */
+  .comparison-table-wrap {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    padding: 0 16px;
+  }
+  .comparison-table {
+    min-width: 600px; /* Forces table to not squish, enabling scroll */
+  }
+
   .cta-banner { padding: 70px 0; }
-  .cta-banner h2 { font-size: 2.2rem; }
+  .cta-banner h2 { font-size: 2rem; }
   .cta-banner .btn { width: 100%; }
   
   .floating-whatsapp { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 1.45rem; }
