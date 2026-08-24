@@ -1644,12 +1644,34 @@ footer {
     padding: 0 12px;
   }
   .carousel-nav-btn {
-    display: none; /* Gestures / swipe are used on mobile */
+    display: none !important; 
   }
+  
+  /* ESCONDE AS PILLS DE CATEGORIA NO MOBILE, POIS VAMOS MOSTRAR TODOS OS CARDS JUNTOS */
+  .carousel-categories-wrap {
+    display: none !important;
+  }
+  .carousel-pagination {
+    display: none !important;
+  }
+
+  /* TRANSFORMA O CARROUSSEL EM UMA LISTA VERTICAL DE CARDS NO MOBILE */
   .carousel-track-wrapper {
     border-radius: 16px;
     max-width: 100%; 
     margin: 0;
+    overflow: visible; /* Permits vertical stacking */
+  }
+  .carousel-track {
+    flex-direction: column !important;
+    gap: 20px;
+    transform: none !important; /* Desativa a transição do JS */
+  }
+  .carousel-slide {
+    display: block !important;
+    opacity: 1 !important;
+    flex: none !important;
+    width: 100% !important;
   }
   
   /* ESCONDE O IFRAME NO MOBILE (MUITO PESADO/FEIO) */
@@ -1661,10 +1683,11 @@ footer {
   .mobile-template-cover {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 40px 24px;
+    align-items: flex-start;
+    justify-content: flex-end;
+    text-align: left;
+    height: 280px;
+    padding: 24px;
     border-radius: 16px;
     text-decoration: none;
     color: #FFFFFF;
@@ -1672,11 +1695,11 @@ footer {
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
   .mobile-template-cover .cover-icon {
-    font-size: 2.5rem;
-    margin-bottom: 16px;
+    font-size: 2rem;
+    margin-bottom: auto;
   }
   .mobile-template-cover h3 {
-    font-size: 1.35rem;
+    font-size: 1.45rem;
     font-weight: 700;
     letter-spacing: -0.02em;
     margin-bottom: 8px;
