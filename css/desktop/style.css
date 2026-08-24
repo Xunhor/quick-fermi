@@ -1672,7 +1672,7 @@ footer {
   .trust-grid { grid-template-columns: 1fr; gap: 16px; }
   .trust-item { padding: 14px; background: var(--bg-surface); border-radius: var(--radius-sm); border: 1px solid var(--border-color); }
   
-  /* Comparison Table Mobile Fix */
+  /* Comparison Table Mobile Fix (Sticky Left Column) */
   .comparison-table-wrap {
     width: 100vw;
     position: relative;
@@ -1683,10 +1683,28 @@ footer {
     border-radius: 0;
     border-left: none;
     border-right: none;
-    padding: 0 16px;
+    padding: 0; /* Remove padding to allow smooth edge-to-edge scroll */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .comparison-table {
-    min-width: 600px; /* Forces table to not squish, enabling scroll */
+    min-width: 800px; /* 4 columns need space */
+  }
+  /* Fix sticky column for context while scrolling */
+  .comparison-table th:first-child,
+  .comparison-table td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 10;
+    background: var(--bg-surface);
+    border-right: 1px solid var(--border-color);
+    box-shadow: 4px 0 12px rgba(0,0,0,0.05);
+  }
+  body.dark-theme .comparison-table th:first-child {
+    background: #121215;
+  }
+  body.dark-theme .comparison-table td:first-child {
+    background: #171F28;
   }
 
   .cta-banner { padding: 70px 0; }
