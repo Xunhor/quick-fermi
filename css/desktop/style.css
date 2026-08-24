@@ -1647,9 +1647,9 @@ footer {
     display: none !important; 
   }
   
-  /* MOSTRA AS PILLS NOVAMENTE NO MOBILE PARA NAVEGAÇÃO */
+  /* ESCONDE AS PILLS DE CATEGORIA NO MOBILE - O SCROLL SNAP JÁ RESOLVE ISSO */
   .carousel-categories-wrap {
-    display: flex !important;
+    display: none !important;
   }
   .carousel-pagination {
     display: none !important;
