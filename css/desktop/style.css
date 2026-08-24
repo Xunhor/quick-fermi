@@ -1522,14 +1522,46 @@ footer {
   .showroom-split { grid-template-columns: 1fr; gap: 28px; }
   .showroom-title { font-size: 1.5rem; }
 
-  .timeline-connected-grid { grid-template-columns: 1fr; gap: 20px; }
+  .timeline-connected-grid { grid-template-columns: 1fr; gap: 32px; position: relative; }
+  .timeline-step-card { position: relative; overflow: visible; }
+  .timeline-step-card:not(:last-child)::after {
+    content: '\f063'; /* FontAwesome arrow-down */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    bottom: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--accent-cyan);
+    font-size: 1.2rem;
+    opacity: 0.6;
+  }
   .pricing-grid { grid-template-columns: 1fr; gap: 20px; }
   .all-inclusive-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
   .guarantee-grid { grid-template-columns: 1fr; gap: 20px; }
 
   .trust-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
   .founder-split { grid-template-columns: 1fr; gap: 40px; }
-  .founder-photo { max-width: 380px; margin: 0 auto; width: 100%; }
+  .founder-photo { 
+    max-width: 220px; 
+    margin: 0 auto; 
+    width: 100%; 
+    border-radius: 50%; /* Faz a foto ficar circular */
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+  }
+  .founder-photo img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+  .founder-badge {
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    text-align: center;
+  }
   .comparison-table-wrap { overflow-x: auto; }
 }
 
@@ -1542,7 +1574,7 @@ footer {
   
   .hero { padding: 60px 0 50px 0; }
   .hero-header-block { margin-bottom: 32px; }
-  .hero-headline { font-size: 2.1rem; letter-spacing: -0.03em; line-height: 1.15; }
+  .hero-headline { font-size: 2.2rem; letter-spacing: -0.04em; line-height: 1.1; }
   .hero-subtext { font-size: 1.02rem; margin-bottom: 24px; }
   .hero-actions { flex-direction: column; width: 100%; }
   .hero-actions .btn { width: 100%; }
@@ -1807,8 +1839,15 @@ footer {
   .section-header h2 { font-size: 1.75rem; letter-spacing: -0.02em; line-height: 1.2; }
   .section-header p { font-size: 0.95rem; }
   
-  .all-inclusive-grid { grid-template-columns: 1fr; gap: 14px; }
-  .inclusive-item { padding: 18px 16px; }
+  .all-inclusive-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .inclusive-item { 
+    padding: 16px 14px; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    gap: 10px; 
+  }
+  .inclusive-item p { display: none; } /* Oculta a descrição longa no celular para ficar clean */
 
   .trust-grid { grid-template-columns: 1fr; gap: 16px; }
   .trust-item { padding: 14px; background: var(--bg-surface); border-radius: var(--radius-sm); border: 1px solid var(--border-color); }
