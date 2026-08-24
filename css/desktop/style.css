@@ -1647,67 +1647,10 @@ footer {
     display: none !important; 
   }
   
-  /* PILLS DE CATEGORIA EM GRID 2x2 NO MOBILE */
+  /* ESCONDE AS PILLS NO MOBILE (MANTÉM APENAS OS CARDS COM SWIPE) */
   .carousel-categories-wrap {
-    display: block !important;
-    padding: 0 24px;
-    margin-bottom: 28px;
-    width: 100%;
-    overflow: visible;
+    display: none !important;
   }
-  .carousel-pills {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    width: 100%;
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-  }
-  .carousel-pill {
-    white-space: normal !important;
-    text-align: left;
-    padding: 12px 14px;
-    font-size: 0.78rem;
-    line-height: 1.25;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 10px;
-    border-radius: 12px;
-    background: var(--bg-surface) !important;
-    border: 1px solid var(--border-color) !important;
-    color: var(--text-muted) !important;
-    font-weight: 500 !important;
-    box-shadow: none !important;
-  }
-  body.dark-theme .carousel-pill {
-    background: #171F2A !important;
-    border-color: rgba(255, 255, 255, 0.08) !important;
-  }
-  .carousel-pill i {
-    font-size: 1rem;
-    color: var(--text-muted);
-  }
-  
-  /* ESTADO ATIVO DO BOTÃO */
-  .carousel-pill.active {
-    background: rgba(34, 211, 238, 0.06) !important;
-    border-color: var(--accent-cyan) !important;
-    color: var(--text-main) !important;
-    font-weight: 600 !important;
-  }
-  body.dark-theme .carousel-pill.active {
-    background: rgba(34, 211, 238, 0.1) !important;
-    border-color: rgba(34, 211, 238, 0.5) !important;
-    color: #FFFFFF !important;
-  }
-  .carousel-pill.active i {
-    color: var(--accent-cyan) !important;
-  }
-
   .carousel-pagination {
     display: none !important;
   }
