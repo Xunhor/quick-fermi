@@ -1098,6 +1098,9 @@ body.dark-theme .comparison-table .boomo-th-badge {
   color: var(--text-muted);
   white-space: nowrap;
 }
+.comparison-cards-mobile {
+  display: none;
+}
 .comparison-table .cell-subtext {
   display: block;
   font-size: 0.78rem;
@@ -1672,39 +1675,99 @@ footer {
   .trust-grid { grid-template-columns: 1fr; gap: 16px; }
   .trust-item { padding: 14px; background: var(--bg-surface); border-radius: var(--radius-sm); border: 1px solid var(--border-color); }
   
-  /* Comparison Table Mobile Fix (Sticky Left Column) */
-  .comparison-table-wrap {
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    border-radius: 0;
-    border-left: none;
-    border-right: none;
-    padding: 0; /* Remove padding to allow smooth edge-to-edge scroll */
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+  /* Tabela escondida no mobile, exibindo os cards */
+  .comparison-table-wrap { display: none !important; }
+  
+  .comparison-cards-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
-  .comparison-table {
-    min-width: 800px; /* 4 columns need space */
-  }
-  /* Fix sticky column for context while scrolling */
-  .comparison-table th:first-child,
-  .comparison-table td:first-child {
-    position: sticky;
-    left: 0;
-    z-index: 10;
+  .comp-card {
     background: var(--bg-surface);
-    border-right: 1px solid var(--border-color);
-    box-shadow: 4px 0 12px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    box-shadow: var(--shadow-sm);
   }
-  body.dark-theme .comparison-table th:first-child {
-    background: #121215;
+  .comp-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-color);
   }
-  body.dark-theme .comparison-table td:first-child {
-    background: #171F28;
+  .comp-card-header .criteria-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-sm);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: var(--text-main);
+    flex-shrink: 0;
+  }
+  body.dark-theme .comp-card-header .criteria-icon {
+    background: #1C1C1E;
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #FFFFFF;
+  }
+  .comp-card-header strong {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--text-main);
+  }
+  .comp-card-header .criteria-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+  .comp-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 12px 0;
+  }
+  .comp-row.boomo-row {
+    background: rgba(34, 211, 238, 0.05); /* very subtle cyan tint */
+    border-radius: var(--radius-md);
+    padding: 16px;
+    margin: 0 -16px; /* bleed it slightly */
+    margin-bottom: 8px;
+    border: 1px solid rgba(34, 211, 238, 0.2);
+  }
+  body.dark-theme .comp-row.boomo-row {
+    background: #171F28; /* dark mode highlight */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .comp-row .brand {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    width: 40%;
+  }
+  .comp-row.boomo-row .brand {
+    color: var(--text-main);
+    font-weight: 800;
+  }
+  .comp-row .val-wrap {
+    width: 60%;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .comp-row .loss-badge, .comp-row .win-pill {
+    font-size: 0.95rem;
+    font-weight: 700;
+  }
+  .comp-row .win-subtext {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 4px;
   }
 
   .cta-banner { padding: 70px 0; }
