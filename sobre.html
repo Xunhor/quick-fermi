@@ -49,13 +49,19 @@
                 <button id="theme-toggle" class="theme-pill" aria-label="Alternar Tema">
                     <span class="pill-track">
                         <span class="pill-thumb">
-                            <span class="pill-icon pill-moon"><i class="fa-solid fa-moon"></i></span>
-                            <span class="pill-icon pill-sun"><i class="fa-solid fa-sun"></i></span>
+                            <span class="pill-icon pill-moon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z" fill="currentColor"/></svg>
+                            </span>
+                            <span class="pill-icon pill-sun">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="5" fill="currentColor"/><line x1="12" y1="2" x2="12" y2="4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="20" x2="12" y2="22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="2" y1="12" x2="4" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="20" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                            </span>
                         </span>
                     </span>
                 </button>
-                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir Menu">
-                    <span></span><span></span><span></span>
+                <button id="mobile-menu-btn" class="mobile-menu-toggle" aria-label="Abrir Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
                 </button>
             </div>
         </div>
@@ -65,11 +71,12 @@
     <section class="section-padding" style="padding-top: 160px; padding-bottom: 60px;">
         <div class="container">
             
-            <!-- HEADER DA EMPRESA -->
+            <!-- A HISTÓRIA (ORIGIN STORY) -->
             <div class="section-header text-center reveal" style="margin-bottom: 60px;">
-                <span class="section-tag">Nossa Missão</span>
-                <h2>Sua empresa merece tecnologia de banco.</h2>
-                <p>Nascemos para acabar com os sites lentos, caros e inseguros que as agências tradicionais empurram para clínicas e escritórios. A Boomo democratiza a engenharia de software de alto nível.</p>
+                <span class="section-tag">Como tudo começou</span>
+                <h2>A tecnologia dos gigantes, agora para o seu negócio.</h2>
+                <p style="max-width: 700px;">Tudo começou nos bastidores da infraestrutura financeira. Enquanto aplicávamos padrões rigorosos de segurança e velocidade para sistemas críticos de grandes bancos, percebemos uma realidade cruel do lado de fora: profissionais liberais e clínicas médicas estavam pagando fortunas para agências tradicionais entregarem sites pesados, inseguros e que quebravam toda semana.</p>
+                <p style="max-width: 700px; margin-top: 16px;">A engenharia de ponta estava restrita às grandes corporações. A Boomo nasceu exatamente para inverter essa lógica, empacotando infraestrutura de alto nível em uma assinatura simples.</p>
             </div>
 
             <!-- VALORES DA EMPRESA -->
