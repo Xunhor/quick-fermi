@@ -1271,9 +1271,23 @@
                 dot.classList.toggle('active', idx === currentSlide);
             });
 
-            // Exact 1-slide translation
+            // Exact translation for desktop, native scroll for mobile
             if (carouselTrack) {
-                carouselTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+                if (window.innerWidth <= 768) {
+                    // Mobile: smooth scroll native element
+                    const targetSlide = carouselSlides[currentSlide];
+                    if (targetSlide) {
+                        const trackRect = carouselTrack.getBoundingClientRect();
+                        const slideRect = targetSlide.getBoundingClientRect();
+                        carouselTrack.scrollTo({
+                            left: targetSlide.offsetLeft,
+                            behavior: 'smooth'
+                        });
+                    }
+                } else {
+                    // Desktop: CSS transform
+                    carouselTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+                }
             }
             updateIframeScales();
         }
@@ -1301,7 +1315,7 @@
             window.addEventListener('load', () => {
                 updateIframeScales();
                 updateCarousel(0);
-                startAutoplay();
+                if (window.innerWidth > 768) startAutoplay();
             });
             window.addEventListener('resize', () => {
                 updateIframeScales();
@@ -1310,8 +1324,23 @@
             setTimeout(() => {
                 updateIframeScales();
                 updateCarousel(0);
-                startAutoplay();
+                if (window.innerWidth > 768) startAutoplay();
             }, 100);
+
+            // Sync native scroll back to pills on mobile
+            if (carouselTrack) {
+                carouselTrack.addEventListener('scroll', () => {
+                    if (window.innerWidth <= 768) {
+                        const scrollLeft = carouselTrack.scrollLeft;
+                        const slideWidth = carouselTrack.offsetWidth;
+                        const newIndex = Math.round(scrollLeft / slideWidth);
+                        if (newIndex !== currentSlide && newIndex >= 0 && newIndex < totalSlides) {
+                            currentSlide = newIndex;
+                            carouselPills.forEach((pill, idx) => pill.classList.toggle('active', idx === currentSlide));
+                        }
+                    }
+                }, { passive: true });
+            }
 
             // Pause autoplay on hover/focus
             if (viewportContainer) {
