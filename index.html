@@ -670,7 +670,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  pointer-events: none;
+  pointer-events: none; overflow: hidden;
   opacity: 0;
   transition: opacity 0.35s ease;
   background: radial-gradient(500px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(0, 113, 227, 0.08), transparent 75%);
@@ -927,7 +927,7 @@ body.dark-theme .theme-pill:hover .pill-track { border-color: rgba(255, 255, 255
   width: 1000px;
   height: 600px;
   background: radial-gradient(ellipse at center, rgba(99, 102, 241, 0.12) 0%, rgba(6, 182, 212, 0.08) 40%, rgba(251, 251, 253, 0) 70%);
-  pointer-events: none;
+  pointer-events: none; overflow: hidden;
   filter: blur(80px);
   z-index: 0;
 }
@@ -1283,14 +1283,14 @@ body.dark-theme .mockup-topbar-cta {
   width: 1366px;
   height: 854px;
   transform-origin: top left;
-  pointer-events: none;
+  pointer-events: none; overflow: hidden;
 }
 .mockup-iframe {
   width: 1366px;
   height: 854px;
   border: none;
   display: block;
-  pointer-events: none;
+  pointer-events: none; overflow: hidden;
   background: #FFFFFF;
 }
 
@@ -2190,7 +2190,7 @@ footer {
     justify-content: space-between;
     transform: translateY(-120%);
     opacity: 0;
-    pointer-events: none;
+    pointer-events: none; overflow: hidden;
     transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
     z-index: 998;
     overflow-y: auto;
@@ -2253,8 +2253,11 @@ footer {
   p { line-height: 1.65; }
   .container { padding: 0 24px; }
   .price-card { padding: 32px 24px !important; }
-  .comparison-cards-mobile { margin-bottom: 24px; }
-  
+  .comparison-cards-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
   .hero { padding: 60px 0 50px 0; }
   .hero-header-block { margin-bottom: 32px; }
   .hero-headline { font-size: 2.1rem; letter-spacing: -0.03em; line-height: 1.15; }
@@ -2643,9 +2646,6 @@ body.menu-open {
   overflow: hidden;
   padding-right: var(--scrollbar-width, 0px);
 }
-.navbar {
-  /* Navbar also compensates to prevent toggle shift */
-}
 body.menu-open .navbar {
   padding-right: calc(var(--scrollbar-width, 0px) / 2);
 }
@@ -2714,10 +2714,6 @@ body.dark-theme .mac-address-bar {
 }
 body.dark-theme .price-card.featured {
   border-color: #FFFFFF;
-}
-body.dark-theme .featured-badge {
-  background: #FFFFFF;
-  color: #000000;
 }
 body.dark-theme .comparison-table-wrap {
   box-shadow: 0 4px 24px -2px rgba(0, 0, 0, 0.8);
@@ -3016,7 +3012,7 @@ body.dark-theme .comparison-table tbody tr:hover td.col-boomo { background-color
                                 </div>
                                 <a href="templates/estetica/index.html" target="_blank" rel="noopener noreferrer" class="mockup-content" title="Clique para abrir demonstração">
                                     <div class="mockup-iframe-scaler">
-                                        <iframe src="templates/estetica/index.html" class="mockup-iframe" tabindex="-1" scrolling="no" loading="lazy" title="Preview Clínica & Estética"></iframe>
+                                        <iframe src="templates/estetica/index.html" class="mockup-iframe" tabindex="-1" loading="lazy" title="Preview Clínica & Estética"></iframe>
                                     </div>
                                 </a>
                             </div>
@@ -3063,7 +3059,7 @@ body.dark-theme .comparison-table tbody tr:hover td.col-boomo { background-color
                                 </div>
                                 <a href="templates/odontologia/index.html" target="_blank" rel="noopener noreferrer" class="mockup-content" title="Clique para abrir demonstração">
                                     <div class="mockup-iframe-scaler">
-                                        <iframe data-src="templates/odontologia/index.html" src="about:blank" class="mockup-iframe" tabindex="-1" scrolling="no" loading="lazy" title="Preview Odontologia & Estética"></iframe>
+                                        <iframe data-src="templates/odontologia/index.html" src="about:blank" class="mockup-iframe" tabindex="-1" loading="lazy" title="Preview Odontologia & Estética"></iframe>
                                     </div>
                                 </a>
                             </div>
@@ -3109,7 +3105,7 @@ body.dark-theme .comparison-table tbody tr:hover td.col-boomo { background-color
                                 </div>
                                 <a href="templates/advocacia/index.html" target="_blank" rel="noopener noreferrer" class="mockup-content" title="Clique para abrir demonstração">
                                     <div class="mockup-iframe-scaler">
-                                        <iframe data-src="templates/advocacia/index.html" src="about:blank" class="mockup-iframe" tabindex="-1" scrolling="no" loading="lazy" title="Preview Advocacia & Finanças"></iframe>
+                                        <iframe data-src="templates/advocacia/index.html" src="about:blank" class="mockup-iframe" tabindex="-1" loading="lazy" title="Preview Advocacia & Finanças"></iframe>
                                     </div>
                                 </a>
                             </div>
@@ -3155,7 +3151,7 @@ body.dark-theme .comparison-table tbody tr:hover td.col-boomo { background-color
                                 </div>
                                 <a href="templates/contabilidade/index.html" target="_blank" rel="noopener noreferrer" class="mockup-content" title="Clique para abrir demonstração">
                                     <div class="mockup-iframe-scaler">
-                                        <iframe data-src="templates/contabilidade/index.html" src="about:blank" class="mockup-iframe" tabindex="-1" scrolling="no" loading="lazy" title="Preview Contabilidade"></iframe>
+                                        <iframe data-src="templates/contabilidade/index.html" src="about:blank" class="mockup-iframe" tabindex="-1" loading="lazy" title="Preview Contabilidade"></iframe>
                                     </div>
                                 </a>
                             </div>
@@ -4001,7 +3997,7 @@ body.dark-theme .comparison-table tbody tr:hover td.col-boomo { background-color
                 const lazyIframe = targetSlide.querySelector('iframe[data-src]');
                 if (lazyIframe && lazyIframe.dataset.src) {
                     lazyIframe.src = lazyIframe.dataset.src;
-                    lazyIframe.removeAttribute('data-src');
+                    delete lazyIframe.dataset.src;
                 }
             }
 
@@ -4011,8 +4007,6 @@ body.dark-theme .comparison-table tbody tr:hover td.col-boomo { background-color
                     // Mobile: smooth scroll native element
                     const targetSlide = carouselSlides[currentSlide];
                     if (targetSlide) {
-                        const trackRect = carouselTrack.getBoundingClientRect();
-                        const slideRect = targetSlide.getBoundingClientRect();
                         carouselTrack.scrollTo({
                             left: targetSlide.offsetLeft,
                             behavior: 'smooth'
@@ -4085,7 +4079,7 @@ body.dark-theme .comparison-table tbody tr:hover td.col-boomo { background-color
             // Category Pill clicks
             carouselPills.forEach((pill) => {
                 pill.addEventListener('click', () => {
-                    const idx = parseInt(pill.getAttribute('data-index'), 10);
+                    const idx = Number.parseInt(pill.dataset.index, 10);
                     updateCarousel(idx);
                     resetAutoplay();
                 });
@@ -4094,7 +4088,7 @@ body.dark-theme .comparison-table tbody tr:hover td.col-boomo { background-color
             // Pagination Dot clicks
             carouselDots.forEach((dot) => {
                 dot.addEventListener('click', () => {
-                    const idx = parseInt(dot.getAttribute('data-index'), 10);
+                    const idx = Number.parseInt(dot.dataset.index, 10);
                     updateCarousel(idx);
                     resetAutoplay();
                 });
