@@ -7,6 +7,9 @@
     <meta name="description" content="A infraestrutura digital da sua empresa como serviço. Criamos, hospedamos e atualizamos o seu site premium por uma assinatura mensal. Sem agências, sem burocracia.">
     <meta name="theme-color" content="#0B0F14">
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    
+    <!-- LCP Image Preload for Mobile -->
+    <link rel="preload" as="image" href="templates/estetica/assets/images/hero-estetica.webp" media="(max-width: 992px)" fetchpriority="high">
 
     <!-- Open Graph / WhatsApp Preview -->
     <meta property="og:type" content="website">
@@ -2434,7 +2437,7 @@ body.dark-theme .comparison-table tbody tr:hover td.col-boomo { background-color
                             <!-- MOBILE CARD UI -->
                             <div class="mobile-template-card">
                                 <div class="mobile-card-image">
-                                    <img src="templates/estetica/assets/images/hero-estetica.webp" alt="Estética Template" loading="lazy" width="512" height="512">
+                                    <img src="templates/estetica/assets/images/hero-estetica.webp" alt="Estética Template" fetchpriority="high" width="512" height="512">
                                     <div class="mobile-card-badge">Novo</div>
                                 </div>
                                 <div class="mobile-card-info">
