@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boomo | Do WhatsApp ao seu site no ar em 3 dias</title>
     <meta name="description" content="A infraestrutura digital da sua empresa como serviço. Criamos, hospedamos e atualizamos o seu site premium por uma assinatura mensal. Sem agências, sem burocracia.">
+    <meta name="theme-color" content="#0B0F14">
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
     <!-- Open Graph / WhatsApp Preview -->
@@ -28,13 +29,8 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"></noscript>
-    
-    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Anti-FOUC Dark Theme Script -->
     <script>
@@ -274,7 +270,7 @@
                                 </div>
                                 <a href="templates/estetica/index.html" target="_blank" rel="noopener noreferrer" class="mockup-content" title="Clique para abrir demonstração">
                                     <div class="mockup-iframe-scaler">
-                                        <iframe data-src="templates/estetica/index.html" src="about:blank" class="mockup-iframe" tabindex="-1" scrolling="no" title="Preview Clínica & Estética"></iframe>
+                                        <iframe src="templates/estetica/index.html" class="mockup-iframe" tabindex="-1" scrolling="no" loading="lazy" title="Preview Clínica & Estética"></iframe>
                                     </div>
                                 </a>
                             </div>
@@ -321,7 +317,7 @@
                                 </div>
                                 <a href="templates/odontologia/index.html" target="_blank" rel="noopener noreferrer" class="mockup-content" title="Clique para abrir demonstração">
                                     <div class="mockup-iframe-scaler">
-                                        <iframe data-src="templates/odontologia/index.html" src="about:blank" class="mockup-iframe" tabindex="-1" scrolling="no" title="Preview Odontologia & Estética"></iframe>
+                                        <iframe data-src="templates/odontologia/index.html" src="about:blank" class="mockup-iframe" tabindex="-1" scrolling="no" loading="lazy" title="Preview Odontologia & Estética"></iframe>
                                     </div>
                                 </a>
                             </div>
@@ -367,7 +363,7 @@
                                 </div>
                                 <a href="templates/advocacia/index.html" target="_blank" rel="noopener noreferrer" class="mockup-content" title="Clique para abrir demonstração">
                                     <div class="mockup-iframe-scaler">
-                                        <iframe data-src="templates/advocacia/index.html" src="about:blank" class="mockup-iframe" tabindex="-1" scrolling="no" title="Preview Advocacia & Finanças"></iframe>
+                                        <iframe data-src="templates/advocacia/index.html" src="about:blank" class="mockup-iframe" tabindex="-1" scrolling="no" loading="lazy" title="Preview Advocacia & Finanças"></iframe>
                                     </div>
                                 </a>
                             </div>
@@ -413,7 +409,7 @@
                                 </div>
                                 <a href="templates/contabilidade/index.html" target="_blank" rel="noopener noreferrer" class="mockup-content" title="Clique para abrir demonstração">
                                     <div class="mockup-iframe-scaler">
-                                        <iframe data-src="templates/contabilidade/index.html" src="about:blank" class="mockup-iframe" tabindex="-1" scrolling="no" title="Preview Contabilidade"></iframe>
+                                        <iframe data-src="templates/contabilidade/index.html" src="about:blank" class="mockup-iframe" tabindex="-1" scrolling="no" loading="lazy" title="Preview Contabilidade"></iframe>
                                     </div>
                                 </a>
                             </div>
@@ -1164,40 +1160,6 @@
         document.addEventListener('DOMContentLoaded', () => {
             // FAQ Toggle
             document.querySelectorAll('.faq-item').forEach(el => new FaqAccordion(el));
-            
-            // Only load iframe when its slide becomes active to save massive CPU/Network
-            function loadIframeForSlide(slideIndex) {
-                const slides = document.querySelectorAll('.carousel-slide');
-                if(slides[slideIndex]) {
-                    const iframe = slides[slideIndex].querySelector('iframe[data-src]');
-                    if (iframe && iframe.dataset.src) {
-                        iframe.src = iframe.dataset.src;
-                        iframe.removeAttribute('data-src');
-                    }
-                }
-            }
-            
-            // Make loadIframeForSlide globally available for the carousel dot click
-            window.loadIframeForSlide = loadIframeForSlide;
-            
-            // Load the first iframe on actual user interaction (Scroll/Mouse/Touch) to guarantee 100/100 PageSpeed Performance
-            let initialIframeLoaded = false;
-            function initFirstIframe() {
-                if(initialIframeLoaded) return;
-                initialIframeLoaded = true;
-                loadIframeForSlide(0);
-                // Remove listeners after first trigger
-                window.removeEventListener('scroll', initFirstIframe);
-                window.removeEventListener('mousemove', initFirstIframe);
-                window.removeEventListener('touchstart', initFirstIframe);
-            }
-            
-            window.addEventListener('scroll', initFirstIframe, {passive: true});
-            window.addEventListener('mousemove', initFirstIframe, {passive: true});
-            window.addEventListener('touchstart', initFirstIframe, {passive: true});
-            
-            // Fallback for huge screens where no scroll/mouse happens (e.g. 10s idle)
-            setTimeout(initFirstIframe, 10000);
         });
 
         // 4. Dynamic Apple Frosted Glass Navbar on Scroll
@@ -1287,9 +1249,14 @@
                 dot.classList.toggle('active', idx === currentSlide);
             });
             
-            // Load iframe on demand for PageSpeed
-            if (window.loadIframeForSlide) {
-                window.loadIframeForSlide(currentSlide);
+            // Standard performance pattern: load heavy slide content only when active
+            const targetSlide = carouselSlides[currentSlide];
+            if (targetSlide) {
+                const lazyIframe = targetSlide.querySelector('iframe[data-src]');
+                if (lazyIframe && lazyIframe.dataset.src) {
+                    lazyIframe.src = lazyIframe.dataset.src;
+                    lazyIframe.removeAttribute('data-src');
+                }
             }
 
             // Exact translation for desktop, native scroll for mobile
