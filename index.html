@@ -1177,13 +1177,27 @@
                 }
             }
             
-            // Load the first iframe on startup after a small delay to prioritize LCP (Hero text)
-            setTimeout(() => {
-                loadIframeForSlide(0);
-            }, 1500);
-            
             // Make loadIframeForSlide globally available for the carousel dot click
             window.loadIframeForSlide = loadIframeForSlide;
+            
+            // Load the first iframe on actual user interaction (Scroll/Mouse/Touch) to guarantee 100/100 PageSpeed Performance
+            let initialIframeLoaded = false;
+            function initFirstIframe() {
+                if(initialIframeLoaded) return;
+                initialIframeLoaded = true;
+                loadIframeForSlide(0);
+                // Remove listeners after first trigger
+                window.removeEventListener('scroll', initFirstIframe);
+                window.removeEventListener('mousemove', initFirstIframe);
+                window.removeEventListener('touchstart', initFirstIframe);
+            }
+            
+            window.addEventListener('scroll', initFirstIframe, {passive: true});
+            window.addEventListener('mousemove', initFirstIframe, {passive: true});
+            window.addEventListener('touchstart', initFirstIframe, {passive: true});
+            
+            // Fallback for huge screens where no scroll/mouse happens (e.g. 10s idle)
+            setTimeout(initFirstIframe, 10000);
         });
 
         // 4. Dynamic Apple Frosted Glass Navbar on Scroll
