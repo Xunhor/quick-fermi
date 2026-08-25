@@ -101,7 +101,7 @@ h1, h2, h3, h4, h5, h6 {
   background: radial-gradient(500px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(0, 113, 227, 0.08), transparent 75%);
   z-index: 3;
 }
-body.dark-theme .has-spotlight::after {
+html.dark-theme .has-spotlight::after {
   background: radial-gradient(500px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.07), transparent 75%);
 }
 .has-spotlight:hover::after {
@@ -115,7 +115,7 @@ body.dark-theme .has-spotlight::after {
 }
 
 /* DARK THEME OVERRIDES (Apple Deep OLED & Titanium) */
-body.dark-theme {
+html.dark-theme {
   --bg-primary: #000000;
   --bg-secondary: #121215;
   --bg-surface: #18181B;
