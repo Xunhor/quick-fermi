@@ -320,6 +320,43 @@
                 });
             });
 
+            // AJAX Form Submission
+            const form = document.querySelector('form');
+            const submitBtn = form.querySelector('button[type="submit"]');
+            
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                
+                // Change button state to loading
+                const originalBtnText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Enviando...';
+                submitBtn.disabled = true;
+                
+                const data = new FormData(form);
+                
+                try {
+                    const response = await fetch(form.action, {
+                        method: form.method,
+                        body: data,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+                    
+                    if (response.ok) {
+                        window.location.href = "sucesso.html";
+                    } else {
+                        alert("Ocorreu um erro ao enviar. Por favor, tente novamente ou nos chame no WhatsApp.");
+                        submitBtn.innerHTML = originalBtnText;
+                        submitBtn.disabled = false;
+                    }
+                } catch (error) {
+                    alert("Erro de conexão. Por favor, tente novamente.");
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.disabled = false;
+                }
+            });
+
             // Close dropdown when clicking outside
             document.addEventListener('click', (e) => {
                 if (!customSelect.contains(e.target)) {
