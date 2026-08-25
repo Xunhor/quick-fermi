@@ -235,7 +235,8 @@
                             
                             <!-- MOBILE CARD UI -->
                             <div class="mobile-template-card">
-                                <div class="mobile-card-image" style="background-image: url('templates/estetica/assets/images/hero-estetica.webp');">
+                                <div class="mobile-card-image">
+                                    <img src="templates/estetica/assets/images/hero-estetica.webp" alt="Estética Template" loading="lazy" width="400" height="250">
                                     <div class="mobile-card-badge">Novo</div>
                                 </div>
                                 <div class="mobile-card-info">
@@ -268,7 +269,7 @@
                                 </div>
                                 <a href="templates/estetica/index.html" target="_blank" rel="noopener noreferrer" class="mockup-content" title="Clique para abrir demonstração">
                                     <div class="mockup-iframe-scaler">
-                                        <iframe src="templates/estetica/index.html" class="mockup-iframe" tabindex="-1" loading="lazy" scrolling="no" title="Preview Clínica & Estética"></iframe>
+                                        <iframe data-src="templates/estetica/index.html" src="about:blank" class="mockup-iframe" tabindex="-1" scrolling="no" title="Preview Clínica & Estética"></iframe>
                                     </div>
                                 </a>
                             </div>
@@ -281,7 +282,8 @@
                             
                             <!-- MOBILE CARD UI -->
                             <div class="mobile-template-card">
-                                <div class="mobile-card-image" style="background-image: url('templates/odontologia/assets/images/hero-odonto.webp');">
+                                <div class="mobile-card-image">
+                                    <img src="templates/odontologia/assets/images/hero-odonto.webp" alt="Odontologia Template" loading="lazy" width="400" height="250">
                                     <div class="mobile-card-badge">Destaque</div>
                                 </div>
                                 <div class="mobile-card-info">
@@ -314,7 +316,7 @@
                                 </div>
                                 <a href="templates/odontologia/index.html" target="_blank" rel="noopener noreferrer" class="mockup-content" title="Clique para abrir demonstração">
                                     <div class="mockup-iframe-scaler">
-                                        <iframe src="templates/odontologia/index.html" class="mockup-iframe" tabindex="-1" loading="lazy" scrolling="no" title="Preview Odontologia & Estética"></iframe>
+                                        <iframe data-src="templates/odontologia/index.html" src="about:blank" class="mockup-iframe" tabindex="-1" scrolling="no" title="Preview Odontologia & Estética"></iframe>
                                     </div>
                                 </a>
                             </div>
@@ -327,7 +329,9 @@
                             
                             <!-- MOBILE CARD UI -->
                             <div class="mobile-template-card">
-                                <div class="mobile-card-image" style="background-image: url('templates/advocacia/assets/images/hero-advocacia.webp');"></div>
+                                <div class="mobile-card-image">
+                                    <img src="templates/advocacia/assets/images/hero-advocacia.webp" alt="Advocacia Template" loading="lazy" width="400" height="250">
+                                </div>
                                 <div class="mobile-card-info">
                                     <div class="mobile-card-title-row">
                                         <div class="mobile-card-icon" style="color: #A38C61; background: rgba(163,140,97,0.1);"><i class="fa-solid fa-scale-balanced"></i></div>
@@ -358,20 +362,22 @@
                                 </div>
                                 <a href="templates/advocacia/index.html" target="_blank" rel="noopener noreferrer" class="mockup-content" title="Clique para abrir demonstração">
                                     <div class="mockup-iframe-scaler">
-                                        <iframe src="templates/advocacia/index.html" class="mockup-iframe" tabindex="-1" loading="lazy" scrolling="no" title="Preview Advocacia & Finanças"></iframe>
+                                        <iframe data-src="templates/advocacia/index.html" src="about:blank" class="mockup-iframe" tabindex="-1" scrolling="no" title="Preview Advocacia & Finanças"></iframe>
                                     </div>
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Slide 4: Gastronomia -->
+                    <!-- Slide 4: Contabilidade -->
                     <div class="carousel-slide" data-index="3" data-link="templates/contabilidade/index.html">
                         <div class="mockup-window-card">
                             
                             <!-- MOBILE CARD UI -->
                             <div class="mobile-template-card">
-                                <div class="mobile-card-image" style="background-image: url('templates/contabilidade/assets/images/hero-contabilidade.webp');"></div>
+                                <div class="mobile-card-image">
+                                    <img src="templates/contabilidade/assets/images/hero-contabilidade.webp" alt="Contabilidade Template" loading="lazy" width="400" height="250">
+                                </div>
                                 <div class="mobile-card-info">
                                     <div class="mobile-card-title-row">
                                         <div class="mobile-card-icon" style="color: #FF5E3A; background: rgba(255,94,58,0.1);"><i class="fa-solid fa-chart-line"></i></div>
@@ -402,7 +408,7 @@
                                 </div>
                                 <a href="templates/contabilidade/index.html" target="_blank" rel="noopener noreferrer" class="mockup-content" title="Clique para abrir demonstração">
                                     <div class="mockup-iframe-scaler">
-                                        <iframe src="templates/contabilidade/index.html" class="mockup-iframe" tabindex="-1" loading="lazy" scrolling="no" title="Preview Contabilidade"></iframe>
+                                        <iframe data-src="templates/contabilidade/index.html" src="about:blank" class="mockup-iframe" tabindex="-1" scrolling="no" title="Preview Contabilidade"></iframe>
                                     </div>
                                 </a>
                             </div>
@@ -1150,7 +1156,27 @@
             }
         }
 
-        document.querySelectorAll('.faq-item').forEach(el => new FaqAccordion(el));
+        document.addEventListener('DOMContentLoaded', () => {
+            // Lazy load iframes with IntersectionObserver to guarantee 90+ PageSpeed
+            const iframes = document.querySelectorAll('iframe[data-src]');
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const iframe = entry.target;
+                        if (iframe.dataset.src) {
+                            iframe.src = iframe.dataset.src;
+                            iframe.removeAttribute('data-src');
+                        }
+                        obs.unobserve(iframe);
+                    }
+                });
+            }, { rootMargin: "0px 0px 400px 0px" }); // Load when 400px away from viewport
+            
+            iframes.forEach(iframe => observer.observe(iframe));
+
+            // FAQ Toggle
+            document.querySelectorAll('.faq-item').forEach(el => new FaqAccordion(el));
+        });
 
         // 4. Dynamic Apple Frosted Glass Navbar on Scroll
         const navbar = document.querySelector('.navbar');

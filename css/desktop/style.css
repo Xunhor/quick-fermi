@@ -1722,10 +1722,16 @@ footer {
   .mobile-card-image {
     height: 220px;
     width: 100%;
-    background-size: cover;
-    background-position: top center;
     position: relative;
     border-bottom: 1px solid rgba(0,0,0,0.04);
+    overflow: hidden;
+  }
+  .mobile-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
   }
   body.dark-theme .mobile-card-image {
     border-bottom-color: rgba(255,255,255,0.05);
