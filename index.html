@@ -923,7 +923,8 @@ html.dark-theme .theme-pill:hover .pill-track { border-color: rgba(255, 255, 255
   position: absolute;
   top: -120px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(calc(-50% + var(--mouse-x, 0px)), var(--mouse-y, 0px));
+    will-change: transform;
   width: 1000px;
   height: 600px;
   background: radial-gradient(ellipse at center, rgba(99, 102, 241, 0.12) 0%, rgba(6, 182, 212, 0.08) 40%, rgba(251, 251, 253, 0) 70%);
@@ -4179,6 +4180,26 @@ html.dark-theme .comparison-table tbody tr:hover td.col-boomo { background-color
                     isMouseDown = false;
                 });
             }
+
+        // 7. Hero Aurora Follow Mouse
+        const heroSection = document.querySelector('.hero');
+        const heroAurora = document.querySelector('.hero-aurora-glow');
+        if (heroSection && heroAurora) {
+            heroSection.addEventListener('mousemove', (e) => {
+                const rect = heroSection.getBoundingClientRect();
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const moveX = (e.clientX - rect.left - centerX) / 2;
+                const moveY = (e.clientY - rect.top - centerY) / 2;
+                
+                heroAurora.style.setProperty('--mouse-x', moveX + 'px');
+                heroAurora.style.setProperty('--mouse-y', moveY + 'px');
+            });
+            heroSection.addEventListener('mouseleave', () => {
+                heroAurora.style.setProperty('--mouse-x', '0px');
+                heroAurora.style.setProperty('--mouse-y', '0px');
+            });
+        }
         }
     </script>
     <script src="assets/js/menu.js"></script>
