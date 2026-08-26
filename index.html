@@ -2741,6 +2741,48 @@ html.dark-theme .comparison-table tbody tr:hover td.col-boomo { background-color
   transition: transform 0.08s ease !important;
 }
 
+
+  /* --- PREMIUM TECH AESTHETIC --- */
+  
+  /* 1. Subtle Dark Mode Noise Texture */
+  html.dark-theme::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      opacity: 0.25;
+  }
+  
+  /* 2. Premium Glow Hover on Cards */
+  .price-card, .timeline-step-card, .inclusive-item {
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+  }
+  
+  html.dark-theme .price-card:hover, 
+  html.dark-theme .timeline-step-card:hover, 
+  html.dark-theme .inclusive-item:hover {
+      border-color: rgba(34, 211, 238, 0.3);
+      box-shadow: 0 10px 40px -10px rgba(34, 211, 238, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+      transform: translateY(-4px);
+  }
+  
+  /* 3. Refined Glassmorphism Badge */
+  html.dark-theme .featured-badge {
+      background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.8));
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.4);
+      color: #000;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  }
+  
+  /* Ensure reveal works smoothly */
+  .reveal {
+      will-change: opacity, transform;
+  }
+
 </style>
     <!-- Fonts Preload & Load -->
     
@@ -2900,8 +2942,8 @@ html.dark-theme .comparison-table tbody tr:hover td.col-boomo { background-color
         <div class="hero-aurora-glow"></div>
         <div class="container hero-container">
             <div class="hero-header-block text-center">
-                <h1 class="hero-headline">O site da sua empresa.<br>Sem dor de cabeça.</h1>
-                <p class="hero-subtext">O Instagram traz curtidas, nós trazemos os clientes do Google. Criamos, hospedamos e integramos seu site direto com o seu WhatsApp por uma assinatura simples.</p>
+                <h1 class="hero-headline">A infraestrutura digital<br>da sua empresa.</h1>
+                <p class="hero-subtext">Engenharia de ponta para empresas locais. Sites com carregamento em milissegundos, arquitetura SEO nativa e uptime de 99.9%.</p>
                 <div class="hero-actions">
                     <a href="#modelos" class="btn btn-primary btn-large">Ver Modelos Prontos <i class="fa-solid fa-arrow-right"></i></a>
                     <a href="https://wa.me/559192432044?text=Ol%C3%A1%20Rui%2C%20gostaria%20de%20conversar%20sobre%20o%20site%20da%20minha%20empresa." target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-large btn-whatsapp" aria-label="Falar Direto no WhatsApp">Falar Direto no WhatsApp</a>
@@ -3379,11 +3421,11 @@ html.dark-theme .comparison-table tbody tr:hover td.col-boomo { background-color
                                 </div>
                             </td>
                             <td class="cell-competitor">
-                                <span class="loss-badge"><i class="fa-solid fa-xmark"></i> R$ 3.000 a R$ 8.000</span>
+                                <span class="loss-badge"><i class="fa-solid fa-xmark"></i> R$ 4.000 a R$ 12.000</span>
                                 <span class="cell-subtext">Cobrados adiantados</span>
                             </td>
                             <td class="cell-competitor">
-                                <span class="neutral-badge">R$ 0 aparente</span>
+                                <span class="neutral-badge">Faça Você Mesmo</span>
                                 <span class="cell-subtext">Consome dezenas de horas</span>
                             </td>
                             <td class="col-boomo cell-win">
@@ -3531,7 +3573,7 @@ html.dark-theme .comparison-table tbody tr:hover td.col-boomo { background-color
                     <div class="comp-row">
                         <span class="brand">Agência Tradicional</span>
                         <div class="val-wrap">
-                            <span class="loss-badge"><i class="fa-solid fa-xmark"></i> R$ 3.000 a R$ 8.000</span>
+                            <span class="loss-badge"><i class="fa-solid fa-xmark"></i> R$ 4.000 a R$ 12.000</span>
                         </div>
                     </div>
                 </div>
