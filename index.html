@@ -3038,7 +3038,7 @@ html.dark-theme .comparison-table tbody tr:hover td.col-boomo { background-color
                                 </div>
                                 <a href="/templates/estetica" target="_blank" rel="noopener noreferrer" class="mockup-content" title="Clique para abrir demonstração">
                                     <div class="mockup-iframe-scaler">
-                                        <iframe src="/templates/estetica" class="mockup-iframe" tabindex="-1" loading="lazy" title="Preview Clínica & Estética"></iframe>
+                                        <iframe data-src="/templates/estetica" src="about:blank" class="mockup-iframe" tabindex="-1" loading="lazy" title="Preview Clínica & Estética"></iframe>
                                     </div>
                                 </a>
                             </div>
@@ -3085,7 +3085,7 @@ html.dark-theme .comparison-table tbody tr:hover td.col-boomo { background-color
                                 </div>
                                 <a href="/templates/odontologia" target="_blank" rel="noopener noreferrer" class="mockup-content" title="Clique para abrir demonstração">
                                     <div class="mockup-iframe-scaler">
-                                        <iframe src="/templates/odontologia" class="mockup-iframe" tabindex="-1" loading="lazy" title="Preview Odontologia & Estética"></iframe>
+                                        <iframe data-src="/templates/odontologia" src="about:blank" class="mockup-iframe" tabindex="-1" loading="lazy" title="Preview Odontologia & Estética"></iframe>
                                     </div>
                                 </a>
                             </div>
@@ -3131,7 +3131,7 @@ html.dark-theme .comparison-table tbody tr:hover td.col-boomo { background-color
                                 </div>
                                 <a href="/templates/advocacia" target="_blank" rel="noopener noreferrer" class="mockup-content" title="Clique para abrir demonstração">
                                     <div class="mockup-iframe-scaler">
-                                        <iframe src="/templates/advocacia" class="mockup-iframe" tabindex="-1" loading="lazy" title="Preview Advocacia & Finanças"></iframe>
+                                        <iframe data-src="/templates/advocacia" src="about:blank" class="mockup-iframe" tabindex="-1" loading="lazy" title="Preview Advocacia & Finanças"></iframe>
                                     </div>
                                 </a>
                             </div>
@@ -3177,7 +3177,7 @@ html.dark-theme .comparison-table tbody tr:hover td.col-boomo { background-color
                                 </div>
                                 <a href="/templates/contabilidade" target="_blank" rel="noopener noreferrer" class="mockup-content" title="Clique para abrir demonstração">
                                     <div class="mockup-iframe-scaler">
-                                        <iframe src="/templates/contabilidade" class="mockup-iframe" tabindex="-1" loading="lazy" title="Preview Contabilidade"></iframe>
+                                        <iframe data-src="/templates/contabilidade" src="about:blank" class="mockup-iframe" tabindex="-1" loading="lazy" title="Preview Contabilidade"></iframe>
                                     </div>
                                 </a>
                             </div>
@@ -3350,7 +3350,7 @@ html.dark-theme .comparison-table tbody tr:hover td.col-boomo { background-color
     <!-- 9. EARLY ADOPTERS -->
     <section class="section-padding text-center" style="padding-top: 80px; padding-bottom: 80px;">
         <div class="container">
-            <h2 style="font-size: 2.2rem; font-weight: 700; margin-bottom: 16px; color: var(--accent-cyan);">Seja um dos primeiros.</h2>
+            <h2 style="font-size: 2.2rem; font-weight: 700; margin-bottom: 16px; color: var(--brand-accent);">Seja um dos primeiros.</h2>
             <p style="font-size: 1.1rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 32px; line-height: 1.6;">
                 Estamos selecionando os primeiros negócios para fazer parte da Boomo.<br>
                 Temos <strong>condições especiais</strong> durante a nossa fase inicial.
@@ -3497,8 +3497,8 @@ html.dark-theme .comparison-table tbody tr:hover td.col-boomo { background-color
         document.querySelectorAll('.has-spotlight').forEach(card => {
             card.addEventListener('mousemove', (e) => {
                 const rect = card.getBoundingClientRect();
-                card.style.setProperty('--mouse-x', ${e.clientX - rect.left}px);
-                card.style.setProperty('--mouse-y', ${e.clientY - rect.top}px);
+                card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+                card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
             });
         });
 
@@ -3516,10 +3516,20 @@ html.dark-theme .comparison-table tbody tr:hover td.col-boomo { background-color
                 slides.forEach(s => s.classList.remove('active'));
                 pills[index].classList.add('active');
                 slides[index].classList.add('active');
-                track.style.transform = 	ranslateX(-px);
+                track.style.transform = `translateX(-${index * 100}%)`;
                 prevBtn.disabled = index === 0;
                 nextBtn.disabled = index === totalSlides - 1;
-            }
+            
+                  // Lazy Load Iframe
+                  const iframe = slides[index].querySelector('iframe');
+                  if (iframe && iframe.hasAttribute('data-src')) {
+                      iframe.src = iframe.getAttribute('data-src');
+                      iframe.removeAttribute('data-src');
+                  }
+              }
+              // Load first iframe on init
+              setTimeout(() => { if (typeof updateCarousel === 'function') updateCarousel(0); }, 100);
+
             pills.forEach((pill, idx) => pill.addEventListener('click', () => updateCarousel(currentIndex = idx)));
             prevBtn.addEventListener('click', () => currentIndex > 0 && updateCarousel(--currentIndex));
             nextBtn.addEventListener('click', () => currentIndex < totalSlides - 1 && updateCarousel(++currentIndex));
@@ -3528,6 +3538,122 @@ html.dark-theme .comparison-table tbody tr:hover td.col-boomo { background-color
         }
     </script>
     <script src="assets/js/menu.js"></script>
+    <script>
+
+        // Safe Scroll Reveal (Zero Regressions)
+        try {
+            const targetSelectors = ['.section-header', '.timeline-step-card', '.price-card', '.inclusive-item', '.guarantee-card', '.faq-item', '.hero-header-block'];
+            const elementsToReveal = document.querySelectorAll(targetSelectors.join(', '));
+            
+            if ('IntersectionObserver' in window && elementsToReveal.length > 0) {
+                const revealObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = 1;
+                            entry.target.style.transform = 'translateY(0)';
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+                elementsToReveal.forEach(el => {
+                    // Only hide elements that are below the fold to avoid FOUC at the top
+                    if (el.getBoundingClientRect().top > window.innerHeight) {
+                        el.style.opacity = 0;
+                        el.style.transform = 'translateY(30px)';
+                        el.style.transition = 'opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1)';
+                        revealObserver.observe(el);
+                    }
+                });
+            }
+        } catch (e) {
+            console.error("Reveal error safely caught:", e);
+        }
+
+    
+        // 2. Mobile Menu Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const navMenu = document.getElementById('nav-menu');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        function toggleMobileMenu() {
+            const isOpening = !navMenu.classList.contains('active');
+            if (isOpening) {
+                // Measure scrollbar width BEFORE locking to avoid shift
+                const scrollbarW = window.innerWidth - document.documentElement.clientWidth;
+                document.documentElement.style.setProperty('--scrollbar-width', scrollbarW + 'px');
+            } else {
+                document.documentElement.style.setProperty('--scrollbar-width', '0px');
+            }
+            mobileMenuBtn.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        }
+
+        function closeMobileMenu() {
+            document.documentElement.style.setProperty('--scrollbar-width', '0px');
+            mobileMenuBtn.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+
+        // 3. Ultra-Smooth FAQ Accordion (Web Animations API)
+        class FaqAccordion {
+            constructor(el) {
+                this.el = el;
+                this.summary = el.querySelector('summary');
+                this.content = el.querySelector('.faq-content');
+                this.animation = null;
+                this.isClosing = false;
+                this.isExpanding = false;
+                this.el._faqInstance = this;
+                this.summary.addEventListener('click', (e) => this.onClick(e));
+            }
+
+            onClick(e) {
+                e.preventDefault();
+                this.el.style.overflow = 'hidden';
+                if (this.isClosing || !this.el.open) {
+                    this.open();
+                } else if (this.isExpanding || this.el.open) {
+                    this.shrink();
+                }
+            }
+
+            shrink() {
+                this.isClosing = true;
+                const startHeight = `${this.el.offsetHeight}px`;
+                const endHeight = `${this.summary.offsetHeight}px`;
+
+                if (this.animation) {
+                    this.animation.cancel();
+                }
+
+                this.animation = this.el.animate({
+                    height: [startHeight, endHeight]
+                }, {
+                    duration: 300,
+                    easing: 'cubic-bezier(0.16, 1, 0.3, 1)'
+                });
+    
+        // Navbar Scroll Styling
+        const navbar = document.querySelector('.navbar');
+        if (navbar) {
+            function handleNavbarScroll() {
+                if (window.scrollY > 20) {
+                    navbar.classList.add('navbar-scrolled');
+                } else {
+                    navbar.classList.remove('navbar-scrolled');
+                }
+            }
+            window.addEventListener('scroll', handleNavbarScroll, { passive: true });
+            handleNavbarScroll();
+        }
+
+    
+    </script>
 </body>
 
 </html>
