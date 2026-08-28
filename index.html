@@ -2987,75 +2987,212 @@ html.dark-theme .comparison-table tbody tr:hover td.col-boomo { background-color
                 </div>
             </div>
 
-            <div class="carousel-viewport-container">
-                <button class="carousel-nav-btn prev-btn" id="carousel-prev" aria-label="Modelo anterior">
-                    <i class="fa-solid fa-chevron-left"></i>
-                </button>
-                <button class="carousel-nav-btn next-btn" id="carousel-next" aria-label="Próximo modelo">
-                    <i class="fa-solid fa-chevron-right"></i>
-                </button>
+        <div class="carousel-viewport-container">
+            <button class="carousel-nav-btn prev-btn" id="carousel-prev" aria-label="Modelo anterior">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="carousel-nav-btn next-btn" id="carousel-next" aria-label="Próximo modelo">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
 
-                <div class="carousel-track-wrapper" id="carousel-track-wrap">
-                    <div class="carousel-track" id="carousel-track">
-                        <!-- Slide 1: Saúde -->
-                        <div class="carousel-slide active" data-index="0">
-                            <div class="mockup-window-card">
-                                <div class="mobile-template-card">
-                                    <div class="mobile-card-image">
-                                        <img src="templates/estetica/assets/images/hero-estetica.webp" alt="Estética" width="512" height="512">
-                                        <div class="image-gradient-overlay"></div>
-                                    </div>
-                                    <div class="mobile-card-content">
-                                        <div class="template-logo"><i class="fa-solid fa-spa"></i> Lumina Estética</div>
-                                        <div class="template-name">Layout: Wellness & Saúde</div>
-                                        <p class="template-desc">Um design limpo, focado em agendamentos pelo WhatsApp e exposição clara dos procedimentos e corpo clínico.</p>
-                                        <a href="/templates/estetica" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-full">Ver site completo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                    </div>
+            <div class="carousel-track-wrapper" id="carousel-track-wrap">
+                <div class="carousel-track" id="carousel-track">
+                    
+                    <!-- Slide 1: Saúde & Pediatria -->
+                    <div class="carousel-slide active" data-index="0" data-link="/templates/estetica">
+                        <div class="mockup-window-card">
+                            
+                            <!-- MOBILE CARD UI -->
+                            <div class="mobile-template-card">
+                                <div class="mobile-card-image">
+                                    <img src="templates/estetica/assets/images/hero-estetica.webp" alt="Estética Template" fetchpriority="high" width="512" height="512">
+                                    <div class="mobile-card-badge">Novo</div>
                                 </div>
-                                <div class="desktop-template-card">
-                                    <div class="window-header-bar">
-                                        <div class="traffic-lights"><span class="light red"></span><span class="light yellow"></span><span class="light green"></span></div>
-                                        <div class="url-bar"><i class="fa-solid fa-lock"></i> clinica-exemplo.com.br</div>
-                                        <a href="/templates/estetica" target="_blank" rel="noopener noreferrer" class="btn-visit-site">Abrir Site <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                <div class="mobile-card-info">
+                                    <div class="mobile-card-title-row">
+                                        <div class="mobile-card-icon" style="color: #22D3EE; background: rgba(34,211,238,0.1);"><i class="fa-solid fa-heart-pulse"></i></div>
+                                        <div class="mobile-card-text">
+                                            <h3>Clínica de Estética</h3>
+                                            <p>Foco em WhatsApp</p>
+                                        </div>
                                     </div>
-                                    <div class="iframe-container"><iframe src="/templates/estetica" title="Preview" loading="lazy"></iframe></div>
+                                    <a href="/templates/estetica" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-full">Visualizar Demo <i class="fa-solid fa-arrow-up-right-from-square" style="margin-left: 6px; font-size: 0.8em;"></i></a>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Slide 2: Odontologia -->
-                        <div class="carousel-slide" data-index="1">
-                            <div class="mockup-window-card">
-                                <div class="mobile-template-card">
-                                    <div class="mobile-card-image">
-                                        <img src="templates/odonto/assets/images/hero-odonto.webp" alt="Odonto" width="512" height="512" onerror="this.src='templates/estetica/assets/images/hero-odonto.webp'">
-                                        <div class="image-gradient-overlay"></div>
+
+                            <!-- DESKTOP IFRAME UI -->
+                            <div class="desktop-mockup-view">
+                                <div class="mockup-window-topbar">
+                                    <div class="mockup-dots">
+                                        <span></span><span></span><span></span>
                                     </div>
-                                    <div class="mobile-card-content">
-                                        <div class="template-logo"><i class="fa-solid fa-tooth"></i> Dra. Odonto</div>
-                                        <div class="template-name">Layout: Sorriso Perfeito</div>
-                                        <p class="template-desc">Ideal para dentistas. Apresenta tratamentos, depoimentos, fotos de antes/depois e facilita o agendamento.</p>
-                                        <a href="/templates/odonto" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-full">Ver site completo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                    <div class="mockup-address">
+                                        <i class="fa-solid fa-lock"></i>
+                                        <span>auraestetica.com.br</span>
+                                    </div>
+                                    <div class="mockup-topbar-right">
+                                        <a href="/templates/estetica" target="_blank" rel="noopener noreferrer" class="mockup-topbar-cta">
+                                            <span>Abrir Site</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="desktop-template-card">
-                                    <div class="window-header-bar">
-                                        <div class="traffic-lights"><span class="light red"></span><span class="light yellow"></span><span class="light green"></span></div>
-                                        <div class="url-bar"><i class="fa-solid fa-lock"></i> consultorio-exemplo.com.br</div>
-                                        <a href="/templates/odonto" target="_blank" rel="noopener noreferrer" class="btn-visit-site">Abrir Site <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                <a href="/templates/estetica" target="_blank" rel="noopener noreferrer" class="mockup-content" title="Clique para abrir demonstração">
+                                    <div class="mockup-iframe-scaler">
+                                        <iframe src="/templates/estetica" class="mockup-iframe" tabindex="-1" loading="lazy" title="Preview Clínica & Estética"></iframe>
                                     </div>
-                                    <div class="iframe-container"><iframe src="/templates/odonto" title="Preview" loading="lazy"></iframe></div>
-                                </div>
+                                </a>
                             </div>
-                        </div>
-                        <!-- Slide 3 & 4 (Empty) -->
-                        <div class="carousel-slide" data-index="2">
-                            <div class="mockup-window-card" style="background:var(--bg-secondary); display:flex; align-items:center; justify-content:center; min-height:400px;"><p style="color:var(--text-muted);"><i class="fa-solid fa-hourglass-half"></i> Em desenvolvimento</p></div>
-                        </div>
-                        <div class="carousel-slide" data-index="3">
-                            <div class="mockup-window-card" style="background:var(--bg-secondary); display:flex; align-items:center; justify-content:center; min-height:400px;"><p style="color:var(--text-muted);"><i class="fa-solid fa-hourglass-half"></i> Em desenvolvimento</p></div>
                         </div>
                     </div>
+
+                    <!-- Slide 2: Odontologia -->
+                    <div class="carousel-slide" data-index="1" data-link="/templates/odontologia">
+                        <div class="mockup-window-card">
+                            
+                            <!-- MOBILE CARD UI -->
+                            <div class="mobile-template-card">
+                                <div class="mobile-card-image">
+                                    <img src="templates/odontologia/assets/images/hero-odonto.webp" alt="Odontologia Template" loading="lazy" width="512" height="512">
+                                    <div class="mobile-card-badge">Destaque</div>
+                                </div>
+                                <div class="mobile-card-info">
+                                    <div class="mobile-card-title-row">
+                                        <div class="mobile-card-icon" style="color: #B89358; background: rgba(184,147,88,0.1);"><i class="fa-solid fa-tooth"></i></div>
+                                        <div class="mobile-card-text">
+                                            <h3>Odontologia</h3>
+                                            <p>Alinhadores & Estética</p>
+                                        </div>
+                                    </div>
+                                    <a href="/templates/odontologia" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-full">Visualizar Demo <i class="fa-solid fa-arrow-up-right-from-square" style="margin-left: 6px; font-size: 0.8em;"></i></a>
+                                </div>
+                            </div>
+
+                            <!-- DESKTOP IFRAME UI -->
+                            <div class="desktop-mockup-view">
+                                <div class="mockup-window-topbar">
+                                    <div class="mockup-dots">
+                                        <span></span><span></span><span></span>
+                                    </div>
+                                    <div class="mockup-address">
+                                        <i class="fa-solid fa-lock"></i>
+                                        <span>odontoprime.com.br</span>
+                                    </div>
+                                    <div class="mockup-topbar-right">
+                                        <a href="/templates/odontologia" target="_blank" rel="noopener noreferrer" class="mockup-topbar-cta">
+                                            <span>Abrir Site</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <a href="/templates/odontologia" target="_blank" rel="noopener noreferrer" class="mockup-content" title="Clique para abrir demonstração">
+                                    <div class="mockup-iframe-scaler">
+                                        <iframe src="/templates/odontologia" class="mockup-iframe" tabindex="-1" loading="lazy" title="Preview Odontologia & Estética"></iframe>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Advocacia -->
+                    <div class="carousel-slide" data-index="2" data-link="/templates/advocacia">
+                        <div class="mockup-window-card">
+                            
+                            <!-- MOBILE CARD UI -->
+                            <div class="mobile-template-card">
+                                <div class="mobile-card-image">
+                                    <img src="templates/advocacia/assets/images/hero-advocacia.webp" alt="Advocacia Template" loading="lazy" width="512" height="512">
+                                </div>
+                                <div class="mobile-card-info">
+                                    <div class="mobile-card-title-row">
+                                        <div class="mobile-card-icon" style="color: #A38C61; background: rgba(163,140,97,0.1);"><i class="fa-solid fa-scale-balanced"></i></div>
+                                        <div class="mobile-card-text">
+                                            <h3>Advocacia</h3>
+                                            <p>Direito & Finanças</p>
+                                        </div>
+                                    </div>
+                                    <a href="/templates/advocacia" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-full">Visualizar Demo <i class="fa-solid fa-arrow-up-right-from-square" style="margin-left: 6px; font-size: 0.8em;"></i></a>
+                                </div>
+                            </div>
+
+                            <!-- DESKTOP IFRAME UI -->
+                            <div class="desktop-mockup-view">
+                                <div class="mockup-window-topbar">
+                                    <div class="mockup-dots">
+                                        <span></span><span></span><span></span>
+                                    </div>
+                                    <div class="mockup-address">
+                                        <i class="fa-solid fa-lock"></i>
+                                        <span>santosvalente.com.br</span>
+                                    </div>
+                                    <div class="mockup-topbar-right">
+                                        <a href="/templates/advocacia" target="_blank" rel="noopener noreferrer" class="mockup-topbar-cta">
+                                            <span>Abrir Site</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <a href="/templates/advocacia" target="_blank" rel="noopener noreferrer" class="mockup-content" title="Clique para abrir demonstração">
+                                    <div class="mockup-iframe-scaler">
+                                        <iframe src="/templates/advocacia" class="mockup-iframe" tabindex="-1" loading="lazy" title="Preview Advocacia & Finanças"></iframe>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4: Contabilidade -->
+                    <div class="carousel-slide" data-index="3" data-link="/templates/contabilidade">
+                        <div class="mockup-window-card">
+                            
+                            <!-- MOBILE CARD UI -->
+                            <div class="mobile-template-card">
+                                <div class="mobile-card-image">
+                                    <img src="templates/contabilidade/assets/images/hero-contabilidade.webp" alt="Contabilidade Template" loading="lazy" width="512" height="512">
+                                </div>
+                                <div class="mobile-card-info">
+                                    <div class="mobile-card-title-row">
+                                        <div class="mobile-card-icon" style="color: #FF5E3A; background: rgba(255,94,58,0.1);"><i class="fa-solid fa-chart-line"></i></div>
+                                        <div class="mobile-card-text">
+                                            <h3>Contabilidade</h3>
+                                            <p>B2B & Consultoria</p>
+                                        </div>
+                                    </div>
+                                    <a href="/templates/contabilidade" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-full">Visualizar Demo <i class="fa-solid fa-arrow-up-right-from-square" style="margin-left: 6px; font-size: 0.8em;"></i></a>
+                                </div>
+                            </div>
+
+                            <!-- DESKTOP IFRAME UI -->
+                            <div class="desktop-mockup-view">
+                                <div class="mockup-window-topbar">
+                                    <div class="mockup-dots">
+                                        <span></span><span></span><span></span>
+                                    </div>
+                                    <div class="mockup-address">
+                                        <i class="fa-solid fa-lock"></i>
+                                        <span>luminacontabil.com.br</span>
+                                    </div>
+                                    <div class="mockup-topbar-right">
+                                        <a href="/templates/contabilidade" target="_blank" rel="noopener noreferrer" class="mockup-topbar-cta">
+                                            <span>Abrir Site</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <a href="/templates/contabilidade" target="_blank" rel="noopener noreferrer" class="mockup-content" title="Clique para abrir demonstração">
+                                    <div class="mockup-iframe-scaler">
+                                        <iframe src="/templates/contabilidade" class="mockup-iframe" tabindex="-1" loading="lazy" title="Preview Contabilidade"></iframe>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+            </div>
+
+            <!-- Dots Pagination Indicator -->
+            <div class="carousel-pagination" id="carousel-dots">
+                <button class="dot active" data-index="0" aria-label="Slide 1"></button>
+                <button class="dot" data-index="1" aria-label="Slide 2"></button>
+                <button class="dot" data-index="2" aria-label="Slide 3"></button>
+                <button class="dot" data-index="3" aria-label="Slide 4"></button>
             </div>
         </div>
     </section>
