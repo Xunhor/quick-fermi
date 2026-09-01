@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Boomo | Estúdio Digital de Sites por Assinatura</title>
     <meta name="description" content="Estúdio de sites profissionais por assinatura. Criamos, hospedamos e mantemos seu site no ar com design de elite.">
-    <meta name="theme-color" content="#060403">
+    <meta name="theme-color" content="#000000">
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
     <!-- Open Graph / WhatsApp Preview -->
@@ -33,7 +33,7 @@
         }
 
         :root {
-            --color-dark: #060403;
+            --color-dark: #000000;
             --color-light: #E9EAE4;
             --color-muted: #8C8C85;
             --color-accent: #00E5FF;
@@ -42,8 +42,6 @@
             --fontXS: 11px;
             --fontS: 12px;
             --fontM: 16px;
-            --fontL: 28px;
-            --fontXL: 48px;
         }
 
         * {
@@ -61,7 +59,7 @@
             width: 100%;
             height: 100%;
             overflow: hidden;
-            background-color: var(--color-dark);
+            background-color: #000000;
             color: var(--color-light);
             font-family: 'Favorit', -apple-system, BlinkMacSystemFont, sans-serif;
             cursor: default;
@@ -73,14 +71,14 @@
             top: 0;
             left: 0;
             width: 100%;
-            padding: 16px 24px;
+            padding: 20px 24px;
             display: grid;
             grid-template-columns: 1fr auto 1fr;
             align-items: center;
             font-size: var(--fontS);
             font-weight: 500;
             text-transform: uppercase;
-            letter-spacing: 0.08em;
+            letter-spacing: 0.12em;
             color: var(--color-light);
             mix-blend-mode: difference;
             z-index: 100;
@@ -108,48 +106,30 @@
         .nav_left {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 14px;
         }
 
         .brand_logo {
             font-weight: 800;
-            font-size: 14px;
-            letter-spacing: 0.02em;
-        }
-
-        .live_status_dot {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-size: var(--fontXXS);
-            color: var(--color-green);
-            letter-spacing: 0.1em;
-        }
-
-        .live_status_dot::before {
-            content: '';
-            width: 5px;
-            height: 5px;
-            border-radius: 50%;
-            background: var(--color-green);
-            box-shadow: 0 0 8px var(--color-green);
+            font-size: 16px;
+            letter-spacing: -0.02em;
         }
 
         .nav_center {
             display: flex;
-            gap: 24px;
+            gap: 32px;
             justify-content: center;
         }
 
         .nav_right {
             display: flex;
-            gap: 20px;
+            gap: 24px;
             justify-content: flex-end;
             align-items: center;
         }
 
         .btn_nav_cta {
-            padding: 4px 12px;
+            padding: 5px 14px;
             border: 1px solid rgba(233, 234, 228, 0.4);
             border-radius: 999px;
             font-size: 11px;
@@ -167,9 +147,9 @@
             position: fixed;
             top: 0;
             left: 0;
-            width: 5px;
-            height: 5px;
-            background-color: var(--color-light);
+            width: 4px;
+            height: 4px;
+            background-color: #FFFFFF;
             mix-blend-mode: difference;
             pointer-events: none;
             z-index: 300;
@@ -182,23 +162,23 @@
             position: fixed;
             top: 0;
             left: 0;
-            color: var(--color-light);
+            color: #FFFFFF;
             mix-blend-mode: difference;
             pointer-events: none;
             z-index: 300;
             opacity: 0;
             font-size: 9px;
             font-family: 'Arizona', serif;
-            letter-spacing: 0.08em;
+            letter-spacing: 0.1em;
             text-transform: uppercase;
             padding-left: 14px;
-            padding-top: 8px;
+            padding-top: 6px;
             transform: translate(0, 0);
             transition: opacity 0.3s;
         }
 
-        /* 3. FULLSCREEN SHOWCASE VIEWPORT (CIPHER CANVAS STYLE) */
-        .showcase_viewport {
+        /* 3. 3D ORBITAL CONSTELLATION STAGE (CIPHER EXACT EXPERIENCE) */
+        .constellation_stage {
             position: relative;
             width: 100vw;
             height: 100svh;
@@ -206,213 +186,117 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            perspective: 1600px;
+            perspective-origin: center center;
+            cursor: grab;
         }
 
-        .showcase_canvas_bg {
+        .constellation_stage:active {
+            cursor: grabbing;
+        }
+
+        /* Center Glyph (Cipher Center Eye/Symbol) */
+        .constellation_center_glyph {
             position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at center, #11100E 0%, #060403 100%);
-            z-index: 1;
-        }
-
-        /* Interactive Showcase Slides */
-        .slides_container {
-            position: relative;
-            width: 100%;
-            height: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 32px;
+            height: 32px;
             display: flex;
             align-items: center;
             justify-content: center;
-            z-index: 5;
-            perspective: 1200px;
-        }
-
-        .showcase_slide {
-            position: absolute;
-            width: min(1040px, 90vw);
-            height: min(640px, 72vh);
-            border-radius: 12px;
-            overflow: hidden;
-            background: #080706;
-            border: 1px solid rgba(233, 234, 228, 0.14);
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(255, 255, 255, 0.05);
-            opacity: 0;
-            z-index: 1;
-            transform: scale(0.92) translateY(20px);
+            color: rgba(233, 234, 228, 0.4);
             pointer-events: none;
-            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
-        }
-
-        .showcase_slide.active {
-            opacity: 1;
-            z-index: 20;
-            transform: scale(1) translateX(0) translateY(0);
-            pointer-events: auto;
-        }
-
-        .showcase_slide.prev {
-            transform: scale(0.88) translateX(-110%);
-            opacity: 0;
-            z-index: 5;
-            pointer-events: none;
-        }
-
-        .showcase_slide.next {
-            transform: scale(0.88) translateX(110%);
-            opacity: 0;
-            z-index: 5;
-            pointer-events: none;
-        }
-
-        /* Slide Topbar */
-        .slide_topbar {
-            height: 40px;
-            padding: 0 16px;
-            background: rgba(18, 20, 24, 0.9);
-            border-bottom: 1px solid rgba(233, 234, 228, 0.08);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-size: 11px;
-            color: var(--color-muted);
-            letter-spacing: 0.04em;
-        }
-
-        .slide_controls {
-            display: flex;
-            gap: 6px;
-        }
-
-        .slide_controls span {
-            width: 9px;
-            height: 9px;
-            border-radius: 50%;
-            background: rgba(233, 234, 228, 0.2);
-        }
-
-        .slide_address {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 3px 14px;
-            background: rgba(0, 0, 0, 0.4);
-            border-radius: 6px;
-            font-size: 10px;
-            font-family: monospace;
-            color: var(--color-light);
-        }
-
-        .slide_action_open {
-            color: var(--color-light);
-            text-decoration: none;
-            font-size: 10px;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            transition: color 0.2s;
-        }
-
-        .slide_action_open:hover {
-            color: var(--color-accent);
-        }
-
-        /* Slide Iframe Viewport */
-        .slide_iframe_wrap {
-            position: relative;
-            width: 100%;
-            height: calc(100% - 40px);
-            overflow: hidden;
-            background: #000;
-        }
-
-        .slide_iframe_scaler {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 1366px;
-            height: 768px;
-            transform-origin: top left;
-        }
-
-        .slide_iframe_scaler iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        /* Slide Overlay Floating Info */
-        .slide_floating_badge {
-            position: absolute;
-            bottom: 18px;
-            left: 18px;
-            padding: 8px 16px;
-            border-radius: 8px;
-            background: rgba(6, 4, 3, 0.85);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(233, 234, 228, 0.12);
-            display: flex;
-            align-items: center;
-            gap: 14px;
             z-index: 10;
         }
 
-        .badge_niche {
-            font-size: 11px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--color-light);
+        .constellation_center_glyph svg {
+            width: 28px;
+            height: 28px;
+            animation: pulseGlyph 4s ease-in-out infinite;
         }
 
-        .badge_cta {
-            font-size: 10px;
-            padding: 4px 10px;
-            border-radius: 4px;
-            background: var(--color-light);
-            color: var(--color-dark);
-            text-decoration: none;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            transition: opacity 0.2s;
+        @keyframes pulseGlyph {
+            0%, 100% { opacity: 0.3; transform: scale(0.95); }
+            50% { opacity: 0.8; transform: scale(1.05); }
         }
 
-        .badge_cta:hover {
-            opacity: 0.85;
-        }
-
-        /* Navigation Arrows on Viewport Sides */
-        .viewport_nav_btn {
+        /* 3D Orbit Ring Container */
+        .orbit_ring {
             position: absolute;
             top: 50%;
-            transform: translateY(-50%);
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            transform-style: preserve-3d;
+        }
+
+        /* Individual Card in Orbit */
+        .orbit_card {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 280px;
+            height: 175px;
+            border-radius: 6px;
+            overflow: hidden;
+            background: #111;
             border: 1px solid rgba(233, 234, 228, 0.15);
-            background: rgba(6, 4, 3, 0.6);
-            backdrop-filter: blur(12px);
-            color: var(--color-light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
+            transform-origin: center center;
             cursor: pointer;
-            z-index: 20;
-            transition: all 0.25s ease;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            will-change: transform, opacity;
         }
 
-        .viewport_nav_btn:hover {
-            background: var(--color-light);
-            color: var(--color-dark);
-            border-color: var(--color-light);
+        .orbit_card:hover {
+            border-color: rgba(233, 234, 228, 0.6);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 1), 0 0 30px rgba(255, 255, 255, 0.15);
         }
 
-        .btn_prev { left: 24px; }
-        .btn_next { right: 24px; }
+        .orbit_card_img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            pointer-events: none;
+            filter: brightness(0.92) contrast(1.05);
+            transition: filter 0.3s ease, transform 0.5s ease;
+        }
+
+        .orbit_card:hover .orbit_card_img {
+            filter: brightness(1.05) contrast(1.1);
+            transform: scale(1.04);
+        }
+
+        .orbit_card_overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.85) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 12px 14px;
+            pointer-events: none;
+        }
+
+        .orbit_card_title {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #FFFFFF;
+            margin-bottom: 2px;
+        }
+
+        .orbit_card_niche {
+            font-size: 9px;
+            font-family: 'Arizona', serif;
+            color: rgba(233, 234, 228, 0.7);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
 
         /* 4. CIPHER BOTTOM BAR (WORKS INFOS) */
         .works_infos {
@@ -420,13 +304,13 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            padding: 16px 24px;
+            padding: 20px 24px;
             display: grid;
-            grid-template-columns: 1fr 1.5fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
             align-items: center;
             font-size: var(--fontXS);
             text-transform: uppercase;
-            letter-spacing: 0.12em;
+            letter-spacing: 0.14em;
             color: var(--color-light);
             mix-blend-mode: difference;
             z-index: 100;
@@ -434,18 +318,15 @@
         }
 
         .works_infos .l {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-family: monospace;
-            font-size: 12px;
+            font-size: 10px;
+            letter-spacing: 0.16em;
         }
 
         .works_infos .m {
             text-align: center;
-            font-weight: 500;
-            font-size: 11px;
-            letter-spacing: 0.15em;
+            font-size: 10px;
+            font-family: monospace;
+            letter-spacing: 0.2em;
         }
 
         .works_infos .r {
@@ -466,6 +347,7 @@
             pointer-events: auto;
             font-weight: 600;
             font-size: 11px;
+            letter-spacing: 0.1em;
         }
 
         .arrow_c {
@@ -502,13 +384,149 @@
             transform: translate(0, 0);
         }
 
-        /* 5. SLIDE-OVER DRAWER MODAL (COMO FUNCIONA / PLANOS / FAQ) */
+        /* 5. MODAL INTERATIVO AO CLICAR EM UM TEMPLATE */
+        .preview_modal_overlay {
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            z-index: 600;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.35s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .preview_modal_overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .preview_modal_window {
+            width: min(1080px, 94vw);
+            height: min(680px, 86vh);
+            background: #0D0F12;
+            border: 1px solid rgba(233, 234, 228, 0.18);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.95);
+            display: flex;
+            flex-direction: column;
+            transform: scale(0.94);
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .preview_modal_overlay.active .preview_modal_window {
+            transform: scale(1);
+        }
+
+        .modal_topbar {
+            height: 44px;
+            padding: 0 18px;
+            background: rgba(18, 20, 24, 0.95);
+            border-bottom: 1px solid rgba(233, 234, 228, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 11px;
+            color: var(--color-muted);
+        }
+
+        .modal_controls {
+            display: flex;
+            gap: 7px;
+        }
+
+        .modal_controls span {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(233, 234, 228, 0.25);
+            cursor: pointer;
+        }
+
+        .modal_address {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 4px 16px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 6px;
+            font-size: 11px;
+            font-family: monospace;
+            color: var(--color-light);
+        }
+
+        .modal_actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .modal_btn_wa {
+            padding: 4px 12px;
+            border-radius: 4px;
+            background: #25D366;
+            color: #000;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .modal_btn_close {
+            background: transparent;
+            border: none;
+            color: var(--color-light);
+            font-size: 16px;
+            cursor: pointer;
+            line-height: 1;
+            padding: 4px;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+
+        .modal_btn_close:hover {
+            opacity: 1;
+        }
+
+        .modal_iframe_wrap {
+            position: relative;
+            width: 100%;
+            height: calc(100% - 44px);
+            overflow: hidden;
+            background: #000;
+        }
+
+        .modal_iframe_scaler {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1366px;
+            height: 768px;
+            transform-origin: top left;
+        }
+
+        .modal_iframe_scaler iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* 6. SLIDE-OVER DRAWER MODAL (COMO FUNCIONA / PLANOS / FAQ) */
         .drawer_overlay {
             position: fixed;
             inset: 0;
             width: 100vw;
             height: 100vh;
-            background: rgba(6, 4, 3, 0.85);
+            background: rgba(0, 0, 0, 0.85);
             backdrop-filter: blur(28px);
             -webkit-backdrop-filter: blur(28px);
             z-index: 500;
@@ -527,7 +545,7 @@
         .drawer_content {
             width: min(680px, 92vw);
             height: 100%;
-            background: #0A0908;
+            background: #080808;
             border-left: 1px solid rgba(233, 234, 228, 0.12);
             padding: 48px 40px;
             overflow-y: auto;
@@ -577,7 +595,6 @@
             color: var(--color-dark);
         }
 
-        /* Drawer Sections */
         .panel_section {
             display: none;
             flex-direction: column;
@@ -743,24 +760,21 @@
         @media (max-width: 768px) {
             nav.main_links {
                 grid-template-columns: 1fr auto;
-                padding: 14px 16px;
+                padding: 16px;
             }
             .nav_center {
                 display: none;
             }
             .works_infos {
                 grid-template-columns: 1fr auto;
-                padding: 14px 16px;
+                padding: 16px;
             }
             .works_infos .m {
                 display: none;
             }
-            .showcase_slide {
-                width: 92vw;
-                height: 70vh;
-            }
-            .viewport_nav_btn {
-                display: none;
+            .orbit_card {
+                width: 210px;
+                height: 130px;
             }
             .cursor_cube, .cursor_label {
                 display: none;
@@ -770,11 +784,10 @@
 </head>
 <body>
 
-    <!-- 1. CIPHER NAVIGATION -->
+    <!-- 1. CIPHER TOP NAVIGATION -->
     <nav class="main_links">
         <div class="nav_left">
             <a href="/" class="brand_logo">BOOMO<span style="color: var(--color-accent);">.</span></a>
-            <span class="live_status_dot">ONLINE</span>
         </div>
 
         <div class="nav_center">
@@ -795,123 +808,28 @@
     <div class="cursor_cube" id="cursorCube"></div>
     <div class="cursor_label" id="cursorLabel">BOOMO // STUDIO</div>
 
-    <!-- 3. FULLSCREEN SHOWCASE (CIPHER CANVAS EXPERIENCE) -->
-    <main class="showcase_viewport" id="viewport">
-        <div class="showcase_canvas_bg"></div>
-
-        <!-- Navigation Arrows -->
-        <button class="viewport_nav_btn btn_prev" id="btnPrev" aria-label="Anterior">←</button>
-        <button class="viewport_nav_btn btn_next" id="btnNext" aria-label="Próximo">→</button>
-
-        <!-- Slides Container -->
-        <div class="slides_container" id="slidesContainer">
-            
-            <!-- Slide 01: Estética -->
-            <div class="showcase_slide active" data-index="0" data-niche="AURA // CLÍNICA & ESTÉTICA" data-url="/templates/estetica" data-address="auraestetica.com.br">
-                <div class="slide_topbar">
-                    <div class="slide_controls">
-                        <span></span><span></span><span></span>
-                    </div>
-                    <div class="slide_address">
-                        <span>🔒 auraestetica.com.br</span>
-                    </div>
-                    <a href="/templates/estetica" target="_blank" rel="noopener noreferrer" class="slide_action_open">
-                        <span>Abrir Site</span> ↗
-                    </a>
-                </div>
-                <div class="slide_iframe_wrap">
-                    <div class="slide_iframe_scaler">
-                        <iframe src="/templates/estetica" title="Aura Estética Demo" loading="eager"></iframe>
-                    </div>
-                </div>
-                <div class="slide_floating_badge">
-                    <span class="badge_niche">Clínica & Estética</span>
-                    <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Quero%20um%20site%20no%20estilo%20do%20modelo%20de%20Est%C3%A9tica." target="_blank" class="badge_cta">Pedir Este Site</a>
-                </div>
-            </div>
-
-            <!-- Slide 02: Odontologia -->
-            <div class="showcase_slide next" data-index="1" data-niche="PRIME // ODONTOLOGIA & IMPLANTES" data-url="/templates/odontologia" data-address="odontoprime.com.br">
-                <div class="slide_topbar">
-                    <div class="slide_controls">
-                        <span></span><span></span><span></span>
-                    </div>
-                    <div class="slide_address">
-                        <span>🔒 odontoprime.com.br</span>
-                    </div>
-                    <a href="/templates/odontologia" target="_blank" rel="noopener noreferrer" class="slide_action_open">
-                        <span>Abrir Site</span> ↗
-                    </a>
-                </div>
-                <div class="slide_iframe_wrap">
-                    <div class="slide_iframe_scaler">
-                        <iframe data-src="/templates/odontologia" src="about:blank" title="Odonto Prime Demo" loading="lazy"></iframe>
-                    </div>
-                </div>
-                <div class="slide_floating_badge">
-                    <span class="badge_niche">Odontologia</span>
-                    <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Quero%20um%20site%20no%20estilo%20do%20modelo%20de%20Odontologia." target="_blank" class="badge_cta">Pedir Este Site</a>
-                </div>
-            </div>
-
-            <!-- Slide 03: Advocacia -->
-            <div class="showcase_slide" data-index="2" data-niche="SANTOS VALENTE // ADVOCACIA & CONSULTORIA" data-url="/templates/advocacia" data-address="santosvalente.com.br">
-                <div class="slide_topbar">
-                    <div class="slide_controls">
-                        <span></span><span></span><span></span>
-                    </div>
-                    <div class="slide_address">
-                        <span>🔒 santosvalente.com.br</span>
-                    </div>
-                    <a href="/templates/advocacia" target="_blank" rel="noopener noreferrer" class="slide_action_open">
-                        <span>Abrir Site</span> ↗
-                    </a>
-                </div>
-                <div class="slide_iframe_wrap">
-                    <div class="slide_iframe_scaler">
-                        <iframe data-src="/templates/advocacia" src="about:blank" title="Santos Valente Demo" loading="lazy"></iframe>
-                    </div>
-                </div>
-                <div class="slide_floating_badge">
-                    <span class="badge_niche">Advocacia</span>
-                    <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Quero%20um%20site%20no%20estilo%20do%20modelo%20de%20Advocacia." target="_blank" class="badge_cta">Pedir Este Site</a>
-                </div>
-            </div>
-
-            <!-- Slide 04: Contabilidade -->
-            <div class="showcase_slide prev" data-index="3" data-niche="LUMINA // CONTABILIDADE & B2B" data-url="/templates/contabilidade" data-address="luminacontabil.com.br">
-                <div class="slide_topbar">
-                    <div class="slide_controls">
-                        <span></span><span></span><span></span>
-                    </div>
-                    <div class="slide_address">
-                        <span>🔒 luminacontabil.com.br</span>
-                    </div>
-                    <a href="/templates/contabilidade" target="_blank" rel="noopener noreferrer" class="slide_action_open">
-                        <span>Abrir Site</span> ↗
-                    </a>
-                </div>
-                <div class="slide_iframe_wrap">
-                    <div class="slide_iframe_scaler">
-                        <iframe data-src="/templates/contabilidade" src="about:blank" title="Lumina Contábil Demo" loading="lazy"></iframe>
-                    </div>
-                </div>
-                <div class="slide_floating_badge">
-                    <span class="badge_niche">Contabilidade</span>
-                    <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Quero%20um%20site%20no%20estilo%20do%20modelo%20de%20Contabilidade." target="_blank" class="badge_cta">Pedir Este Site</a>
-                </div>
-            </div>
-
+    <!-- 3. 3D ORBITAL CONSTELLATION (CIPHER EXACT 3D VORTEX EXPERIENCE) -->
+    <main class="constellation_stage" id="stage">
+        <!-- Center Glyph -->
+        <div class="constellation_center_glyph">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                <path d="M2 12h20"/>
+            </svg>
         </div>
+
+        <!-- 3D Orbit Ring with Cards -->
+        <div class="orbit_ring" id="orbitRing"></div>
     </main>
 
     <!-- 4. CIPHER BOTTOM BAR (WORKS INFOS) -->
     <div class="works_infos">
         <div class="l">
-            <span id="workIndex">01 / 04</span>
+            <span>SITES POR ASSINATURA // ESTÚDIO DIGITAL</span>
         </div>
         <div class="m">
-            <span id="workLabel">AURA // CLÍNICA & ESTÉTICA</span>
+            <span id="centerStatus">CONSTELLATION</span>
         </div>
         <div class="r">
             <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Gostaria%20de%20um%20site%20profissional%20para%20minha%20empresa." target="_blank" rel="noopener noreferrer" class="jour">
@@ -924,7 +842,32 @@
         </div>
     </div>
 
-    <!-- 5. SLIDE-OVER DRAWER MODAL (COMO FUNCIONA / PLANOS / FAQ) -->
+    <!-- 5. PREVIEW MODAL AO CLICAR EM UM CARD -->
+    <div class="preview_modal_overlay" id="previewModal" onclick="closePreviewModalOutside(event)">
+        <div class="preview_modal_window">
+            <div class="modal_topbar">
+                <div class="modal_controls">
+                    <span onclick="closePreviewModal()" style="background: #FF5F56;"></span>
+                    <span style="background: #FFBD2E;"></span>
+                    <span style="background: #27C93F;"></span>
+                </div>
+                <div class="modal_address">
+                    <span id="modalAddressText">🔒 auraestetica.com.br</span>
+                </div>
+                <div class="modal_actions">
+                    <a href="https://wa.me/559192432044" target="_blank" class="modal_btn_wa" id="modalWaBtn">Pedir Este Site</a>
+                    <button class="modal_btn_close" onclick="closePreviewModal()">✕</button>
+                </div>
+            </div>
+            <div class="modal_iframe_wrap">
+                <div class="modal_iframe_scaler" id="modalIframeScaler">
+                    <iframe id="modalIframe" src="about:blank" title="Site Demo Preview"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. SLIDE-OVER DRAWER MODAL (COMO FUNCIONA / PLANOS / FAQ) -->
     <div class="drawer_overlay" id="drawerOverlay" onclick="closeDrawerOutside(event)">
         <div class="drawer_content" id="drawerContent">
             <div class="drawer_header">
@@ -937,22 +880,22 @@
                 <h3 class="panel_headline">Projetos & Modelos Sob Medida</h3>
                 <p class="panel_subtext">Criamos sites institucionais de alto padrão para o seu nicho de atuação com foco total em autoridade e captação de clientes pelo WhatsApp.</p>
                 <div class="drawer_steps">
-                    <div class="step_item" style="cursor: pointer;" onclick="goToSlide(0); closeDrawer();">
+                    <div class="step_item" style="cursor: pointer;" onclick="openPreview('/templates/estetica', 'auraestetica.com.br', 'Clínica & Estética'); closeDrawer();">
                         <span class="step_num">01. TEMPLATE</span>
                         <h4>Clínica & Estética</h4>
                         <p>Design sofisticado, apresentação de procedimentos e agendamento direto.</p>
                     </div>
-                    <div class="step_item" style="cursor: pointer;" onclick="goToSlide(1); closeDrawer();">
+                    <div class="step_item" style="cursor: pointer;" onclick="openPreview('/templates/odontologia', 'odontoprime.com.br', 'Odontologia & Implantes'); closeDrawer();">
                         <span class="step_num">02. TEMPLATE</span>
                         <h4>Odontologia & Implantes</h4>
                         <p>Foco em tratamentos, estética do sorriso e autoridade médica.</p>
                     </div>
-                    <div class="step_item" style="cursor: pointer;" onclick="goToSlide(2); closeDrawer();">
+                    <div class="step_item" style="cursor: pointer;" onclick="openPreview('/templates/advocacia', 'santosvalente.com.br', 'Advocacia & Consultoria'); closeDrawer();">
                         <span class="step_num">03. TEMPLATE</span>
                         <h4>Advocacia & Finanças</h4>
                         <p>Elegância, áreas de atuação e contato imediato para consultas.</p>
                     </div>
-                    <div class="step_item" style="cursor: pointer;" onclick="goToSlide(3); closeDrawer();">
+                    <div class="step_item" style="cursor: pointer;" onclick="openPreview('/templates/contabilidade', 'luminacontabil.com.br', 'Contabilidade & B2B'); closeDrawer();">
                         <span class="step_num">04. TEMPLATE</span>
                         <h4>Contabilidade & B2B</h4>
                         <p>Clareza nos serviços contábeis, gestão fiscal e conversão corporativa.</p>
@@ -1062,9 +1005,185 @@
         </div>
     </div>
 
-    <!-- SCRIPTS (CIPHER INTERACTION ENGINE) -->
+    <!-- SCRIPTS: CIPHER 3D CONSTELLATION ORBIT ENGINE -->
     <script>
-        // 1. Cursor Follower (Cipher Style)
+        // 1. Templates Data
+        const templates = [
+            {
+                title: "Aura Estética",
+                niche: "Clínica & Procedimentos",
+                img: "templates/estetica/assets/images/hero-estetica.webp",
+                url: "/templates/estetica",
+                domain: "auraestetica.com.br"
+            },
+            {
+                title: "Odonto Prime",
+                niche: "Odontologia & Implantes",
+                img: "templates/odontologia/assets/images/hero-odonto.webp",
+                url: "/templates/odontologia",
+                domain: "odontoprime.com.br"
+            },
+            {
+                title: "Santos Valente",
+                niche: "Advocacia Empresarial",
+                img: "templates/advocacia/assets/images/hero-advocacia.webp",
+                url: "/templates/advocacia",
+                domain: "santosvalente.com.br"
+            },
+            {
+                title: "Lumina Contábil",
+                niche: "Contabilidade & B2B",
+                img: "templates/contabilidade/assets/images/hero-contabilidade.webp",
+                url: "/templates/contabilidade",
+                domain: "luminacontabil.com.br"
+            },
+            {
+                title: "Aura Laser",
+                niche: "Estética & Bem-Estar",
+                img: "templates/estetica/assets/images/hero-estetica.webp",
+                url: "/templates/estetica",
+                domain: "auralaser.com.br"
+            },
+            {
+                title: "Prime Alinhadores",
+                niche: "Estética Dental",
+                img: "templates/odontologia/assets/images/hero-odonto.webp",
+                url: "/templates/odontologia",
+                domain: "primealinhadores.com.br"
+            },
+            {
+                title: "Valente Consultoria",
+                niche: "Direito Tributário",
+                img: "templates/advocacia/assets/images/hero-advocacia.webp",
+                url: "/templates/advocacia",
+                domain: "valenteconsultoria.com.br"
+            },
+            {
+                title: "Lumina Gestão",
+                niche: "B2B & Finanças",
+                img: "templates/contabilidade/assets/images/hero-contabilidade.webp",
+                url: "/templates/contabilidade",
+                domain: "luminagestao.com.br"
+            },
+            {
+                title: "Aura Harmonização",
+                niche: "Dermatologia & Estética",
+                img: "templates/estetica/assets/images/hero-estetica.webp",
+                url: "/templates/estetica",
+                domain: "auraharmonizacao.com.br"
+            },
+            {
+                title: "Prime Cirurgia",
+                niche: "Odontologia Digital",
+                img: "templates/odontologia/assets/images/hero-odonto.webp",
+                url: "/templates/odontologia",
+                domain: "primecirurgia.com.br"
+            }
+        ];
+
+        // 2. Build 3D Orbit Cards
+        const orbitRing = document.getElementById('orbitRing');
+        const cardElements = [];
+
+        templates.forEach((tpl, i) => {
+            const card = document.createElement('div');
+            card.className = 'orbit_card';
+            card.innerHTML = `
+                <img class="orbit_card_img" src="${tpl.img}" alt="${tpl.title}" loading="lazy">
+                <div class="orbit_card_overlay">
+                    <div class="orbit_card_title">${tpl.title}</div>
+                    <div class="orbit_card_niche">${tpl.niche}</div>
+                </div>
+            `;
+            card.addEventListener('click', () => {
+                openPreview(tpl.url, tpl.domain, tpl.title);
+            });
+            card.addEventListener('mouseenter', () => {
+                if (label) label.textContent = `${tpl.title.toUpperCase()} // ${tpl.niche.toUpperCase()}`;
+            });
+            orbitRing.appendChild(card);
+            cardElements.push(card);
+        });
+
+        // 3. 3D Constellation Physics & Render Loop
+        let rotation = 0;
+        let targetRotation = 0;
+        let velocity = 0.0018; // gentle automatic floating orbit
+        let isDragging = false;
+        let startX = 0;
+
+        function update3DOrbit() {
+            rotation += (targetRotation - rotation) * 0.1 + velocity;
+
+            const total = cardElements.length;
+            const radiusX = Math.min(window.innerWidth * 0.40, 520);
+            const radiusY = Math.min(window.innerHeight * 0.30, 320);
+
+            cardElements.forEach((card, i) => {
+                const angle = (i / total) * Math.PI * 2 + rotation;
+                const x = Math.cos(angle) * radiusX;
+                const y = Math.sin(angle) * radiusY;
+                const z = Math.sin(angle) * 200; // depth in 3D
+                
+                // Normalizing scale and opacity based on z-depth
+                const depthFactor = (z + 200) / 400; // 0 to 1
+                const scale = 0.65 + depthFactor * 0.45;
+                const opacity = 0.25 + depthFactor * 0.75;
+                const zIndex = Math.round(depthFactor * 100);
+
+                card.style.transform = `translate3d(calc(-50% + ${x}px), calc(-50% + ${y}px), ${z}px) scale(${scale})`;
+                card.style.opacity = opacity;
+                card.style.zIndex = zIndex;
+            });
+
+            requestAnimationFrame(update3DOrbit);
+        }
+        requestAnimationFrame(update3DOrbit);
+
+        // Drag / Scroll Interaction
+        const stage = document.getElementById('stage');
+
+        stage.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            startX = e.clientX;
+        });
+
+        window.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+
+        window.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            const diff = e.clientX - startX;
+            startX = e.clientX;
+            targetRotation += diff * 0.005;
+        });
+
+        // Touch Drag for Mobile
+        stage.addEventListener('touchstart', (e) => {
+            isDragging = true;
+            startX = e.touches[0].clientX;
+        }, { passive: true });
+
+        window.addEventListener('touchend', () => {
+            isDragging = false;
+        });
+
+        window.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            const diff = e.touches[0].clientX - startX;
+            startX = e.touches[0].clientX;
+            targetRotation += diff * 0.006;
+        }, { passive: true });
+
+        // Wheel Scroll
+        window.addEventListener('wheel', (e) => {
+            if (document.getElementById('drawerOverlay')?.classList.contains('active')) return;
+            if (document.getElementById('previewModal')?.classList.contains('active')) return;
+            targetRotation += (e.deltaY || e.deltaX) * 0.002;
+        }, { passive: true });
+
+        // 4. Cursor Follower (Cipher Style)
         const cube = document.getElementById('cursorCube');
         const label = document.getElementById('cursorLabel');
         let mouseX = window.innerWidth / 2;
@@ -1091,99 +1210,44 @@
         }
         animateCursor();
 
-        // 2. Showcase Slider Logic
-        const slides = document.querySelectorAll('.showcase_slide');
-        const totalSlides = slides.length;
-        let currentIndex = 0;
-        const workIndexEl = document.getElementById('workIndex');
-        const workLabelEl = document.getElementById('workLabel');
-
-        function updateSlideScales() {
-            const scalers = document.querySelectorAll('.slide_iframe_scaler');
-            scalers.forEach(scaler => {
-                const parent = scaler.parentElement;
-                if (parent && parent.offsetWidth > 0) {
-                    const scale = parent.offsetWidth / 1366;
-                    scaler.style.transform = `scale(${scale})`;
-                }
-            });
+        // 5. Preview Modal Logic
+        function updateModalIframeScale() {
+            const scaler = document.getElementById('modalIframeScaler');
+            const parent = scaler?.parentElement;
+            if (scaler && parent && parent.offsetWidth > 0) {
+                const scale = parent.offsetWidth / 1366;
+                scaler.style.transform = `scale(${scale})`;
+            }
         }
 
-        function goToSlide(index) {
-            if (index < 0) index = totalSlides - 1;
-            if (index >= totalSlides) index = 0;
-            currentIndex = index;
+        function openPreview(url, domain, title) {
+            const modal = document.getElementById('previewModal');
+            const iframe = document.getElementById('modalIframe');
+            const address = document.getElementById('modalAddressText');
+            const waBtn = document.getElementById('modalWaBtn');
 
-            slides.forEach((slide, idx) => {
-                slide.classList.remove('active', 'prev', 'next');
-                if (idx === currentIndex) {
-                    slide.classList.add('active');
-                    const lazyIframe = slide.querySelector('iframe[data-src]');
-                    if (lazyIframe && lazyIframe.dataset.src) {
-                        lazyIframe.src = lazyIframe.dataset.src;
-                        delete lazyIframe.dataset.src;
-                    }
-                } else if (idx === (currentIndex - 1 + totalSlides) % totalSlides) {
-                    slide.classList.add('prev');
-                } else if (idx === (currentIndex + 1) % totalSlides) {
-                    slide.classList.add('next');
-                }
-            });
+            if (address) address.textContent = `🔒 ${domain}`;
+            if (iframe) iframe.src = url;
+            if (waBtn) waBtn.href = `https://wa.me/559192432044?text=Ol%C3%A1%21%20Gostei%20do%20modelo%20${encodeURIComponent(title)}%20e%20gostaria%20de%20um%20site%20para%20minha%20empresa.`;
 
-            const activeSlide = slides[currentIndex];
-            if (activeSlide) {
-                const niche = activeSlide.dataset.niche || '';
-                if (workIndexEl) workIndexEl.textContent = `0${currentIndex + 1} / 0${totalSlides}`;
-                if (workLabelEl) workLabelEl.textContent = niche;
-                if (label) label.textContent = niche;
-            }
-
-            updateSlideScales();
+            if (modal) modal.classList.add('active');
+            setTimeout(updateModalIframeScale, 50);
         }
 
-        document.getElementById('btnPrev')?.addEventListener('click', () => goToSlide(currentIndex - 1));
-        document.getElementById('btnNext')?.addEventListener('click', () => goToSlide(currentIndex + 1));
+        function closePreviewModal() {
+            const modal = document.getElementById('previewModal');
+            const iframe = document.getElementById('modalIframe');
+            if (modal) modal.classList.remove('active');
+            if (iframe) iframe.src = 'about:blank';
+        }
 
-        // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowRight') goToSlide(currentIndex + 1);
-            if (e.key === 'ArrowLeft') goToSlide(currentIndex - 1);
-            if (e.key === 'Escape') closeDrawer();
-        });
+        function closePreviewModalOutside(e) {
+            if (e.target.id === 'previewModal') closePreviewModal();
+        }
 
-        // Touch & Wheel drag
-        let touchStartX = 0;
-        document.addEventListener('touchstart', (e) => {
-            touchStartX = e.touches[0].clientX;
-        }, { passive: true });
+        window.addEventListener('resize', updateModalIframeScale);
 
-        document.addEventListener('touchend', (e) => {
-            const diff = touchStartX - e.changedTouches[0].clientX;
-            if (Math.abs(diff) > 50) {
-                if (diff > 0) goToSlide(currentIndex + 1);
-                else goToSlide(currentIndex - 1);
-            }
-        }, { passive: true });
-
-        let wheelCooldown = false;
-        document.addEventListener('wheel', (e) => {
-            if (document.getElementById('drawerOverlay')?.classList.contains('active')) return;
-            if (wheelCooldown) return;
-            if (Math.abs(e.deltaY) > 30 || Math.abs(e.deltaX) > 30) {
-                wheelCooldown = true;
-                if (e.deltaY > 0 || e.deltaX > 0) goToSlide(currentIndex + 1);
-                else goToSlide(currentIndex - 1);
-                setTimeout(() => { wheelCooldown = false; }, 600);
-            }
-        }, { passive: true });
-
-        window.addEventListener('resize', updateSlideScales);
-        window.addEventListener('load', () => {
-            updateSlideScales();
-            goToSlide(0);
-        });
-
-        // 3. Drawer Logic
+        // 6. Drawer Logic
         function openDrawer(sectionId) {
             const overlay = document.getElementById('drawerOverlay');
             const titleEl = document.getElementById('drawerSectionTitle');
