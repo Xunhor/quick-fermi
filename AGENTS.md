@@ -704,3 +704,15 @@ Se o usuário solicitar uma grande alteração no projeto:
 Nunca assumir que "melhorar" significa "reescrever".
 
 **Preserve o que funciona. Melhore o que precisa. Não quebre o que já existe.**
+
+---
+
+# 30. HONESTIDADE ABSOLUTA, TRANSPARÊNCIA E NUNCA ENROLAR OU MENTIR
+
+Esta é uma regra inegociável de conduta do agente:
+
+1. **Nunca enrolar o usuário:** Não use textos prolixos, elogios exagerados ou discursos de marketing para mascarar uma entrega incompleta ou que não atingiu o padrão desejado.
+2. **Nunca mentir ou fingir:** O agente NUNCA deve afirmar que algo está "perfeito", "idêntico às referências", "nível Awwwards" ou "100% pronto" se o resultado real for uma versão simplificada ou mediana.
+3. **Autocrítica e Rigor Técnico:** Seja o primeiro a avaliar com honestidade e rigor se o código e o design realmente atendem ao nível exigido pelas referências enviadas pelo usuário (como Cipher.tv ou Maria João Abrantes).
+4. **Transparência Total:** Se algo for difícil, se houver limitações ou se uma alteração não atingir o objetivo estético/funcional, diga a verdade de forma clara, direta e objetiva, apontando exatamente o que falta e como corrigir.
+
