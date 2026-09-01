@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Boomo | Estúdio Digital de Sites por Assinatura</title>
-    <meta name="description" content="Estúdio de sites profissionais por assinatura mensal. Criamos, hospedamos e mantemos seu site no ar em 72 horas com aprovação antes do setup.">
+    <meta name="description" content="Estúdio de sites profissionais por assinatura. Criamos, hospedamos e mantemos seu site no ar em 72 horas com garantia de aprovação antes do setup.">
     <meta name="theme-color" content="#000000">
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
@@ -12,7 +12,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://quick-fermi.vercel.app/">
     <meta property="og:title" content="Boomo | Sites Profissionais por Assinatura">
-    <meta property="og:description" content="Seu site profissional no ar em 72 horas. Você aprova o design antes de pagar o setup.">
+    <meta property="og:description" content="O site profissional da sua empresa no ar em 72 horas. Você aprova o design antes de pagar o setup.">
     <meta property="og:image" content="https://quick-fermi.vercel.app/assets/images/og-boomo.jpg">
 
     <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
@@ -21,29 +21,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- Stylesheet -->
+    <!-- Stylesheet Clone Squarespace -->
     <link rel="stylesheet" href="css/desktop/style.css">
 </head>
 <body>
 
     <!-- 1. NAVBAR (SQUARESPACE GLOBAL NAVIGATION) -->
-    <header class="sq_header">
-        <div class="container nav_content">
-            <a href="/" class="brand_logo">BOOMO<span>.</span></a>
+    <header class="sq_navbar">
+        <div class="container nav_inner">
+            <a href="/" class="nav_brand">BOOMO<span>.</span></a>
 
-            <nav class="nav_links" id="navLinks">
-                <a href="#templates">Templates</a>
-                <a href="#diferenciais">Diferenciais</a>
-                <a href="#como-funciona">Como Funciona</a>
-                <a href="#planos">Planos</a>
-                <a href="#faq">FAQ</a>
+            <nav class="nav_menu" id="navMenu">
+                <a href="#modelos" class="nav_item">Modelos</a>
+                <a href="#plataforma" class="nav_item">Recursos</a>
+                <a href="#como-funciona" class="nav_item">O Método</a>
+                <a href="#planos" class="nav_item">Planos & Preços</a>
+                <a href="#faq" class="nav_item">FAQ</a>
             </nav>
 
-            <div class="nav_cta_wrap">
-                <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Gostaria%20de%20conversar%20sobre%20um%20site%20profissional%20para%20minha%20empresa." target="_blank" rel="noopener noreferrer" class="btn_sqsp btn_sqsp_primary">
-                    Quero Meu Site
+            <div class="nav_right">
+                <a href="https://wa.me/559192432044" target="_blank" rel="noopener noreferrer" class="nav_link_plain">
+                    WhatsApp
                 </a>
-                <button class="mobile_toggle" id="mobileToggle" aria-label="Abrir menu de navegação">
+                <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Gostaria%20de%20um%20site%20profissional%20para%20minha%20empresa." target="_blank" rel="noopener noreferrer" class="btn_sq_cta">
+                    Comece Já
+                </a>
+                <button class="mobile_hamburger" id="mobileHamburger" aria-label="Menu de Navegação">
                     <span></span>
                     <span></span>
                 </button>
@@ -51,467 +54,349 @@
         </div>
     </header>
 
-    <!-- 2. HERO SECTION (SQUARESPACE HOMEPAGE HERO) -->
-    <section class="sq_hero">
-        <div class="container">
-            <div class="hero_content">
-                <div class="hero_badge">Estúdio Digital de Sites por Assinatura</div>
-                <h1 class="hero_title">
-                    O site da sua empresa no ar em <em>72 horas</em>.
-                </h1>
-                <p class="hero_lead">
-                    Criamos, publicamos e cuidamos de tudo por uma assinatura mensal simples. Você visualiza e aprova o design completo antes de pagar a taxa de setup.
-                </p>
-                <div class="hero_actions">
-                    <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Quero%20colocar%20o%20site%20da%20minha%20empresa%20no%20ar%20em%2072%20horas." target="_blank" rel="noopener noreferrer" class="btn_sqsp btn_sqsp_primary btn_sqsp_lg">
-                        Quero Meu Site no WhatsApp →
-                    </a>
-                    <a href="#templates" class="btn_sqsp btn_sqsp_secondary btn_sqsp_lg">
-                        Explorar Modelos
-                    </a>
-                </div>
-                <div class="hero_microcopy">
-                    Aprovação prévia do design • Sem fidelidade ou multas de cancelamento
-                </div>
+    <!-- 2. HERO CINEMATOGRÁFICO COM CARROSSEL FULL-BLEED (SQUARESPACE HERO) -->
+    <section class="sq_hero_cinema">
+        <div class="hero_header_block">
+            <h1 class="hero_cinema_title">
+                O site da sua empresa no ar em <em>72 horas</em>.
+            </h1>
+            <p class="hero_cinema_desc">
+                Criamos, publicamos e mantemos seu site institucional sob medida. Você aprova o design completo antes de pagar a taxa única de setup.
+            </p>
+            <div class="hero_cta_box">
+                <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Quero%20colocar%20o%20site%20da%20minha%20empresa%20no%20ar%20em%2072%20horas." target="_blank" rel="noopener noreferrer" class="btn_cinema_primary">
+                    Comece Já no WhatsApp →
+                </a>
+                <span class="hero_badge_guarantee">
+                    Aprovação prévia do design • Sem fidelidade ou multa
+                </span>
             </div>
+        </div>
 
-            <!-- Vitrine em Perspectiva de Produto na Base do Hero -->
-            <div class="hero_stage_wrap">
-                <div class="hero_mockup_perspective">
-                    <!-- Odonto Prime -->
-                    <div class="hero_mockup_card" onclick="openPreviewModal('/templates/odontologia/index.html', 'Odonto Prime — Odontologia Digital')">
-                        <img src="assets/images/templates-mockups/odontologia-hero.webp" alt="Template Odonto Prime">
-                        <div class="card_bar">
-                            <span>Odontologia Digital</span>
-                            <strong>Ver Modelo →</strong>
-                        </div>
+        <!-- CARROSSEL FULL-BLEED MONUMENTAL (100VW - IDENTICO AO SQUARESPACE) -->
+        <div class="hero_fullbleed_showcase" id="heroShowcase">
+            <div class="showcase_track">
+                <!-- Card Esquerda: Santos & Valente Advogados -->
+                <div class="carousel_item side_peek" onclick="openPreviewModal('/templates/advocacia/index.html', 'Santos & Valente — Advocacia Corporativa')">
+                    <img src="assets/images/templates-mockups/advocacia-hero.webp" alt="Santos & Valente Advocacia">
+                    <div class="carousel_item_footer">
+                        <span>Advocacia Corporativa</span>
+                        <strong>Ver Demonstração →</strong>
                     </div>
+                </div>
 
-                    <!-- Aura Estética (Centro Em Destaque) -->
-                    <div class="hero_mockup_card featured_center" onclick="openPreviewModal('/templates/estetica/index.html', 'Aura — Clínica Dermatológica & Estética')">
-                        <img src="assets/images/templates-mockups/estetica-hero.webp" alt="Template Aura Estética">
-                        <div class="card_bar">
-                            <span>Dermatologia & Estética</span>
-                            <strong>Testar Online →</strong>
-                        </div>
+                <!-- Card Centro Monumental: Aura Clínica de Estética -->
+                <div class="carousel_item center_monumental" onclick="openPreviewModal('/templates/estetica/index.html', 'Aura — Clínica Dermatológica & Estética')">
+                    <img src="assets/images/templates-mockups/estetica-hero.webp" alt="Aura Clínica de Estética">
+                    <div class="carousel_item_footer">
+                        <span>Dermatologia & Estética Avançada</span>
+                        <strong>Testar Modelo Online →</strong>
                     </div>
+                </div>
 
-                    <!-- Santos & Valente Advogados -->
-                    <div class="hero_mockup_card" onclick="openPreviewModal('/templates/advocacia/index.html', 'Santos & Valente — Advocacia Corporativa')">
-                        <img src="assets/images/templates-mockups/advocacia-hero.webp" alt="Template Advocacia Corporativa">
-                        <div class="card_bar">
-                            <span>Advocacia Corporativa</span>
-                            <strong>Ver Modelo →</strong>
-                        </div>
+                <!-- Card Direita: Odonto Prime -->
+                <div class="carousel_item side_peek" onclick="openPreviewModal('/templates/odontologia/index.html', 'Odonto Prime — Odontologia Digital')">
+                    <img src="assets/images/templates-mockups/odontologia-hero.webp" alt="Odonto Prime Odontologia">
+                    <div class="carousel_item_footer">
+                        <span>Odontologia Digital & Estética</span>
+                        <strong>Ver Demonstração →</strong>
+                    </div>
+                </div>
+
+                <!-- Card Adicional: Lumina Contábil -->
+                <div class="carousel_item side_peek" onclick="openPreviewModal('/templates/contabilidade/index.html', 'Lumina — Contabilidade Estratégica')">
+                    <img src="assets/images/templates-mockups/contabilidade-hero.webp" alt="Lumina Contábil">
+                    <div class="carousel_item_footer">
+                        <span>Consultoria Contábil & CFO</span>
+                        <strong>Ver Demonstração →</strong>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 3. STATS STRIP (AUTORIDADE E SEGURANÇA) -->
-    <section class="sq_stats_strip">
-        <div class="container stats_flex">
-            <div class="stat_cell">
-                <div class="stat_big">72h</div>
-                <div class="stat_label">Prazo Médio de Entrega</div>
+    <!-- 3. FAIXA DE ESTATÍSTICAS E AUTORIDADE (SQUARESPACE 14 MI+) -->
+    <section class="sq_stats_section">
+        <div class="container">
+            <div class="stats_tagline">
+                Junte-se às empresas que transmitem autoridade e captam clientes todos os dias.
             </div>
-            <div class="stat_cell">
-                <div class="stat_big">100%</div>
-                <div class="stat_label">Domínio no seu CPF/CNPJ</div>
-            </div>
-            <div class="stat_cell">
-                <div class="stat_big">Zero Risco</div>
-                <div class="stat_label">Aprova Antes de Pagar o Setup</div>
-            </div>
-            <div class="stat_cell">
-                <div class="stat_big">24h</div>
-                <div class="stat_label">SLA de Alterações no WhatsApp</div>
+            <div class="stats_trio">
+                <div>
+                    <div class="stat_block_num">72h</div>
+                    <div class="stat_block_label">Prazo Médio de Publicação</div>
+                </div>
+                <div>
+                    <div class="stat_block_num">Zero Risco</div>
+                    <div class="stat_block_label">Aprova Antes de Pagar o Setup</div>
+                </div>
+                <div>
+                    <div class="stat_block_num">100%</div>
+                    <div class="stat_block_label">Domínio no seu CPF ou CNPJ</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- 4. SHOWROOM DE TEMPLATES (SEÇÃO BRANCA - CONTRASTE SQUARESPACE) -->
-    <section class="sq_section_light" id="templates">
+    <!-- 4. VITRINE INTERATIVA "AMPLIE SEUS NEGÓCIOS" (SQUARESPACE SHOWCASE) -->
+    <section class="sq_section_showcase" id="modelos">
         <div class="container">
-            <div class="section_header text-center">
-                <span class="sec_badge">Modelos Demonstrativos Reais</span>
-                <h2 class="sec_title">Sites criados para se destacar no seu mercado.</h2>
-                <p class="sec_lead">
-                    Projetados com estética de alto nível, tipografia refinada e arquitetura pensada para transformar visitantes em contatos no WhatsApp.
-                </p>
+            <div class="showcase_title_center">
+                <h2>Amplie seus negócios</h2>
+                <p>Você merece um site que valorize o nível do seu serviço.</p>
             </div>
 
-            <!-- Filtros por Segmento -->
-            <div class="category_tabs_wrap">
-                <button class="cat_tab_btn active" onclick="filterTemplates('all', this)">Todos os Modelos</button>
-                <button class="cat_tab_btn" onclick="filterTemplates('estetica', this)">Estética & Saúde</button>
-                <button class="cat_tab_btn" onclick="filterTemplates('odonto', this)">Odontologia</button>
-                <button class="cat_tab_btn" onclick="filterTemplates('advocacia', this)">Advocacia</button>
-                <button class="cat_tab_btn" onclick="filterTemplates('contabil', this)">Contabilidade & B2B</button>
+            <!-- Filtros por Pílulas -->
+            <div class="sq_filter_pills">
+                <button class="filter_pill active" onclick="switchShowcaseTab('estetica', this)">Estética & Saúde</button>
+                <button class="filter_pill" onclick="switchShowcaseTab('odonto', this)">Odontologia</button>
+                <button class="filter_pill" onclick="switchShowcaseTab('advocacia', this)">Advocacia</button>
+                <button class="filter_pill" onclick="switchShowcaseTab('contabil', this)">Contabilidade & B2B</button>
             </div>
 
-            <!-- Grid de Templates -->
-            <div class="templates_showcase_grid" id="templatesGrid">
+            <!-- Stage com Mockup e Floating Badges -->
+            <div class="showcase_ambient_stage">
+                <div class="showcase_stage_grid">
+                    <!-- Media Frame -->
+                    <div class="stage_media_frame" id="stageMediaFrame">
+                        <img id="stageImg" src="assets/images/templates-mockups/estetica-hero.webp" alt="Demonstração do Modelo">
+                        <div class="floating_ui_pill">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span id="stageFloatingText">Agendamento direto no WhatsApp</span>
+                        </div>
+                    </div>
 
-                <!-- 1. Aura Estética -->
-                <div class="tmpl_card" data-category="estetica">
-                    <div class="tmpl_media">
-                        <img src="assets/images/templates-mockups/estetica-hero.webp" alt="Aura Clínica de Estética">
-                        <div class="tmpl_overlay">
-                            <button class="btn_test_preview" onclick="openPreviewModal('/templates/estetica/index.html', 'Aura — Clínica Dermatológica & Estética')">
+                    <!-- Informações do Modelo -->
+                    <div class="stage_text_info">
+                        <span class="stage_tag" id="stageTag">Dermatologia & Harmonização Facial</span>
+                        <h3 class="stage_heading" id="stageHeading">Aura Clínica — Estética Médica de Alto Padrão</h3>
+                        <p class="stage_desc" id="stageDesc">
+                            Projetado com estética editorial clássica em tons de off-white seda e bronze champagne. Estruturado para clínicas que cobram tickets elevados e exigem autoridade médica imediata.
+                        </p>
+                        <ul class="stage_feature_list">
+                            <li><i class="fa-solid fa-check"></i> Galeria de protocolos clínicos e durabilidade</li>
+                            <li><i class="fa-solid fa-check"></i> Perfil do corpo clínico com conselho regional (CRBM/CRM)</li>
+                            <li><i class="fa-solid fa-check"></i> Jornada do paciente em 4 etapas e FAQ privativo</li>
+                        </ul>
+                        <div class="stage_btn_row">
+                            <button class="btn_sq_cta" id="stageBtnTest" onclick="openPreviewModal('/templates/estetica/index.html', 'Aura — Clínica Dermatológica & Estética')">
                                 Testar Modelo Interativo
                             </button>
-                        </div>
-                    </div>
-                    <div class="tmpl_body">
-                        <div class="tmpl_meta">
-                            <span class="tmpl_tag">Dermatologia & Estética Avançada</span>
-                            <span class="tmpl_time">Entrega em 72h</span>
-                        </div>
-                        <h3 class="tmpl_title">Aura Clínica</h3>
-                        <p class="tmpl_desc">
-                            Direção de arte editorial clássica em tons de off-white e bronze champagne. Foco em protocolos de harmonização facial, autoridade médica e agendamento privativo.
-                        </p>
-                        <div class="tmpl_action_row">
-                            <a href="/templates/estetica" target="_blank" class="tmpl_direct_link">
-                                Abrir em nova aba ↗
+                            <a id="stageBtnNewTab" href="/templates/estetica" target="_blank" class="btn_cinema_primary" style="background: transparent; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.25);">
+                                Abrir em Nova Aba ↗
                             </a>
-                            <button class="btn_sqsp btn_sqsp_dark" onclick="openPreviewModal('/templates/estetica/index.html', 'Aura — Clínica Dermatológica & Estética')">
-                                Testar Demonstração
-                            </button>
                         </div>
                     </div>
-                </div>
-
-                <!-- 2. Odonto Prime -->
-                <div class="tmpl_card" data-category="odonto">
-                    <div class="tmpl_media">
-                        <img src="assets/images/templates-mockups/odontologia-hero.webp" alt="Odonto Prime Odontologia">
-                        <div class="tmpl_overlay">
-                            <button class="btn_test_preview" onclick="openPreviewModal('/templates/odontologia/index.html', 'Odonto Prime — Odontologia Digital')">
-                                Testar Modelo Interativo
-                            </button>
-                        </div>
-                    </div>
-                    <div class="tmpl_body">
-                        <div class="tmpl_meta">
-                            <span class="tmpl_tag">Odontologia Digital & Estética</span>
-                            <span class="tmpl_time">Entrega em 72h</span>
-                        </div>
-                        <h3 class="tmpl_title">Odonto Prime</h3>
-                        <p class="tmpl_desc">
-                            Estética clínica suíça em azul-safira e platina. Estrutura voltada para tratamentos de alto valor como Lentes de Contato E.max, Invisalign e Implantes Guiados 3D.
-                        </p>
-                        <div class="tmpl_action_row">
-                            <a href="/templates/odontologia" target="_blank" class="tmpl_direct_link">
-                                Abrir em nova aba ↗
-                            </a>
-                            <button class="btn_sqsp btn_sqsp_dark" onclick="openPreviewModal('/templates/odontologia/index.html', 'Odonto Prime — Odontologia Digital')">
-                                Testar Demonstração
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 3. Santos & Valente Advogados -->
-                <div class="tmpl_card" data-category="advocacia">
-                    <div class="tmpl_media">
-                        <img src="assets/images/templates-mockups/advocacia-hero.webp" alt="Santos e Valente Advogados">
-                        <div class="tmpl_overlay">
-                            <button class="btn_test_preview" onclick="openPreviewModal('/templates/advocacia/index.html', 'Santos & Valente — Advocacia Corporativa')">
-                                Testar Modelo Interativo
-                            </button>
-                        </div>
-                    </div>
-                    <div class="tmpl_body">
-                        <div class="tmpl_meta">
-                            <span class="tmpl_tag">Advocacia Corporativa & Tributária</span>
-                            <span class="tmpl_time">Entrega em 72h</span>
-                        </div>
-                        <h3 class="tmpl_title">Santos & Valente Advogados</h3>
-                        <p class="tmpl_desc">
-                            Layout imponente em ardósia obsidian e ouro velho. Perfeito para bancas corporativas com núcleos de M&A, Governança, Proteção Patrimonial e Direito Tributário.
-                        </p>
-                        <div class="tmpl_action_row">
-                            <a href="/templates/advocacia" target="_blank" class="tmpl_direct_link">
-                                Abrir em nova aba ↗
-                            </a>
-                            <button class="btn_sqsp btn_sqsp_dark" onclick="openPreviewModal('/templates/advocacia/index.html', 'Santos & Valente — Advocacia Corporativa')">
-                                Testar Demonstração
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 4. Lumina Contábil -->
-                <div class="tmpl_card" data-category="contabil">
-                    <div class="tmpl_media">
-                        <img src="assets/images/templates-mockups/contabilidade-hero.webp" alt="Lumina Contabilidade">
-                        <div class="tmpl_overlay">
-                            <button class="btn_test_preview" onclick="openPreviewModal('/templates/contabilidade/index.html', 'Lumina — Contabilidade Estratégica & CFO')">
-                                Testar Modelo Interativo
-                            </button>
-                        </div>
-                    </div>
-                    <div class="tmpl_body">
-                        <div class="tmpl_meta">
-                            <span class="tmpl_tag">Consultoria Contábil & CFO as a Service</span>
-                            <span class="tmpl_time">Entrega em 72h</span>
-                        </div>
-                        <h3 class="tmpl_title">Lumina Contábil</h3>
-                        <p class="tmpl_desc">
-                            Posicionamento estratégico para escritórios B2B em verde-floresta nobre e esmeralda. Transmite segurança tributária para Lucro Real, BPO Financeiro e Holdings.
-                        </p>
-                        <div class="tmpl_action_row">
-                            <a href="/templates/contabilidade" target="_blank" class="tmpl_direct_link">
-                                Abrir em nova aba ↗
-                            </a>
-                            <button class="btn_sqsp btn_sqsp_dark" onclick="openPreviewModal('/templates/contabilidade/index.html', 'Lumina — Contabilidade Estratégica & CFO')">
-                                Testar Demonstração
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. TUDO EM UMA SÓ ASSINATURA (SQUARESPACE ONE-PLATFORM) -->
-    <section class="sq_section_features" id="diferenciais">
-        <div class="container">
-            <div class="section_header text-center">
-                <span class="sec_badge">Tudo O Que Sua Empresa Precisa</span>
-                <h2 class="sec_title">Infraestrutura completa de estúdio. Sem custos ocultos.</h2>
-                <p class="sec_lead">
-                    Você não precisa se preocupar com servidores, códigos ou técnicos. Cuidamos de cada detalhe para o seu negócio vender mais.
-                </p>
-            </div>
-
-            <div class="features_grid">
-                <!-- Box 1 -->
-                <div class="feat_box">
-                    <div class="feat_icon"><i class="fa-solid fa-globe"></i></div>
-                    <h3 class="feat_title">Domínio & SSL Inclusos</h3>
-                    <p class="feat_text">
-                        Configuramos seu domínio .com.br registrado 100% no seu CPF ou CNPJ com certificado de segurança ativo. O domínio é seu.
-                    </p>
-                </div>
-
-                <!-- Box 2 -->
-                <div class="feat_box">
-                    <div class="feat_icon"><i class="fa-solid fa-bolt"></i></div>
-                    <h3 class="feat_title">Velocidade Extrema</h3>
-                    <p class="feat_text">
-                        Sites ultraleves sem plataformas pesadas. Abertura instantânea no celular para seus clientes não desistirem de entrar em contato.
-                    </p>
-                </div>
-
-                <!-- Box 3 -->
-                <div class="feat_box">
-                    <div class="feat_icon"><i class="fa-brands fa-google"></i></div>
-                    <h3 class="feat_title">Preparado para o Google</h3>
-                    <p class="feat_text">
-                        Arquitetura estruturada com SEO local, indexação automática e integração com o Google Meu Negócio da sua cidade.
-                    </p>
-                </div>
-
-                <!-- Box 4 -->
-                <div class="feat_box">
-                    <div class="feat_icon"><i class="fa-brands fa-whatsapp"></i></div>
-                    <h3 class="feat_title">Alterações no WhatsApp</h3>
-                    <p class="feat_text">
-                        Troque preços, fotos ou inclua um novo serviço mandando apenas uma mensagem. Nossa equipe cuida de tudo em até 24h úteis.
-                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 6. O MÉTODO BOOMO EM 3 PASSOS (SQUARESPACE HOW-TO) -->
-    <section class="sq_section_process" id="como-funciona">
+    <!-- 5. PÔSTERES EDITORIAIS (SQUARESPACE "TUDO O QUE VOCÊ PRECISA EM UMA SÓ PLATAFORMA") -->
+    <section class="sq_section_posters" id="plataforma">
         <div class="container">
-            <div class="section_header text-center">
-                <span class="sec_badge" style="color: var(--sq-text-muted-dark);">O Método Boomo</span>
-                <h2 class="sec_title" style="color: #FFFFFF;">Do WhatsApp ao seu site no ar em <em>3 dias</em>.</h2>
-                <p class="sec_lead" style="color: var(--sq-text-muted-dark);">
-                    Processo direto e sem reuniões demoradas. Você só paga a taxa de setup após aprovar o design.
-                </p>
+            <div class="posters_header_split">
+                <h2>Tudo o que você precisa em uma só plataforma</h2>
+                <p>Alivie sua rotina com toda a infraestrutura técnica e design profissional para gerenciar sua presença digital — perfeitamente integrados em um só lugar.</p>
             </div>
 
-            <div class="process_grid">
-                <!-- Passo 1 -->
-                <div class="process_step">
-                    <div class="step_top">
-                        <span class="step_number">01</span>
-                        <span class="step_timeline">15 Minutos</span>
+            <div class="posters_grid_4">
+                <!-- Poster 1: Alterações no WhatsApp -->
+                <div class="sq_poster_card">
+                    <div class="poster_text_top">
+                        <h4 class="poster_title">Alterações no WhatsApp</h4>
+                        <p class="poster_desc">Troque fotos, serviços ou preços mandando apenas uma mensagem. Cuidamos de tudo em até 24h úteis.</p>
                     </div>
-                    <h3 class="step_title">Briefing no WhatsApp</h3>
-                    <p class="step_text">
-                        Você escolhe o modelo base que mais combina com o seu negócio e nos envia os serviços, fotos e diferenciais pelo WhatsApp.
-                    </p>
+                    <div class="poster_art_bottom">
+                        <div class="poster_mockup_graphic">
+                            <div style="font-size: 11px; color: var(--sq-accent-emerald); font-weight: 700; margin-bottom: 6px;"><i class="fa-brands fa-whatsapp"></i> SUPORTE DIRETO</div>
+                            <div style="font-size: 12.5px; color: #FFFFFF;">"Pode atualizar o valor da consulta?"</div>
+                            <div style="font-size: 11px; color: var(--sq-text-secondary); margin-top: 4px;">✓ Atualizado e publicado em 45min</div>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Passo 2 -->
-                <div class="process_step">
-                    <div class="step_top">
-                        <span class="step_number">02</span>
-                        <span class="step_timeline">48 Horas</span>
+                <!-- Poster 2: Design de Estúdio -->
+                <div class="sq_poster_card">
+                    <div class="poster_text_top">
+                        <h4 class="poster_title">Design de Estúdio</h4>
+                        <p class="poster_desc">Sem páginas amadoras ou templates genéricos de IA. Tipografia, cores e respiros de nível internacional.</p>
                     </div>
-                    <h3 class="step_title">Criação & Aprovação Prévia</h3>
-                    <p class="step_text">
-                        Nossa equipe desenvolve o seu site personalizado. <strong>Você visualiza o site pronto e aprova o design antes de pagar o setup</strong>.
-                    </p>
+                    <div class="poster_art_bottom">
+                        <div class="poster_mockup_graphic">
+                            <div style="font-size: 11px; color: var(--sq-text-secondary); margin-bottom: 4px;">TIPOGRAFIA & ARQUITETURA</div>
+                            <div style="font-family: var(--font-serif); font-style: italic; font-size: 18px; color: #FFFFFF;">Editorial Luxury</div>
+                            <div style="font-size: 11px; color: var(--sq-accent-gold); margin-top: 4px;">Paleta Exclusiva por Nicho</div>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Passo 3 -->
-                <div class="process_step">
-                    <div class="step_top">
-                        <span class="step_number">03</span>
-                        <span class="step_timeline">72 Horas no Ar</span>
+                <!-- Poster 3: Domínio & SSL Inclusos -->
+                <div class="sq_poster_card">
+                    <div class="poster_text_top">
+                        <h4 class="poster_title">Domínio Próprio & SSL</h4>
+                        <p class="poster_desc">Configuramos seu endereço .com.br registrado 100% no seu CPF ou CNPJ com certificado de segurança vitalício.</p>
                     </div>
-                    <h3 class="step_title">Publicação & Manutenção</h3>
-                    <p class="step_text">
-                        Conectamos seu domínio, ativamos o SSL e colocamos seu site no ar. A partir daí, qualquer alteração é feita direto pelo WhatsApp.
-                    </p>
+                    <div class="poster_art_bottom">
+                        <div class="poster_mockup_graphic">
+                            <div style="font-size: 11px; color: var(--sq-accent-emerald);"><i class="fa-solid fa-lock"></i> CONEXÃO SEGURA (SSL)</div>
+                            <div style="font-size: 13px; font-weight: 700; color: #FFFFFF; margin-top: 4px;">https://suaempresa.com.br</div>
+                            <div style="font-size: 11px; color: var(--sq-text-secondary); margin-top: 2px;">Proprietário: Seu CPF / CNPJ</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Poster 4: Otimizado para o Google -->
+                <div class="sq_poster_card">
+                    <div class="poster_text_top">
+                        <h4 class="poster_title">Otimizado para o Google</h4>
+                        <p class="poster_desc">SEO estruturado, velocidade instantânea e integração com Google Maps para seu cliente te encontrar primeiro.</p>
+                    </div>
+                    <div class="poster_art_bottom">
+                        <div class="poster_mockup_graphic">
+                            <div style="font-size: 11px; color: var(--sq-accent-cyan);"><i class="fa-brands fa-google"></i> BUSCA ORGÂNICA LOCAL</div>
+                            <div style="font-size: 12.5px; color: #FFFFFF; margin-top: 4px;">Top 1 na sua cidade e nicho</div>
+                            <div style="font-size: 11px; color: var(--sq-text-secondary); margin-top: 2px;">Indexação de alta performance</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 7. TABELA COMPARATIVA DE VALOR -->
-    <section class="sq_section_comparison">
+    <!-- 6. O MÉTODO BOOMO (SQUARESPACE "NUNCA FOI TÃO FÁCIL COMEÇAR") -->
+    <section class="sq_section_method" id="como-funciona">
         <div class="container">
-            <div class="section_header text-center">
-                <span class="sec_badge">Comparação Direta</span>
-                <h2 class="sec_title">Por que a Boomo é a escolha mais inteligente?</h2>
-                <p class="sec_lead">
-                    Compare o tempo de entrega, o risco financeiro e o suporte contínuo entre os modelos disponíveis no mercado.
-                </p>
+            <div class="showcase_title_center">
+                <h2>Do WhatsApp ao seu site no ar em 3 dias</h2>
+                <p>Sem reuniões intermináveis e com garantia de aprovação prévia.</p>
             </div>
 
-            <div class="mobile_swipe_hint">Deslize para ver todas as colunas →</div>
-            <div class="comparison_table_frame">
-                <table class="comparison_table">
-                    <thead>
-                        <tr>
-                            <th>Critério</th>
-                            <th class="col_boomo">Boomo (Assinatura)</th>
-                            <th>Agência Tradicional</th>
-                            <th>Fazer Sozinho</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Tempo de Entrega</strong></td>
-                            <td class="col_boomo"><i class="fa-solid fa-check"></i> Até 3 dias úteis</td>
-                            <td>30 a 60 dias úteis</td>
-                            <td>Semanas de tentativa</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Custo Inicial (Setup)</strong></td>
-                            <td class="col_boomo"><i class="fa-solid fa-check"></i> R$ 300 a R$ 500 (após aprovar)</td>
-                            <td>R$ 4.000 a R$ 8.000</td>
-                            <td>"Grátis" + seu tempo</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Garantia de Risco</strong></td>
-                            <td class="col_boomo"><i class="fa-solid fa-check"></i> Aprova o design antes de pagar</td>
-                            <td>50% adiantado sem garantia</td>
-                            <td>Risco de abandono</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Hospedagem & Suporte</strong></td>
-                            <td class="col_boomo"><i class="fa-solid fa-check"></i> 100% Inclusos na assinatura</td>
-                            <td>Cobrança à parte (R$ 300+/mês)</td>
-                            <td>Você cuida de quedas e erros</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Qualidade Visual</strong></td>
-                            <td class="col_boomo"><i class="fa-solid fa-check"></i> Design de Estúdio Internacional</td>
-                            <td>Variável conforme agência</td>
-                            <td>Aparência amadora</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="method_cards_duo">
+                <!-- Card 1 -->
+                <div class="method_card_big">
+                    <div>
+                        <span class="method_step_tag">ETAPA 01 • BRIEFING RÁPIDO (15 MIN)</span>
+                        <h3 class="method_title">Você escolhe o estilo e nos manda o conteúdo</h3>
+                        <p class="method_desc">
+                            Basta nos enviar fotos, serviços e informações da sua empresa diretamente pelo WhatsApp. Não precisa redigir contratos complexos ou entender de programação.
+                        </p>
+                    </div>
+                    <div style="font-size: 13px; color: var(--sq-accent-emerald); font-weight: 700;">
+                        ✓ Início Imediato sem Burocracia
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="method_card_big">
+                    <div>
+                        <span class="method_step_tag">ETAPA 02 • APROVAÇÃO PRÉVIA (48 HORAS)</span>
+                        <h3 class="method_title">Você aprova o site pronto antes de pagar o setup</h3>
+                        <p class="method_desc">
+                            Nossa equipe constrói o site personalizado. <strong>Você visualiza o design online e só paga a taxa de setup se aprovar o resultado</strong>. Risco zero para começar.
+                        </p>
+                    </div>
+                    <div style="font-size: 13px; color: #FFFFFF; font-weight: 700;">
+                        ✓ Garantia Total de Aprovação Visual
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- 8. PLANOS & PREÇOS TRANSPARENTES (SQUARESPACE PRICING) -->
-    <section class="sq_section_pricing" id="planos">
+    <!-- 7. ENCONTRE O DOMÍNIO PERFEITO (SQUARESPACE DOMAINS) -->
+    <section class="sq_section_domain">
         <div class="container">
-            <div class="section_header text-center">
-                <span class="sec_badge">Investimento Transparente</span>
-                <h2 class="sec_title">Planos simples. Sem multas ou fidelidade.</h2>
-                <p class="sec_lead">
-                    Escolha o plano ideal para o momento da sua empresa. Cancele quando quiser sem nenhuma taxa rescisória.
-                </p>
+            <h2 style="font-size: clamp(28px, 3.5vw, 44px); color: #FFFFFF; margin-bottom: 12px;">
+                Encontre o domínio perfeito para o seu site
+            </h2>
+            <p style="color: var(--sq-text-secondary); font-size: 16px;">
+                Cuidamos do registro oficial do seu domínio .com.br 100% no seu CPF ou CNPJ.
+            </p>
+
+            <div class="domain_search_box">
+                <input type="text" class="domain_input" placeholder="digitesuaempresa.com.br" id="domainInput" spellcheck="false">
+                <button class="domain_badge_btn" onclick="checkDomain()">
+                    Garantir no WhatsApp →
+                </button>
             </div>
 
-            <div class="pricing_grid">
+            <div class="domain_subtext">
+                Já tem um domínio registrado? Nós cuidamos de toda a transferência técnica sem que seu site fique fora do ar.
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. PLANOS & PREÇOS (SQUARESPACE PRICING DARK) -->
+    <section class="sq_section_pricing_dark" id="planos">
+        <div class="container">
+            <div class="showcase_title_center">
+                <h2>Planos simples. Sem multas ou fidelidade.</h2>
+                <p>Escolha a estrutura ideal para o seu momento. Cancele quando quiser.</p>
+            </div>
+
+            <div class="pricing_grid_dark">
                 <!-- Essencial -->
-                <div class="pricing_card">
-                    <div class="plan_top">
-                        <h3 class="plan_title">Essencial</h3>
-                        <p class="plan_desc">Para profissionais autônomos e empresas locais que buscam presença profissional imediata.</p>
+                <div class="plan_box_dark">
+                    <div>
+                        <h3 class="plan_h3">Essencial</h3>
+                        <p class="plan_sub">Para profissionais autônomos e pequenos negócios que buscam presença profissional imediata.</p>
+                        <div class="plan_price_row">
+                            <div class="price_big">R$ 149<span>/mês</span></div>
+                            <div class="price_setup_info">+ setup único de <strong>R$ 300</strong> (após aprovar)</div>
+                        </div>
+                        <ul class="plan_features_ul">
+                            <li><i class="fa-solid fa-check"></i> Site institucional profissional sob medida</li>
+                            <li><i class="fa-solid fa-check"></i> Botão de contato direto no WhatsApp</li>
+                            <li><i class="fa-solid fa-check"></i> Hospedagem de alta velocidade e SSL inclusos</li>
+                            <li><i class="fa-solid fa-check"></i> Alterações mensais de fotos e textos inclusas</li>
+                        </ul>
                     </div>
-                    <div class="plan_price_box">
-                        <div class="plan_price">R$ 149<span>/mês</span></div>
-                        <div class="plan_setup">+ setup único de <strong>R$ 300</strong> (após aprovar)</div>
-                    </div>
-                    <ul class="plan_features_list">
-                        <li><i class="fa-solid fa-check"></i> Site institucional profissional sob medida</li>
-                        <li><i class="fa-solid fa-check"></i> Botão de contato direto no WhatsApp</li>
-                        <li><i class="fa-solid fa-check"></i> Hospedagem de alta velocidade e SSL inclusos</li>
-                        <li><i class="fa-solid fa-check"></i> Alterações mensais inclusas na assinatura</li>
-                    </ul>
-                    <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Gostaria%20de%20assinar%20o%20plano%20Essencial%20da%20Boomo." target="_blank" rel="noopener noreferrer" class="btn_sqsp btn_sqsp_secondary" style="border-color: #000000; color: #000000;">
+                    <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Gostaria%20de%20assinar%20o%20plano%20Essencial%20da%20Boomo." target="_blank" rel="noopener noreferrer" class="btn_cinema_primary" style="background: transparent; border: 1px solid rgba(255,255,255,0.25); color: #FFFFFF; text-align: center; justify-content: center; width: 100%;">
                         Assinar Essencial
                     </a>
                 </div>
 
                 <!-- Pro Negócios Locais (Featured) -->
-                <div class="pricing_card featured">
-                    <span class="featured_badge">Mais Escolhido — Clínicas e Empresas</span>
-                    <div class="plan_top">
-                        <h3 class="plan_title">Pro Negócios Locais</h3>
-                        <p class="plan_desc">Para clínicas, consultórios e empresas que desejam atrair novos clientes pelo Google.</p>
+                <div class="plan_box_dark highlight_plan">
+                    <span class="plan_pill_badge">Mais Escolhido — Clínicas e Empresas</span>
+                    <div>
+                        <h3 class="plan_h3">Pro Negócios Locais</h3>
+                        <p class="plan_sub">Para clínicas, consultórios e empresas que desejam atrair novos clientes pelo Google.</p>
+                        <div class="plan_price_row">
+                            <div class="price_big">R$ 249<span>/mês</span></div>
+                            <div class="price_setup_info">+ setup único de <strong>R$ 500</strong> (após aprovar)</div>
+                        </div>
+                        <ul class="plan_features_ul">
+                            <li><i class="fa-solid fa-check"></i> Tudo do Plano Essencial</li>
+                            <li><i class="fa-solid fa-check"></i> SEO Local estruturado para o Google</li>
+                            <li><i class="fa-solid fa-check"></i> Integração com Google Maps e Avaliações</li>
+                            <li><i class="fa-solid fa-check"></i> Suporte prioritário via WhatsApp</li>
+                            <li><i class="fa-solid fa-check"></i> Alterações ilimitadas de textos e fotos</li>
+                        </ul>
                     </div>
-                    <div class="plan_price_box">
-                        <div class="plan_price">R$ 249<span>/mês</span></div>
-                        <div class="plan_setup">+ setup único de <strong>R$ 500</strong> (após aprovar)</div>
-                    </div>
-                    <ul class="plan_features_list">
-                        <li><i class="fa-solid fa-check"></i> Tudo do Plano Essencial</li>
-                        <li><i class="fa-solid fa-check"></i> SEO Local estruturado para o Google</li>
-                        <li><i class="fa-solid fa-check"></i> Integração com Google Maps e Avaliações</li>
-                        <li><i class="fa-solid fa-check"></i> Suporte prioritário via WhatsApp</li>
-                        <li><i class="fa-solid fa-check"></i> Alterações ilimitadas de textos e fotos</li>
-                    </ul>
-                    <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Gostaria%20de%20assinar%20o%20plano%20Pro%20Neg%C3%B3cios%20Locais%20da%20Boomo." target="_blank" rel="noopener noreferrer" class="btn_sqsp btn_sqsp_dark">
+                    <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Gostaria%20de%20assinar%20o%20plano%20Pro%20Neg%C3%B3cios%20Locais%20da%20Boomo." target="_blank" rel="noopener noreferrer" class="btn_cinema_primary" style="text-align: center; justify-content: center; width: 100%;">
                         Assinar Plano Pro
                     </a>
                 </div>
 
                 <!-- Personalizado -->
-                <div class="pricing_card">
-                    <div class="plan_top">
-                        <h3 class="plan_title">Personalizado</h3>
-                        <p class="plan_desc">Para empresas consolidadas com demandas específicas, múltiplas filiais ou integrações.</p>
+                <div class="plan_box_dark">
+                    <div>
+                        <h3 class="plan_h3">Personalizado</h3>
+                        <p class="plan_sub">Para empresas consolidadas com demandas específicas, múltiplas filiais ou integrações.</p>
+                        <div class="plan_price_row">
+                            <div class="price_big">R$ 399<span>/mês</span></div>
+                            <div class="price_setup_info">Setup sob consulta técnica</div>
+                        </div>
+                        <ul class="plan_features_ul">
+                            <li><i class="fa-solid fa-check"></i> Múltiplas páginas institucionais</li>
+                            <li><i class="fa-solid fa-check"></i> Integrações com CRM, APIs e sistemas</li>
+                            <li><i class="fa-solid fa-check"></i> Gestor técnico de conta dedicado</li>
+                            <li><i class="fa-solid fa-check"></i> SLA prioritário de atendimento</li>
+                        </ul>
                     </div>
-                    <div class="plan_price_box">
-                        <div class="plan_price">R$ 399<span>/mês</span></div>
-                        <div class="plan_setup">Setup sob consulta técnica</div>
-                    </div>
-                    <ul class="plan_features_list">
-                        <li><i class="fa-solid fa-check"></i> Múltiplas páginas e seções avançadas</li>
-                        <li><i class="fa-solid fa-check"></i> Integrações com sistemas, CRM ou APIs</li>
-                        <li><i class="fa-solid fa-check"></i> Gestor técnico de conta dedicado</li>
-                        <li><i class="fa-solid fa-check"></i> SLA de atendimento com prioridade máxima</li>
-                    </ul>
-                    <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Gostaria%20de%20um%20or%C3%A7amento%20personalizado%20com%20a%20Boomo." target="_blank" rel="noopener noreferrer" class="btn_sqsp btn_sqsp_secondary" style="border-color: #000000; color: #000000;">
+                    <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Gostaria%20de%20um%20or%C3%A7amento%20personalizado%20com%20a%20Boomo." target="_blank" rel="noopener noreferrer" class="btn_cinema_primary" style="background: transparent; border: 1px solid rgba(255,255,255,0.25); color: #FFFFFF; text-align: center; justify-content: center; width: 100%;">
                         Falar com Consultor
                     </a>
                 </div>
@@ -519,94 +404,96 @@
         </div>
     </section>
 
-    <!-- 9. DÚVIDAS FREQUENTES (FAQ ACCORDION) -->
-    <section class="sq_section_faq" id="faq">
+    <!-- 9. FAQ EM LINHAS MINIMALISTAS (SQUARESPACE FAQ LINES) -->
+    <section class="sq_section_faq_lines" id="faq">
         <div class="container">
-            <div class="section_header text-center">
-                <span class="sec_badge">Perguntas Frequentes</span>
-                <h2 class="sec_title">Respostas diretas sobre como cuidamos do seu site.</h2>
+            <div class="showcase_title_center">
+                <h2>Perguntas frequentes</h2>
+                <p>Respostas diretas sobre como cuidamos do seu site.</p>
             </div>
 
-            <div class="faq_wrap">
-                <details class="faq_item" open>
-                    <summary class="faq_question">
+            <div class="faq_lines_container">
+                <details class="faq_row_item" open>
+                    <summary class="faq_row_summary">
                         <span>O domínio (.com.br) fica registrado no meu nome?</span>
-                        <span class="faq_icon"><i class="fa-solid fa-chevron-down"></i></span>
+                        <span class="faq_row_icon">+</span>
                     </summary>
-                    <div class="faq_answer">
-                        Sim, 100% no seu CPF ou CNPJ. Você é o proprietário definitivo do endereço do seu site. A Boomo apenas cuida de toda a configuração técnica de DNS, apontamento de servidores e segurança.
+                    <div class="faq_row_answer">
+                        Sim, 100% no seu CPF ou CNPJ. Você é o proprietário definitivo do endereço da sua empresa na internet. A Boomo cuida apenas de toda a configuração técnica de DNS, apontamento de servidores e certificados de segurança.
                     </div>
                 </details>
 
-                <details class="faq_item">
-                    <summary class="faq_question">
+                <details class="faq_row_item">
+                    <summary class="faq_row_summary">
                         <span>Como funciona a garantia de aprovação antes de pagar o setup?</span>
-                        <span class="faq_icon"><i class="fa-solid fa-chevron-down"></i></span>
+                        <span class="faq_row_icon">+</span>
                     </summary>
-                    <div class="faq_answer">
-                        Você não assume risco algum para começar. Nossa equipe cria a versão demonstrativa personalizada da sua empresa. Você só paga a taxa única de setup se olhar o site pronto e aprovar o design para publicação.
+                    <div class="faq_row_answer">
+                        Você não assume risco algum para começar. Nossa equipe cria a versão personalizada do seu site primeiro. Você só paga a taxa de setup se aprovar o design para publicação no seu domínio.
                     </div>
                 </details>
 
-                <details class="faq_item">
-                    <summary class="faq_question">
-                        <span>Como faço pedidos de alteração no site?</span>
-                        <span class="faq_icon"><i class="fa-solid fa-chevron-down"></i></span>
+                <details class="faq_row_item">
+                    <summary class="faq_row_summary">
+                        <span>Como funcionam os pedidos de alteração no site?</span>
+                        <span class="faq_row_icon">+</span>
                     </summary>
-                    <div class="faq_answer">
-                        Basta nos mandar uma mensagem ou áudio no WhatsApp. Precisa atualizar um preço, mudar o horário de funcionamento ou adicionar uma nova foto? Nossa equipe técnica executa e publica a alteração em até 24h úteis.
+                    <div class="faq_row_answer">
+                        Basta mandar uma mensagem ou áudio no WhatsApp. Precisa atualizar um preço, mudar uma foto ou adicionar um novo serviço? Envie para nossa equipe e publicamos a alteração em até 24 horas úteis.
                     </div>
                 </details>
 
-                <details class="faq_item">
-                    <summary class="faq_question">
+                <details class="faq_row_item">
+                    <summary class="faq_row_summary">
                         <span>Existe contrato de fidelidade ou multa de cancelamento?</span>
-                        <span class="faq_icon"><i class="fa-solid fa-chevron-down"></i></span>
+                        <span class="faq_row_icon">+</span>
                     </summary>
-                    <div class="faq_answer">
-                        Zero fidelidade. Você pode cancelar sua assinatura mensal a qualquer momento sem nenhuma multa, taxa rescisória ou burocracia.
+                    <div class="faq_row_answer">
+                        Zero fidelidade. Você pode cancelar sua assinatura mensal a qualquer momento sem nenhuma taxa, multa rescisória ou complicação.
                     </div>
                 </details>
             </div>
         </div>
     </section>
 
-    <!-- 10. CTA CONVERSÃO FINAL (SQUARESPACE CONVERSION) -->
-    <section class="sq_section_cta">
-        <div class="container cta_box">
-            <span class="sec_badge">Seu Site No Ar Essa Semana</span>
-            <h2 class="cta_title">Pronto para colocar o site da sua empresa no ar?</h2>
-            <p class="cta_lead">
-                Fale diretamente com nossa equipe no WhatsApp, escolha o estilo do seu site e veja a primeira versão pronta em até 48 horas.
+    <!-- 10. CTA COM ESFERA DE PARTÍCULAS (SQUARESPACE SPHERE OF LIGHTS) -->
+    <section class="sq_section_sphere_cta">
+        <div class="particle_sphere_bg"></div>
+        <div class="container sphere_cta_content">
+            <h2 class="sphere_cta_title">
+                Faça o site da sua empresa acontecer
+            </h2>
+            <p class="sphere_cta_sub">
+                Aprove o design completo antes de qualquer cobrança de setup.
             </p>
-            <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Quero%20colocar%20meu%20site%20no%20ar%20com%20a%20Boomo." target="_blank" rel="noopener noreferrer" class="btn_sqsp btn_sqsp_primary btn_sqsp_lg">
+            <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Quero%20colocar%20meu%20site%20no%20ar%20com%20a%20Boomo." target="_blank" rel="noopener noreferrer" class="btn_cinema_primary">
                 Falar com a Equipe no WhatsApp →
             </a>
         </div>
     </section>
 
-    <!-- 11. RODAPÉ (SQUARESPACE FOOTER) -->
-    <footer class="sq_footer">
+    <!-- 11. RODAPÉ INSTITUCIONAL (SQUARESPACE FOOTER) -->
+    <footer class="sq_footer_cinema">
         <div class="container">
-            <div class="footer_grid">
-                <div class="footer_brand">
-                    <div class="brand_logo">BOOMO<span>.</span></div>
-                    <p class="footer_desc">
+            <div class="footer_cinema_grid">
+                <div class="footer_cinema_brand">
+                    <h3>BOOMO<span>.</span></h3>
+                    <p class="footer_cinema_desc">
                         Estúdio de sites profissionais por assinatura. Criamos, hospedamos e mantemos sua presença digital de elite.
                     </p>
                 </div>
                 <div>
-                    <div class="footer_col_title">Navegação</div>
-                    <ul class="footer_links">
-                        <li><a href="#templates">Templates</a></li>
-                        <li><a href="#diferenciais">Diferenciais</a></li>
-                        <li><a href="#como-funciona">Como Funciona</a></li>
+                    <div class="footer_col_h4">Navegação</div>
+                    <ul class="footer_cinema_links">
+                        <li><a href="#modelos">Modelos</a></li>
+                        <li><a href="#plataforma">Recursos</a></li>
+                        <li><a href="#como-funciona">O Método</a></li>
                         <li><a href="#planos">Planos & Preços</a></li>
                     </ul>
                 </div>
                 <div>
-                    <div class="footer_col_title">Modelos</div>
-                    <ul class="footer_links">
+                    <div class="footer_col_h4">Modelos de Sites</div>
+                    <ul class="footer_cinema_links">
                         <li><a href="javascript:void(0)" onclick="openPreviewModal('/templates/estetica/index.html', 'Aura — Clínica Dermatológica')">Estética & Saúde</a></li>
                         <li><a href="javascript:void(0)" onclick="openPreviewModal('/templates/odontologia/index.html', 'Odonto Prime — Odontologia')">Odontologia</a></li>
                         <li><a href="javascript:void(0)" onclick="openPreviewModal('/templates/advocacia/index.html', 'Santos & Valente — Advocacia')">Advocacia</a></li>
@@ -614,16 +501,16 @@
                     </ul>
                 </div>
                 <div>
-                    <div class="footer_col_title">Contato & Suporte</div>
-                    <ul class="footer_links">
+                    <div class="footer_col_h4">Contato & Suporte</div>
+                    <ul class="footer_cinema_links">
                         <li><a href="https://wa.me/559192432044" target="_blank">WhatsApp Oficial</a></li>
                         <li><a href="mailto:contato@boomo.com.br">contato@boomo.com.br</a></li>
-                        <li><span>Seg a Sex • 09h às 18h</span></li>
+                        <li><span>Segunda a Sexta • 09h às 18h</span></li>
                     </ul>
                 </div>
             </div>
 
-            <div class="footer_bottom">
+            <div class="footer_cinema_bottom">
                 <div>BOOMO © 2026 — TODOS OS DIREITOS RESERVADOS.</div>
                 <div>SITES PROFISSIONAIS POR ASSINATURA • BRASIL</div>
             </div>
@@ -657,33 +544,80 @@
 
     <!-- Scripts da Página -->
     <script>
-        // Toggle do Menu Mobile
-        const mobileToggle = document.getElementById('mobileToggle');
-        const navLinks = document.getElementById('navLinks');
-        if (mobileToggle && navLinks) {
-            mobileToggle.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
+        // Menu Mobile Toggle
+        const mobileHamburger = document.getElementById('mobileHamburger');
+        const navMenu = document.getElementById('navMenu');
+        if (mobileHamburger && navMenu) {
+            mobileHamburger.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
             });
-            navLinks.querySelectorAll('a').forEach(link => {
+            navMenu.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', () => {
-                    navLinks.classList.remove('active');
+                    navMenu.classList.remove('active');
                 });
             });
         }
 
-        // Filtro de Categorias no Showroom
-        function filterTemplates(category, btn) {
-            document.querySelectorAll('.cat_tab_btn').forEach(b => b.classList.remove('active'));
+        // Dados dos Segmentos para o Showcase Interativo
+        const segmentData = {
+            estetica: {
+                img: 'assets/images/templates-mockups/estetica-hero.webp',
+                floating: 'Agendamento direto no WhatsApp',
+                tag: 'Dermatologia & Harmonização Facial',
+                heading: 'Aura Clínica — Estética Médica de Alto Padrão',
+                desc: 'Projetado com estética editorial clássica em tons de off-white seda e bronze champagne. Estruturado para clínicas que cobram tickets elevados e exigem autoridade médica imediata.',
+                url: '/templates/estetica/index.html',
+                newTab: '/templates/estetica'
+            },
+            odonto: {
+                img: 'assets/images/templates-mockups/odontologia-hero.webp',
+                floating: 'Avaliação com Scanner 3D',
+                tag: 'Odontologia Digital & Lentes de Contato',
+                heading: 'Odonto Prime — Odontologia Boutique Suíça',
+                desc: 'Visual em azul-safira e platina com foco em tratamentos de alta precisão: Lentes E.max, Invisalign Diamond e Cirurgia Guiada de Implantes sem dor.',
+                url: '/templates/odontologia/index.html',
+                newTab: '/templates/odontologia'
+            },
+            advocacia: {
+                img: 'assets/images/templates-mockups/advocacia-hero.webp',
+                floating: 'Sigilo & Consulta Corporativa',
+                tag: 'Direito Empresarial & Tributário',
+                heading: 'Santos & Valente — Banca Corporativa Faria Lima',
+                desc: 'Layout sóbrio em ardósia obsidian e ouro velho. Perfeito para escritórios jurídicos que atuam com M&A, Governança, Proteção Familiar e Direito Tributário.',
+                url: '/templates/advocacia/index.html',
+                newTab: '/templates/advocacia'
+            },
+            contabil: {
+                img: 'assets/images/templates-mockups/contabilidade-hero.webp',
+                floating: 'Diagnóstico Tributário Gratuito',
+                tag: 'Consultoria Contábil & CFO as a Service',
+                heading: 'Lumina Contábil — Inteligência Financeira B2B',
+                desc: 'Posicionamento estratégico para escritórios contábeis em verde-floresta e esmeralda. Transmite segurança para Lucro Real, BPO Financeiro e Holdings.',
+                url: '/templates/contabilidade/index.html',
+                newTab: '/templates/contabilidade'
+            }
+        };
+
+        function switchShowcaseTab(seg, btn) {
+            document.querySelectorAll('.filter_pill').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
-            const cards = document.querySelectorAll('.tmpl_card');
-            cards.forEach(card => {
-                if (category === 'all' || card.getAttribute('data-category') === category) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
+            const data = segmentData[seg];
+            if (!data) return;
+
+            document.getElementById('stageImg').src = data.img;
+            document.getElementById('stageFloatingText').innerText = data.floating;
+            document.getElementById('stageTag').innerText = data.tag;
+            document.getElementById('stageHeading').innerText = data.heading;
+            document.getElementById('stageDesc').innerText = data.desc;
+            document.getElementById('stageBtnNewTab').href = data.newTab;
+            document.getElementById('stageBtnTest').onclick = () => openPreviewModal(data.url, data.heading);
+        }
+
+        function checkDomain() {
+            const input = document.getElementById('domainInput').value.trim();
+            const text = input ? `Ol%C3%A1%21%20Gostaria%20de%20garantir%20o%20dom%C3%ADnio%20${encodeURIComponent(input)}%20para%20o%20site%20da%20minha%20empresa.` : `Ol%C3%A1%21%20Gostaria%20de%20verificar%20a%20disponibilidade%20de%20um%20dom%C3%ADnio%20para%20minha%20empresa.`;
+            window.open(`https://wa.me/559192432044?text=${text}`, '_blank');
         }
 
         // Modal de Preview Interativo
@@ -724,17 +658,12 @@
             }
         }
 
-        // Fechar modal ao clicar fora ou pressionar ESC
         window.addEventListener('click', (e) => {
-            if (e.target === previewModal) {
-                closePreviewModal();
-            }
+            if (e.target === previewModal) closePreviewModal();
         });
 
         window.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && previewModal.classList.contains('active')) {
-                closePreviewModal();
-            }
+            if (e.key === 'Escape' && previewModal.classList.contains('active')) closePreviewModal();
         });
     </script>
 </body>
