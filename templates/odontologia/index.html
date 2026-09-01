@@ -3,142 +3,488 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Odonto Prime | Odontologia Digital & Estética</title>
-    
+    <title>Odonto Prime | Odontologia Digital & Estética Avançada</title>
+    <meta name="description" content="Clínica odontológica de alta precisão nos Jardins, São Paulo. Scanner 3D, lentes de contato dental em porcelana, Invisalign e implantes guiados por computador.">
+
     <!-- Fonts -->
-    
-    
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,400;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/vendor/fontawesome/css/all.min.css">
     
+    <!-- CSS -->
     <link rel="stylesheet" href="/templates/odontologia/css/style.css">
 </head>
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="container nav-content">
-            <a href="#" class="logo">
-                <i class="fa-solid fa-tooth"></i> Odonto<span>Prime</span>
-            </a>
-            <div class="nav-links">
-                <a href="#tratamentos">Tratamentos</a>
-                <a href="#diferenciais">Diferenciais</a>
-                <a href="#especialista">A Especialista</a>
-                <a href="https://wa.me/5511999999999" target="_blank" class="btn btn-primary">Agendar Avaliação</a>
-            </div>
+    <!-- TOPBAR INFORMATIVA -->
+    <aside class="odonto_topbar" aria-label="Aviso institucional">
+        <div class="container topbar_content">
+            <span class="topbar_tag"><i class="fa-solid fa-laptop-medical"></i> Fluxo 100% Digital • Sem moldagens com massinha</span>
+            <span class="topbar_location">Rua Oscar Freire, Jardins • São Paulo, SP</span>
+            <a href="https://wa.me/5511988888888?text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20a%20agenda%20da%20Odonto%20Prime." target="_blank" rel="noopener noreferrer" class="topbar_link">Consultar Agenda</a>
         </div>
-    </nav>
+    </aside>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="container hero-container">
-            <div class="hero-content">
-                <span class="badge">Odontologia Digital & Estética Avançada</span>
-                <h1>A odontologia de precisão que transforma seu sorriso <em>com naturalidade e conforto.</em></h1>
-                <p>Alinhadores invisíveis, lentes de contato e implantes guiados por computador. Tecnologia de ponta e atendimento humanizado no coração dos Jardins.</p>
-                <div class="hero-actions">
-                    <a href="https://wa.me/5511999999999" target="_blank" class="btn btn-primary btn-large">
-                        <i class="fa-brands fa-whatsapp"></i> Agendar Avaliação no WhatsApp
-                    </a>
-                    <a href="#tratamentos" class="btn btn-outline">Conhecer Tratamentos</a>
-                </div>
+    <!-- NAVBAR -->
+    <header class="odonto_header">
+        <nav class="container nav_content" aria-label="Navegação principal">
+            <a href="#" class="brand_signature">
+                <span class="brand_name">ODONTO<span class="brand_accent">PRIME</span></span>
+                <span class="brand_sub">Odontologia Digital & Estética</span>
+            </a>
+
+            <div class="nav_links">
+                <a href="#tratamentos">Tratamentos</a>
+                <a href="#tecnologia">Tecnologia 3D</a>
+                <a href="#especialista">O Especialista</a>
+                <a href="#estrutura">Estrutura & Conforto</a>
+                <a href="#faq">FAQ</a>
             </div>
-            <div class="hero-image-wrapper">
-                <picture>
-              <source media="(min-width: 768px)" srcset="/templates/odontologia/assets/images/hero-odonto-desktop.webp">
-              <img src="/templates/odontologia/assets/images/hero-odonto.webp" alt="Interior da Odonto Prime">
-            </picture>
-                <div class="hero-stats">
-                    <div class="stat-icon"><i class="fa-solid fa-certificate"></i></div>
-                    <div class="stat-text">
-                        <strong>+2.500 Sorrisos</strong>
-                        <span>Transformados com tecnologia digital</span>
+
+            <div class="nav_cta_wrap">
+                <a href="https://wa.me/5511988888888?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Odonto%20Prime." target="_blank" rel="noopener noreferrer" class="btn_odonto btn_odonto_primary">
+                    <span>Agendar Avaliação</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="odonto_hero">
+            <div class="container hero_grid">
+                <div class="hero_content">
+                    <div class="hero_badge">
+                        <span class="badge_dot"></span>
+                        Odontologia Digital & Reabilitação Oral de Precisão
+                    </div>
+
+                    <h1 class="hero_title">
+                        A odontologia de precisão que transforma seu sorriso <em>com naturalidade e conforto absoluto.</em>
+                    </h1>
+
+                    <p class="hero_lead">
+                        Alinhadores invisíveis, lentes de contato em cerâmica pura e implantes guiados por computador. Tecnologia de ponta, sedação consciente e atendimento exclusivo no coração dos Jardins.
+                    </p>
+
+                    <div class="hero_actions">
+                        <a href="https://wa.me/5511988888888?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Odonto%20Prime." target="_blank" rel="noopener noreferrer" class="btn_odonto btn_odonto_gold btn_odonto_lg">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>Agendar Avaliação no WhatsApp</span>
+                        </a>
+                        <a href="#tratamentos" class="btn_odonto btn_odonto_outline btn_odonto_lg">
+                            <span>Conhecer Tratamentos</span>
+                        </a>
+                    </div>
+
+                    <div class="hero_trust_row">
+                        <div class="trust_badge">
+                            <i class="fa-solid fa-microchip"></i>
+                            <span>Scanner 3D iTero</span>
+                        </div>
+                        <div class="trust_badge">
+                            <i class="fa-solid fa-gem"></i>
+                            <span>Cerâmicas E.max Suíças</span>
+                        </div>
+                        <div class="trust_badge">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <span>Invisalign Diamond</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero_visual">
+                    <div class="hero_image_frame">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="/templates/odontologia/assets/images/hero-odonto-desktop.webp">
+                            <img src="/templates/odontologia/assets/images/hero-odonto.webp" alt="Consultório com tecnologia de escaneamento 3D da Odonto Prime" class="hero_main_img">
+                        </picture>
+                        
+                        <div class="hero_floating_card">
+                            <div class="card_icon_wrap">
+                                <i class="fa-solid fa-check-double"></i>
+                            </div>
+                            <div class="card_text_wrap">
+                                <strong>+2.500 Sorrisos</strong>
+                                <span>Transformados com fluxo 100% digital e sem dor</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- TRATAMENTOS -->
-    <section id="tratamentos" class="section-padding bg-light">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2>Excelência em Odontologia</h2>
-                <p>Especialidades focadas em restaurar a função, estética e saúde do seu sorriso com técnicas minimamente invasivas.</p>
-            </div>
+        <!-- DIFERENCIAIS TECNOLÓGICOS -->
+        <section id="tecnologia" class="odonto_section section_light">
+            <div class="container">
+                <div class="section_intro text-center">
+                    <span class="section_badge">Por Que a Odonto Prime</span>
+                    <h2 class="section_title">O fim das moldagens desconfortáveis e do medo de dentista.</h2>
+                    <p class="section_desc">
+                        Substituímos métodos ultrapassados por scanners tridimensionais, robótica e planejamento milimétrico em tela antes de tocar em qualquer dente.
+                    </p>
+                </div>
 
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-face-smile-beam"></i></div>
-                    <h3>Lentes de Contato Dental</h3>
-                    <p>Facetas ultrafinas de porcelana planejadas digitalmente para corrigir cor, formato e alinhamento dos dentes com desgaste mínimo.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-teeth"></i></div>
-                    <h3>Alinhadores Invisíveis</h3>
-                    <p>Tratamento ortodôntico discreto, rápido e previsível. Dentes alinhados sem o desconforto dos aparelhos metálicos tradicionais.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-tooth"></i></div>
-                    <h3>Implantes Guiados</h3>
-                    <p>Cirurgia sem cortes de bisturi. Planejamento 3D que garante precisão milimétrica, segurança e recuperação extremamente rápida.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-                    <h3>Clareamento a Laser</h3>
-                    <p>Protocolo avançado que clareia os dentes em única sessão no consultório, com dessensibilizantes para máximo conforto.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+                <div class="tech_cards_grid">
+                    <article class="tech_card">
+                        <div class="tech_icon"><i class="fa-solid fa-cube"></i></div>
+                        <h3 class="tech_card_title">Escaneamento Intraoral 3D</h3>
+                        <p class="tech_card_text">
+                            Adeus à massinha e ao reflexo de vômito. Uma câmera de alta resolução captura 6.000 imagens por segundo da sua boca, gerando um modelo 3D colorido e exato em minutos.
+                        </p>
+                    </article>
 
-    <!-- SOBRE O ESPECIALISTA -->
-    <section id="especialista" class="section-padding">
-        <div class="container">
-            <div class="about-flex">
-                <div class="about-photo">
-                    <img src="/templates/odontologia/assets/images/dr-odonto.webp" alt="Dr. A. Thorne">
-                </div>
-                <div class="about-info">
-                    <h2>Dr. Arthur Thorne</h2>
-                    <span class="crm">CRO-SP 123456</span>
-                    <p>Com mais de 15 anos de dedicação exclusiva à Odontologia Estética e Reabilitação Oral, o Dr. Thorne é referência em transformações de sorrisos utilizando o fluxo 100% digital.</p>
-                    <p>Especialista em Implantodontia pela USP e membro da Sociedade Brasileira de Odontologia Estética (SBOE), seu foco é proporcionar tratamentos resolutivos com total previsibilidade.</p>
-                    <ul class="about-list">
-                        <li><i class="fa-solid fa-check"></i> Especialista em Lentes de Porcelana</li>
-                        <li><i class="fa-solid fa-check"></i> Master em Alinhadores Invisíveis (Invisalign Doctor)</li>
-                        <li><i class="fa-solid fa-check"></i> Scanner Intraoral 3D (Sem moldagens com massinha)</li>
-                    </ul>
-                    <a href="https://wa.me/5511999999999" target="_blank" class="btn btn-primary" style="margin-top: 20px;">Agendar Consulta com Dr. Arthur</a>
+                    <article class="tech_card">
+                        <div class="tech_icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        <h3 class="tech_card_title">Previsibilidade Total do Sorriso</h3>
+                        <p class="tech_card_text">
+                            Através do planejamento digital (Digital Smile Design), você vê e aprova exatamente como seus dentes ficarão antes de iniciar qualquer etapa do tratamento.
+                        </p>
+                    </article>
+
+                    <article class="tech_card">
+                        <div class="tech_icon"><i class="fa-solid fa-crosshairs"></i></div>
+                        <h3 class="tech_card_title">Cirurgia Guiada Sem Cortes</h3>
+                        <p class="tech_card_text">
+                            Implantes posicionados por guias cirúrgicas impressas em 3D a partir da sua tomografia. Sem necessidade de incisões de bisturi nem pontos, permitindo retorno rápido à rotina.
+                        </p>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- TRATAMENTOS CLÍNICOS -->
+        <section id="tratamentos" class="odonto_section section_ice">
+            <div class="container">
+                <div class="section_intro text-center">
+                    <span class="section_badge">Especialidades Odontológicas</span>
+                    <h2 class="section_title">Excelência clínica e estética de alta precisão.</h2>
+                    <p class="section_desc">
+                        Procedimentos desenvolvidos para restaurar função mastigatória, saúde gengival e harmonia estética duradoura.
+                    </p>
+                </div>
+
+                <div class="services_grid">
+                    <!-- 1 -->
+                    <article class="service_card">
+                        <div class="service_header">
+                            <span class="service_tag">Estética Avançada</span>
+                            <span class="service_spec">Cerâmica E.max</span>
+                        </div>
+                        <h3 class="service_title">Lentes de Contato Dental</h3>
+                        <p class="service_desc">
+                            Lâminas cerâmicas ultrafinas (0.2mm a 0.3mm) planejadas digitalmente para harmonizar cor, forma e textura do sorriso com preservação máxima da estrutura dental.
+                        </p>
+                        <div class="service_pills">
+                            <span>Desgaste Mínimo</span>
+                            <span>Brilho Permanente</span>
+                        </div>
+                        <a href="https://wa.me/5511988888888?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20Lentes%20de%20Contato%20Dental%20na%20Odonto%20Prime." target="_blank" rel="noopener noreferrer" class="service_action">
+                            <span>Consultar especialista</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                    <!-- 2 -->
+                    <article class="service_card">
+                        <div class="service_header">
+                            <span class="service_tag">Ortodontia Digital</span>
+                            <span class="service_spec">Invisalign® Diamond</span>
+                        </div>
+                        <h3 class="service_title">Alinhadores Invisíveis</h3>
+                        <p class="service_desc">
+                            Tratamento ortodôntico imperceptível e removível. Dentes perfeitamente alinhados até 50% mais rápido do que aparelhos metálicos tradicionais, sem aftas e sem restrições alimentares.
+                        </p>
+                        <div class="service_pills">
+                            <span>100% Removível</span>
+                            <span>Acompanhamento Virtual</span>
+                        </div>
+                        <a href="https://wa.me/5511988888888?text=Ol%C3%A1%2C%20gostaria%20de%20avaliar%20Alinhadores%20Invis%C3%ADveis%20Invisalign." target="_blank" rel="noopener noreferrer" class="service_action">
+                            <span>Consultar especialista</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                    <!-- 3 -->
+                    <article class="service_card">
+                        <div class="service_header">
+                            <span class="service_tag">Implantodontia</span>
+                            <span class="service_spec">Carga Imediata</span>
+                        </div>
+                        <h3 class="service_title">Implantes Guiados por Computador</h3>
+                        <p class="service_desc">
+                            Recupere dentes fixos com precisão robótica milimétrica. Instalação de implantes osseointegráveis de titânio ou zircônia sem dor e com dente definitivo instalado no mesmo dia.
+                        </p>
+                        <div class="service_pills">
+                            <span>Sem Cortes de Bisturi</span>
+                            <span>Pós-Operatório Confortável</span>
+                        </div>
+                        <a href="https://wa.me/5511988888888?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20Implantes%20Dent%C3%A1rios%20Guiados." target="_blank" rel="noopener noreferrer" class="service_action">
+                            <span>Consultar especialista</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                    <!-- 4 -->
+                    <article class="service_card">
+                        <div class="service_header">
+                            <span class="service_tag">Clareamento Clínico</span>
+                            <span class="service_spec">Laser Fotopolimerizado</span>
+                        </div>
+                        <h3 class="service_title">Clareamento Dental Sem Sensibilidade</h3>
+                        <p class="service_desc">
+                            Protocolo moderno com agentes clareadores associados a dessensibilizantes de fosfato de cálcio. Dentes até 4 tons mais brancos em sessão única de 60 minutos.
+                        </p>
+                        <div class="service_pills">
+                            <span>Sessão Única de 1h</span>
+                            <span>Zero Sensibilidade</span>
+                        </div>
+                        <a href="https://wa.me/5511988888888?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20Clareamento%20Dental." target="_blank" rel="noopener noreferrer" class="service_action">
+                            <span>Consultar especialista</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                    <!-- 5 -->
+                    <article class="service_card">
+                        <div class="service_header">
+                            <span class="service_tag">Reabilitação Oral</span>
+                            <span class="service_spec">CAD/CAM</span>
+                        </div>
+                        <h3 class="service_title">Próteses Cerâmicas & Coroas</h3>
+                        <p class="service_desc">
+                            Restauração de dentes fraturados ou desgastados com cerâmica pura de alta resistência. Fresagem robótica computadorizada para adaptação biológica e margens perfeitas.
+                        </p>
+                        <div class="service_pills">
+                            <span>Cerâmica Pura Alemã</span>
+                            <span>Adaptação Milimétrica</span>
+                        </div>
+                        <a href="https://wa.me/5511988888888?text=Ol%C3%A1%2C%20preciso%20de%20avalia%C3%A7%C3%A3o%20para%20Pr%C3%B3tese%20Cer%C3%A2mica." target="_blank" rel="noopener noreferrer" class="service_action">
+                            <span>Consultar especialista</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                    <!-- 6 -->
+                    <article class="service_card">
+                        <div class="service_header">
+                            <span class="service_tag">Saúde Funcional</span>
+                            <span class="service_spec">DTM & Oclusão</span>
+                        </div>
+                        <h3 class="service_title">Tratamento de Bruxismo & DTM</h3>
+                        <p class="service_desc">
+                            Alívio de dores de cabeça tensionais, estalos articulares e desgaste dental crônico. Placas miorrelaxantes digitais impressas em 3D e termoterapia específica.
+                        </p>
+                        <div class="service_pills">
+                            <span>Placas 3D Sob Medida</span>
+                            <span>Alívio de Dores Crônicas</span>
+                        </div>
+                        <a href="https://wa.me/5511988888888?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20Tratamento%20de%20Bruxismo." target="_blank" rel="noopener noreferrer" class="service_action">
+                            <span>Consultar especialista</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- O ESPECIALISTA -->
+        <section id="especialista" class="odonto_section section_light">
+            <div class="container">
+                <div class="expert_split">
+                    <div class="expert_photo_wrap">
+                        <div class="photo_card_border">
+                            <img src="/templates/odontologia/assets/images/dr-odonto.webp" alt="Dr. Arthur Thorne, Diretor Clínico da Odonto Prime" class="expert_img">
+                            <div class="photo_tag_bottom">
+                                <span class="tag_title">15+ Anos de Excelência</span>
+                                <span class="tag_subtitle">Especialista em Implantodontia & Reabilitação Oral</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="expert_text">
+                        <span class="section_badge">Direção Clínica</span>
+                        <h2 class="expert_name">Dr. Arthur Thorne</h2>
+                        <span class="expert_cro">CRO-SP 123.456 • Membro Titular SBOE & ITI</span>
+
+                        <blockquote class="expert_quote">
+                            "O sorriso perfeito não é aquele que parece artificialmente branco, mas o que devolve mastigação plena, saúde biológica e harmonia natural com o seu rosto."
+                        </blockquote>
+
+                        <div class="expert_bio">
+                            <p>
+                                Graduado e Especialista em Implantodontia e Prótese Dentária pela Faculdade de Odontologia da Universidade de São Paulo (FOUSP), o Dr. Arthur Thorne dedicou a última década ao aprimoramento de técnicas minimamente invasivas e fluxos 100% digitais.
+                            </p>
+                            <p>
+                                Membro da <em>Sociedade Brasileira de Odontologia Estética (SBOE)</em> e do <em>International Team for Implantology (ITI - Suíça)</em>, atende executivos, profissionais liberais e famílias que buscam odontologia de alto nível com discrição, conforto e previsibilidade.
+                            </p>
+                        </div>
+
+                        <ul class="expert_badges_list">
+                            <li><i class="fa-solid fa-circle-check"></i> Master Invisalign Doctor (Certificação Diamond)</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Especialista em Reabilitações Cerâmicas com fluxo CAD/CAM</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Atendimento com opção de sedação consciente assistida</li>
+                        </ul>
+
+                        <div class="expert_cta">
+                            <a href="https://wa.me/5511988888888?text=Ol%C3%A1%20Dr.%20Arthur%2C%20gostaria%20de%20agendar%20uma%20consulta%20de%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="btn_odonto btn_odonto_gold">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                <span>Agendar Consulta com Dr. Arthur</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ESTRUTURA & CONFORTO -->
+        <section id="estrutura" class="odonto_section section_dark">
+            <div class="container">
+                <div class="section_intro text-center">
+                    <span class="section_badge badge_gold">Estrutura de Alto Padrão</span>
+                    <h2 class="section_title text_white">Um ambiente planejado para o seu absoluto conforto.</h2>
+                    <p class="section_desc text_light">
+                        Criamos um consultório boutique nos Jardins onde a visita ao dentista se torna uma experiência relaxante, privada e acolhedora.
+                    </p>
+                </div>
+
+                <div class="comfort_grid">
+                    <div class="comfort_item">
+                        <div class="comfort_icon"><i class="fa-solid fa-couch"></i></div>
+                        <h3 class="comfort_title">Lounge Privativo</h3>
+                        <p class="comfort_desc">Recepção espaçosa com carta de cafés especiais, privacidade acústica e sem salas de espera lotadas.</p>
+                    </div>
+
+                    <div class="comfort_item">
+                        <div class="comfort_icon"><i class="fa-solid fa-spa"></i></div>
+                        <h3 class="comfort_title">Sedação Consciente</h3>
+                        <p class="comfort_desc">Para pacientes ansiosos ou procedimentos longos. Tratamento leve sob acompanhamento de médico anestesiologista.</p>
+                    </div>
+
+                    <div class="comfort_item">
+                        <div class="comfort_icon"><i class="fa-solid fa-headphones"></i></div>
+                        <h3 class="comfort_title">Óculos Multimídia</h3>
+                        <p class="comfort_desc">Assista a suas séries favoritas ou ouça suas músicas com fones antirruído durante toda a sessão odontológica.</p>
+                    </div>
+
+                    <div class="comfort_item">
+                        <div class="comfort_icon"><i class="fa-solid fa-square-parking"></i></div>
+                        <h3 class="comfort_title">Estacionamento com Manobrista</h3>
+                        <p class="comfort_desc">Comodidade e segurança total na Oscar Freire, com vaga garantida durante o seu atendimento.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="odonto_section section_light">
+            <div class="container faq_wrap">
+                <div class="section_intro text-center">
+                    <span class="section_badge">Tire Suas Dúvidas</span>
+                    <h2 class="section_title">Perguntas frequentes sobre os procedimentos.</h2>
+                    <p class="section_desc">Transparência clínica para que você inicie seu tratamento com total segurança.</p>
+                </div>
+
+                <div class="faq_accordion">
+                    <details class="faq_card" open>
+                        <summary class="faq_header">
+                            <span>A colocação de lentes de contato desgasta os dentes naturais?</span>
+                            <i class="fa-solid fa-chevron-down faq_arrow"></i>
+                        </summary>
+                        <div class="faq_body">
+                            <p>
+                                Com a tecnologia atual de cerâmicas ultrafinas E.max (de apenas 0.2 a 0.3mm), o desgaste é mínimo e restrito apenas ao esmalte superficial, quando necessário. Em muitos casos de dentes lingualizados ou pequenos, o preparo é zero (lentes no-prep), preservando 100% da integridade dental biológica.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="faq_card">
+                        <summary class="faq_header">
+                            <span>O implante dental guiado por computador dói?</span>
+                            <i class="fa-solid fa-chevron-down faq_arrow"></i>
+                        </summary>
+                        <div class="faq_body">
+                            <p>
+                                Não. A cirurgia guiada por tomografia 3D é realizada por microperfurações através de uma guia cirúrgica personalizada, sem a necessidade de cortar a gengiva com bisturi nem suturar (dar pontos). O procedimento é realizado sob anestesia local potente (ou sedação consciente), e a grande maioria dos pacientes relata apenas um leve desconforto controlável com analgésicos comuns.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="faq_card">
+                        <summary class="faq_header">
+                            <span>Alinhadores Invisalign funcionam para casos complexos?</span>
+                            <i class="fa-solid fa-chevron-down faq_arrow"></i>
+                        </summary>
+                        <div class="faq_body">
+                            <p>
+                                Sim. Graças aos avanços do material SmartTrack e ao planejamento biomecânico do Dr. Arthur Thorne (Invisalign Diamond Doctor), é possível tratar desde pequenos desalinhamentos até mordidas cruzadas severas, sobremordidas e apinhamentos graves com total previsibilidade.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="faq_card">
+                        <summary class="faq_header">
+                            <span>Como funciona a primeira consulta de avaliação?</span>
+                            <i class="fa-solid fa-chevron-down faq_arrow"></i>
+                        </summary>
+                        <div class="faq_body">
+                            <p>
+                                Na primeira consulta dedicamos 60 minutos exclusivos para ouvir seus objetivos, realizar o escaneamento intraoral 3D completo da sua boca, avaliar a saúde gengival e mastigatória e apresentar na tela do computador as opções de tratamento com orçamento detalhado e transparente.
+                            </p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA BANNER -->
+        <section class="odonto_cta">
+            <div class="container text-center">
+                <span class="cta_tag">Atendimento Exclusivo</span>
+                <h2 class="cta_title">Pronto para conquistar o sorriso que você sempre mereceu?</h2>
+                <p class="cta_text">
+                    Nossa equipe de concierge odontológico está pronta para encontrar o melhor horário para a sua consulta nos Jardins.
+                </p>
+                <a href="https://wa.me/5511988888888?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Odonto%20Prime." target="_blank" rel="noopener noreferrer" class="btn_odonto btn_odonto_gold btn_odonto_lg">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Agendar Avaliação no WhatsApp</span>
+                </a>
+            </div>
+        </section>
+    </main>
 
     <!-- FOOTER -->
-    <footer>
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <a href="#" class="logo">
-                    <i class="fa-solid fa-tooth"></i> Odonto<span>Prime</span>
+    <footer class="odonto_footer">
+        <div class="container footer_main_grid">
+            <div class="footer_col brand_section">
+                <a href="#" class="brand_signature">
+                    <span class="brand_name">ODONTO<span class="brand_accent">PRIME</span></span>
+                    <span class="brand_sub">Odontologia Digital & Estética</span>
                 </a>
-                <p>Tecnologia e arte aplicadas à saúde do seu sorriso.</p>
+                <p class="footer_desc">
+                    Reabilitação oral de alta precisão, odontologia estética e tecnologia 3D. Atendimento humanizado e sem dor no coração dos Jardins.
+                </p>
+                <span class="cro_label">Responsável Técnico: Dr. Arthur Thorne • CRO-SP 123.456</span>
             </div>
-            <div class="footer-contact">
-                <h4>Atendimento</h4>
-                <p><i class="fa-solid fa-location-dot"></i> Rua Oscar Freire, 1000 - Jardins, SP</p>
-                <p><i class="fa-brands fa-whatsapp"></i> (11) 98888-8888</p>
-                <p><i class="fa-solid fa-envelope"></i> contato@odontoprime.com.br</p>
+
+            <div class="footer_col">
+                <h3 class="footer_title">Localização</h3>
+                <p class="footer_item"><i class="fa-solid fa-location-dot"></i> Rua Oscar Freire, 1000 • Conj. 82<br>Jardins, São Paulo • SP</p>
+                <p class="footer_item"><i class="fa-solid fa-car"></i> Valet cortesia no local</p>
             </div>
-            <div class="footer-hours">
-                <h4>Funcionamento</h4>
-                <p>Seg a Sex: 08:00 - 19:00</p>
-                <p>Sábados: 08:00 - 12:00</p>
+
+            <div class="footer_col">
+                <h3 class="footer_title">Horários & Contato</h3>
+                <p class="footer_item"><i class="fa-brands fa-whatsapp"></i> (11) 98888-8888</p>
+                <p class="footer_item"><i class="fa-regular fa-envelope"></i> atendimento@odontoprime.com.br</p>
+                <p class="footer_item"><i class="fa-regular fa-clock"></i> Seg a Sex: 08:00 às 20:00<br>Sábados: 08:30 às 13:30</p>
             </div>
         </div>
-        <div class="footer-bottom text-center">
-            <p>&copy; 2026 Odonto Prime. Diretor Técnico: Dr. Arthur Thorne CRO-SP 123456. <span>Desenvolvido por Boomo</span></p>
+
+        <div class="container footer_bottom_strip">
+            <p>&copy; 2026 Odonto Prime Clínica Odontológica. Todos os direitos reservados.</p>
+            <p class="boomo_badge">Site criado por <strong>Boomo</strong></p>
         </div>
     </footer>
 
