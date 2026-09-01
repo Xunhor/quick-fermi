@@ -3,141 +3,497 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aura Clínica de Estética | Harmonização e Rejuvenescimento</title>
-    
+    <title>Aura Clínica & Estética Avançada | Harmonização Facial e Rejuvenescimento Natural</title>
+    <meta name="description" content="Clínica médica especializada em harmonização facial sutil, bioestimuladores de colágeno e protocolos avançados de rejuvenescimento nos Jardins, São Paulo.">
+
     <!-- Fonts -->
-    
-    
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/vendor/fontawesome/css/all.min.css">
     
+    <!-- CSS -->
     <link rel="stylesheet" href="/templates/estetica/css/style.css">
 </head>
 <body>
 
+    <!-- TOPBAR INFORMATIVA -->
+    <aside class="aura_topbar" aria-label="Aviso institucional">
+        <div class="container topbar_content">
+            <span class="topbar_tag">Atendimento Exclusivo com Hora Marcada</span>
+            <span class="topbar_location">Alameda Gabriel Monteiro da Silva, Jardins • São Paulo</span>
+            <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20a%20disponibilidade%20de%20hor%C3%A1rios%20na%20Aura%20Est%C3%A9tica." target="_blank" rel="noopener noreferrer" class="topbar_link">Consultar Agenda</a>
+        </div>
+    </aside>
+
     <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="container nav-content">
-            <a href="#" class="logo">AURA<span>ESTÉTICA</span></a>
-            <div class="nav-links">
+    <header class="aura_header">
+        <nav class="container nav_content" aria-label="Navegação principal">
+            <a href="#" class="brand_signature">
+                <span class="brand_name">AURA</span>
+                <span class="brand_sub">Clínica & Estética Avançada</span>
+            </a>
+
+            <div class="nav_links">
                 <a href="#tratamentos">Tratamentos</a>
-                <a href="#clinica">A Clínica</a>
-                <a href="#depoimentos">Resultados</a>
-                <a href="https://wa.me/5511999999999" target="_blank" class="btn btn-outline">Agendar Avaliação</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="hero-bg">
-            <picture>
-              <source media="(min-width: 768px)" srcset="/templates/estetica/assets/images/hero-estetica-desktop.webp">
-              <img src="/templates/estetica/assets/images/hero-estetica.webp" alt="Interior da Clínica Aura">
-            </picture>
-            <div class="hero-overlay"></div>
-        </div>
-        <div class="container hero-container">
-            <div class="hero-text">
-                <h1>A sua melhor versão <br>com naturalidade.</h1>
-                <p>Especialistas em harmonização facial, preenchimentos e protocolos de rejuvenescimento avançado. Realce sua beleza com segurança e sofisticação.</p>
-                <a href="https://wa.me/5511999999999" target="_blank" class="btn btn-primary">Falar com Especialista no WhatsApp <i class="fa-brands fa-whatsapp"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- TRATAMENTOS -->
-    <section id="tratamentos" class="section-padding treatments">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2>Protocolos Exclusivos</h2>
-                <p>Tratamentos estéticos avançados focados em resultados reais e naturais.</p>
-                <div class="separator"></div>
+                <a href="#filosofia">Filosofia</a>
+                <a href="#especialista">A Especialista</a>
+                <a href="#jornada">Sua Consulta</a>
+                <a href="#faq">FAQ</a>
             </div>
 
-            <div class="grid-3">
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-syringe"></i></div>
-                    <h3>Harmonização Facial</h3>
-                    <p>Equilíbrio e proporção para o seu rosto. Preenchimento de lábios, olheiras, mandíbula e maçãs do rosto com Ácido Hialurônico.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-face-smile"></i></div>
-                    <h3>Toxina Botulínica</h3>
-                    <p>Prevenção e suavização de rugas e linhas de expressão, mantendo a naturalidade dos seus movimentos faciais.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-droplet"></i></div>
-                    <h3>Bioestimuladores</h3>
-                    <p>Estímulo intenso de colágeno para tratar a flacidez facial e corporal, devolvendo a firmeza e o viço da pele.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-spa"></i></div>
-                    <h3>Fios de PDO</h3>
-                    <p>Efeito lifting não cirúrgico e estímulo de colágeno localizado, ideal para contorno facial e papada.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-                    <h3>Peeling Químico</h3>
-                    <p>Renovação celular profunda para tratamento de manchas, melasma e uniformização do tom e textura da pele.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-fire-flame-simple"></i></div>
-                    <h3>Ultraformer MPT</h3>
-                    <p>Ultrassom micro e macrofocado de última geração para lifting facial imediato e destruição de gordura localizada.</p>
-                </div>
+            <div class="nav_cta_wrap">
+                <a href="https://wa.me/5511999999999?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Aura%20Est%C3%A9tica." target="_blank" rel="noopener noreferrer" class="btn_aura btn_aura_outline">
+                    <span>Agendar Avaliação</span>
+                </a>
             </div>
-        </div>
-    </section>
+        </nav>
+    </header>
 
-    <!-- A CLÍNICA / DRA -->
-    <section id="clinica" class="section-padding about-section">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-image">
-                    <img src="/templates/estetica/assets/images/dra-estetica.webp" alt="Dra. responsável pela Clínica">
-                    <div class="experience-badge">
-                        <span>10+</span>
-                        <p>Anos de<br>Experiência</p>
+    <main>
+        <!-- HERO SECTION -->
+        <section class="aura_hero">
+            <div class="hero_backdrop">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="/templates/estetica/assets/images/hero-estetica-desktop.webp">
+                    <img src="/templates/estetica/assets/images/hero-estetica.webp" alt="Consultório acolhedor e contemporâneo da Clínica Aura" class="hero_bg_img" priority>
+                </picture>
+                <div class="hero_overlay_scrim"></div>
+            </div>
+
+            <div class="container hero_inner">
+                <div class="hero_card_editorial">
+                    <div class="hero_eyebrow">
+                        <span class="eyebrow_dot"></span>
+                        Rejuvenescimento & Harmonização Facial de Alta Precisão
+                    </div>
+
+                    <h1 class="hero_title">
+                        A arte da proporção natural, <em>sem alterar sua essência.</em>
+                    </h1>
+
+                    <p class="hero_lead">
+                        Protocolos médicos minimamente invasivos planejados sob medida para a sua anatomia facial. Beleza refinada, produtos líderes globais e total segurança clínica.
+                    </p>
+
+                    <div class="hero_actions">
+                        <a href="https://wa.me/5511999999999?text=Ol%C3%A1%21%20Gostaria%20de%20conversar%20sobre%20um%20plano%20de%20tratamento%20na%20Aura%20Est%C3%A9tica." target="_blank" rel="noopener noreferrer" class="btn_aura btn_aura_gold">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>Falar com a Especialista</span>
+                        </a>
+                        <a href="#tratamentos" class="btn_aura btn_aura_glass">
+                            <span>Conhecer Protocolos</span>
+                        </a>
+                    </div>
+
+                    <div class="hero_trust_strip">
+                        <div class="trust_item">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <span>Produtos Aprovados Anvisa & FDA</span>
+                        </div>
+                        <span class="trust_sep">•</span>
+                        <div class="trust_item">
+                            <i class="fa-solid fa-gem"></i>
+                            <span>Allergan & Galderma</span>
+                        </div>
+                        <span class="trust_sep">•</span>
+                        <div class="trust_item">
+                            <i class="fa-solid fa-user-doctor"></i>
+                            <span>Ambiente Estéril e Privativo</span>
+                        </div>
                     </div>
                 </div>
-                <div class="about-text">
-                    <h2>Excelência e Cuidado em cada detalhe.</h2>
-                    <div class="separator left"></div>
-                    <p>A Aura Estética foi fundada com um propósito claro: elevar a autoestima das nossas pacientes através de protocolos cientificamente comprovados, sem perder a essência da beleza natural.</p>
-                    <p>Sob a direção clínica da <strong>Dra. Evelyn Reed (CRBM 12345)</strong>, nossa equipe é formada por especialistas altamente capacitadas que participam constantemente de atualizações internacionais.</p>
-                    <ul class="check-list">
-                        <li><i class="fa-solid fa-check"></i> Produtos Premium (Allergan, Galderma)</li>
-                        <li><i class="fa-solid fa-check"></i> Ambiente Luxuoso e Acolhedor</li>
-                        <li><i class="fa-solid fa-check"></i> Avaliação Facial Personalizada em 3D</li>
-                    </ul>
-                    <a href="https://wa.me/5511999999999" target="_blank" class="btn btn-primary" style="margin-top: 24px;">Agendar minha avaliação</a>
+            </div>
+        </section>
+
+        <!-- PILARES DE EXCELÊNCIA (FILOSOFIA) -->
+        <section id="filosofia" class="aura_section section_light">
+            <div class="container">
+                <div class="section_intro text-center">
+                    <span class="section_badge">Nossa Filosofia</span>
+                    <h2 class="section_title">O compromisso inegociável com a sua naturalidade.</h2>
+                    <p class="section_desc">
+                        Acreditamos que o melhor procedimento é aquele que ninguém percebe que você fez — apenas notam que você está mais descansada, luminosa e confiante.
+                    </p>
+                </div>
+
+                <div class="pillars_grid">
+                    <article class="pillar_card">
+                        <div class="pillar_num">01</div>
+                        <h3 class="pillar_title">Anatomia & Proporção Áurea</h3>
+                        <p class="pillar_text">
+                            Não reproduzimos fórmulas prontas. Cada formato de rosto possui eixos de sustentação únicos que respeitamos para valorizar seus traços naturais.
+                        </p>
+                    </article>
+
+                    <article class="pillar_card">
+                        <div class="pillar_num">02</div>
+                        <h3 class="pillar_title">Produtos de Classe Médica</h3>
+                        <p class="pillar_text">
+                            Utilizamos exclusivamente substâncias biocompatíveis de pureza comprovada (Allergan, Restylane, Sculptra e Radiesse) com rastreabilidade total de lote.
+                        </p>
+                    </article>
+
+                    <article class="pillar_card">
+                        <div class="pillar_num">03</div>
+                        <h3 class="pillar_title">Técnica Minimamente Invasiva</h3>
+                        <p class="pillar_text">
+                            Aplicação realizada com microcânulas atraumáticas com ponta romba, reduzindo expressivamente o risco de hematomas e permitindo retorno rápido à rotina.
+                        </p>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- PROTOCOLOS EXCLUSIVOS (TRATAMENTOS) -->
+        <section id="tratamentos" class="aura_section section_warm">
+            <div class="container">
+                <div class="section_intro text-center">
+                    <span class="section_badge">Protocolos Clínicos</span>
+                    <h2 class="section_title">Tratamentos sob medida para a sua pele.</h2>
+                    <p class="section_desc">
+                        Procedimentos com respaldo científico para rejuvenescimento global, contorno e melhora da qualidade dérmica.
+                    </p>
+                </div>
+
+                <div class="treatments_grid">
+                    <!-- 1 -->
+                    <article class="treatment_box">
+                        <div class="treatment_header">
+                            <span class="treatment_code">Protocolo 01 • Sustentação</span>
+                            <span class="treatment_time"><i class="fa-regular fa-clock"></i> 45 min</span>
+                        </div>
+                        <h3 class="treatment_name">Harmonização Facial Estrutural</h3>
+                        <p class="treatment_desc">
+                            Restauração dos pontos de luz e suporte do rosto. Preenchimento preciso de maçãs do rosto (malar), mandíbula, mento e lábios com Ácido Hialurônico de diferentes densidades.
+                        </p>
+                        <div class="treatment_meta">
+                            <span class="meta_tag">Ácido Hialurônico Reticulado</span>
+                            <span class="meta_tag">Resultado Imediato</span>
+                        </div>
+                        <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20Harmoniza%C3%A7%C3%A3o%20Facial%20na%20Aura%20Est%C3%A9tica." target="_blank" rel="noopener noreferrer" class="treatment_cta">
+                            <span>Saber mais</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                    <!-- 2 -->
+                    <article class="treatment_box">
+                        <div class="treatment_header">
+                            <span class="treatment_code">Protocolo 02 • Firmeza</span>
+                            <span class="treatment_time"><i class="fa-regular fa-clock"></i> 40 min</span>
+                        </div>
+                        <h3 class="treatment_name">Bioestimuladores de Colágeno</h3>
+                        <p class="treatment_desc">
+                            Estímulo biológico profundo das células de sustentação da pele. Aplicação de Sculptra (Ácido Poli-L-Láctico) ou Radiesse (Hidroxiapatita de Cálcio) para combater a flacidez facial e cervical.
+                        </p>
+                        <div class="treatment_meta">
+                            <span class="meta_tag">Efeito Progressivo</span>
+                            <span class="meta_tag">Durabilidade até 24 meses</span>
+                        </div>
+                        <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20Bioestimuladores%20de%20Col%C3%A1geno." target="_blank" rel="noopener noreferrer" class="treatment_cta">
+                            <span>Saber mais</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                    <!-- 3 -->
+                    <article class="treatment_box">
+                        <div class="treatment_header">
+                            <span class="treatment_code">Protocolo 03 • Prevenção</span>
+                            <span class="treatment_time"><i class="fa-regular fa-clock"></i> 30 min</span>
+                        </div>
+                        <h3 class="treatment_name">Toxina Botulínica de Precisão</h3>
+                        <p class="treatment_desc">
+                            Prevenção e suavização das linhas dinâmicas de testa, glabela e pés de galinha. Aplicação milimétrica que mantém a expressividade natural e o olhar descansado.
+                        </p>
+                        <div class="treatment_meta">
+                            <span class="meta_tag">Microdoses Anatômicas</span>
+                            <span class="meta_tag">Retorno Imediato ao Trabalho</span>
+                        </div>
+                        <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20sobre%20Toxina%20Botul%C3%ADnica." target="_blank" rel="noopener noreferrer" class="treatment_cta">
+                            <span>Saber mais</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                    <!-- 4 -->
+                    <article class="treatment_box">
+                        <div class="treatment_header">
+                            <span class="treatment_code">Protocolo 04 • Tecnologia</span>
+                            <span class="treatment_time"><i class="fa-regular fa-clock"></i> 50 min</span>
+                        </div>
+                        <h3 class="treatment_name">Ultraformer MPT (Ultrassom Microfocado)</h3>
+                        <p class="treatment_desc">
+                            A tecnologia mais recente em lifting facial não invasivo. Atinge a camada muscular SMAS para ancoragem facial, afinamento de papada e estímulo dérmico sem tempo de recuperação.
+                        </p>
+                        <div class="treatment_meta">
+                            <span class="meta_tag">Lifting Sem Cortes</span>
+                            <span class="meta_tag">Tecnologia Micropulsada</span>
+                        </div>
+                        <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20Ultraformer%20MPT." target="_blank" rel="noopener noreferrer" class="treatment_cta">
+                            <span>Saber mais</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                    <!-- 5 -->
+                    <article class="treatment_box">
+                        <div class="treatment_header">
+                            <span class="treatment_code">Protocolo 05 • Contorno</span>
+                            <span class="treatment_time"><i class="fa-regular fa-clock"></i> 60 min</span>
+                        </div>
+                        <h3 class="treatment_name">Fios de PDO de Tração e Estímulo</h3>
+                        <p class="treatment_desc">
+                            Reposicionamento imediato de tecidos caídos do terço médio do rosto e definição da linha da mandíbula. Fios 100% absorvíveis que continuam gerando colágeno ao longo dos meses.
+                        </p>
+                        <div class="treatment_meta">
+                            <span class="meta_tag">Polidioxanona Biocompatível</span>
+                            <span class="meta_tag">Tração Facial Imediata</span>
+                        </div>
+                        <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20Fios%20de%20PDO." target="_blank" rel="noopener noreferrer" class="treatment_cta">
+                            <span>Saber mais</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                    <!-- 6 -->
+                    <article class="treatment_box">
+                        <div class="treatment_header">
+                            <span class="treatment_code">Protocolo 06 • Textura</span>
+                            <span class="treatment_time"><i class="fa-regular fa-clock"></i> 35 min</span>
+                        </div>
+                        <h3 class="treatment_name">Skinbooster & Peelings Avançados</h3>
+                        <p class="treatment_desc">
+                            Hidratação injetável profunda para peles ressecadas, opacas ou com linhas finas. Clareamento de melasma e renovação de luminosidade com peelings químicos controlados.
+                        </p>
+                        <div class="treatment_meta">
+                            <span class="meta_tag">Glow & Viço Imediato</span>
+                            <span class="meta_tag">Tratamento de Melasma</span>
+                        </div>
+                        <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20Skinbooster%20e%20Peelings." target="_blank" rel="noopener noreferrer" class="treatment_cta">
+                            <span>Saber mais</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- A ESPECIALISTA (DIREÇÃO CLÍNICA) -->
+        <section id="especialista" class="aura_section section_light">
+            <div class="container">
+                <div class="expert_layout">
+                    <div class="expert_visual">
+                        <div class="portrait_frame">
+                            <img src="/templates/estetica/assets/images/dra-estetica.webp" alt="Dra. Evelyn Reed no consultório da Aura Estética" class="portrait_img">
+                            <div class="portrait_overlay_card">
+                                <span class="card_stat">10+ Anos</span>
+                                <span class="card_text">De dedicação exclusiva à estética facial avançada</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="expert_narrative">
+                        <span class="section_badge">Direção Clínica</span>
+                        <h2 class="expert_headline">Cuidado humanizado e rigor técnico em cada aplicação.</h2>
+                        
+                        <blockquote class="expert_quote">
+                            "A verdadeira sofisticação não está em transformar quem você é, mas em resgatar a sua versão mais descansada, luminosa e confiante."
+                        </blockquote>
+
+                        <div class="expert_bio">
+                            <p>
+                                Sob a liderança da <strong>Dra. Evelyn Reed (CRBM 18.420)</strong>, pós-graduada em Harmonização Orofacial e Rejuvenescimento pelo Instituto BWS, a clínica Aura foi concebida como um refúgio de bem-estar onde o paciente é ouvido com paciência e tratado com excelência científica.
+                            </p>
+                            <p>
+                                Participante assídua dos principais congressos de dermatologia estética do mundo (AMWC Mônaco e IMCAS Paris), a Dra. Evelyn aplica protocolos consolidados de anatomia de segurança para garantir resultados naturais e previsíveis.
+                            </p>
+                        </div>
+
+                        <ul class="expert_credentials_list">
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                <span>Planejamento facial individualizado em consultório privativo</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                <span>Microcânulas atraumáticas para mínimo desconforto</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                <span>Acompanhamento pós-procedimento presencial e via WhatsApp</span>
+                            </li>
+                        </ul>
+
+                        <div class="expert_action">
+                            <a href="https://wa.me/5511999999999?text=Ol%C3%A1%20Dra.%20Evelyn%2C%20gostaria%20de%20agendar%20minha%20consulta%20de%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="btn_aura btn_aura_gold">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                <span>Agendar Consulta com a Dra. Evelyn</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- JORNADA DO PACIENTE -->
+        <section id="jornada" class="aura_section section_warm">
+            <div class="container">
+                <div class="section_intro text-center">
+                    <span class="section_badge">A Experiência Aura</span>
+                    <h2 class="section_title">Como funciona a sua primeira consulta.</h2>
+                    <p class="section_desc">
+                        Um processo transparente e acolhedor, desenhado para que você se sinta 100% segura antes de realizar qualquer procedimento.
+                    </p>
+                </div>
+
+                <div class="journey_steps">
+                    <div class="step_box">
+                        <span class="step_circle">1</span>
+                        <h3 class="step_heading">Análise & Mapeamento</h3>
+                        <p class="step_info">
+                            Avaliação minuciosa da sua pele, proporções ósseas e musculatura facial sob fotografia clínica padronizada.
+                        </p>
+                    </div>
+
+                    <div class="step_box">
+                        <span class="step_circle">2</span>
+                        <h3 class="step_heading">Plano de Tratamento</h3>
+                        <p class="step_info">
+                            Definição conjunta das prioridades, indicação dos produtos adequados e alinhamento realista de expectativas.
+                        </p>
+                    </div>
+
+                    <div class="step_box">
+                        <span class="step_circle">3</span>
+                        <h3 class="step_heading">Execução Suave</h3>
+                        <p class="step_info">
+                            Aplicação realizada com anestesia local tópica ou bloqueio indolor, em ambiente esterilizado e relaxante.
+                        </p>
+                    </div>
+
+                    <div class="step_box">
+                        <span class="step_circle">4</span>
+                        <h3 class="step_heading">Acompanhamento</h3>
+                        <p class="step_info">
+                            Retorno presencial agendado para avaliar a cicatrização e garantir que o resultado final atingiu a perfeição.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ CLÍNICO -->
+        <section id="faq" class="aura_section section_light">
+            <div class="container faq_container">
+                <div class="section_intro text-center">
+                    <span class="section_badge">Dúvidas Frequentes</span>
+                    <h2 class="section_title">Perguntas comuns sobre os nossos procedimentos.</h2>
+                    <p class="section_desc">
+                        Informações claras para que você tome decisões com tranquilidade e embasamento.
+                    </p>
+                </div>
+
+                <div class="faq_list">
+                    <details class="faq_item" open>
+                        <summary class="faq_question">
+                            <span>Os procedimentos causam dor ou desconforto?</span>
+                            <i class="fa-solid fa-chevron-down faq_icon"></i>
+                        </summary>
+                        <div class="faq_answer">
+                            <p>
+                                Priorizamos o conforto máximo em cada sessão. Utilizamos anestésicos tópicos hospitalares de alta eficácia 30 minutos antes do procedimento e trabalhamos com microcânulas flexíveis que não cortam vasos nem tecidos, tornando a aplicação praticamente indolor.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="faq_item">
+                        <summary class="faq_question">
+                            <span>Quanto tempo dura o efeito da harmonização facial e do botox?</span>
+                            <i class="fa-solid fa-chevron-down faq_icon"></i>
+                        </summary>
+                        <div class="faq_answer">
+                            <p>
+                                A toxina botulínica dura em média de 4 a 6 meses, conforme o metabolismo individual. Já os preenchimentos com Ácido Hialurônico duram de 12 a 18 meses, e os bioestimuladores de colágeno (Radiesse e Sculptra) continuam agindo por até 2 anos.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="faq_item">
+                        <summary class="faq_question">
+                            <span>O meu rosto pode ficar artificial ou com aspecto exagerado?</span>
+                            <i class="fa-solid fa-chevron-down faq_icon"></i>
+                        </summary>
+                        <div class="faq_answer">
+                            <p>
+                                Não. A nossa filosofia clínica é expressamente contrária a exageros ou modificações radicais. Trabalhamos com microdoses graduais em pontos estratégicos para devolver suporte e jovialidade de forma indetectável.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="faq_item">
+                        <summary class="faq_question">
+                            <span>Preciso me afastar do trabalho ou da academia após a aplicação?</span>
+                            <i class="fa-solid fa-chevron-down faq_icon"></i>
+                        </summary>
+                        <div class="faq_answer">
+                            <p>
+                                Na grande maioria dos casos você pode retornar ao trabalho imediatamente. Recomendamos apenas evitar atividades físicas intensas, exposição solar direta e sauna pelas primeiras 24 a 48 horas após a aplicação.
+                            </p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section class="aura_cta_banner">
+            <div class="container text-center">
+                <span class="cta_badge">Atendimento com Hora Marcada</span>
+                <h2 class="cta_headline">Pronta para realçar a sua beleza natural?</h2>
+                <p class="cta_sub">
+                    Nossa equipe de concierge está à disposição para encontrar o melhor horário e esclarecer todas as suas dúvidas.
+                </p>
+                <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Aura%20Est%C3%A9tica." target="_blank" rel="noopener noreferrer" class="btn_aura btn_aura_gold btn_aura_lg">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Agendar Avaliação no WhatsApp</span>
+                </a>
+            </div>
+        </section>
+    </main>
 
     <!-- FOOTER -->
-    <footer>
-        <div class="container footer-content">
-            <div class="footer-col">
-                <a href="#" class="logo">AURA<span>ESTÉTICA</span></a>
-                <p>Sua beleza tratada como arte e ciência. Clínica especializada em estética avançada.</p>
+    <footer class="aura_footer">
+        <div class="container footer_grid">
+            <div class="footer_block brand_col">
+                <a href="#" class="brand_signature">
+                    <span class="brand_name">AURA</span>
+                    <span class="brand_sub">Clínica & Estética Avançada</span>
+                </a>
+                <p class="footer_text">
+                    Dedicação à medicina estética ética e natural. Tecnologia de ponta, conforto acústico e acompanhamento médico individualizado.
+                </p>
+                <span class="resp_tecnica">Resp. Técnica: Dra. Evelyn Reed • CRBM 18.420</span>
             </div>
-            <div class="footer-col">
-                <h3>Contato</h3>
-                <p><i class="fa-solid fa-location-dot"></i> Av. das Nações Unidas, 1234 - Conj 501, São Paulo - SP</p>
-                <p><i class="fa-brands fa-whatsapp"></i> (11) 99999-9999</p>
-                <p><i class="fa-brands fa-instagram"></i> @auraestetica.sp</p>
+
+            <div class="footer_block">
+                <h3 class="footer_heading">Localização</h3>
+                <p class="footer_info"><i class="fa-solid fa-location-dot"></i> Alameda Gabriel Monteiro da Silva, 1420<br>Jardins, São Paulo • SP</p>
+                <p class="footer_info"><i class="fa-solid fa-square-parking"></i> Estacionamento privativo no local</p>
             </div>
-            <div class="footer-col">
-                <h3>Horário</h3>
-                <p>Segunda a Sexta: 08:00 - 19:00</p>
-                <p>Sábados: 09:00 - 14:00</p>
+
+            <div class="footer_block">
+                <h3 class="footer_heading">Contato & Horários</h3>
+                <p class="footer_info"><i class="fa-brands fa-whatsapp"></i> (11) 99999-9999</p>
+                <p class="footer_info"><i class="fa-regular fa-envelope"></i> contato@auraclinica.com.br</p>
+                <p class="footer_info"><i class="fa-regular fa-clock"></i> Seg a Sex: 08:00 às 20:00<br>Sábados: 09:00 às 15:00</p>
             </div>
         </div>
-        <div class="footer-bottom text-center">
-            <p>&copy; 2026 Aura Estética. Todos os direitos reservados. <span>Site criado por Boomo</span></p>
+
+        <div class="container footer_baseline">
+            <p>&copy; 2026 Aura Clínica de Estética Avançada. Todos os direitos reservados.</p>
+            <p class="boomo_seal">Site criado por <strong>Boomo</strong></p>
         </div>
     </footer>
 
