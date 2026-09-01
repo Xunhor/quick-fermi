@@ -140,7 +140,7 @@
             color: var(--color-dark) !important;
         }
 
-        /* 2. CIPHER CUSTOM CURSOR */
+        /* 2. CIPHER CUSTOM CURSOR (HIDDEN UNTIL REAL MOUSE MOVE) */
         .cursor_cube {
             position: fixed;
             top: 0;
@@ -151,8 +151,7 @@
             mix-blend-mode: difference;
             pointer-events: none;
             z-index: 300;
-            opacity: 0;
-            transition: opacity 0.3s;
+            display: none;
             transform: translate(-50%, -50%);
         }
 
@@ -164,7 +163,7 @@
             mix-blend-mode: difference;
             pointer-events: none;
             z-index: 300;
-            opacity: 0;
+            display: none;
             font-size: 9px;
             font-family: 'Arizona', serif;
             letter-spacing: 0.1em;
@@ -172,10 +171,9 @@
             padding-left: 14px;
             padding-top: 6px;
             transform: translate(0, 0);
-            transition: opacity 0.3s;
         }
 
-        /* 3. CONSTELLATION ORBIT STAGE (CIPHER FAITHFUL FLAT-BILLBOARD CIRCLE) */
+        /* 3. CONSTELLATION ORBIT STAGE (CIPHER TIGHT VORTEX SPIRAL) */
         .constellation_stage {
             position: relative;
             width: 100vw;
@@ -192,31 +190,31 @@
             cursor: grabbing;
         }
 
-        /* Center Glyph (Cipher Center Eye/Symbol) */
+        /* Center Glyph (Cipher Iconic Ellipse Aperture Mark) */
         .constellation_center_glyph {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 32px;
-            height: 32px;
+            width: 40px;
+            height: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: rgba(233, 234, 228, 0.4);
+            color: rgba(233, 234, 228, 0.45);
             pointer-events: none;
             z-index: 1;
         }
 
         .constellation_center_glyph svg {
-            width: 28px;
-            height: 28px;
-            animation: pulseGlyph 4s ease-in-out infinite;
+            width: 36px;
+            height: 18px;
+            animation: pulseAperture 4s ease-in-out infinite;
         }
 
-        @keyframes pulseGlyph {
-            0%, 100% { opacity: 0.25; transform: scale(0.95); }
-            50% { opacity: 0.85; transform: scale(1.05); }
+        @keyframes pulseAperture {
+            0%, 100% { opacity: 0.35; transform: scale(0.96); }
+            50% { opacity: 0.85; transform: scale(1.04); }
         }
 
         /* 2D Flat Orbit Container */
@@ -228,29 +226,29 @@
             height: 0;
         }
 
-        /* Individual Card in Orbit (Front-Facing, Grayscale by default, Color + Zoom on Hover) */
+        /* Individual Card in Spiral Orbit (Cipher Precise Aspect, Overlapping Petals) */
         .orbit_card {
             position: absolute;
             top: 0;
             left: 0;
-            width: 260px;
-            height: 155px;
-            background: #0A0A0A;
-            border-radius: 2px;
+            width: 290px;
+            height: 170px;
+            background: #050505;
+            border-radius: 0px;
             overflow: hidden;
             cursor: pointer;
-            filter: grayscale(100%) brightness(0.65) contrast(1.15);
-            opacity: 0.82;
-            transition: filter 0.45s cubic-bezier(0.16, 1, 0.3, 1), 
-                        opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1),
-                        box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+            filter: brightness(0.68) contrast(1.1);
+            opacity: 0.88;
+            transition: filter 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                        opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                        box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             will-change: transform, filter, opacity;
         }
 
         .orbit_card:hover, .orbit_card.is-hovered {
-            filter: grayscale(0%) brightness(1) contrast(1.05);
+            filter: brightness(1.05) contrast(1.08);
             opacity: 1;
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.95), 0 0 0 1px rgba(255, 255, 255, 0.12);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.98), 0 0 0 1px rgba(255, 255, 255, 0.15);
         }
 
         .orbit_card_img {
@@ -263,7 +261,7 @@
         }
 
         .orbit_card:hover .orbit_card_img {
-            transform: scale(1.04);
+            transform: scale(1.03);
         }
 
         /* 4. CIPHER BOTTOM BAR (WORKS INFOS) */
@@ -743,11 +741,11 @@
                 display: none;
             }
             .orbit_card {
-                width: 190px;
-                height: 115px;
+                width: 200px;
+                height: 120px;
             }
             .cursor_cube, .cursor_label {
-                display: none;
+                display: none !important;
             }
         }
     </style>
@@ -780,16 +778,16 @@
 
     <!-- 3. CIPHER FAITHFUL CONSTELLATION ORBIT STAGE -->
     <main class="constellation_stage" id="stage">
-        <!-- Center Glyph -->
+        <!-- Center Aperture Glyph (Cipher Mark) -->
         <div class="constellation_center_glyph">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <circle cx="12" cy="12" r="10"/>
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                <path d="M2 12h20"/>
+            <svg viewBox="0 0 36 18" fill="none" stroke="currentColor" stroke-width="1.2">
+                <ellipse cx="18" cy="9" rx="17" ry="8"/>
+                <ellipse cx="18" cy="9" rx="11" ry="5"/>
+                <circle cx="18" cy="9" r="2.5" fill="currentColor"/>
             </svg>
         </div>
 
-        <!-- 2D Billboard Orbit Container -->
+        <!-- 2D Billboard Orbit Container (Tight Vortex Arrangement) -->
         <div class="orbit_container" id="orbitContainer"></div>
     </main>
 
@@ -975,7 +973,7 @@
         </div>
     </div>
 
-    <!-- SCRIPTS: CIPHER EXACT ORBIT ENGINE -->
+    <!-- SCRIPTS: CIPHER TIGHT SPIRAL VORTEX ENGINE -->
     <script>
         const templates = [
             { id: "001", title: "AURA ESTÉTICA", niche: "Clínica & Procedimentos", img: "templates/estetica/assets/images/hero-estetica.webp", url: "/templates/estetica", domain: "auraestetica.com.br" },
@@ -986,8 +984,10 @@
             { id: "006", title: "PRIME ALINHADORES", niche: "Estética Dental", img: "templates/odontologia/assets/images/hero-odonto.webp", url: "/templates/odontologia", domain: "primealinhadores.com.br" },
             { id: "007", title: "VALENTE CONSULTORIA", niche: "Direito Tributário", img: "templates/advocacia/assets/images/hero-advocacia.webp", url: "/templates/advocacia", domain: "valenteconsultoria.com.br" },
             { id: "008", title: "LUMINA GESTÃO", niche: "B2B & Finanças", img: "templates/contabilidade/assets/images/hero-contabilidade.webp", url: "/templates/contabilidade", domain: "luminagestao.com.br" },
-            { id: "009", title: "AURA HARMONIZAÇÃO", niche: "Dermatologia & Estética", img: "templates/estetica/assets/images/hero-estetica.webp", url: "/templates/estetica", domain: "auraharmonizacao.com.br" },
-            { id: "010", title: "PRIME CIRURGIA", niche: "Odontologia Digital", img: "templates/odontologia/assets/images/hero-odonto.webp", url: "/templates/odontologia", domain: "primecirurgia.com.br" }
+            { id: "009", title: "AURA DERMO", niche: "Dermatologia & Saúde", img: "templates/estetica/assets/images/hero-estetica.webp", url: "/templates/estetica", domain: "auradermo.com.br" },
+            { id: "010", title: "PRIME DIGITAL", niche: "Odontologia Avançada", img: "templates/odontologia/assets/images/hero-odonto.webp", url: "/templates/odontologia", domain: "primedigital.com.br" },
+            { id: "011", title: "SANTOS CORPORATE", niche: "Contratos & Fusões", img: "templates/advocacia/assets/images/hero-advocacia.webp", url: "/templates/advocacia", domain: "santoscorporate.com.br" },
+            { id: "012", title: "LUMINA AUDITORIA", niche: "Auditoria & Compliance", img: "templates/contabilidade/assets/images/hero-contabilidade.webp", url: "/templates/contabilidade", domain: "luminaauditoria.com.br" }
         ];
 
         const orbitContainer = document.getElementById('orbitContainer');
@@ -997,7 +997,7 @@
 
         let hoveredIndex = -1;
 
-        // Build Cards
+        // Build Cards with Layering
         templates.forEach((tpl, i) => {
             const card = document.createElement('div');
             card.className = 'orbit_card';
@@ -1025,19 +1025,19 @@
             });
 
             orbitContainer.appendChild(card);
-            cardNodes.push({ el: card, data: tpl });
+            cardNodes.push({ el: card, data: tpl, index: i });
         });
 
-        // Orbit Loop Physics
+        // Orbit Tight Spiral Loop Physics
         let currentAngle = 0;
-        let targetAngleVelocity = 0.0015; // smooth hypnotic orbit
-        let currentAngleVelocity = 0.0015;
+        let targetAngleVelocity = 0.0014;
+        let currentAngleVelocity = 0.0014;
         let isDragging = false;
         let startX = 0;
 
         function animateOrbit() {
-            // Smoothly slow down when hovering a card for easy clicking
-            const baseSpeed = (hoveredIndex !== -1) ? 0.0003 : 0.0015;
+            // Smooth slow-down during hover
+            const baseSpeed = (hoveredIndex !== -1) ? 0.0002 : 0.0014;
             
             if (!isDragging) {
                 targetAngleVelocity += (baseSpeed - targetAngleVelocity) * 0.05;
@@ -1047,21 +1047,21 @@
             currentAngle += currentAngleVelocity;
 
             const total = cardNodes.length;
-            const radiusX = Math.min(window.innerWidth * 0.38, 480);
-            const radiusY = Math.min(window.innerHeight * 0.28, 280);
+            // Tighter radius for overlapping vortex spiral (identical to Cipher)
+            const radiusX = Math.min(window.innerWidth * 0.28, 360);
+            const radiusY = Math.min(window.innerHeight * 0.22, 230);
 
             cardNodes.forEach((node, i) => {
                 const angle = (i / total) * Math.PI * 2 + currentAngle;
                 const x = Math.cos(angle) * radiusX;
                 const y = Math.sin(angle) * radiusY;
                 
-                // Depth stacking: items lower on the screen (sin > 0) have higher base z-index
-                const sinVal = Math.sin(angle);
-                const depthOrder = Math.round((sinVal + 1) * 20) + 10;
+                // Clockwise overlapping cascade layering
+                const baseZIndex = ((i + Math.round(currentAngle * 2)) % total + total) % total + 10;
                 
                 const isHover = (hoveredIndex === i);
-                const scale = isHover ? 1.32 : (0.92 + (sinVal + 1) * 0.06);
-                const zIndex = isHover ? 200 : depthOrder;
+                const scale = isHover ? 1.25 : 1.0;
+                const zIndex = isHover ? 200 : baseZIndex;
 
                 node.el.style.transform = `translate3d(calc(-50% + ${x.toFixed(2)}px), calc(-50% + ${y.toFixed(2)}px), 0) scale(${scale.toFixed(3)})`;
                 node.el.style.zIndex = zIndex;
@@ -1116,12 +1116,11 @@
             currentAngleVelocity += (e.deltaY || e.deltaX) * 0.0004;
         }, { passive: true });
 
-        // Cursor Follower (Cipher Style)
+        // Cursor Follower (Cipher Style - Only Active On Real Movement)
         const cube = document.getElementById('cursorCube');
         const label = document.getElementById('cursorLabel');
-        let cMouseX = window.innerWidth / 2;
-        let cMouseY = window.innerHeight / 2;
-        let curX = cMouseX, curY = cMouseY;
+        let cMouseX = -100, cMouseY = -100;
+        let curX = -100, curY = -100;
         let mouseMoved = false;
 
         document.addEventListener('mousemove', (e) => {
@@ -1129,16 +1128,20 @@
             cMouseY = e.clientY;
             if (!mouseMoved) {
                 mouseMoved = true;
-                if (cube) cube.style.opacity = '1';
-                if (label) label.style.opacity = '1';
+                curX = cMouseX;
+                curY = cMouseY;
+                if (cube) cube.style.display = 'block';
+                if (label) label.style.display = 'block';
             }
         });
 
         function animateCursor() {
-            curX += (cMouseX - curX) * 0.25;
-            curY += (cMouseY - curY) * 0.25;
-            if (cube) cube.style.transform = `translate(${curX}px, ${curY}px)`;
-            if (label) label.style.transform = `translate(${curX}px, ${curY}px)`;
+            if (mouseMoved) {
+                curX += (cMouseX - curX) * 0.25;
+                curY += (cMouseY - curY) * 0.25;
+                if (cube) cube.style.transform = `translate(${curX}px, ${curY}px)`;
+                if (label) label.style.transform = `translate(${curX}px, ${curY}px)`;
+            }
             requestAnimationFrame(animateCursor);
         }
         animateCursor();
