@@ -141,22 +141,7 @@
             color: var(--color-dark) !important;
         }
 
-        /* 2. CIPHER MINIMAL CURSOR */
-        .cursor_cube {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 4px;
-            background-color: #FFFFFF;
-            mix-blend-mode: difference;
-            pointer-events: none;
-            z-index: 300;
-            display: none;
-            transform: translate(-50%, -50%);
-        }
-
-        /* 3. CONSTELLATION ORBIT STAGE (CIPHER TIGHT VORTEX SPIRAL) */
+        /* 2. CONSTELLATION ORBIT STAGE (CIPHER TIGHT VORTEX SPIRAL) */
         .constellation_stage {
             position: relative;
             width: 100vw;
@@ -166,11 +151,7 @@
             align-items: center;
             justify-content: center;
             background: #000000;
-            cursor: grab;
-        }
-
-        .constellation_stage:active {
-            cursor: grabbing;
+            cursor: default;
         }
 
         /* Center Glyph (Cipher Iconic Ellipse Aperture Mark) */
@@ -755,9 +736,6 @@
         </div>
     </nav>
 
-    <!-- 2. CIPHER CUSTOM CURSOR -->
-    <div class="cursor_cube" id="cursorCube"></div>
-
     <!-- 3. CIPHER FAITHFUL CONSTELLATION ORBIT STAGE -->
     <main class="constellation_stage" id="stage">
         <!-- Center Aperture Glyph (Cipher Mark) -->
@@ -1095,33 +1073,6 @@
             if (document.getElementById('previewModal')?.classList.contains('active')) return;
             currentAngleVelocity += (e.deltaY || e.deltaX) * 0.0004;
         }, { passive: true });
-
-        // Minimal Cipher Dot Cursor
-        const cube = document.getElementById('cursorCube');
-        let cMouseX = -100, cMouseY = -100;
-        let curX = -100, curY = -100;
-        let mouseMoved = false;
-
-        document.addEventListener('mousemove', (e) => {
-            cMouseX = e.clientX;
-            cMouseY = e.clientY;
-            if (!mouseMoved) {
-                mouseMoved = true;
-                curX = cMouseX;
-                curY = cMouseY;
-                if (cube) cube.style.display = 'block';
-            }
-        });
-
-        function animateCursor() {
-            if (mouseMoved && cube) {
-                curX += (cMouseX - curX) * 0.25;
-                curY += (cMouseY - curY) * 0.25;
-                cube.style.transform = `translate(${curX}px, ${curY}px)`;
-            }
-            requestAnimationFrame(animateCursor);
-        }
-        animateCursor();
 
         // Preview Modal Logic
         function updateModalIframeScale() {
