@@ -4,1258 +4,400 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Boomo | Estúdio Digital de Sites por Assinatura</title>
-    <meta name="description" content="Estúdio de sites profissionais por assinatura. Criamos, hospedamos e mantemos seu site no ar com design de elite.">
+    <meta name="description" content="Estúdio de sites profissionais por assinatura mensal. Criamos, hospedamos e mantemos seu site no ar em 72 horas com aprovação antes do setup.">
     <meta name="theme-color" content="#000000">
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
     <!-- Open Graph / WhatsApp Preview -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://quick-fermi.vercel.app/">
-    <meta property="og:title" content="Boomo | Estúdio Digital de Sites">
-    <meta property="og:description" content="Sites profissionais por assinatura com design de estúdio internacional.">
+    <meta property="og:title" content="Boomo | Sites Profissionais por Assinatura">
+    <meta property="og:description" content="Seu site profissional no ar em 72 horas. Você aprova o design antes de pagar o setup.">
     <meta property="og:image" content="https://quick-fermi.vercel.app/assets/images/og-boomo.jpg">
 
-    <!-- Fonts: ABC Favorit & ABC Arizona (Cipher.tv Authentic Fonts) -->
-    <style>
-        @font-face {
-            font-family: 'Favorit';
-            src: url('/assets/fonts/ABCFavoritVariable.woff2') format('woff2-variations');
-            font-weight: 100 900;
-            font-style: normal;
-            font-display: swap;
-        }
-        @font-face {
-            font-family: 'Arizona';
-            src: url('/assets/fonts/ABCArizonaMixVariable.woff2') format('woff2-variations');
-            font-weight: 100 900;
-            font-style: normal;
-            font-display: swap;
-        }
-
-        :root {
-            --color-dark: #000000;
-            --color-surface: #0A0A0A;
-            --color-card: #0F0F0F;
-            --color-light: #E9EAE4;
-            --color-muted: #888882;
-            --color-subtle: #444440;
-            --color-border: rgba(233, 234, 228, 0.08);
-            --color-border-hover: rgba(233, 234, 228, 0.22);
-            --color-accent: #E9EAE4;
-            --fontXXS: 9px;
-            --fontXS: 11px;
-            --fontS: 13px;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            text-rendering: optimizeLegibility;
-        }
-
-        body, html {
-            width: 100%;
-            min-height: 100%;
-            background-color: #000000;
-            color: var(--color-light);
-            font-family: 'Favorit', -apple-system, BlinkMacSystemFont, sans-serif;
-            overflow-x: hidden;
-            scroll-behavior: smooth;
-        }
-
-        /* 1. CIPHER TOP NAVIGATION */
-        nav.main_links {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 22px 32px;
-            display: grid;
-            grid-template-columns: 1fr auto 1fr;
-            align-items: center;
-            font-size: var(--fontXS);
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.14em;
-            color: var(--color-light);
-            background: linear-gradient(180deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            z-index: 100;
-        }
-
-        nav a, nav button {
-            color: inherit;
-            text-decoration: none;
-            cursor: pointer;
-            background: transparent;
-            border: none;
-            font-family: inherit;
-            font-size: inherit;
-            letter-spacing: inherit;
-            text-transform: inherit;
-            transition: opacity 0.2s ease;
-        }
-
-        nav a:hover, nav button:hover {
-            opacity: 0.5;
-        }
-
-        .nav_left {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
-
-        .brand_logo {
-            font-weight: 800;
-            font-size: 28px;
-            letter-spacing: -0.04em;
-            line-height: 1;
-            color: #FFFFFF;
-        }
-
-        .nav_center {
-            display: flex;
-            gap: 36px;
-            justify-content: center;
-        }
-
-        .nav_right {
-            display: flex;
-            gap: 20px;
-            justify-content: flex-end;
-            align-items: center;
-        }
-
-        .btn_nav_cta {
-            padding: 7px 18px;
-            border: 1px solid rgba(233, 234, 228, 0.4);
-            border-radius: 999px;
-            font-size: 11px;
-            letter-spacing: 0.1em;
-            transition: all 0.25s ease !important;
-        }
-
-        .btn_nav_cta:hover {
-            opacity: 1 !important;
-            background: var(--color-light);
-            color: var(--color-dark) !important;
-        }
-
-        /* 2. SASHA MARTYNCHUK STYLE INTERACTIVE INFINITE 3D GRID HERO */
-        .infinite_hero_stage {
-            position: relative;
-            width: 100vw;
-            height: 100svh;
-            min-height: 650px;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #030303;
-            cursor: grab;
-            user-select: none;
-            -webkit-user-select: none;
-        }
-
-        .infinite_hero_stage.is-dragging {
-            cursor: grabbing;
-        }
-
-        canvas.stage-gl {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: block;
-            touch-action: none;
-            cursor: grab;
-        }
-
-        .infinite_hero_stage.is-dragging canvas.stage-gl {
-            cursor: grabbing;
-        }
-
-        /* Ambient Scrim Overlay: Top and Bottom scrim, Luminous Center */
-        .hero_ambient_overlay {
-            position: absolute;
-            inset: 0;
-            pointer-events: none;
-            background: linear-gradient(180deg, 
-                rgba(3, 3, 3, 0.6) 0%, 
-                rgba(3, 3, 3, 0.04) 22%, 
-                rgba(3, 3, 3, 0.2) 48%, 
-                rgba(3, 3, 3, 0.86) 72%, 
-                #030303 100%);
-            z-index: 10;
-        }
-
-        /* Foreground Hero Content (Positioned at bottom half, exactly like Sasha) */
-        .hero_center_content {
-            position: absolute;
-            bottom: 44px;
-            left: 50%;
-            transform: translateX(-50%);
-            text-align: center;
-            z-index: 20;
-            max-width: 920px;
-            width: 92%;
-            pointer-events: none;
-        }
-
-        .hero_center_content > * {
-            pointer-events: none;
-        }
-
-        .hero_eyebrow {
-            display: inline-block;
-            font-size: 11px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.18em;
-            color: var(--color-muted);
-            margin-bottom: 12px;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
-        }
-
-        .hero_headline {
-            font-size: clamp(26px, 3.8vw, 48px);
-            font-weight: 800;
-            letter-spacing: -0.04em;
-            line-height: 1.08;
-            color: #FFFFFF;
-            margin-bottom: 10px;
-            text-shadow: 0 4px 24px rgba(0, 0, 0, 0.95);
-        }
-
-        .hero_headline em {
-            font-family: 'Arizona', serif;
-            font-style: italic;
-            font-weight: 400;
-            color: #E9EAE4;
-        }
-
-        .hero_subheadline {
-            font-size: clamp(13px, 1.3vw, 15px);
-            color: rgba(233, 234, 228, 0.88);
-            line-height: 1.55;
-            max-width: 580px;
-            margin: 0 auto 18px;
-            text-shadow: 0 2px 14px rgba(0, 0, 0, 0.95);
-        }
-
-        .hero_cta_row {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 14px;
-            flex-wrap: wrap;
-            margin-bottom: 14px;
-        }
-
-        .hero_cta_row a {
-            pointer-events: auto;
-        }
-
-        .btn_hero_primary {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 13px 26px;
-            border-radius: 999px;
-            background: #FFFFFF;
-            color: #000000;
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 0.04em;
-            text-decoration: none;
-            transition: transform 0.2s, opacity 0.2s, box-shadow 0.2s;
-            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.12);
-        }
-
-        .btn_hero_primary:hover {
-            transform: translateY(-2px);
-            opacity: 0.95;
-            box-shadow: 0 14px 35px rgba(255, 255, 255, 0.2);
-        }
-
-        .btn_hero_secondary {
-            display: inline-flex;
-            align-items: center;
-            padding: 13px 24px;
-            border-radius: 999px;
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.22);
-            color: #FFFFFF;
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: 0.02em;
-            text-decoration: none;
-            transition: background 0.2s, border-color 0.2s, transform 0.2s;
-            backdrop-filter: blur(12px);
-        }
-
-        .btn_hero_secondary:hover {
-            background: rgba(255, 255, 255, 0.14);
-            border-color: rgba(255, 255, 255, 0.4);
-            transform: translateY(-2px);
-        }
-
-        .hero_drag_hint {
-            font-size: 10px;
-            text-transform: uppercase;
-            letter-spacing: 0.16em;
-            color: rgba(233, 234, 228, 0.45);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-        }
-
-        /* Hero Bottom Status Bar */
-        .hero_bottom_status {
-            position: absolute;
-            bottom: 16px;
-            left: 0;
-            width: 100%;
-            padding: 0 36px;
-            display: grid;
-            grid-template-columns: 1fr auto 1fr;
-            align-items: center;
-            font-size: 10px;
-            text-transform: uppercase;
-            letter-spacing: 0.14em;
-            color: var(--color-light);
-            z-index: 25;
-            pointer-events: none;
-        }
-            pointer-events: none;
-        }
-
-        .hero_bottom_status .status_left {
-            font-size: 10px;
-            letter-spacing: 0.16em;
-            color: var(--color-muted);
-        }
-
-        .hero_bottom_status .status_center {
-            text-align: center;
-            font-size: 10px;
-            letter-spacing: 0.2em;
-            color: rgba(233, 234, 228, 0.6);
-        }
-
-        .hero_bottom_status .status_right {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            pointer-events: auto;
-        }
-
-        /* CIPHER SLIDING DIAGONAL ARROW LINK (JOURLINK) */
-        .jour {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            color: var(--color-light);
-            text-decoration: none;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 11px;
-            letter-spacing: 0.1em;
-        }
-
-        .arrow_c {
-            position: relative;
-            width: 14px;
-            height: 14px;
-            overflow: hidden;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .arrow_c svg {
-            width: 8px;
-            height: 8px;
-            fill: currentColor;
-            transition: transform 0.45s cubic-bezier(0.83, 0.12, 0.35, 0.96);
-        }
-
-        .arrow_c svg.rel {
-            transform: translate(0, 0);
-        }
-
-        .arrow_c svg.abs {
-            position: absolute;
-            transform: translate(-140%, 140%);
-        }
-
-        .jour:hover .arrow_c svg.rel {
-            transform: translate(140%, -140%);
-        }
-
-        .jour:hover .arrow_c svg.abs {
-            transform: translate(0, 0);
-        }
-
-        /* 3. EDITORIAL SCROLLABLE SECTIONS */
-        .page_content {
-            position: relative;
-            width: 100%;
-            background: #000000;
-            z-index: 20;
-        }
-
-        .section_wrap {
-            max-width: 1240px;
-            margin: 0 auto;
-            padding: 120px 32px;
-            border-top: 1px solid var(--color-border);
-        }
-
-        .section_tag {
-            font-size: 11px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
-            color: var(--color-muted);
-            margin-bottom: 18px;
-            display: block;
-        }
-
-        .section_headline {
-            font-size: clamp(32px, 4.5vw, 54px);
-            font-weight: 700;
-            letter-spacing: -0.035em;
-            line-height: 1.1;
-            color: var(--color-light);
-            max-width: 840px;
-            margin-bottom: 24px;
-        }
-
-        .section_headline em {
-            font-family: 'Arizona', serif;
-            font-style: italic;
-            font-weight: 400;
-            color: #FFFFFF;
-        }
-
-        .section_desc {
-            font-size: 16px;
-            color: var(--color-muted);
-            line-height: 1.65;
-            max-width: 620px;
-            margin-bottom: 60px;
-        }
-
-        /* Grid: 3 Steps (Process) */
-        .process_grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-
-        .process_card {
-            background: var(--color-surface);
-            border: 1px solid var(--color-border);
-            border-radius: 4px;
-            padding: 36px 30px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            min-height: 280px;
-            transition: border-color 0.3s, transform 0.3s;
-        }
-
-        .process_card:hover {
-            border-color: var(--color-border-hover);
-            transform: translateY(-3px);
-        }
-
-        .process_top {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 32px;
-        }
-
-        .process_index {
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--color-light);
-            letter-spacing: 0.05em;
-        }
-
-        .process_timeline {
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: var(--color-muted);
-        }
-
-        .process_title {
-            font-size: 20px;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            margin-bottom: 12px;
-            color: var(--color-light);
-        }
-
-        .process_text {
-            font-size: 14px;
-            color: var(--color-muted);
-            line-height: 1.6;
-        }
-
-        .process_text strong {
-            color: var(--color-light);
-            font-weight: 600;
-        }
-
-        .badge_guarantee {
-            display: inline-block;
-            font-size: 10px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: #FFFFFF;
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.22);
-            padding: 4px 10px;
-            border-radius: 2px;
-            margin-bottom: 14px;
-        }
-
-        .badge_featured_plan {
-            display: inline-block;
-            font-size: 10px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.14em;
-            color: #000000;
-            background: #FFFFFF;
-            padding: 4px 10px;
-            border-radius: 2px;
-            margin-bottom: 16px;
-        }
-
-        /* Grid: Capabilities (Studio Engineering) */
-        .capabilities_grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-
-        .cap_item {
-            background: var(--color-surface);
-            border: 1px solid var(--color-border);
-            border-radius: 4px;
-            padding: 30px 24px;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            transition: border-color 0.3s;
-        }
-
-        .cap_item:hover {
-            border-color: var(--color-border-hover);
-        }
-
-        .cap_item h4 {
-            font-size: 16px;
-            font-weight: 700;
-            letter-spacing: -0.01em;
-            color: var(--color-light);
-        }
-
-        .cap_item p {
-            font-size: 13px;
-            color: var(--color-muted);
-            line-height: 1.55;
-        }
-
-        /* Grid: Pricing (Planos) */
-        .pricing_grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            align-items: stretch;
-        }
-
-        .plan_card {
-            background: var(--color-surface);
-            border: 1px solid var(--color-border);
-            border-radius: 4px;
-            padding: 40px 32px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: border-color 0.3s, transform 0.3s;
-        }
-
-        .plan_card.featured {
-            border-color: rgba(233, 234, 228, 0.4);
-            background: #0E0E0E;
-        }
-
-        .plan_card:hover {
-            border-color: var(--color-border-hover);
-            transform: translateY(-3px);
-        }
-
-        .plan_header {
-            margin-bottom: 24px;
-        }
-
-        .plan_name {
-            font-size: 20px;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            margin-bottom: 6px;
-            color: var(--color-light);
-        }
-
-        .plan_desc {
-            font-size: 13px;
-            color: var(--color-muted);
-            line-height: 1.5;
-        }
-
-        .plan_price_wrap {
-            padding: 24px 0;
-            border-top: 1px solid var(--color-border);
-            border-bottom: 1px solid var(--color-border);
-            margin-bottom: 28px;
-        }
-
-        .plan_price {
-            font-size: 38px;
-            font-weight: 800;
-            letter-spacing: -0.04em;
-            color: #FFFFFF;
-            line-height: 1;
-            margin-bottom: 8px;
-        }
-
-        .plan_price span {
-            font-size: 14px;
-            font-weight: 400;
-            color: var(--color-muted);
-        }
-
-        .plan_setup {
-            font-size: 12px;
-            color: var(--color-muted);
-        }
-
-        .plan_setup strong {
-            color: var(--color-light);
-        }
-
-        .plan_features {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-bottom: 36px;
-            flex-grow: 1;
-        }
-
-        .plan_features li {
-            font-size: 13px;
-            color: var(--color-light);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .plan_features li::before {
-            content: "—";
-            color: var(--color-muted);
-        }
-
-        .btn_plan {
-            display: block;
-            width: 100%;
-            padding: 13px;
-            text-align: center;
-            border-radius: 4px;
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            text-decoration: none;
-            background: var(--color-light);
-            color: var(--color-dark);
-            transition: opacity 0.2s;
-        }
-
-        .btn_plan:hover {
-            opacity: 0.85;
-        }
-
-        .plan_card.featured .btn_plan {
-            background: #FFFFFF;
-            color: #000000;
-        }
-
-        /* Comparison Table */
-        .comparison_table_wrap {
-            width: 100%;
-            border: 1px solid var(--color-border);
-            border-radius: 4px;
-            overflow: hidden;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        .mobile_swipe_hint {
-            display: none;
-            font-size: 11px;
-            color: var(--color-muted);
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            margin-bottom: 12px;
-        }
-
-        .comp_table {
-            width: 100%;
-            border-collapse: collapse;
-            text-align: left;
-            font-size: 14px;
-        }
-
-        .comp_table th, .comp_table td {
-            padding: 18px 24px;
-            border-bottom: 1px solid var(--color-border);
-        }
-
-        .comp_table th {
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: var(--color-muted);
-            background: var(--color-surface);
-        }
-
-        .comp_table th.highlight {
-            color: #FFFFFF;
-            background: rgba(233, 234, 228, 0.05);
-            border-top: 2px solid var(--color-light);
-        }
-
-        .comp_table td.highlight {
-            background: rgba(233, 234, 228, 0.02);
-            color: #FFFFFF;
-            font-weight: 600;
-        }
-
-        /* FAQ Accordion */
-        .faq_wrap {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            max-width: 860px;
-        }
-
-        .faq_item {
-            border: 1px solid var(--color-border);
-            border-radius: 4px;
-            background: var(--color-surface);
-            padding: 20px 24px;
-            cursor: pointer;
-            transition: border-color 0.2s;
-        }
-
-        .faq_item[open] {
-            border-color: var(--color-border-hover);
-        }
-
-        .faq_item summary {
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--color-light);
-            list-style: none;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .faq_item summary::-webkit-details-marker {
-            display: none;
-        }
-
-        .faq_item .faq_ans {
-            margin-top: 14px;
-            font-size: 14px;
-            color: var(--color-muted);
-            line-height: 1.65;
-        }
-
-        /* CTA Section Banner */
-        .cta_section {
-            text-align: center;
-            padding: 140px 32px;
-            border-top: 1px solid var(--color-border);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .cta_btn_large {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            padding: 16px 36px;
-            background: var(--color-light);
-            color: var(--color-dark);
-            border-radius: 999px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-top: 36px;
-            transition: opacity 0.2s, transform 0.2s;
-        }
-
-        .cta_btn_large:hover {
-            opacity: 0.9;
-            transform: scale(1.02);
-        }
-
-        /* Footer */
-        footer.site_footer {
-            padding: 60px 32px 40px;
-            border-top: 1px solid var(--color-border);
-            max-width: 1240px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 12px;
-            color: var(--color-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-
-        /* 4. PREVIEW MODAL COM ALTERNADOR DESKTOP/MOBILE */
-        .preview_modal_overlay {
-            position: fixed;
-            inset: 0;
-            width: 100vw;
-            height: 100vh;
-            background: rgba(0, 0, 0, 0.94);
-            backdrop-filter: blur(28px);
-            -webkit-backdrop-filter: blur(28px);
-            z-index: 600;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.35s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 24px;
-        }
-
-        .preview_modal_overlay.active {
-            opacity: 1;
-            pointer-events: auto;
-        }
-
-        .preview_modal_window {
-            width: min(1120px, 94vw);
-            height: min(720px, 88vh);
-            background: #0D0F12;
-            border: 1px solid rgba(233, 234, 228, 0.18);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 40px 100px rgba(0,0,0,0.95);
-            display: flex;
-            flex-direction: column;
-            transform: scale(0.94);
-            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), width 0.3s ease;
-        }
-
-        .preview_modal_window.is-mobile-view {
-            width: 410px;
-            height: min(760px, 90vh);
-        }
-
-        .preview_modal_overlay.active .preview_modal_window {
-            transform: scale(1);
-        }
-
-        .modal_topbar {
-            height: 46px;
-            padding: 0 18px;
-            background: rgba(18, 20, 24, 0.95);
-            border-bottom: 1px solid rgba(233, 234, 228, 0.08);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-size: 11px;
-            color: var(--color-muted);
-        }
-
-        .modal_controls {
-            display: flex;
-            gap: 7px;
-        }
-
-        .modal_controls span {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: rgba(233, 234, 228, 0.25);
-            cursor: pointer;
-        }
-
-        .modal_center_tools {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .modal_device_switch {
-            display: flex;
-            background: rgba(0,0,0,0.4);
-            border: 1px solid rgba(233, 234, 228, 0.1);
-            border-radius: 6px;
-            padding: 2px;
-        }
-
-        .device_btn {
-            padding: 3px 10px;
-            border-radius: 4px;
-            border: none;
-            background: transparent;
-            color: var(--color-muted);
-            font-size: 10px;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .device_btn.active {
-            background: rgba(233, 234, 228, 0.15);
-            color: var(--color-light);
-        }
-
-        .modal_address {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 4px 16px;
-            background: rgba(0, 0, 0, 0.5);
-            border-radius: 6px;
-            font-size: 11px;
-            font-family: monospace;
-            color: var(--color-light);
-        }
-
-        .modal_actions {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .modal_btn_wa {
-            padding: 5px 14px;
-            border-radius: 4px;
-            background: #25D366;
-            color: #000;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-        }
-
-        .modal_btn_close {
-            background: transparent;
-            border: none;
-            color: var(--color-light);
-            font-size: 16px;
-            cursor: pointer;
-            line-height: 1;
-            padding: 4px;
-            opacity: 0.7;
-            transition: opacity 0.2s;
-        }
-
-        .modal_btn_close:hover {
-            opacity: 1;
-        }
-
-        .modal_iframe_wrap {
-            position: relative;
-            width: 100%;
-            height: calc(100% - 46px);
-            overflow: hidden;
-            background: #000;
-        }
-
-        .modal_iframe_scaler {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 1366px;
-            height: 768px;
-            transform-origin: top left;
-        }
-
-        .preview_modal_window.is-mobile-view .modal_iframe_scaler {
-            width: 375px;
-            height: 812px;
-        }
-
-        .modal_iframe_scaler iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        /* 5. RESPONSIVE MOBILE OPTIMIZATION */
-        @media (max-width: 992px) {
-            .process_grid, .pricing_grid {
-                grid-template-columns: 1fr;
-            }
-            .capabilities_grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 768px) {
-            nav.main_links {
-                grid-template-columns: 1fr auto;
-                padding: 16px 20px;
-            }
-            .nav_center {
-                display: none;
-            }
-            .hero_bottom_status {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 0 20px;
-                bottom: 16px;
-            }
-            .hero_bottom_status .status_center {
-                display: none;
-            }
-            .hero_bottom_status .status_left {
-                max-width: 55%;
-                font-size: 9px;
-                line-height: 1.3;
-            .hero_center_content {
-                bottom: 48px;
-                width: 95%;
-            }
-            .hero_headline {
-                font-size: 28px !important;
-                line-height: 1.1 !important;
-            }
-            .hero_subheadline {
-                font-size: 13px !important;
-                margin-bottom: 16px !important;
-            }
-            .section_wrap {
-                padding: 80px 20px;
-            }
-            .capabilities_grid {
-                grid-template-columns: 1fr;
-            }
-            .comparison_table_wrap {
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-            }
-            .mobile_swipe_hint {
-                display: block;
-            }
-            .comp_table {
-                min-width: 620px;
-            }
-            .comp_table th, .comp_table td {
-                padding: 14px 16px;
-                font-size: 13px;
-            }
-            footer.site_footer {
-                flex-direction: column;
-                gap: 16px;
-                text-align: center;
-                padding: 40px 20px;
-            }
-        }
-    </style>
+    <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/desktop/style.css">
 </head>
 <body>
 
-    <!-- 1. CIPHER TOP NAVIGATION -->
-    <nav class="main_links">
-        <div class="nav_left">
-            <a href="/" class="brand_logo">BOOMO.</a>
-        </div>
+    <!-- 1. NAVBAR (SQUARESPACE GLOBAL NAVIGATION) -->
+    <header class="sq_header">
+        <div class="container nav_content">
+            <a href="/" class="brand_logo">BOOMO<span>.</span></a>
 
-        <div class="nav_center">
-            <a href="#templates">TEMPLATES</a>
-            <a href="#como-funciona">COMO FUNCIONA</a>
-            <a href="#planos">PLANOS</a>
-            <a href="#faq">FAQ</a>
-        </div>
+            <nav class="nav_links" id="navLinks">
+                <a href="#templates">Templates</a>
+                <a href="#diferenciais">Diferenciais</a>
+                <a href="#como-funciona">Como Funciona</a>
+                <a href="#planos">Planos</a>
+                <a href="#faq">FAQ</a>
+            </nav>
 
-        <div class="nav_right">
-            <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Gostaria%20de%20conversar%20sobre%20um%20site%20profissional%20para%20minha%20empresa." target="_blank" rel="noopener noreferrer" class="btn_nav_cta">
-                QUERO MEU SITE
-            </a>
-        </div>
-    </nav>
-
-    <!-- 2. SASHA MARTYNCHUK STYLE INTERACTIVE INFINITE 3D GRID HERO (NATIVE WEBGL 2.0) -->
-    <header class="infinite_hero_stage" id="templates">
-        <!-- Native WebGL 2.0 Spherical Dome Canvas -->
-        <canvas class="stage-gl" id="stageGl"></canvas>
-
-        <!-- Ambient Vignette & Soft Gradient (Crystal clear text + visible living wall) -->
-        <div class="hero_ambient_overlay"></div>
-
-        <!-- Foreground Hero Content (Floating over the 3D wall) -->
-        <div class="hero_center_content">
-            <span class="hero_eyebrow">Sites Profissionais por Assinatura</span>
-            <h1 class="hero_headline">
-                O site da sua empresa no ar em <em>72 horas</em>.
-            </h1>
-            <p class="hero_subheadline">
-                Criamos, publicamos e mantemos seu site institucional sob medida. Você aprova o design completo antes de pagar a taxa de setup.
-            </p>
-            <div class="hero_cta_row">
-                <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Gostaria%20de%20um%20site%20profissional%20para%20minha%20empresa." target="_blank" rel="noopener noreferrer" class="btn_hero_primary">
-                    <span>Quero Meu Site no WhatsApp</span>
-                    <div class="arrow_c">
-                        <svg class="rel" viewBox="0 0 7 7"><path d="M4.5 1.296H1.5L1.488 0.0119998L6.756 0L6.744 5.268L5.46 5.256V2.256L0.96 6.756L0 5.796L4.5 1.296Z"/></svg>
-                        <svg class="abs" viewBox="0 0 7 7"><path d="M4.5 1.296H1.5L1.488 0.0119998L6.756 0L6.744 5.268L5.46 5.256V2.256L0.96 6.756L0 5.796L4.5 1.296Z"/></svg>
-                    </div>
+            <div class="nav_cta_wrap">
+                <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Gostaria%20de%20conversar%20sobre%20um%20site%20profissional%20para%20minha%20empresa." target="_blank" rel="noopener noreferrer" class="btn_sqsp btn_sqsp_primary">
+                    Quero Meu Site
                 </a>
-                <a href="#planos" class="btn_hero_secondary">
-                    <span>Ver Planos & Preços</span>
-                </a>
-            </div>
-            <div class="hero_drag_hint">
-                <span>↔</span> Arraste o fundo para explorar os modelos
-            </div>
-        </div>
-
-        <!-- Hero Bottom Bar -->
-        <div class="hero_bottom_status">
-            <div class="status_left">
-                <span id="activeModelTitle">MODELOS DEMONSTRATIVOS REAIS</span>
-            </div>
-            <div class="status_center">
-                <span>CLIQUE EM QUALQUER SITE PARA TESTAR</span>
-            </div>
-            <div class="status_right">
-                <a href="#como-funciona" class="jour">
-                    <span>O MÉTODO BOOMO</span>
-                    <div class="arrow_c">
-                        <svg class="rel" viewBox="0 0 7 7"><path d="M4.5 1.296H1.5L1.488 0.0119998L6.756 0L6.744 5.268L5.46 5.256V2.256L0.96 6.756L0 5.796L4.5 1.296Z"/></svg>
-                        <svg class="abs" viewBox="0 0 7 7"><path d="M4.5 1.296H1.5L1.488 0.0119998L6.756 0L6.744 5.268L5.46 5.256V2.256L0.96 6.756L0 5.796L4.5 1.296Z"/></svg>
-                    </div>
-                </a>
+                <button class="mobile_toggle" id="mobileToggle" aria-label="Abrir menu de navegação">
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </header>
 
-    <!-- 3. MAIN PAGE CONTENT -->
-    <main class="page_content">
+    <!-- 2. HERO SECTION (SQUARESPACE HOMEPAGE HERO) -->
+    <section class="sq_hero">
+        <div class="container">
+            <div class="hero_content">
+                <div class="hero_badge">Estúdio Digital de Sites por Assinatura</div>
+                <h1 class="hero_title">
+                    O site da sua empresa no ar em <em>72 horas</em>.
+                </h1>
+                <p class="hero_lead">
+                    Criamos, publicamos e cuidamos de tudo por uma assinatura mensal simples. Você visualiza e aprova o design completo antes de pagar a taxa de setup.
+                </p>
+                <div class="hero_actions">
+                    <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Quero%20colocar%20o%20site%20da%20minha%20empresa%20no%20ar%20em%2072%20horas." target="_blank" rel="noopener noreferrer" class="btn_sqsp btn_sqsp_primary btn_sqsp_lg">
+                        Quero Meu Site no WhatsApp →
+                    </a>
+                    <a href="#templates" class="btn_sqsp btn_sqsp_secondary btn_sqsp_lg">
+                        Explorar Modelos
+                    </a>
+                </div>
+                <div class="hero_microcopy">
+                    Aprovação prévia do design • Sem fidelidade ou multas de cancelamento
+                </div>
+            </div>
 
-        <!-- SECTION: COMO FUNCIONA (PROCESSO) -->
-        <section class="section_wrap" id="como-funciona">
-            <span class="section_tag">O MÉTODO BOOMO</span>
-            <h2 class="section_headline">Do WhatsApp ao seu site no ar em <em>3 dias</em>.</h2>
-            <p class="section_desc">Sem reuniões demoradas, sem código para você mexer e com garantia total de aprovação visual antes de pagar o setup.</p>
+            <!-- Vitrine em Perspectiva de Produto na Base do Hero -->
+            <div class="hero_stage_wrap">
+                <div class="hero_mockup_perspective">
+                    <!-- Odonto Prime -->
+                    <div class="hero_mockup_card" onclick="openPreviewModal('/templates/odontologia/index.html', 'Odonto Prime — Odontologia Digital')">
+                        <img src="assets/images/templates-mockups/odontologia-hero.webp" alt="Template Odonto Prime">
+                        <div class="card_bar">
+                            <span>Odontologia Digital</span>
+                            <strong>Ver Modelo →</strong>
+                        </div>
+                    </div>
+
+                    <!-- Aura Estética (Centro Em Destaque) -->
+                    <div class="hero_mockup_card featured_center" onclick="openPreviewModal('/templates/estetica/index.html', 'Aura — Clínica Dermatológica & Estética')">
+                        <img src="assets/images/templates-mockups/estetica-hero.webp" alt="Template Aura Estética">
+                        <div class="card_bar">
+                            <span>Dermatologia & Estética</span>
+                            <strong>Testar Online →</strong>
+                        </div>
+                    </div>
+
+                    <!-- Santos & Valente Advogados -->
+                    <div class="hero_mockup_card" onclick="openPreviewModal('/templates/advocacia/index.html', 'Santos & Valente — Advocacia Corporativa')">
+                        <img src="assets/images/templates-mockups/advocacia-hero.webp" alt="Template Advocacia Corporativa">
+                        <div class="card_bar">
+                            <span>Advocacia Corporativa</span>
+                            <strong>Ver Modelo →</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. STATS STRIP (AUTORIDADE E SEGURANÇA) -->
+    <section class="sq_stats_strip">
+        <div class="container stats_flex">
+            <div class="stat_cell">
+                <div class="stat_big">72h</div>
+                <div class="stat_label">Prazo Médio de Entrega</div>
+            </div>
+            <div class="stat_cell">
+                <div class="stat_big">100%</div>
+                <div class="stat_label">Domínio no seu CPF/CNPJ</div>
+            </div>
+            <div class="stat_cell">
+                <div class="stat_big">Zero Risco</div>
+                <div class="stat_label">Aprova Antes de Pagar o Setup</div>
+            </div>
+            <div class="stat_cell">
+                <div class="stat_big">24h</div>
+                <div class="stat_label">SLA de Alterações no WhatsApp</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SHOWROOM DE TEMPLATES (SEÇÃO BRANCA - CONTRASTE SQUARESPACE) -->
+    <section class="sq_section_light" id="templates">
+        <div class="container">
+            <div class="section_header text-center">
+                <span class="sec_badge">Modelos Demonstrativos Reais</span>
+                <h2 class="sec_title">Sites criados para se destacar no seu mercado.</h2>
+                <p class="sec_lead">
+                    Projetados com estética de alto nível, tipografia refinada e arquitetura pensada para transformar visitantes em contatos no WhatsApp.
+                </p>
+            </div>
+
+            <!-- Filtros por Segmento -->
+            <div class="category_tabs_wrap">
+                <button class="cat_tab_btn active" onclick="filterTemplates('all', this)">Todos os Modelos</button>
+                <button class="cat_tab_btn" onclick="filterTemplates('estetica', this)">Estética & Saúde</button>
+                <button class="cat_tab_btn" onclick="filterTemplates('odonto', this)">Odontologia</button>
+                <button class="cat_tab_btn" onclick="filterTemplates('advocacia', this)">Advocacia</button>
+                <button class="cat_tab_btn" onclick="filterTemplates('contabil', this)">Contabilidade & B2B</button>
+            </div>
+
+            <!-- Grid de Templates -->
+            <div class="templates_showcase_grid" id="templatesGrid">
+
+                <!-- 1. Aura Estética -->
+                <div class="tmpl_card" data-category="estetica">
+                    <div class="tmpl_media">
+                        <img src="assets/images/templates-mockups/estetica-hero.webp" alt="Aura Clínica de Estética">
+                        <div class="tmpl_overlay">
+                            <button class="btn_test_preview" onclick="openPreviewModal('/templates/estetica/index.html', 'Aura — Clínica Dermatológica & Estética')">
+                                Testar Modelo Interativo
+                            </button>
+                        </div>
+                    </div>
+                    <div class="tmpl_body">
+                        <div class="tmpl_meta">
+                            <span class="tmpl_tag">Dermatologia & Estética Avançada</span>
+                            <span class="tmpl_time">Entrega em 72h</span>
+                        </div>
+                        <h3 class="tmpl_title">Aura Clínica</h3>
+                        <p class="tmpl_desc">
+                            Direção de arte editorial clássica em tons de off-white e bronze champagne. Foco em protocolos de harmonização facial, autoridade médica e agendamento privativo.
+                        </p>
+                        <div class="tmpl_action_row">
+                            <a href="/templates/estetica" target="_blank" class="tmpl_direct_link">
+                                Abrir em nova aba ↗
+                            </a>
+                            <button class="btn_sqsp btn_sqsp_dark" onclick="openPreviewModal('/templates/estetica/index.html', 'Aura — Clínica Dermatológica & Estética')">
+                                Testar Demonstração
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Odonto Prime -->
+                <div class="tmpl_card" data-category="odonto">
+                    <div class="tmpl_media">
+                        <img src="assets/images/templates-mockups/odontologia-hero.webp" alt="Odonto Prime Odontologia">
+                        <div class="tmpl_overlay">
+                            <button class="btn_test_preview" onclick="openPreviewModal('/templates/odontologia/index.html', 'Odonto Prime — Odontologia Digital')">
+                                Testar Modelo Interativo
+                            </button>
+                        </div>
+                    </div>
+                    <div class="tmpl_body">
+                        <div class="tmpl_meta">
+                            <span class="tmpl_tag">Odontologia Digital & Estética</span>
+                            <span class="tmpl_time">Entrega em 72h</span>
+                        </div>
+                        <h3 class="tmpl_title">Odonto Prime</h3>
+                        <p class="tmpl_desc">
+                            Estética clínica suíça em azul-safira e platina. Estrutura voltada para tratamentos de alto valor como Lentes de Contato E.max, Invisalign e Implantes Guiados 3D.
+                        </p>
+                        <div class="tmpl_action_row">
+                            <a href="/templates/odontologia" target="_blank" class="tmpl_direct_link">
+                                Abrir em nova aba ↗
+                            </a>
+                            <button class="btn_sqsp btn_sqsp_dark" onclick="openPreviewModal('/templates/odontologia/index.html', 'Odonto Prime — Odontologia Digital')">
+                                Testar Demonstração
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Santos & Valente Advogados -->
+                <div class="tmpl_card" data-category="advocacia">
+                    <div class="tmpl_media">
+                        <img src="assets/images/templates-mockups/advocacia-hero.webp" alt="Santos e Valente Advogados">
+                        <div class="tmpl_overlay">
+                            <button class="btn_test_preview" onclick="openPreviewModal('/templates/advocacia/index.html', 'Santos & Valente — Advocacia Corporativa')">
+                                Testar Modelo Interativo
+                            </button>
+                        </div>
+                    </div>
+                    <div class="tmpl_body">
+                        <div class="tmpl_meta">
+                            <span class="tmpl_tag">Advocacia Corporativa & Tributária</span>
+                            <span class="tmpl_time">Entrega em 72h</span>
+                        </div>
+                        <h3 class="tmpl_title">Santos & Valente Advogados</h3>
+                        <p class="tmpl_desc">
+                            Layout imponente em ardósia obsidian e ouro velho. Perfeito para bancas corporativas com núcleos de M&A, Governança, Proteção Patrimonial e Direito Tributário.
+                        </p>
+                        <div class="tmpl_action_row">
+                            <a href="/templates/advocacia" target="_blank" class="tmpl_direct_link">
+                                Abrir em nova aba ↗
+                            </a>
+                            <button class="btn_sqsp btn_sqsp_dark" onclick="openPreviewModal('/templates/advocacia/index.html', 'Santos & Valente — Advocacia Corporativa')">
+                                Testar Demonstração
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Lumina Contábil -->
+                <div class="tmpl_card" data-category="contabil">
+                    <div class="tmpl_media">
+                        <img src="assets/images/templates-mockups/contabilidade-hero.webp" alt="Lumina Contabilidade">
+                        <div class="tmpl_overlay">
+                            <button class="btn_test_preview" onclick="openPreviewModal('/templates/contabilidade/index.html', 'Lumina — Contabilidade Estratégica & CFO')">
+                                Testar Modelo Interativo
+                            </button>
+                        </div>
+                    </div>
+                    <div class="tmpl_body">
+                        <div class="tmpl_meta">
+                            <span class="tmpl_tag">Consultoria Contábil & CFO as a Service</span>
+                            <span class="tmpl_time">Entrega em 72h</span>
+                        </div>
+                        <h3 class="tmpl_title">Lumina Contábil</h3>
+                        <p class="tmpl_desc">
+                            Posicionamento estratégico para escritórios B2B em verde-floresta nobre e esmeralda. Transmite segurança tributária para Lucro Real, BPO Financeiro e Holdings.
+                        </p>
+                        <div class="tmpl_action_row">
+                            <a href="/templates/contabilidade" target="_blank" class="tmpl_direct_link">
+                                Abrir em nova aba ↗
+                            </a>
+                            <button class="btn_sqsp btn_sqsp_dark" onclick="openPreviewModal('/templates/contabilidade/index.html', 'Lumina — Contabilidade Estratégica & CFO')">
+                                Testar Demonstração
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. TUDO EM UMA SÓ ASSINATURA (SQUARESPACE ONE-PLATFORM) -->
+    <section class="sq_section_features" id="diferenciais">
+        <div class="container">
+            <div class="section_header text-center">
+                <span class="sec_badge">Tudo O Que Sua Empresa Precisa</span>
+                <h2 class="sec_title">Infraestrutura completa de estúdio. Sem custos ocultos.</h2>
+                <p class="sec_lead">
+                    Você não precisa se preocupar com servidores, códigos ou técnicos. Cuidamos de cada detalhe para o seu negócio vender mais.
+                </p>
+            </div>
+
+            <div class="features_grid">
+                <!-- Box 1 -->
+                <div class="feat_box">
+                    <div class="feat_icon"><i class="fa-solid fa-globe"></i></div>
+                    <h3 class="feat_title">Domínio & SSL Inclusos</h3>
+                    <p class="feat_text">
+                        Configuramos seu domínio .com.br registrado 100% no seu CPF ou CNPJ com certificado de segurança ativo. O domínio é seu.
+                    </p>
+                </div>
+
+                <!-- Box 2 -->
+                <div class="feat_box">
+                    <div class="feat_icon"><i class="fa-solid fa-bolt"></i></div>
+                    <h3 class="feat_title">Velocidade Extrema</h3>
+                    <p class="feat_text">
+                        Sites ultraleves sem plataformas pesadas. Abertura instantânea no celular para seus clientes não desistirem de entrar em contato.
+                    </p>
+                </div>
+
+                <!-- Box 3 -->
+                <div class="feat_box">
+                    <div class="feat_icon"><i class="fa-brands fa-google"></i></div>
+                    <h3 class="feat_title">Preparado para o Google</h3>
+                    <p class="feat_text">
+                        Arquitetura estruturada com SEO local, indexação automática e integração com o Google Meu Negócio da sua cidade.
+                    </p>
+                </div>
+
+                <!-- Box 4 -->
+                <div class="feat_box">
+                    <div class="feat_icon"><i class="fa-brands fa-whatsapp"></i></div>
+                    <h3 class="feat_title">Alterações no WhatsApp</h3>
+                    <p class="feat_text">
+                        Troque preços, fotos ou inclua um novo serviço mandando apenas uma mensagem. Nossa equipe cuida de tudo em até 24h úteis.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. O MÉTODO BOOMO EM 3 PASSOS (SQUARESPACE HOW-TO) -->
+    <section class="sq_section_process" id="como-funciona">
+        <div class="container">
+            <div class="section_header text-center">
+                <span class="sec_badge" style="color: var(--sq-text-muted-dark);">O Método Boomo</span>
+                <h2 class="sec_title" style="color: #FFFFFF;">Do WhatsApp ao seu site no ar em <em>3 dias</em>.</h2>
+                <p class="sec_lead" style="color: var(--sq-text-muted-dark);">
+                    Processo direto e sem reuniões demoradas. Você só paga a taxa de setup após aprovar o design.
+                </p>
+            </div>
 
             <div class="process_grid">
-                <div class="process_card">
-                    <div class="process_top">
-                        <span class="process_index">01.</span>
-                        <span class="process_timeline">15 MINUTOS</span>
+                <!-- Passo 1 -->
+                <div class="process_step">
+                    <div class="step_top">
+                        <span class="step_number">01</span>
+                        <span class="step_timeline">15 Minutos</span>
                     </div>
-                    <div>
-                        <h3 class="process_title">Briefing no WhatsApp</h3>
-                        <p class="process_text">Você escolhe o modelo base, nos envia as fotos, textos e serviços da sua empresa diretamente pelo WhatsApp.</p>
-                    </div>
+                    <h3 class="step_title">Briefing no WhatsApp</h3>
+                    <p class="step_text">
+                        Você escolhe o modelo base que mais combina com o seu negócio e nos envia os serviços, fotos e diferenciais pelo WhatsApp.
+                    </p>
                 </div>
 
-                <div class="process_card">
-                    <div class="process_top">
-                        <span class="process_index">02.</span>
-                        <span class="process_timeline">48 HORAS</span>
+                <!-- Passo 2 -->
+                <div class="process_step">
+                    <div class="step_top">
+                        <span class="step_number">02</span>
+                        <span class="step_timeline">48 Horas</span>
                     </div>
-                    <div>
-                        <span class="badge_guarantee">Garantia de Aprovação Prévia</span>
-                        <h3 class="process_title">Criação & Aprovação</h3>
-                        <p class="process_text">Nossa equipe constrói seu site sob medida. Você visualiza e <strong>aprova o design antes de pagar o setup</strong>.</p>
-                    </div>
+                    <h3 class="step_title">Criação & Aprovação Prévia</h3>
+                    <p class="step_text">
+                        Nossa equipe desenvolve o seu site personalizado. <strong>Você visualiza o site pronto e aprova o design antes de pagar o setup</strong>.
+                    </p>
                 </div>
 
-                <div class="process_card">
-                    <div class="process_top">
-                        <span class="process_index">03.</span>
-                        <span class="process_timeline">72 HORAS NO AR</span>
+                <!-- Passo 3 -->
+                <div class="process_step">
+                    <div class="step_top">
+                        <span class="step_number">03</span>
+                        <span class="step_timeline">72 Horas no Ar</span>
                     </div>
-                    <div>
-                        <h3 class="process_title">Publicação & Manutenção</h3>
-                        <p class="process_text">Publicamos no seu domínio próprio com SSL, CDN de alta velocidade e alterações contínuas inclusas na assinatura.</p>
-                    </div>
+                    <h3 class="step_title">Publicação & Manutenção</h3>
+                    <p class="step_text">
+                        Conectamos seu domínio, ativamos o SSL e colocamos seu site no ar. A partir daí, qualquer alteração é feita direto pelo WhatsApp.
+                    </p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- SECTION: CAPACIDADES & ENGENHARIA -->
-        <section class="section_wrap">
-            <span class="section_tag">ENGENHARIA DE ESTÚDIO</span>
-            <h2 class="section_headline">Tudo o que sua empresa precisa. <em>Sem custos ocultos</em>.</h2>
-            <p class="section_desc">Cuidamos da infraestrutura completa para que você foque apenas em atender seus clientes.</p>
-
-            <div class="capabilities_grid">
-                <div class="cap_item">
-                    <h4>Velocidade Extrema</h4>
-                    <p>Sites leves construídos com HTML/CSS puro e CDN global, abrindo instantaneamente em qualquer conexão.</p>
-                </div>
-                <div class="cap_item">
-                    <h4>SEO Estruturado</h4>
-                    <p>Arquitetura otimizada para o Google encontrar seu negócio na sua cidade e nicho de atuação.</p>
-                </div>
-                <div class="cap_item">
-                    <h4>Domínio & SSL Inclusos</h4>
-                    <p>Configuramos seu domínio .com.br registrado 100% no seu CPF ou CNPJ com certificado de segurança.</p>
-                </div>
-                <div class="cap_item">
-                    <h4>Alterações no WhatsApp</h4>
-                    <p>Precisa trocar um preço, foto ou horário? Basta nos mandar uma mensagem. Cuidamos em até 24h úteis.</p>
-                </div>
+    <!-- 7. TABELA COMPARATIVA DE VALOR -->
+    <section class="sq_section_comparison">
+        <div class="container">
+            <div class="section_header text-center">
+                <span class="sec_badge">Comparação Direta</span>
+                <h2 class="sec_title">Por que a Boomo é a escolha mais inteligente?</h2>
+                <p class="sec_lead">
+                    Compare o tempo de entrega, o risco financeiro e o suporte contínuo entre os modelos disponíveis no mercado.
+                </p>
             </div>
-        </section>
-
-        <!-- SECTION: TABELA COMPARATIVA -->
-        <section class="section_wrap">
-            <span class="section_tag">COMPARAÇÃO DE VALOR</span>
-            <h2 class="section_headline">Por que a Boomo é a escolha <em>mais inteligente</em>?</h2>
-            <p class="section_desc">Compare a velocidade, qualidade e previsibilidade de custo da Boomo com as alternativas do mercado.</p>
 
             <div class="mobile_swipe_hint">Deslize para ver todas as colunas →</div>
-            <div class="comparison_table_wrap">
-                <table class="comp_table">
+            <div class="comparison_table_frame">
+                <table class="comparison_table">
                     <thead>
                         <tr>
                             <th>Critério</th>
-                            <th class="highlight">Boomo (Assinatura)</th>
+                            <th class="col_boomo">Boomo (Assinatura)</th>
                             <th>Agência Tradicional</th>
                             <th>Fazer Sozinho</th>
                         </tr>
@@ -1263,982 +405,337 @@
                     <tbody>
                         <tr>
                             <td><strong>Tempo de Entrega</strong></td>
-                            <td class="highlight">Até 3 dias úteis</td>
-                            <td>30 a 60 dias</td>
+                            <td class="col_boomo"><i class="fa-solid fa-check"></i> Até 3 dias úteis</td>
+                            <td>30 a 60 dias úteis</td>
                             <td>Semanas de tentativa</td>
                         </tr>
                         <tr>
                             <td><strong>Custo Inicial (Setup)</strong></td>
-                            <td class="highlight">R$ 300 a R$ 500 (após aprovar)</td>
+                            <td class="col_boomo"><i class="fa-solid fa-check"></i> R$ 300 a R$ 500 (após aprovar)</td>
                             <td>R$ 4.000 a R$ 8.000</td>
                             <td>"Grátis" + seu tempo</td>
                         </tr>
                         <tr>
                             <td><strong>Garantia de Risco</strong></td>
-                            <td class="highlight">Aprova o design antes de pagar</td>
+                            <td class="col_boomo"><i class="fa-solid fa-check"></i> Aprova o design antes de pagar</td>
                             <td>50% adiantado sem garantia</td>
                             <td>Risco de abandono</td>
                         </tr>
                         <tr>
-                            <td><strong>Hospedagem & Manutenção</strong></td>
-                            <td class="highlight">100% Inclusas na mensalidade</td>
+                            <td><strong>Hospedagem & Suporte</strong></td>
+                            <td class="col_boomo"><i class="fa-solid fa-check"></i> 100% Inclusos na assinatura</td>
                             <td>Cobrança à parte (R$ 300+/mês)</td>
-                            <td>Você cuida de bugs e quedas</td>
+                            <td>Você cuida de quedas e erros</td>
                         </tr>
                         <tr>
                             <td><strong>Qualidade Visual</strong></td>
-                            <td class="highlight">Design de Estúdio Internacional</td>
+                            <td class="col_boomo"><i class="fa-solid fa-check"></i> Design de Estúdio Internacional</td>
                             <td>Variável conforme agência</td>
                             <td>Aparência amadora</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- SECTION: PLANOS & PREÇOS -->
-        <section class="section_wrap" id="planos">
-            <span class="section_tag">INVESTIMENTO TRANSPARENTE</span>
-            <h2 class="section_headline">Planos simples. <em>Sem multas ou fidelidade</em>.</h2>
-            <p class="section_desc">Escolha a estrutura ideal para o seu momento. Cancele quando quiser.</p>
+    <!-- 8. PLANOS & PREÇOS TRANSPARENTES (SQUARESPACE PRICING) -->
+    <section class="sq_section_pricing" id="planos">
+        <div class="container">
+            <div class="section_header text-center">
+                <span class="sec_badge">Investimento Transparente</span>
+                <h2 class="sec_title">Planos simples. Sem multas ou fidelidade.</h2>
+                <p class="sec_lead">
+                    Escolha o plano ideal para o momento da sua empresa. Cancele quando quiser sem nenhuma taxa rescisória.
+                </p>
+            </div>
 
             <div class="pricing_grid">
                 <!-- Essencial -->
-                <div class="plan_card">
-                    <div>
-                        <div class="plan_header">
-                            <h3 class="plan_name">Essencial</h3>
-                            <p class="plan_desc">Ideal para profissionais autônomos e pequenos negócios que buscam presença profissional imediata.</p>
-                        </div>
-                        <div class="plan_price_wrap">
-                            <div class="plan_price">R$ 149<span>/mês</span></div>
-                            <div class="plan_setup">+ setup único de <strong>R$ 300</strong> (após aprovar)</div>
-                        </div>
-                        <ul class="plan_features">
-                            <li>Site institucional sob medida</li>
-                            <li>Botão de contato direto no WhatsApp</li>
-                            <li>Hospedagem de alta velocidade e SSL</li>
-                            <li>Alterações mensais inclusas</li>
-                        </ul>
+                <div class="pricing_card">
+                    <div class="plan_top">
+                        <h3 class="plan_title">Essencial</h3>
+                        <p class="plan_desc">Para profissionais autônomos e empresas locais que buscam presença profissional imediata.</p>
                     </div>
-                    <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Gostaria%20de%20assinar%20o%20plano%20Essencial%20da%20Boomo." target="_blank" class="btn_plan">Assinar Essencial</a>
+                    <div class="plan_price_box">
+                        <div class="plan_price">R$ 149<span>/mês</span></div>
+                        <div class="plan_setup">+ setup único de <strong>R$ 300</strong> (após aprovar)</div>
+                    </div>
+                    <ul class="plan_features_list">
+                        <li><i class="fa-solid fa-check"></i> Site institucional profissional sob medida</li>
+                        <li><i class="fa-solid fa-check"></i> Botão de contato direto no WhatsApp</li>
+                        <li><i class="fa-solid fa-check"></i> Hospedagem de alta velocidade e SSL inclusos</li>
+                        <li><i class="fa-solid fa-check"></i> Alterações mensais inclusas na assinatura</li>
+                    </ul>
+                    <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Gostaria%20de%20assinar%20o%20plano%20Essencial%20da%20Boomo." target="_blank" rel="noopener noreferrer" class="btn_sqsp btn_sqsp_secondary" style="border-color: #000000; color: #000000;">
+                        Assinar Essencial
+                    </a>
                 </div>
 
-                <!-- Pro -->
-                <div class="plan_card featured">
-                    <div>
-                        <span class="badge_featured_plan">Mais Escolhido — Clínicas e Empresas</span>
-                        <div class="plan_header">
-                            <h3 class="plan_name">Pro Negócios Locais</h3>
-                            <p class="plan_desc">Para clínicas, consultórios e empresas que desejam atrair novos clientes pelo Google.</p>
-                        </div>
-                        <div class="plan_price_wrap">
-                            <div class="plan_price">R$ 249<span>/mês</span></div>
-                            <div class="plan_setup">+ setup único de <strong>R$ 500</strong> (após aprovar)</div>
-                        </div>
-                        <ul class="plan_features">
-                            <li>Tudo do Plano Essencial</li>
-                            <li>SEO Local estruturado para o Google</li>
-                            <li>Integração com Google Maps e Avaliações</li>
-                            <li>Suporte prioritário via WhatsApp</li>
-                            <li>Alterações ilimitadas de textos e fotos</li>
-                        </ul>
+                <!-- Pro Negócios Locais (Featured) -->
+                <div class="pricing_card featured">
+                    <span class="featured_badge">Mais Escolhido — Clínicas e Empresas</span>
+                    <div class="plan_top">
+                        <h3 class="plan_title">Pro Negócios Locais</h3>
+                        <p class="plan_desc">Para clínicas, consultórios e empresas que desejam atrair novos clientes pelo Google.</p>
                     </div>
-                    <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Gostaria%20de%20assinar%20o%20plano%20Pro%20Neg%C3%B3cios%20Locais%20da%20Boomo." target="_blank" class="btn_plan">Assinar Plano Pro</a>
+                    <div class="plan_price_box">
+                        <div class="plan_price">R$ 249<span>/mês</span></div>
+                        <div class="plan_setup">+ setup único de <strong>R$ 500</strong> (após aprovar)</div>
+                    </div>
+                    <ul class="plan_features_list">
+                        <li><i class="fa-solid fa-check"></i> Tudo do Plano Essencial</li>
+                        <li><i class="fa-solid fa-check"></i> SEO Local estruturado para o Google</li>
+                        <li><i class="fa-solid fa-check"></i> Integração com Google Maps e Avaliações</li>
+                        <li><i class="fa-solid fa-check"></i> Suporte prioritário via WhatsApp</li>
+                        <li><i class="fa-solid fa-check"></i> Alterações ilimitadas de textos e fotos</li>
+                    </ul>
+                    <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Gostaria%20de%20assinar%20o%20plano%20Pro%20Neg%C3%B3cios%20Locais%20da%20Boomo." target="_blank" rel="noopener noreferrer" class="btn_sqsp btn_sqsp_dark">
+                        Assinar Plano Pro
+                    </a>
                 </div>
 
                 <!-- Personalizado -->
-                <div class="plan_card">
-                    <div>
-                        <div class="plan_header">
-                            <h3 class="plan_name">Personalizado</h3>
-                            <p class="plan_desc">Para empresas consolidadas com demandas específicas, múltiplas filiais ou integrações.</p>
-                        </div>
-                        <div class="plan_price_wrap">
-                            <div class="plan_price">R$ 399<span>/mês</span></div>
-                            <div class="plan_setup">Setup sob consulta técnica</div>
-                        </div>
-                        <ul class="plan_features">
-                            <li>Múltiplas páginas institucionais</li>
-                            <li>Integrações com APIs e CRM</li>
-                            <li>Gestor técnico de conta dedicado</li>
-                            <li>SLA prioritário de atendimento</li>
-                        </ul>
+                <div class="pricing_card">
+                    <div class="plan_top">
+                        <h3 class="plan_title">Personalizado</h3>
+                        <p class="plan_desc">Para empresas consolidadas com demandas específicas, múltiplas filiais ou integrações.</p>
                     </div>
-                    <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Gostaria%20de%20um%20or%C3%A7amento%20personalizado%20com%20a%20Boomo." target="_blank" class="btn_plan">Falar com Consultor</a>
+                    <div class="plan_price_box">
+                        <div class="plan_price">R$ 399<span>/mês</span></div>
+                        <div class="plan_setup">Setup sob consulta técnica</div>
+                    </div>
+                    <ul class="plan_features_list">
+                        <li><i class="fa-solid fa-check"></i> Múltiplas páginas e seções avançadas</li>
+                        <li><i class="fa-solid fa-check"></i> Integrações com sistemas, CRM ou APIs</li>
+                        <li><i class="fa-solid fa-check"></i> Gestor técnico de conta dedicado</li>
+                        <li><i class="fa-solid fa-check"></i> SLA de atendimento com prioridade máxima</li>
+                    </ul>
+                    <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Gostaria%20de%20um%20or%C3%A7amento%20personalizado%20com%20a%20Boomo." target="_blank" rel="noopener noreferrer" class="btn_sqsp btn_sqsp_secondary" style="border-color: #000000; color: #000000;">
+                        Falar com Consultor
+                    </a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- SECTION: FAQ -->
-        <section class="section_wrap" id="faq">
-            <span class="section_tag">TRANSPARÊNCIA TOTAL</span>
-            <h2 class="section_headline">Dúvidas Frequentes</h2>
-            <p class="section_desc">Respostas diretas sobre como cuidamos do seu site.</p>
+    <!-- 9. DÚVIDAS FREQUENTES (FAQ ACCORDION) -->
+    <section class="sq_section_faq" id="faq">
+        <div class="container">
+            <div class="section_header text-center">
+                <span class="sec_badge">Perguntas Frequentes</span>
+                <h2 class="sec_title">Respostas diretas sobre como cuidamos do seu site.</h2>
+            </div>
 
             <div class="faq_wrap">
                 <details class="faq_item" open>
-                    <summary>O domínio (.com.br) fica registrado no meu nome? <span>+</span></summary>
-                    <div class="faq_ans">Sim, 100% no seu CPF ou CNPJ. Você é o proprietário definitivo do domínio. A Boomo cuida apenas de toda a configuração técnica de DNS, servidores e segurança.</div>
+                    <summary class="faq_question">
+                        <span>O domínio (.com.br) fica registrado no meu nome?</span>
+                        <span class="faq_icon"><i class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="faq_answer">
+                        Sim, 100% no seu CPF ou CNPJ. Você é o proprietário definitivo do endereço do seu site. A Boomo apenas cuida de toda a configuração técnica de DNS, apontamento de servidores e segurança.
+                    </div>
                 </details>
 
                 <details class="faq_item">
-                    <summary>Como funcionam os pedidos de alteração no site? <span>+</span></summary>
-                    <div class="faq_ans">É tão simples quanto mandar um áudio ou texto no WhatsApp. Precisa atualizar um preço, mudar uma foto ou adicionar um serviço? Envie para nossa equipe e realizamos a alteração técnica em até 24 horas úteis.</div>
+                    <summary class="faq_question">
+                        <span>Como funciona a garantia de aprovação antes de pagar o setup?</span>
+                        <span class="faq_icon"><i class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="faq_answer">
+                        Você não assume risco algum para começar. Nossa equipe cria a versão demonstrativa personalizada da sua empresa. Você só paga a taxa única de setup se olhar o site pronto e aprovar o design para publicação.
+                    </div>
                 </details>
 
                 <details class="faq_item">
-                    <summary>Existe tempo mínimo de fidelidade ou multa de cancelamento? <span>+</span></summary>
-                    <div class="faq_ans">Zero fidelidade. Você pode cancelar sua assinatura mensal a qualquer momento sem nenhuma taxa ou multa de rescisão.</div>
+                    <summary class="faq_question">
+                        <span>Como faço pedidos de alteração no site?</span>
+                        <span class="faq_icon"><i class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="faq_answer">
+                        Basta nos mandar uma mensagem ou áudio no WhatsApp. Precisa atualizar um preço, mudar o horário de funcionamento ou adicionar uma nova foto? Nossa equipe técnica executa e publica a alteração em até 24h úteis.
+                    </div>
                 </details>
 
                 <details class="faq_item">
-                    <summary>Como funciona a garantia de aprovação antes de pagar o setup? <span>+</span></summary>
-                    <div class="faq_ans">Nós criamos a demonstração personalizada do seu site primeiro. Você só paga a taxa única de setup após ver o design pronto e aprová-lo para publicação.</div>
+                    <summary class="faq_question">
+                        <span>Existe contrato de fidelidade ou multa de cancelamento?</span>
+                        <span class="faq_icon"><i class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="faq_answer">
+                        Zero fidelidade. Você pode cancelar sua assinatura mensal a qualquer momento sem nenhuma multa, taxa rescisória ou burocracia.
+                    </div>
                 </details>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- SECTION: CTA BANNER -->
-        <section class="cta_section">
-            <span class="section_tag">SEU SITE NO AR EM 3 DIAS</span>
-            <h2 class="section_headline" style="max-width: 700px;">Quer colocar o site da sua empresa no ar essa semana?</h2>
-            <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Quero%20colocar%20meu%20site%20no%20ar%20com%20a%20Boomo." target="_blank" class="cta_btn_large">
-                <span>Falar com a equipe no WhatsApp</span>
-                <div class="arrow_c">
-                    <svg class="rel" viewBox="0 0 7 7"><path d="M4.5 1.296H1.5L1.488 0.0119998L6.756 0L6.744 5.268L5.46 5.256V2.256L0.96 6.756L0 5.796L4.5 1.296Z"/></svg>
-                    <svg class="abs" viewBox="0 0 7 7"><path d="M4.5 1.296H1.5L1.488 0.0119998L6.756 0L6.744 5.268L5.46 5.256V2.256L0.96 6.756L0 5.796L4.5 1.296Z"/></svg>
-                </div>
+    <!-- 10. CTA CONVERSÃO FINAL (SQUARESPACE CONVERSION) -->
+    <section class="sq_section_cta">
+        <div class="container cta_box">
+            <span class="sec_badge">Seu Site No Ar Essa Semana</span>
+            <h2 class="cta_title">Pronto para colocar o site da sua empresa no ar?</h2>
+            <p class="cta_lead">
+                Fale diretamente com nossa equipe no WhatsApp, escolha o estilo do seu site e veja a primeira versão pronta em até 48 horas.
+            </p>
+            <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Quero%20colocar%20meu%20site%20no%20ar%20com%20a%20Boomo." target="_blank" rel="noopener noreferrer" class="btn_sqsp btn_sqsp_primary btn_sqsp_lg">
+                Falar com a Equipe no WhatsApp →
             </a>
-        </section>
+        </div>
+    </section>
 
-        <!-- FOOTER -->
-        <footer class="site_footer">
-            <div>BOOMO © 2026 — ESTÚDIO DIGITAL DE SITES POR ASSINATURA</div>
-            <div>BRASIL • ALTA PERFORMANCE</div>
-        </footer>
-
-    </main>
-
-    <!-- 4. PREVIEW MODAL COM ALTERNADOR DESKTOP/MOBILE -->
-    <div class="preview_modal_overlay" id="previewModal" onclick="closePreviewModalOutside(event)">
-        <div class="preview_modal_window" id="previewModalWindow">
-            <div class="modal_topbar">
-                <div class="modal_controls">
-                    <span onclick="closePreviewModal()" style="background: #FF5F56;"></span>
-                    <span style="background: #FFBD2E;"></span>
-                    <span style="background: #27C93F;"></span>
+    <!-- 11. RODAPÉ (SQUARESPACE FOOTER) -->
+    <footer class="sq_footer">
+        <div class="container">
+            <div class="footer_grid">
+                <div class="footer_brand">
+                    <div class="brand_logo">BOOMO<span>.</span></div>
+                    <p class="footer_desc">
+                        Estúdio de sites profissionais por assinatura. Criamos, hospedamos e mantemos sua presença digital de elite.
+                    </p>
                 </div>
-                <div class="modal_center_tools">
-                    <div class="modal_address">
-                        <span id="modalAddressText">🔒 auraestetica.com.br</span>
-                    </div>
-                    <div class="modal_device_switch">
-                        <button class="device_btn active" id="btnDeskView" onclick="setModalDevice('desktop')">Desktop</button>
-                        <button class="device_btn" id="btnMobView" onclick="setModalDevice('mobile')">Mobile</button>
-                    </div>
+                <div>
+                    <div class="footer_col_title">Navegação</div>
+                    <ul class="footer_links">
+                        <li><a href="#templates">Templates</a></li>
+                        <li><a href="#diferenciais">Diferenciais</a></li>
+                        <li><a href="#como-funciona">Como Funciona</a></li>
+                        <li><a href="#planos">Planos & Preços</a></li>
+                    </ul>
                 </div>
-                <div class="modal_actions">
-                    <a href="https://wa.me/559192432044" target="_blank" class="modal_btn_wa" id="modalWaBtn">Pedir Este Site</a>
-                    <button class="modal_btn_close" onclick="closePreviewModal()">✕</button>
+                <div>
+                    <div class="footer_col_title">Modelos</div>
+                    <ul class="footer_links">
+                        <li><a href="javascript:void(0)" onclick="openPreviewModal('/templates/estetica/index.html', 'Aura — Clínica Dermatológica')">Estética & Saúde</a></li>
+                        <li><a href="javascript:void(0)" onclick="openPreviewModal('/templates/odontologia/index.html', 'Odonto Prime — Odontologia')">Odontologia</a></li>
+                        <li><a href="javascript:void(0)" onclick="openPreviewModal('/templates/advocacia/index.html', 'Santos & Valente — Advocacia')">Advocacia</a></li>
+                        <li><a href="javascript:void(0)" onclick="openPreviewModal('/templates/contabilidade/index.html', 'Lumina — Contabilidade')">Contabilidade</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="footer_col_title">Contato & Suporte</div>
+                    <ul class="footer_links">
+                        <li><a href="https://wa.me/559192432044" target="_blank">WhatsApp Oficial</a></li>
+                        <li><a href="mailto:contato@boomo.com.br">contato@boomo.com.br</a></li>
+                        <li><span>Seg a Sex • 09h às 18h</span></li>
+                    </ul>
                 </div>
             </div>
-            <div class="modal_iframe_wrap">
-                <div class="modal_iframe_scaler" id="modalIframeScaler">
-                    <iframe id="modalIframe" src="about:blank" title="Site Demo Preview"></iframe>
+
+            <div class="footer_bottom">
+                <div>BOOMO © 2026 — TODOS OS DIREITOS RESERVADOS.</div>
+                <div>SITES PROFISSIONAIS POR ASSINATURA • BRASIL</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 12. PREVIEW MODAL INTERATIVO COM ALTERNADOR DESKTOP / MOBILE -->
+    <div class="preview_modal_overlay" id="previewModal">
+        <div class="preview_modal_container">
+            <div class="preview_modal_header">
+                <div class="preview_header_title">
+                    <span id="previewModalTitle">Visualização do Modelo</span>
+                </div>
+                <div class="preview_device_toggles">
+                    <button class="device_btn active" id="btnViewDesktop" onclick="setPreviewDevice('desktop')">
+                        <i class="fa-solid fa-desktop"></i> Desktop
+                    </button>
+                    <button class="device_btn" id="btnViewMobile" onclick="setPreviewDevice('mobile')">
+                        <i class="fa-solid fa-mobile-screen"></i> Mobile
+                    </button>
+                </div>
+                <button class="btn_close_preview" onclick="closePreviewModal()" aria-label="Fechar pré-visualização">✕</button>
+            </div>
+            <div class="preview_modal_viewport">
+                <div class="preview_frame_wrapper view_desktop" id="previewFrameWrapper">
+                    <iframe id="previewIframe" class="preview_iframe" src="" title="Pré-visualização do Modelo"></iframe>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- SCRIPTS: CIPHER TIGHT SPIRAL VORTEX ENGINE COM SCREENSHOTS REAIS DOS WEBSITES -->
+    <!-- Scripts da Página -->
     <script>
-        // 12 Website Template Mockup Cards with Curated Studio Colors per Niche
-        const templates = [
-            { id: "001", title: "Aura Estética", niche: "Clínica & Procedimentos", img: "assets/images/templates-mockups/estetica-hero.webp?v=3", url: "/templates/estetica", domain: "auraestetica.com.br", bg: "#2E241E" },
-            { id: "002", title: "Odonto Prime", niche: "Odontologia & Implantes", img: "assets/images/templates-mockups/odontologia-hero.webp?v=3", url: "/templates/odontologia", domain: "odontoprime.com.br", bg: "#0F212D" },
-            { id: "003", title: "Santos & Valente", niche: "Advocacia Empresarial", img: "assets/images/templates-mockups/advocacia-hero.webp?v=3", url: "/templates/advocacia", domain: "santosvalente.com.br", bg: "#222124" },
-            { id: "004", title: "Lumina Contábil", niche: "Contabilidade & B2B", img: "assets/images/templates-mockups/contabilidade-hero.webp?v=3", url: "/templates/contabilidade", domain: "luminacontabil.com.br", bg: "#102922" },
-            { id: "005", title: "Aura • Serviços", niche: "Protocolos Exclusivos", img: "assets/images/templates-mockups/estetica-section.webp?v=3", url: "/templates/estetica", domain: "auraestetica.com.br", bg: "#38281F" },
-            { id: "006", title: "Odonto • Sorriso", niche: "Estética & Alinhadores", img: "assets/images/templates-mockups/odontologia-section.webp?v=3", url: "/templates/odontologia", domain: "odontoprime.com.br", bg: "#162D3D" },
-            { id: "007", title: "Santos • Atuação", niche: "Direito Tributário", img: "assets/images/templates-mockups/advocacia-section.webp?v=3", url: "/templates/advocacia", domain: "santosvalente.com.br", bg: "#292728" },
-            { id: "008", title: "Lumina • Fiscal", niche: "Gestão B2B & Consultoria", img: "assets/images/templates-mockups/contabilidade-section.webp?v=3", url: "/templates/contabilidade", domain: "luminacontabil.com.br", bg: "#16332C" },
-            { id: "009", title: "Aura • Mobile", niche: "Design Responsivo", img: "assets/images/templates-mockups/estetica-mobile.webp?v=3", url: "/templates/estetica", domain: "auraestetica.com.br", bg: "#221A15" },
-            { id: "010", title: "Odonto • Mobile", niche: "Design Responsivo", img: "assets/images/templates-mockups/odontologia-mobile.webp?v=3", url: "/templates/odontologia", domain: "odontoprime.com.br", bg: "#0C1B24" },
-            { id: "011", title: "Santos • Mobile", niche: "Design Responsivo", img: "assets/images/templates-mockups/advocacia-mobile.webp?v=3", url: "/templates/advocacia", domain: "santosvalente.com.br", bg: "#1A191C" },
-            { id: "012", title: "Lumina • Mobile", niche: "Design Responsivo", img: "assets/images/templates-mockups/contabilidade-mobile.webp?v=3", url: "/templates/contabilidade", domain: "luminacontabil.com.br", bg: "#0C201A" }
-        ];
-
-        // SASHA MARTYNCHUK NATIVE WEBGL 2.0 SPHERICAL DOME ENGINE
-        const TEX_SIZE = 512;
-        const _t = 10;
-        const Eo = 0.06, To = 0.028, Ro = 0.2, xo = 0.09, bo = 0.12, Ae = 5, Ao = 0, wo = 1, we = 0, Mo = 0.25, So = 132, Lo = 340, Me = 2600 * 1400;
-        const clamp = (val, min, max) => Math.min(max, Math.max(min, val));
-
-        function hashCoord(x, y) {
-            let e = Math.imul(x, 73856093) ^ Math.imul(y, 19349663);
-            e ^= e >>> 13;
-            e = Math.imul(e, 1274126177);
-            return ((e ^ (e >>> 16)) >>> 0);
-        }
-
-        const vsGrid = `#version 300 es
-precision highp float;
-
-in vec2 aUV;      
-in vec2 aCell;    
-in float aLayer;  
-in float aLift;   
-
-uniform vec2  uOffset;
-uniform vec2  uCell;
-uniform vec2  uMedia;
-uniform float uR;
-uniform float uPersp;   
-uniform float uCamZ;    
-uniform vec2  uHalfViewport;
-uniform float uReveal;
-
-out vec2  vUV;
-out float vLayer;
-out float vShade;
-out float vLift;
-out float vEnter;
-out vec2  vParallax;
-
-vec3 surface(vec2 arc) {
-  vec2 ang = arc / uR;
-  return vec3(uR * sin(ang.x),
-              uR * sin(ang.y),
-              uR * (2.0 - cos(ang.x) - cos(ang.y)));
-}
-
-void main() {
-  vec2 centre = aCell * uCell - uOffset;
-  vec2 local  = (aUV - 0.5) * uMedia * (1.0 + aLift * 0.05);
-  vec3 P      = surface(centre + local);
-
-  vec2 ang = centre / uR;
-  float facing = cos(ang.x) * cos(ang.y);
-
-  float st = sin(ang.x), ct = cos(ang.x);
-  float sp = sin(ang.y), cp = cos(ang.y);
-  vec3 T = vec3(ct, 0.0, st);
-  vec3 B = vec3(-sp * st, cp, sp * ct);
-  vec3 N = vec3(-st * cp, -sp, ct * cp);
-
-  vec3 toCam = normalize(vec3(0.0, 0.0, uCamZ) - P);
-  float nd = max(dot(toCam, N), 0.25);
-  vParallax = vec2(dot(toCam, T), dot(toCam, B)) / nd;
-
-  P.z += aLift * uCell.x * 0.12;
-
-  float d = length(centre / uCell);
-  float t = clamp(uReveal * 1.9 - d * 0.14, 0.0, 1.0);
-  float e = 1.0 - pow(1.0 - t, 3.0);
-  P.z -= (1.0 - e) * uPersp * 1.8;
-
-  vec3 V = vec3(P.x, -P.y, P.z - uCamZ);
-  float n = uPersp * 0.05;
-  float f = uPersp * 5.0;
-
-  gl_Position = vec4(
-    uPersp * V.x / uHalfViewport.x,
-    uPersp * V.y / uHalfViewport.y,
-    ((f + n) * V.z + 2.0 * f * n) / (n - f),
-    -V.z
-  );
-
-  vUV    = aUV;
-  vLayer = aLayer;
-  vShade = clamp((1.0 - facing) * 1.5, 0.0, 0.7);
-  vLift  = aLift * e;
-  vEnter = e;
-}
-`;
-
-        const fsGrid = `#version 300 es
-precision highp float;
-precision highp sampler2DArray;
-
-in vec2  vUV;
-in float vLayer;
-in float vShade;
-in float vLift;
-in float vEnter;
-in vec2  vParallax;
-
-uniform sampler2DArray uTex;
-uniform vec2  uMediaPx;
-uniform float uRadius;
-uniform float uDepth;  
-uniform float uZoom;   
-uniform vec2  uDrag;   
-
-out vec4 fragColor;
-
-void main() {
-  vec2 halfSize = uMediaPx * 0.5;
-  vec2 q = abs((vUV - 0.5) * uMediaPx) - (halfSize - uRadius);
-  float d = length(max(q, 0.0)) + min(max(q.x, q.y), 0.0) - uRadius;
-  float cover = 1.0 - smoothstep(-1.0, 1.0, d);
-
-  float lim = (1.0 - uZoom) * 0.5;
-  vec2 off = clamp((vParallax * uDepth + uDrag) / uMediaPx, -lim, lim);
-  vec2 uv = 0.5 + (vUV - 0.5) * uZoom - off;
-
-  vec3 c = texture(uTex, vec3(uv, vLayer)).rgb;
-
-  c *= 1.0 - vShade * 0.55;
-
-  float l = dot(c, vec3(0.299, 0.587, 0.114));
-  c = mix(vec3(l), c, 1.0 - vShade * 0.45);
-
-  fragColor = vec4(c * vEnter, cover);
-}
-`;
-
-        const vsPost = `#version 300 es
-precision highp float;
-
-void main() {
-  vec2 p = vec2((gl_VertexID << 1) & 2, gl_VertexID & 2);
-  gl_Position = vec4(p * 2.0 - 1.0, 0.0, 1.0);
-}
-`;
-
-        const fsPost = `#version 300 es
-precision highp float;
-
-uniform sampler2D uScene;
-uniform vec2  uResolution;
-uniform float uTime;
-
-out vec4 fragColor;
-
-void main() {
-  vec2 uv = gl_FragCoord.xy / uResolution;
-  vec2 c  = uv - 0.5;
-
-  vec3 col = texture(uScene, uv).rgb;
-  col *= smoothstep(1.25, 0.30, length(c) * 1.5);
-
-  float n = fract(sin(dot(gl_FragCoord.xy + fract(uTime) * 91.7, vec2(12.9898, 78.233))) * 43758.5453);
-  col += (n - 0.5) * 0.030;
-
-  fragColor = vec4(col, 1.0);
-}
-`;
-
-        function createShader(gl, type, source) {
-            const s = gl.createShader(type);
-            gl.shaderSource(s, source);
-            gl.compileShader(s);
-            if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) {
-                throw new Error(gl.getShaderInfoLog(s) || 'shader compile failed');
-            }
-            return s;
-        }
-
-        function createProgram(gl, vs, fs) {
-            const p = gl.createProgram();
-            gl.attachShader(p, createShader(gl, gl.VERTEX_SHADER, vs));
-            gl.attachShader(p, createShader(gl, gl.FRAGMENT_SHADER, fs));
-            gl.linkProgram(p);
-            if (!gl.getProgramParameter(p, gl.LINK_STATUS)) {
-                throw new Error(gl.getProgramInfoLog(p) || 'program link failed');
-            }
-            return p;
-        }
-
-        function getUniforms(gl, prog) {
-            const u = {};
-            const count = gl.getProgramParameter(prog, gl.ACTIVE_UNIFORMS);
-            for (let i = 0; i < count; i++) {
-                const name = gl.getActiveUniform(prog, i).name.replace(/\[0\]$/, '');
-                u[name] = gl.getUniformLocation(prog, name);
-            }
-            return u;
-        }
-
-        class SashaStage {
-            constructor(canvas, items) {
-                this.canvas = canvas;
-                this.items = items;
-                const gl = canvas.getContext('webgl2', {
-                    antialias: false,
-                    alpha: false,
-                    depth: false,
-                    powerPreference: 'high-performance'
+        // Toggle do Menu Mobile
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        if (mobileToggle && navLinks) {
+            mobileToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
                 });
-                if (!gl) throw new Error('WebGL2 unavailable');
-                this.gl = gl;
-
-                this.pos = { x: 0, y: 0 };
-                this.target = { x: 0, y: 0 };
-                this.velocity = { x: 0, y: 0 };
-                this.smoothVel = { x: 0, y: 0 };
-                this.pointer = { x: -1e5, y: -1e5 };
-                this.smoothPointer = { x: -1e5, y: -1e5 };
-                this.dragging = false;
-                this.hold = 0;
-                this.pointerId = null;
-                this.revealT = 1;
-                this.revealing = false;
-                this.parallax = 1;
-                this.camZ = 0;
-                this.depthCull = 0.28;
-
-                this.gridProg = createProgram(gl, vsGrid, fsGrid);
-                this.gridU = getUniforms(gl, this.gridProg);
-                this.postProg = createProgram(gl, vsPost, fsPost);
-                this.postU = getUniforms(gl, this.postProg);
-
-                this._buildPatch();
-                this._buildTexture();
-                this._bind();
-                this.measure();
-                this.lastTime = performance.now();
-                this._tick = this._tick.bind(this);
-                requestAnimationFrame(this._tick);
-            }
-
-            _buildPatch() {
-                const gl = this.gl;
-                const verts = [];
-                for (let h = 0; h <= _t; h++) {
-                    for (let d = 0; d <= _t; d++) {
-                        verts.push(d / _t, h / _t);
-                    }
-                }
-                const idxs = [];
-                const r = _t + 1;
-                for (let h = 0; h < _t; h++) {
-                    for (let d = 0; d < _t; d++) {
-                        const n = h * r + d;
-                        idxs.push(n, n + 1, n + r, n + 1, n + r + 1, n + r);
-                    }
-                }
-                this.indexCount = idxs.length;
-                this.vao = gl.createVertexArray();
-                gl.bindVertexArray(this.vao);
-
-                const vBuf = gl.createBuffer();
-                gl.bindBuffer(gl.ARRAY_BUFFER, vBuf);
-                gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(verts), gl.STATIC_DRAW);
-                const aUV = gl.getAttribLocation(this.gridProg, 'aUV');
-                gl.enableVertexAttribArray(aUV);
-                gl.vertexAttribPointer(aUV, 2, gl.FLOAT, false, 0, 0);
-
-                const iBuf = gl.createBuffer();
-                gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, iBuf);
-                gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, new Uint16Array(idxs), gl.STATIC_DRAW);
-
-                this.instBuf = gl.createBuffer();
-                gl.bindBuffer(gl.ARRAY_BUFFER, this.instBuf);
-                const attrs = [['aCell', 2, 0], ['aLayer', 1, 8], ['aLift', 1, 12]];
-                for (const [name, size, offset] of attrs) {
-                    const loc = gl.getAttribLocation(this.gridProg, name);
-                    gl.enableVertexAttribArray(loc);
-                    gl.vertexAttribPointer(loc, size, gl.FLOAT, false, 16, offset);
-                    gl.vertexAttribDivisor(loc, 1);
-                }
-                gl.bindVertexArray(null);
-            }
-
-            _buildTexture() {
-                const gl = this.gl;
-                const count = this.items.length;
-                const levels = Math.floor(Math.log2(TEX_SIZE)) + 1;
-                const tex = gl.createTexture();
-                gl.bindTexture(gl.TEXTURE_2D_ARRAY, tex);
-                gl.texStorage3D(gl.TEXTURE_2D_ARRAY, levels, gl.RGBA8, TEX_SIZE, TEX_SIZE, count);
-                gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, false);
-
-                for (let c = 0; c < count; c++) {
-                    if (this.items[c].canvas) {
-                        gl.texSubImage3D(gl.TEXTURE_2D_ARRAY, 0, 0, 0, c, TEX_SIZE, TEX_SIZE, 1, gl.RGBA, gl.UNSIGNED_BYTE, this.items[c].canvas);
-                    }
-                }
-                gl.generateMipmap(gl.TEXTURE_2D_ARRAY);
-                gl.texParameteri(gl.TEXTURE_2D_ARRAY, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_LINEAR);
-                gl.texParameteri(gl.TEXTURE_2D_ARRAY, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
-                gl.texParameteri(gl.TEXTURE_2D_ARRAY, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
-                gl.texParameteri(gl.TEXTURE_2D_ARRAY, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
-
-                const ext = gl.getExtension('EXT_texture_filter_anisotropic');
-                if (ext) {
-                    gl.texParameterf(gl.TEXTURE_2D_ARRAY, ext.TEXTURE_MAX_ANISOTROPY_EXT, 8);
-                }
-                this.tex = tex;
-            }
-
-            measure() {
-                const w = this.canvas.clientWidth;
-                const h = this.canvas.clientHeight;
-                this.vw = w;
-                this.vh = h;
-                const dpr = Math.min(window.devicePixelRatio || 1, 2);
-                this.dw = Math.round(w * dpr);
-                this.dh = Math.round(h * dpr);
-                this.canvas.width = this.dw;
-                this.canvas.height = this.dh;
-
-                const T = Math.round(clamp(Mo * Math.sqrt(w * h), So, Lo));
-                const pad = Math.round(T * Eo);
-                this.cell = T;
-                this.media = T - pad * 2;
-                this.radius = Math.max(2, T * To);
-
-                const base = Math.max(w, h * 0.72);
-                const A = clamp((base - 420) / 1020, 0, 1);
-                this.R = base * (1.18 + (0.94 - 1.18) * A);
-                this.persp = this.R * (0.85 + (0.65 - 0.85) * A);
-                this.camZ = this.persp;
-
-                const P = this._solveArc(w * 0.62);
-                const O = this._solveArc(h * 0.62);
-                this.cols = Math.min(27, Math.ceil((P / T) * 2) + Ae);
-                this.rows = Math.min(19, Math.ceil((O / T) * 2) + Ae);
-                if (this.cols % 2 === 0) this.cols++;
-                if (this.rows % 2 === 0) this.rows++;
-
-                this.instances = new Float32Array(this.cols * this.rows * 4);
-                this._buildTargets();
-            }
-
-            _solveArc(target) {
-                const { R, persp } = this;
-                const maxAng = Math.acos(clamp(1 - (persp * 0.8) / R, -1, 1));
-                let low = 0, high = maxAng;
-                for (let i = 0; i < 36; i++) {
-                    const mid = (low + high) / 2;
-                    if ((R * Math.sin(mid) * persp) / (persp - R * (1 - Math.cos(mid))) < target) {
-                        low = mid;
-                    } else {
-                        high = mid;
-                    }
-                }
-                return R * low;
-            }
-
-            _buildTargets() {
-                const gl = this.gl;
-                const { dw, dh } = this;
-                if (this.fboMS) {
-                    gl.deleteFramebuffer(this.fboMS);
-                    gl.deleteRenderbuffer(this.rbColor);
-                    gl.deleteRenderbuffer(this.rbDepth);
-                    gl.deleteFramebuffer(this.fboResolve);
-                    gl.deleteTexture(this.texResolve);
-                }
-                this.rbColor = gl.createRenderbuffer();
-                gl.bindRenderbuffer(gl.RENDERBUFFER, this.rbColor);
-                gl.renderbufferStorageMultisample(gl.RENDERBUFFER, 4, gl.RGBA8, dw, dh);
-
-                this.rbDepth = gl.createRenderbuffer();
-                gl.bindRenderbuffer(gl.RENDERBUFFER, this.rbDepth);
-                gl.renderbufferStorageMultisample(gl.RENDERBUFFER, 4, gl.DEPTH_COMPONENT24, dw, dh);
-
-                this.fboMS = gl.createFramebuffer();
-                gl.bindFramebuffer(gl.FRAMEBUFFER, this.fboMS);
-                gl.framebufferRenderbuffer(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.RENDERBUFFER, this.rbColor);
-                gl.framebufferRenderbuffer(gl.FRAMEBUFFER, gl.DEPTH_ATTACHMENT, gl.RENDERBUFFER, this.rbDepth);
-
-                this.texResolve = gl.createTexture();
-                gl.bindTexture(gl.TEXTURE_2D, this.texResolve);
-                gl.texStorage2D(gl.TEXTURE_2D, 1, gl.RGBA8, dw, dh);
-                gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
-                gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
-
-                this.fboResolve = gl.createFramebuffer();
-                gl.bindFramebuffer(gl.FRAMEBUFFER, this.fboResolve);
-                gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, this.texResolve, 0);
-                gl.bindFramebuffer(gl.FRAMEBUFFER, null);
-            }
-
-            _bind() {
-                const canvas = this.canvas;
-                canvas.addEventListener('pointerdown', (e) => {
-                    if (e.button === 0) {
-                        this.dragging = true;
-                        this.pointerId = e.pointerId;
-                        this.last = { x: e.clientX, y: e.clientY };
-                        this.velocity.x = this.velocity.y = 0;
-                        document.body.classList.add('is-dragging');
-                        if (e.pointerType !== 'touch') canvas.setPointerCapture(e.pointerId);
-                    }
-                });
-
-                window.addEventListener('pointermove', (e) => {
-                    this.pointer.x = e.clientX;
-                    this.pointer.y = e.clientY;
-                    if (!this.dragging || e.pointerId !== this.pointerId) return;
-                    const dx = e.clientX - this.last.x;
-                    const dy = e.clientY - this.last.y;
-                    this.last = { x: e.clientX, y: e.clientY };
-                    const c = Math.max(this.camZ, this.persp * 0.02) / this.persp;
-                    this.target.x -= dx * c;
-                    this.target.y -= dy * c;
-                    this.velocity.x = dx * c;
-                    this.velocity.y = dy * c;
-                }, { passive: true });
-
-                const onUp = (e) => {
-                    if (!this.dragging || (e && e.pointerId !== this.pointerId)) return;
-                    this.dragging = false;
-                    document.body.classList.remove('is-dragging');
-                    this.target.x -= this.velocity.x * 14;
-                    this.target.y -= this.velocity.y * 14;
-                    this.velocity.x = 0;
-                    this.velocity.y = 0;
-                };
-                window.addEventListener('pointerup', onUp);
-                window.addEventListener('pointercancel', onUp);
-            }
-
-            get drawR() { return this.R * (1 - xo * this.hold); }
-            get drawCamZ() { return this.camZ * (1 + Ro * this.hold); }
-
-            pick(t, e) {
-                const { cell: o, persp: r, pos: i, media: c } = this;
-                const u = this.drawR, l = this.drawCamZ;
-                const h = this.canvas.getBoundingClientRect();
-                const d = t - h.left - this.vw / 2;
-                const n = e - h.top - this.vh / 2;
-                const f = Math.round(i.x / o);
-                const v = Math.round(i.y / o);
-                const m = (this.cols - 1) / 2;
-                const T = (this.rows - 1) / 2;
-                const w = this.items.length;
-                let _ = null;
-                for (let A = 0; A < this.rows; A++) {
-                    for (let M = 0; M < this.cols; M++) {
-                        const P = f + M - m;
-                        const O = v + A - T;
-                        const U = (P * o - i.x) / u;
-                        const W = (O * o - i.y) / u;
-                        const y = Math.cos(U), S = Math.cos(W);
-                        const G = l - u * (2 - y - S);
-                        if (y * S < 0.45 || G < r * this.depthCull) continue;
-                        const p = r / G;
-                        const g = u * Math.sin(U) * p;
-                        const C = u * Math.sin(W) * p;
-                        const F = c * p / 2;
-                        if (Math.abs(d - g) > F || Math.abs(n - C) > F) continue;
-                        if (!_ || _.scale < p) {
-                            _ = { index: hashCoord(P, O) % w, sx: g, sy: C, size: F * 2, scale: p };
-                        }
-                    }
-                }
-                return _ ? { index: _.index, sx: _.sx + this.vw / 2 + h.left, sy: _.sy + this.vh / 2 + h.top, size: _.size } : null;
-            }
-
-            _pack() {
-                const { cell: t, persp: e, pos: o } = this;
-                const r = this.drawR;
-                const i = this.drawCamZ;
-                const c = Math.round(o.x / t);
-                const u = Math.round(o.y / t);
-                const l = (this.cols - 1) / 2;
-                const h = (this.rows - 1) / 2;
-                const d = this.items.length;
-                const n = this.instances;
-                const f = this.smoothPointer.x - this.vw / 2;
-                const v = this.smoothPointer.y - this.vh / 2;
-                const m = t * 1.5;
-                let count = 0;
-
-                for (let w = 0; w < this.rows; w++) {
-                    for (let _ = 0; _ < this.cols; _++) {
-                        const A = c + _ - l;
-                        const M = u + w - h;
-                        const P = A * t - o.x;
-                        const O = M * t - o.y;
-                        const U = P / r;
-                        const W = O / r;
-                        const y = Math.cos(U);
-                        const S = Math.cos(W);
-                        const G = r * (2 - y - S);
-                        const p = i - G;
-                        if (y * S < 0.45 || p < e * this.depthCull) continue;
-                        const g = e / p;
-                        const C = r * Math.sin(U) * g;
-                        const F = r * Math.sin(W) * g;
-                        const H = t * g;
-                        if (Math.abs(C) > this.vw * 0.5 + H || Math.abs(F) > this.vh * 0.5 + H) continue;
-
-                        let Z = 1 - Math.hypot(C - f, F - v) / m;
-                        Z = Z <= 0 ? 0 : Z * Z * (3 - 2 * Z);
-                        const idx = count * 4;
-                        n[idx] = A;
-                        n[idx + 1] = M;
-                        n[idx + 2] = hashCoord(A, M) % d;
-                        n[idx + 3] = Z;
-                        count++;
-                    }
-                }
-                return count;
-            }
-
-            _draw(time) {
-                const gl = this.gl;
-                const count = this._pack();
-
-                gl.bindBuffer(gl.ARRAY_BUFFER, this.instBuf);
-                gl.bufferData(gl.ARRAY_BUFFER, this.instances, gl.DYNAMIC_DRAW);
-                gl.bindFramebuffer(gl.FRAMEBUFFER, this.fboMS);
-                gl.viewport(0, 0, this.dw, this.dh);
-                gl.clearColor(0, 0, 0, 1);
-                gl.clearDepth(1);
-                gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
-
-                gl.enable(gl.DEPTH_TEST);
-                gl.depthFunc(gl.LEQUAL);
-                gl.enable(gl.SAMPLE_ALPHA_TO_COVERAGE);
-
-                gl.useProgram(this.gridProg);
-                gl.bindVertexArray(this.vao);
-                gl.activeTexture(gl.TEXTURE0);
-                gl.bindTexture(gl.TEXTURE_2D_ARRAY, this.tex);
-
-                const u = this.gridU;
-                gl.uniform1i(u.uTex, 0);
-                gl.uniform2f(u.uOffset, this.pos.x, this.pos.y);
-                gl.uniform2f(u.uCell, this.cell, this.cell);
-                gl.uniform2f(u.uMedia, this.media, this.media);
-                gl.uniform2f(u.uMediaPx, this.media, this.media);
-                gl.uniform1f(u.uRadius, this.radius);
-                gl.uniform1f(u.uZoom, wo);
-                gl.uniform1f(u.uDepth, this.media * Ao * this.parallax);
-                gl.uniform2f(u.uDrag, clamp(this.smoothVel.x * we, -this.media * 0.04, this.media * 0.04), clamp(this.smoothVel.y * we, -this.media * 0.04, this.media * 0.04));
-                gl.uniform1f(u.uR, this.drawR);
-                gl.uniform1f(u.uPersp, this.persp);
-                gl.uniform1f(u.uCamZ, this.drawCamZ);
-                gl.uniform2f(u.uHalfViewport, this.vw / 2, this.vh / 2);
-                gl.uniform1f(u.uReveal, this.revealT);
-
-                gl.drawElementsInstanced(gl.TRIANGLES, this.indexCount, gl.UNSIGNED_SHORT, 0, count);
-
-                gl.disable(gl.SAMPLE_ALPHA_TO_COVERAGE);
-                gl.bindVertexArray(null);
-                gl.disable(gl.DEPTH_TEST);
-
-                gl.bindFramebuffer(gl.READ_FRAMEBUFFER, this.fboMS);
-                gl.bindFramebuffer(gl.DRAW_FRAMEBUFFER, this.fboResolve);
-                gl.blitFramebuffer(0, 0, this.dw, this.dh, 0, 0, this.dw, this.dh, gl.COLOR_BUFFER_BIT, gl.LINEAR);
-
-                gl.bindFramebuffer(gl.FRAMEBUFFER, null);
-                gl.viewport(0, 0, this.dw, this.dh);
-                gl.useProgram(this.postProg);
-                gl.activeTexture(gl.TEXTURE0);
-                gl.bindTexture(gl.TEXTURE_2D, this.texResolve);
-                gl.uniform1i(this.postU.uScene, 0);
-                gl.uniform2f(this.postU.uResolution, this.dw, this.dh);
-                gl.uniform1f(this.postU.uTime, time * 0.001);
-                gl.drawArrays(gl.TRIANGLES, 0, 3);
-            }
-
-            _tick(time) {
-                const delta = Math.min(64, time - this.lastTime);
-                this.lastTime = time;
-                requestAnimationFrame(this._tick);
-
-                this.hold += ((this.dragging ? 1 : 0) - this.hold) * (1 - Math.pow(1 - bo, delta / 16.667));
-                const ease = this.dragging ? 0.26 : 0.075;
-                const r = 1 - Math.pow(1 - ease, delta / 16.667);
-
-                this.pos.x += (this.target.x - this.pos.x) * r;
-                this.pos.y += (this.target.y - this.pos.y) * r;
-
-                this.smoothPointer.x += (this.pointer.x - this.smoothPointer.x) * 0.15;
-                this.smoothPointer.y += (this.pointer.y - this.smoothPointer.y) * 0.15;
-
-                if (!this.dragging) {
-                    this.target.x += 0.22;
-                    this.target.y += 0.08;
-                }
-
-                this._draw(time);
-            }
+            });
         }
 
-        // Initialize WebGL Stage on Page Load
-        window.addEventListener('DOMContentLoaded', async () => {
-            const canvas = document.getElementById('stageGl');
-            const activeModelTitle = document.getElementById('activeModelTitle');
-            if (!canvas) return;
+        // Filtro de Categorias no Showroom
+        function filterTemplates(category, btn) {
+            document.querySelectorAll('.cat_tab_btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
 
-            const items = [];
-
-            // Helper to draw luxury framed tile
-            async function buildTileCanvas(cardData) {
-                const c = document.createElement('canvas');
-                c.width = TEX_SIZE;
-                c.height = TEX_SIZE;
-                const ctx = c.getContext('2d');
-
-                // Background
-                ctx.fillStyle = cardData.bg;
-                ctx.fillRect(0, 0, TEX_SIZE, TEX_SIZE);
-
-                // Inner Website Mockup
-                try {
-                    const img = new Image();
-                    img.src = cardData.img;
-                    await new Promise((res) => {
-                        img.onload = res;
-                        img.onerror = res;
-                    });
-
-                    if (img.width > 0) {
-                        const pad = 24;
-                        const innerW = TEX_SIZE - pad * 2;
-                        const innerH = TEX_SIZE - pad * 2 - 48;
-
-                        ctx.save();
-                        ctx.beginPath();
-                        ctx.roundRect(pad, pad, innerW, innerH, 16);
-                        ctx.clip();
-                        ctx.drawImage(img, 0, 0, img.width, img.height, pad, pad, innerW, innerH);
-                        ctx.restore();
-
-                        ctx.strokeStyle = 'rgba(255, 255, 255, 0.12)';
-                        ctx.lineWidth = 2;
-                        ctx.beginPath();
-                        ctx.roundRect(pad, pad, innerW, innerH, 16);
-                        ctx.stroke();
-                    }
-                } catch(e) {}
-
-                // Footer Text
-                ctx.fillStyle = '#FFFFFF';
-                ctx.font = '600 20px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
-                ctx.fillText(cardData.title, 26, TEX_SIZE - 24);
-
-                ctx.fillStyle = 'rgba(255, 255, 255, 0.55)';
-                ctx.font = '500 15px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
-                ctx.textAlign = 'right';
-                ctx.fillText(cardData.niche.toUpperCase(), TEX_SIZE - 26, TEX_SIZE - 24);
-
-                return c;
-            }
-
-            for (const tpl of templates) {
-                const c = await buildTileCanvas(tpl);
-                items.push({ canvas: c, data: tpl });
-            }
-
-            try {
-                window.sasha = new SashaStage(canvas, items);
-                
-                // Click & Hover Events on Canvas
-                let pointerDownPos = null;
-                canvas.addEventListener('pointerdown', (e) => {
-                    pointerDownPos = { x: e.clientX, y: e.clientY, time: performance.now() };
-                });
-
-                canvas.addEventListener('pointerup', (e) => {
-                    if (!pointerDownPos) return;
-                    const dx = Math.abs(e.clientX - pointerDownPos.x);
-                    const dy = Math.abs(e.clientY - pointerDownPos.y);
-                    const dt = performance.now() - pointerDownPos.time;
-                    if (dx < 8 && dy < 8 && dt < 400) {
-                        const hit = window.sasha?.pick(e.clientX, e.clientY);
-                        if (hit && templates[hit.index]) {
-                            const tpl = templates[hit.index];
-                            openPreview(tpl.url, tpl.domain, tpl.title);
-                        }
-                    }
-                });
-
-                canvas.addEventListener('pointermove', (e) => {
-                    const hit = window.sasha?.pick(e.clientX, e.clientY);
-                    if (hit && templates[hit.index]) {
-                        canvas.style.cursor = 'pointer';
-                        const tpl = templates[hit.index];
-                        if (activeModelTitle) {
-                            activeModelTitle.textContent = `${tpl.title.toUpperCase()} • ${tpl.niche.toUpperCase()}`;
-                            activeModelTitle.style.color = '#FFFFFF';
-                        }
-                    } else {
-                        canvas.style.cursor = window.sasha?.dragging ? 'grabbing' : 'grab';
-                        if (activeModelTitle) {
-                            activeModelTitle.textContent = 'MODELOS DEMONSTRATIVOS REAIS';
-                            activeModelTitle.style.color = 'var(--color-muted)';
-                        }
-                    }
-                });
-
-                window.addEventListener('resize', () => {
-                    window.sasha?.measure();
-                    updateModalIframeScale();
-                });
-            } catch (err) {
-                console.error('WebGL 2 failed:', err);
-            }
-        });
-
-
-        // Preview Modal Logic (With Desktop/Mobile toggle)
-        let currentModalMode = 'desktop';
-
-        function updateModalIframeScale() {
-            const scaler = document.getElementById('modalIframeScaler');
-            const parent = scaler?.parentElement;
-            if (scaler && parent && parent.offsetWidth > 0) {
-                const baseWidth = (currentModalMode === 'mobile') ? 375 : 1366;
-                const scale = parent.offsetWidth / baseWidth;
-                scaler.style.transform = `scale(${scale})`;
-            }
+            const cards = document.querySelectorAll('.tmpl_card');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
         }
 
-        function setModalDevice(mode) {
-            currentModalMode = mode;
-            const modalWindow = document.getElementById('previewModalWindow');
-            const btnDesk = document.getElementById('btnDeskView');
-            const btnMob = document.getElementById('btnMobView');
+        // Modal de Preview Interativo
+        const previewModal = document.getElementById('previewModal');
+        const previewIframe = document.getElementById('previewIframe');
+        const previewModalTitle = document.getElementById('previewModalTitle');
+        const previewFrameWrapper = document.getElementById('previewFrameWrapper');
+        const btnViewDesktop = document.getElementById('btnViewDesktop');
+        const btnViewMobile = document.getElementById('btnViewMobile');
 
-            if (mode === 'mobile') {
-                modalWindow.classList.add('is-mobile-view');
-                btnMob.classList.add('active');
-                btnDesk.classList.remove('active');
-            } else {
-                modalWindow.classList.remove('is-mobile-view');
-                btnDesk.classList.add('active');
-                btnMob.classList.remove('active');
-            }
-
-            setTimeout(updateModalIframeScale, 30);
-        }
-
-        function openPreview(url, domain, title) {
-            const modal = document.getElementById('previewModal');
-            const iframe = document.getElementById('modalIframe');
-            const address = document.getElementById('modalAddressText');
-            const waBtn = document.getElementById('modalWaBtn');
-
-            if (address) address.textContent = `🔒 ${domain}`;
-            if (iframe) iframe.src = url;
-            if (waBtn) waBtn.href = `https://wa.me/559192432044?text=Ol%C3%A1%21%20Gostei%20do%20modelo%20${encodeURIComponent(title)}%20e%20gostaria%20de%20um%20site%20para%20minha%20empresa.`;
-
-            setModalDevice('desktop');
-            if (modal) modal.classList.add('active');
-            setTimeout(updateModalIframeScale, 50);
+        function openPreviewModal(url, title) {
+            if (!previewModal) return;
+            previewModalTitle.innerText = title;
+            previewIframe.src = url;
+            previewModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            setPreviewDevice('desktop');
         }
 
         function closePreviewModal() {
-            const modal = document.getElementById('previewModal');
-            const iframe = document.getElementById('modalIframe');
-            if (modal) modal.classList.remove('active');
-            if (iframe) iframe.src = 'about:blank';
+            if (!previewModal) return;
+            previewModal.classList.remove('active');
+            previewIframe.src = '';
+            document.body.style.overflow = '';
         }
 
-        function closePreviewModalOutside(e) {
-            if (e.target.id === 'previewModal') closePreviewModal();
+        function setPreviewDevice(device) {
+            if (device === 'mobile') {
+                previewFrameWrapper.classList.remove('view_desktop');
+                previewFrameWrapper.classList.add('view_mobile');
+                btnViewMobile.classList.add('active');
+                btnViewDesktop.classList.remove('active');
+            } else {
+                previewFrameWrapper.classList.remove('view_mobile');
+                previewFrameWrapper.classList.add('view_desktop');
+                btnViewDesktop.classList.add('active');
+                btnViewMobile.classList.remove('active');
+            }
         }
 
-        window.addEventListener('resize', updateModalIframeScale);
+        // Fechar modal ao clicar fora ou pressionar ESC
+        window.addEventListener('click', (e) => {
+            if (e.target === previewModal) {
+                closePreviewModal();
+            }
+        });
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && previewModal.classList.contains('active')) {
+                closePreviewModal();
+            }
+        });
     </script>
 </body>
 </html>
