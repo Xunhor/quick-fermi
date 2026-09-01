@@ -1,37 +1,46 @@
 /* ==========================================================================
-   BOOMO — DESIGN SYSTEM CLONE SQUARESPACE (pt.squarespace.com)
-   Estética: 100% Escuro Cinematográfico, Full-Bleed 100vw, Monumental
+   BOOMO — DESIGN SYSTEM CLONE EXATO DO SQUARESPACE (pt.squarespace.com)
+   Ritmo Oficial:
+   1. Hero Escuro com Foto Botânica Bronze + Carrossel Full-Bleed 100vw + Stats
+   2. Fundo Branco: Amplie seus Negócios (Banner Travertino com Mockup & Badges)
+   3. Fundo Branco: Tudo em Uma só Plataforma (4 Pôsteres Escuros Verticais)
+   4. Transição Gradiente Quente para Preto: O Método em 2 Grandes Blocos
+   5. Fundo Preto: Busca de Domínio + Avatares de Clientes
+   6. Fundo Preto: Planos & Preços (Cards Escuros de Luxo)
+   7. Fundo Preto: FAQ em Linhas Minimalistas com [+]
+   8. Fundo Preto: CTA com a Esfera de Partículas Cósmica
+   9. Fundo Preto: Rodapé Institucional em 4 Colunas
    ========================================================================== */
 
 :root {
     --sq-black: #000000;
-    --sq-dark: #060709;
-    --sq-surface: #0E1015;
-    --sq-surface-elevated: #14171E;
-    --sq-card: #111319;
-    --sq-card-border: rgba(255, 255, 255, 0.12);
-    --sq-card-border-hover: rgba(255, 255, 255, 0.35);
+    --sq-dark: #08090C;
+    --sq-white: #FFFFFF;
+    --sq-offwhite: #F9F9FB;
+    --sq-gray-light: #EEEEF2;
+    --sq-border-light: rgba(0, 0, 0, 0.08);
 
-    --sq-text-primary: #FFFFFF;
-    --sq-text-secondary: #A0A3AB;
-    --sq-text-tertiary: #6E717B;
+    --sq-card-dark: #101218;
+    --sq-card-dark-border: rgba(255, 255, 255, 0.12);
 
-    --sq-accent-gold: #C5A880;
+    --sq-text-dark-primary: #FFFFFF;
+    --sq-text-dark-secondary: #9DA1AA;
+
+    --sq-text-light-primary: #000000;
+    --sq-text-light-secondary: #555761;
+
     --sq-accent-emerald: #10B981;
-    --sq-accent-cyan: #38BDF8;
+    --sq-accent-gold: #C5A880;
 
     --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-serif: 'Playfair Display', Georgia, serif;
-
-    --shadow-poster: 0 20px 50px rgba(0, 0, 0, 0.6);
-    --shadow-glow: 0 0 80px rgba(255, 255, 255, 0.05);
 
     --radius-sm: 4px;
     --radius-md: 8px;
     --radius-lg: 16px;
     --radius-full: 999px;
 
-    --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 *, *::before, *::after {
@@ -42,9 +51,9 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 80px;
+    scroll-padding-top: 74px;
     background-color: var(--sq-black);
-    color: var(--sq-text-primary);
+    color: var(--sq-text-dark-primary);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -54,24 +63,22 @@ body {
     font-size: 16px;
     line-height: 1.6;
     background-color: var(--sq-black);
-    color: var(--sq-text-primary);
+    color: var(--sq-text-dark-primary);
     overflow-x: hidden;
 }
 
-/* Container Padrão */
 .container {
     width: 100%;
     max-width: 1320px;
     margin: 0 auto;
-    padding: 0 36px;
+    padding: 0 32px;
 }
 
-/* Tipografia */
 h1, h2, h3, h4 {
     font-family: var(--font-sans);
     font-weight: 700;
-    letter-spacing: -0.03em;
-    line-height: 1.12;
+    letter-spacing: -0.035em;
+    line-height: 1.1;
 }
 
 em {
@@ -83,11 +90,11 @@ em {
 a {
     color: inherit;
     text-decoration: none;
-    transition: var(--transition-smooth);
+    transition: var(--transition);
 }
 
 /* ==========================================================================
-   1. NAVBAR (SQUARESPACE EXACT REPLICA)
+   1. NAVBAR FIXA TRANSLÚCIDA
    ========================================================================== */
 .sq_navbar {
     position: fixed;
@@ -114,9 +121,6 @@ a {
     font-weight: 800;
     letter-spacing: -0.04em;
     color: #FFFFFF;
-    display: flex;
-    align-items: center;
-    gap: 2px;
 }
 
 .nav_brand span {
@@ -135,9 +139,6 @@ a {
     text-transform: uppercase;
     letter-spacing: 0.12em;
     color: rgba(255, 255, 255, 0.75);
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
 }
 
 .nav_item:hover {
@@ -176,7 +177,7 @@ a {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: var(--transition-smooth);
+    transition: var(--transition);
     border: none;
 }
 
@@ -203,52 +204,55 @@ a {
     width: 22px;
     height: 2px;
     background: #FFFFFF;
-    transition: var(--transition-smooth);
 }
 
 /* ==========================================================================
-   2. HERO CINEMATOGRÁFICO COM FOTO ARTÍSTICA E CARROSSEL FULL-BLEED
+   2. HERO COM FUNDO FOTOGRÁFICO BRONZE & CARROSSEL FULL-BLEED 100VW
    ========================================================================== */
 .sq_hero_cinema {
     position: relative;
     padding-top: 130px;
-    padding-bottom: 60px;
+    padding-bottom: 50px;
     background-color: #000000;
     background-image: 
-        radial-gradient(ellipse at 50% 10%, rgba(197, 168, 128, 0.12) 0%, rgba(0, 0, 0, 0.95) 60%),
-        radial-gradient(circle at 80% 30%, rgba(16, 185, 129, 0.06) 0%, transparent 40%);
+        linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.8) 50%, #000000 100%),
+        url('../../assets/images/sqsp-hero-bg.jpg');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
     overflow: hidden;
     text-align: center;
 }
 
 .hero_header_block {
     max-width: 960px;
-    margin: 0 auto 48px;
+    margin: 0 auto 40px;
     padding: 0 24px;
     position: relative;
     z-index: 2;
 }
 
 .hero_cinema_title {
-    font-size: clamp(40px, 6.2vw, 76px);
+    font-size: clamp(42px, 6.4vw, 78px);
     font-weight: 800;
-    line-height: 1.05;
+    line-height: 1.04;
     letter-spacing: -0.04em;
     color: #FFFFFF;
     margin-bottom: 24px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 
 .hero_cinema_title em {
-    color: #F3EFEA;
-    font-weight: 400;
+    color: #F6EDE2;
 }
 
 .hero_cinema_desc {
     font-size: clamp(16px, 1.8vw, 20px);
-    color: var(--sq-text-secondary);
+    color: rgba(255, 255, 255, 0.85);
     line-height: 1.6;
     max-width: 680px;
     margin: 0 auto 36px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
 }
 
 .hero_cta_box {
@@ -271,8 +275,8 @@ a {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.16);
-    transition: var(--transition-smooth);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    transition: var(--transition);
 }
 
 .btn_cinema_primary:hover {
@@ -283,20 +287,20 @@ a {
 
 .hero_badge_guarantee {
     font-size: 13px;
-    color: var(--sq-text-secondary);
+    color: rgba(255, 255, 255, 0.75);
 }
 
-/* CARROSSEL MONUMENTAL DE BORDA A BORDA (100VW - IGUAL SQUARESPACE) */
+/* CARROSSEL MONUMENTAL DE BORDA A BORDA (100VW - IDENTICO AO SQUARESPACE) */
 .hero_fullbleed_showcase {
     position: relative;
     width: 100vw;
     margin-left: calc(-50vw + 50%);
-    margin-top: 50px;
+    margin-top: 40px;
     overflow-x: auto;
     overflow-y: hidden;
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
-    padding: 20px 0 50px;
+    padding: 20px 0 40px;
 }
 
 .hero_fullbleed_showcase::-webkit-scrollbar {
@@ -305,38 +309,36 @@ a {
 
 .showcase_track {
     display: flex;
-    gap: 32px;
+    gap: 28px;
     width: max-content;
-    padding: 0 max(32px, calc(50vw - 480px));
+    padding: 0 max(24px, calc(50vw - 440px));
     align-items: center;
 }
 
-/* Card Monumental do Carrossel */
 .carousel_item {
     flex-shrink: 0;
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-sm);
     overflow: hidden;
     background: #090B0E;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 30px 80px rgba(0, 0, 0, 0.85);
     cursor: pointer;
-    transition: var(--transition-smooth);
-    position: relative;
+    transition: var(--transition);
 }
 
 .carousel_item:hover {
     border-color: rgba(255, 255, 255, 0.4);
-    transform: translateY(-6px);
+    transform: translateY(-4px);
 }
 
 .carousel_item.center_monumental {
     width: min(840px, 86vw);
-    border-color: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.35);
 }
 
 .carousel_item.side_peek {
-    width: min(580px, 65vw);
-    opacity: 0.65;
+    width: min(560px, 65vw);
+    opacity: 0.7;
 }
 
 .carousel_item.side_peek:hover {
@@ -364,7 +366,7 @@ a {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.14em;
-    color: var(--sq-text-secondary);
+    color: var(--sq-text-dark-secondary);
 }
 
 .carousel_item_footer strong {
@@ -376,19 +378,16 @@ a {
     gap: 6px;
 }
 
-/* ==========================================================================
-   3. FAIXA DE ESTATÍSTICAS E CREDIBILIDADE (SQUARESPACE 14 MI+)
-   ========================================================================== */
+/* FAIXA DE ESTATÍSTICAS NO FUNDO PRETO */
 .sq_stats_section {
     background: #000000;
-    padding: 60px 0 80px;
+    padding: 50px 0 80px;
     text-align: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .stats_tagline {
-    font-size: 14.5px;
-    color: var(--sq-text-secondary);
+    font-size: 14px;
+    color: var(--sq-text-dark-secondary);
     margin-bottom: 36px;
     letter-spacing: 0.02em;
 }
@@ -407,246 +406,223 @@ a {
     letter-spacing: -0.04em;
     line-height: 1;
     color: #FFFFFF;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .stat_block_label {
     font-size: 13px;
-    color: var(--sq-text-secondary);
+    color: var(--sq-text-dark-secondary);
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
 
 /* ==========================================================================
-   4. VITRINE DE SEGMENTOS "AMPLIE SEUS NEGÓCIOS" (ESCURA & SOFISTICADA)
+   3. SEÇÃO "AMPLIE SEUS NEGÓCIOS" (FUNDO BRANCO PURO - IGUAL SQUARESPACE)
    ========================================================================== */
-.sq_section_showcase {
-    background: #060709;
+.sq_section_white {
+    background-color: var(--sq-white);
+    color: var(--sq-text-light-primary);
     padding: 120px 0;
-    position: relative;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.showcase_title_center {
+.white_title_center {
     text-align: center;
     max-width: 780px;
-    margin: 0 auto 40px;
+    margin: 0 auto 36px;
 }
 
-.showcase_title_center h2 {
-    font-size: clamp(34px, 4.2vw, 52px);
-    margin-bottom: 16px;
-    color: #FFFFFF;
+.white_title_center h2 {
+    font-size: clamp(34px, 4.4vw, 52px);
+    color: #000000;
+    margin-bottom: 14px;
 }
 
-.showcase_title_center p {
+.white_title_center p {
     font-size: 18px;
-    color: var(--sq-text-secondary);
+    color: var(--sq-text-light-secondary);
 }
 
-/* Pílulas de Navegação (Estilo Squarespace) */
-.sq_filter_pills {
+/* Pílulas em Fundo Branco */
+.sq_pills_white_bar {
     display: flex;
     justify-content: center;
-    gap: 12px;
+    gap: 10px;
     flex-wrap: wrap;
-    margin-bottom: 50px;
+    margin-bottom: 48px;
 }
 
-.filter_pill {
-    background: #12141A;
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    color: var(--sq-text-secondary);
+.pill_white {
+    background: #F3F4F6;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    color: #4B5563;
     font-family: var(--font-sans);
     font-size: 13.5px;
     font-weight: 600;
     padding: 10px 22px;
     border-radius: var(--radius-full);
     cursor: pointer;
-    transition: var(--transition-smooth);
+    transition: var(--transition);
 }
 
-.filter_pill:hover {
-    background: #1B1F27;
-    color: #FFFFFF;
-    border-color: rgba(255, 255, 255, 0.3);
-}
-
-.filter_pill.active {
-    background: #FFFFFF;
+.pill_white:hover {
+    background: #E5E7EB;
     color: #000000;
-    border-color: #FFFFFF;
+}
+
+.pill_white.active {
+    background: #000000;
+    color: #FFFFFF;
     font-weight: 700;
 }
 
-/* Stage Grande de Modelo com Floating Elements */
-.showcase_ambient_stage {
-    background: radial-gradient(circle at 50% 40%, #171B24 0%, #080A0E 75%);
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    border-radius: var(--radius-lg);
-    padding: 60px 48px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.9);
-}
-
-.showcase_stage_grid {
-    display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 48px;
-    align-items: center;
-}
-
-.stage_media_frame {
+/* Banner de Luxo Travertino com Mockup e Floating Badges */
+.showcase_banner_travertine {
     position: relative;
     border-radius: var(--radius-md);
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: var(--shadow-poster);
-    background: #000000;
+    background-image: 
+        linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.4) 100%),
+        url('../../assets/images/sqsp-showcase-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
 }
 
-.stage_media_frame img {
+.browser_window_mockup {
+    position: relative;
+    width: min(720px, 90vw);
+    background: #FFFFFF;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.browser_header_bar {
+    background: #F3F4F6;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.browser_dots {
+    display: flex;
+    gap: 5px;
+}
+
+.browser_dots span {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #D1D5DB;
+}
+
+.browser_url {
+    background: #FFFFFF;
+    padding: 3px 12px;
+    border-radius: 4px;
+    font-size: 11px;
+    color: #6B7280;
+    margin-left: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.browser_screen img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-/* Floating UI Badges sobre a foto */
-.floating_ui_pill {
+/* Floating Badges sobre o Mockup Travertino */
+.badge_float_corner {
     position: absolute;
-    bottom: 24px;
-    left: 24px;
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 10px 18px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: var(--radius-full);
+    padding: 10px 18px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     font-size: 13px;
-    font-weight: 600;
-    color: #FFFFFF;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
-}
-
-.floating_ui_pill i {
-    color: var(--sq-accent-emerald);
-}
-
-.stage_text_info {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.stage_tag {
-    font-size: 12px;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
+    color: #000000;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    z-index: 3;
+}
+
+.badge_float_corner.left_top {
+    top: 40px;
+    left: 40px;
+}
+
+.badge_float_corner.right_bottom {
+    bottom: 40px;
+    right: 40px;
+}
+
+.badge_float_corner i {
     color: var(--sq-accent-emerald);
-}
-
-.stage_heading {
-    font-size: clamp(28px, 3.2vw, 42px);
-    color: #FFFFFF;
-    line-height: 1.15;
-}
-
-.stage_desc {
-    font-size: 16px;
-    color: var(--sq-text-secondary);
-    line-height: 1.7;
-}
-
-.stage_feature_list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.stage_feature_list li {
-    font-size: 14.5px;
-    color: #E2E8F0;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.stage_feature_list li i {
-    color: var(--sq-accent-emerald);
-}
-
-.stage_btn_row {
-    display: flex;
-    gap: 16px;
-    margin-top: 10px;
-    flex-wrap: wrap;
 }
 
 /* ==========================================================================
-   5. PÔSTERES EDITORIAIS (SQUARESPACE "TUDO EM UMA SÓ PLATAFORMA")
+   4. "TUDO O QUE VOCÊ PRECISA EM UMA SÓ PLATAFORMA" (4 PÔSTERES ESCUROS)
    ========================================================================== */
-.sq_section_posters {
-    background: #000000;
-    padding: 140px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
 .posters_header_split {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.1fr 0.9fr;
     gap: 60px;
     align-items: flex-end;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
 .posters_header_split h2 {
-    font-size: clamp(32px, 4vw, 50px);
-    color: #FFFFFF;
+    font-size: clamp(32px, 4vw, 48px);
+    color: #000000;
     line-height: 1.12;
 }
 
 .posters_header_split p {
     font-size: 17px;
-    color: var(--sq-text-secondary);
+    color: var(--sq-text-light-secondary);
     line-height: 1.7;
 }
 
-/* 4 Pôsteres Verticais de Alto Impacto */
 .posters_grid_4 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+    gap: 20px;
 }
 
-.sq_poster_card {
-    background: #0F1218;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: var(--radius-md);
+.sq_dark_poster {
+    background: #111319;
+    border-radius: var(--radius-sm);
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     min-height: 440px;
-    transition: var(--transition-smooth);
-    position: relative;
+    transition: var(--transition);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
-.sq_poster_card:hover {
-    border-color: rgba(255, 255, 255, 0.35);
+.sq_dark_poster:hover {
     transform: translateY(-6px);
-    box-shadow: var(--shadow-poster);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
 }
 
-.poster_text_top {
+.poster_top_content {
     padding: 28px 24px 16px;
 }
 
-.poster_title {
+.poster_h4 {
     font-size: 20px;
     font-weight: 700;
     color: #FFFFFF;
@@ -654,62 +630,56 @@ a {
     line-height: 1.25;
 }
 
-.poster_desc {
+.poster_p {
     font-size: 13.5px;
-    color: var(--sq-text-secondary);
+    color: #9CA3AF;
     line-height: 1.6;
 }
 
-/* Área Visual Inferior do Pôster */
-.poster_art_bottom {
+.poster_bottom_art {
     margin-top: auto;
     padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
 }
 
-.poster_mockup_graphic {
-    width: 100%;
-    background: #171B24;
+.poster_ui_box {
+    background: #1A1E27;
     border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: var(--radius-sm);
+    border-radius: 4px;
     padding: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 /* ==========================================================================
-   6. SEÇÃO MÉTODO / CRIAÇÃO (SQUARESPACE "NUNCA FOI TÃO FÁCIL COMEÇAR")
+   5. TRANSIÇÃO GRADIENTE & "O MÉTODO BOOMO" EM 2 GRANDES CARDS
    ========================================================================== */
-.sq_section_method {
-    background: radial-gradient(circle at 50% 50%, #151923 0%, #050608 70%);
-    padding: 140px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+.sq_section_method_gradient {
+    background: linear-gradient(180deg, #FFFFFF 0%, #F5EFEB 35%, #08090C 85%, #000000 100%);
+    padding: 120px 0 140px;
 }
 
 .method_cards_duo {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 36px;
+    gap: 32px;
     margin-top: 50px;
 }
 
-.method_card_big {
+.method_big_card {
     background: #090B0F;
     border: 1px solid rgba(255, 255, 255, 0.14);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-md);
     padding: 48px 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     min-height: 380px;
-    transition: var(--transition-smooth);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+    transition: var(--transition);
     position: relative;
     overflow: hidden;
 }
 
-.method_card_big::before {
+.method_big_card::before {
     content: "";
     position: absolute;
     top: 0;
@@ -719,12 +689,12 @@ a {
     background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0.1) 100%);
 }
 
-.method_card_big:hover {
-    border-color: rgba(255, 255, 255, 0.4);
+.method_big_card:hover {
+    border-color: rgba(255, 255, 255, 0.35);
     transform: translateY(-4px);
 }
 
-.method_step_tag {
+.method_tag {
     font-size: 11.5px;
     font-weight: 800;
     text-transform: uppercase;
@@ -742,7 +712,7 @@ a {
 
 .method_desc {
     font-size: 15px;
-    color: var(--sq-text-secondary);
+    color: var(--sq-text-dark-secondary);
     line-height: 1.7;
 }
 
@@ -751,7 +721,7 @@ a {
 }
 
 /* ==========================================================================
-   7. SEÇÃO DOMÍNIO & COMPARATIVO (SQUARESPACE ENCONTRE O DOMÍNIO)
+   6. BUSCA DE DOMÍNIO NO PRETO (SQUARESPACE DOMAINS)
    ========================================================================== */
 .sq_section_domain {
     background: #000000;
@@ -782,7 +752,7 @@ a {
 }
 
 .domain_input::placeholder {
-    color: var(--sq-text-tertiary);
+    color: #6B7280;
 }
 
 .domain_badge_btn {
@@ -800,14 +770,14 @@ a {
 
 .domain_subtext {
     font-size: 13.5px;
-    color: var(--sq-text-secondary);
+    color: var(--sq-text-dark-secondary);
 }
 
 /* ==========================================================================
-   8. TABELA DE PLANOS & PREÇOS (MINIMALISMO ESCURO REFINADO)
+   7. PLANOS & PREÇOS (CARDS ESCUROS DE LUXO)
    ========================================================================== */
 .sq_section_pricing_dark {
-    background: #060709;
+    background: #000000;
     padding: 140px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -820,14 +790,14 @@ a {
 }
 
 .plan_box_dark {
-    background: #0D1015;
+    background: #0C0E13;
     border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-sm);
     padding: 44px 34px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: var(--transition-smooth);
+    transition: var(--transition);
     position: relative;
 }
 
@@ -837,9 +807,9 @@ a {
 }
 
 .plan_box_dark.highlight_plan {
-    background: #121620;
+    background: #11141D;
     border: 2px solid #FFFFFF;
-    box-shadow: var(--shadow-poster);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
 }
 
 .plan_pill_badge {
@@ -866,7 +836,7 @@ a {
 
 .plan_sub {
     font-size: 13.5px;
-    color: var(--sq-text-secondary);
+    color: var(--sq-text-dark-secondary);
     line-height: 1.5;
     margin-bottom: 24px;
 }
@@ -889,12 +859,12 @@ a {
 .price_big span {
     font-size: 15px;
     font-weight: 400;
-    color: var(--sq-text-secondary);
+    color: var(--sq-text-dark-secondary);
 }
 
 .price_setup_info {
     font-size: 12.5px;
-    color: var(--sq-text-secondary);
+    color: var(--sq-text-dark-secondary);
 }
 
 .price_setup_info strong {
@@ -924,7 +894,7 @@ a {
 }
 
 /* ==========================================================================
-   9. FAQ MINIMALISTA EM LINHAS FINAS (IGUAL SQUARESPACE)
+   8. FAQ EM LINHAS MINIMALISTAS NO PRETO (SQUARESPACE FAQ LINES)
    ========================================================================== */
 .sq_section_faq_lines {
     background: #000000;
@@ -943,7 +913,7 @@ a {
     border-top: 1px solid rgba(255, 255, 255, 0.12);
     padding: 28px 0;
     cursor: pointer;
-    transition: var(--transition-smooth);
+    transition: var(--transition);
 }
 
 .faq_row_item:last-child {
@@ -965,8 +935,8 @@ a {
 }
 
 .faq_row_icon {
-    font-size: 16px;
-    color: var(--sq-text-secondary);
+    font-size: 18px;
+    color: var(--sq-text-dark-secondary);
     transition: transform 0.25s ease;
 }
 
@@ -978,12 +948,12 @@ a {
 .faq_row_answer {
     padding-top: 16px;
     font-size: 15px;
-    color: var(--sq-text-secondary);
+    color: var(--sq-text-dark-secondary);
     line-height: 1.7;
 }
 
 /* ==========================================================================
-   10. CTA MONUMENTAL COM A ESFERA DE PARTÍCULAS (SPHERE OF LIGHTS)
+   9. CTA COM A ESFERA DE PARTÍCULAS CÓSMICA (SPHERE OF LIGHTS)
    ========================================================================== */
 .sq_section_sphere_cta {
     position: relative;
@@ -993,7 +963,6 @@ a {
     overflow: hidden;
 }
 
-/* Esfera pontilhada idêntica ao Squarespace */
 .particle_sphere_bg {
     position: absolute;
     top: 50%;
@@ -1005,7 +974,7 @@ a {
     background: 
         radial-gradient(circle at center, rgba(255, 255, 255, 0.08) 0%, transparent 65%),
         repeating-radial-gradient(circle at center, rgba(255, 255, 255, 0.25) 0, rgba(255, 255, 255, 0.25) 1.5px, transparent 1.5px, transparent 18px);
-    opacity: 0.5;
+    opacity: 0.55;
     pointer-events: none;
     animation: sphereRotate 60s linear infinite;
 }
@@ -1031,19 +1000,19 @@ a {
 
 .sphere_cta_sub {
     font-size: 17px;
-    color: var(--sq-text-secondary);
+    color: var(--sq-text-dark-secondary);
     margin-bottom: 36px;
 }
 
 /* ==========================================================================
-   11. RODAPÉ INSTITUCIONAL (SQUARESPACE BOTTOM FOOTER)
+   10. RODAPÉ INSTITUCIONAL NO PRETO ABSOLUTO
    ========================================================================== */
 .sq_footer_cinema {
     background: #000000;
     padding: 90px 0 50px;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     font-size: 13px;
-    color: var(--sq-text-tertiary);
+    color: #6B7280;
 }
 
 .footer_cinema_grid {
@@ -1060,7 +1029,7 @@ a {
 }
 
 .footer_cinema_desc {
-    color: var(--sq-text-secondary);
+    color: var(--sq-text-dark-secondary);
     line-height: 1.65;
     max-width: 320px;
 }
@@ -1082,7 +1051,7 @@ a {
 }
 
 .footer_cinema_links a {
-    color: var(--sq-text-secondary);
+    color: var(--sq-text-dark-secondary);
 }
 
 .footer_cinema_links a:hover {
@@ -1101,7 +1070,7 @@ a {
 }
 
 /* ==========================================================================
-   12. PREVIEW MODAL INTERATIVO
+   11. PREVIEW MODAL INTERATIVO
    ========================================================================== */
 .preview_modal_overlay {
     position: fixed;
@@ -1129,7 +1098,7 @@ a {
     height: 92vh;
     background: #0E1015;
     border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-sm);
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -1162,7 +1131,7 @@ a {
 .device_btn {
     background: transparent;
     border: none;
-    color: var(--sq-text-secondary);
+    color: var(--sq-text-dark-secondary);
     padding: 6px 14px;
     border-radius: var(--radius-sm);
     font-size: 12px;
@@ -1171,7 +1140,7 @@ a {
     display: flex;
     align-items: center;
     gap: 6px;
-    transition: var(--transition-smooth);
+    transition: var(--transition);
 }
 
 .device_btn.active {
@@ -1229,12 +1198,9 @@ a {
 }
 
 /* ==========================================================================
-   13. RESPONSIVIDADE
+   12. RESPONSIVIDADE
    ========================================================================== */
 @media (max-width: 1080px) {
-    .showcase_stage_grid {
-        grid-template-columns: 1fr;
-    }
     .posters_header_split {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -1288,6 +1254,12 @@ a {
     }
     .posters_grid_4 {
         grid-template-columns: 1fr;
+    }
+    .showcase_banner_travertine {
+        padding: 40px 16px;
+    }
+    .badge_float_corner {
+        display: none;
     }
     .domain_search_box {
         flex-direction: column;
