@@ -109,8 +109,9 @@
 
         .brand_logo {
             font-weight: 800;
-            font-size: 16px;
-            letter-spacing: -0.02em;
+            font-size: 28px;
+            letter-spacing: -0.04em;
+            line-height: 1;
         }
 
         .nav_center {
@@ -127,7 +128,7 @@
         }
 
         .btn_nav_cta {
-            padding: 5px 14px;
+            padding: 6px 16px;
             border: 1px solid rgba(233, 234, 228, 0.4);
             border-radius: 999px;
             font-size: 11px;
@@ -140,7 +141,7 @@
             color: var(--color-dark) !important;
         }
 
-        /* 2. CIPHER CUSTOM CURSOR (HIDDEN UNTIL REAL MOUSE MOVE) */
+        /* 2. CIPHER MINIMAL CURSOR */
         .cursor_cube {
             position: fixed;
             top: 0;
@@ -153,24 +154,6 @@
             z-index: 300;
             display: none;
             transform: translate(-50%, -50%);
-        }
-
-        .cursor_label {
-            position: fixed;
-            top: 0;
-            left: 0;
-            color: #FFFFFF;
-            mix-blend-mode: difference;
-            pointer-events: none;
-            z-index: 300;
-            display: none;
-            font-size: 9px;
-            font-family: 'Arizona', serif;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            padding-left: 14px;
-            padding-top: 6px;
-            transform: translate(0, 0);
         }
 
         /* 3. CONSTELLATION ORBIT STAGE (CIPHER TIGHT VORTEX SPIRAL) */
@@ -774,7 +757,6 @@
 
     <!-- 2. CIPHER CUSTOM CURSOR -->
     <div class="cursor_cube" id="cursorCube"></div>
-    <div class="cursor_label" id="cursorLabel">BOOMO // STUDIO</div>
 
     <!-- 3. CIPHER FAITHFUL CONSTELLATION ORBIT STAGE -->
     <main class="constellation_stage" id="stage">
@@ -1008,7 +990,6 @@
                 card.classList.add('is-hovered');
                 if (centerStatus) centerStatus.textContent = tpl.title;
                 if (workIndexNum) workIndexNum.textContent = tpl.id;
-                if (label) label.textContent = `${tpl.title} // ${tpl.niche}`;
             });
 
             card.addEventListener('mouseleave', () => {
@@ -1016,7 +997,6 @@
                     hoveredIndex = -1;
                     card.classList.remove('is-hovered');
                     if (centerStatus) centerStatus.textContent = 'CONSTELLATION';
-                    if (label) label.textContent = 'BOOMO // STUDIO';
                 }
             });
 
@@ -1116,9 +1096,8 @@
             currentAngleVelocity += (e.deltaY || e.deltaX) * 0.0004;
         }, { passive: true });
 
-        // Cursor Follower (Cipher Style - Only Active On Real Movement)
+        // Minimal Cipher Dot Cursor
         const cube = document.getElementById('cursorCube');
-        const label = document.getElementById('cursorLabel');
         let cMouseX = -100, cMouseY = -100;
         let curX = -100, curY = -100;
         let mouseMoved = false;
@@ -1131,16 +1110,14 @@
                 curX = cMouseX;
                 curY = cMouseY;
                 if (cube) cube.style.display = 'block';
-                if (label) label.style.display = 'block';
             }
         });
 
         function animateCursor() {
-            if (mouseMoved) {
+            if (mouseMoved && cube) {
                 curX += (cMouseX - curX) * 0.25;
                 curY += (cMouseY - curY) * 0.25;
-                if (cube) cube.style.transform = `translate(${curX}px, ${curY}px)`;
-                if (label) label.style.transform = `translate(${curX}px, ${curY}px)`;
+                cube.style.transform = `translate(${curX}px, ${curY}px)`;
             }
             requestAnimationFrame(animateCursor);
         }
