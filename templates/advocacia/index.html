@@ -3,315 +3,476 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Santos & Valente Advogados | Advocacia Empresarial & Tributária</title>
-    <meta name="description" content="Assessoria e consultoria jurídica especializada em Direito Empresarial, Tributário, Trabalhista e Proteção Patrimonial.">
+    <title>Santos & Valente Advogados | Advocacia Estratégica & Corporativa</title>
+    <meta name="description" content="Sociedade de advogados especializada em Direito Empresarial, Tributário, Trabalhista Estratégico e Blindagem Patrimonial. Sede na Av. Faria Lima, São Paulo.">
     
     <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
 
-    <!-- Open Graph / WhatsApp Preview -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Santos & Valente Advogados | Advocacia Empresarial">
-    <meta property="og:description" content="Assessoria e consultoria jurídica especializada em Direito Empresarial, Tributário e Proteção Patrimonial.">
-    <meta property="og:image" content="assets/images/hero-advocacia.webp">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/vendor/fontawesome/css/all.min.css">
     
     <!-- CSS -->
     <link rel="stylesheet" href="/templates/advocacia/css/style.css">
-    
-    <!-- Fonts -->
-    
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/vendor/fontawesome/css/all.min.css">
 </head>
 <body>
 
-    <!-- 1. NAVBAR -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="#" class="brand-logo">
-                <span class="brand-name">Santos & Valente</span>
-                <span class="brand-tagline">Advogados Associados</span>
+    <!-- TOPBAR INSTITUCIONAL -->
+    <aside class="sv_topbar" aria-label="Aviso institucional">
+        <div class="container topbar_content">
+            <span class="topbar_tag"><i class="fa-solid fa-scale-balanced"></i> Atendimento Corporativo & Confidencialidade Absoluta</span>
+            <span class="topbar_location">Av. Brigadeiro Faria Lima, Itaim Bibi • São Paulo, SP</span>
+            <span class="topbar_compliance">OAB/SP 45.890 • Provimento 205/2021 OAB</span>
+        </div>
+    </aside>
+
+    <!-- NAVBAR -->
+    <header class="sv_header">
+        <nav class="container nav_content" aria-label="Navegação principal">
+            <a href="#" class="brand_signature">
+                <span class="brand_name">Santos & Valente</span>
+                <span class="brand_sub">Advogados Associados</span>
             </a>
             
-            <div class="nav-menu-wrapper" id="nav-menu">
-                <ul class="nav-links">
-                    <li><a href="#areas">Áreas de Atuação</a></li>
-                    <li><a href="#metodo">Metodologia</a></li>
-                    <li><a href="#socios">Os Sócios</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-                <div class="nav-mobile-cta">
-                    <a href="https://wa.me/559192432044?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20consulta%20jur%C3%ADdica%20com%20a%20Santos%20%26%20Valente." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-full">
-                        <i class="fa-brands fa-whatsapp"></i> Falar com Advogado
-                    </a>
-                </div>
+            <div class="nav_links" id="navLinks">
+                <a href="#areas">Áreas de Atuação</a>
+                <a href="#metodo">Metodologia</a>
+                <a href="#socios">Os Sócios</a>
+                <a href="#governanca">Governança</a>
+                <a href="#contato">Contato</a>
             </div>
 
-            <div class="nav-actions">
-                <a href="https://wa.me/559192432044?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20consulta%20jur%C3%ADdica%20com%20a%20Santos%20%26%20Valente." target="_blank" rel="noopener noreferrer" class="btn btn-primary nav-desktop-cta">Falar com Advogado</a>
-                <button id="mobile-menu-btn" class="mobile-menu-toggle" aria-label="Abrir Menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
+            <div class="nav_cta_wrap">
+                <a href="https://wa.me/5511999990000?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20consulta%20jur%C3%ADdica%20com%20a%20Santos%20%26%20Valente." target="_blank" rel="noopener noreferrer" class="btn_sv btn_sv_primary">
+                    <span>Consulta Corporativa</span>
+                </a>
+                <button id="mobileMenuBtn" class="mobile_toggle" aria-label="Abrir Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </button>
             </div>
-        </div>
-    </nav>
-
-    <!-- 2. HERO SECTION -->
-    <header class="hero">
-        <div class="container hero-grid">
-            <div class="hero-content">
-                <div class="hero-tag">
-                    <i class="fa-solid fa-scale-balanced"></i> Advocacia Estratégica & Corporativa
-                </div>
-                <h1>Defesa jurídica de alta precisão para <span>proteger seu patrimônio e sua empresa.</span></h1>
-                <p>Atuação consultiva e contenciosa especializada, orientando decisões seguras, prevenindo litígios e resguardando os interesses dos nossos clientes com total discrição e solidez.</p>
-                
-                <div class="hero-actions">
-                    <a href="https://wa.me/559192432044?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20reuni%C3%A3o%20com%20os%20advogados." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
-                        <i class="fa-brands fa-whatsapp"></i> Agendar Reunião no WhatsApp
-                    </a>
-                    <a href="#areas" class="btn btn-secondary btn-large">Conhecer Áreas de Atuação</a>
-                </div>
-            </div>
-
-            <div class="hero-image-wrap">
-                <picture>
-              <source media="(min-width: 768px)" srcset="/templates/advocacia/assets/images/hero-advocacia-desktop.webp">
-              <img src="/templates/advocacia/assets/images/hero-advocacia.webp" alt="Edifício Corporativo Santos & Valente" class="hero-img" loading="lazy">
-            </picture>
-                <div class="hero-card-floating">
-                    <strong>+15 Anos de Solidez</strong>
-                    <span>Assessoria a grandes grupos empresariais</span>
-                </div>
-            </div>
-        </div>
+        </nav>
     </header>
 
-    <!-- 3. STATS BAR -->
-    <section class="stats-bar">
-        <div class="container stats-grid">
-            <div class="stat-item">
-                <h3>+15 Anos</h3>
-                <p>De Tradição e Excelência</p>
-            </div>
-            <div class="stat-item">
-                <h3>+R$ 80M</h3>
-                <p>Em Patrimônio Blindado</p>
-            </div>
-            <div class="stat-item">
-                <h3>+1.800</h3>
-                <p>Demandas Patrocinadas</p>
-            </div>
-            <div class="stat-item">
-                <h3>100% Ético</h3>
-                <p>Em Conformidade com a OAB</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. ÁREAS DE ATUAÇÃO -->
-    <section id="areas" class="section-padding">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Áreas Especializadas</span>
-                <h2>Soluções jurídicas sob medida para seu negócio</h2>
-                <p>Nossa equipe é dividida por núcleos especializados para entregar respostas técnicas rápidas e estratégicas.</p>
-            </div>
-
-            <div class="areas-grid">
-                <!-- Card 1: Direito Empresarial -->
-                <div class="area-card">
-                    <div class="area-icon"><i class="fa-solid fa-briefcase"></i></div>
-                    <h3>Direito Empresarial & Societário</h3>
-                    <p>Estruturação de contratos comerciais complexos, acordos de sócios, fusões e aquisições (M&A) e governança corporativa para blindar o crescimento da empresa.</p>
-                    <a href="https://wa.me/559192432044?text=Quero%20consultoria%20em%20Direito%20Empresarial." target="_blank" rel="noopener noreferrer" class="area-link">Consultar Especialista <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-
-                <!-- Card 2: Direito Tributário -->
-                <div class="area-card">
-                    <div class="area-icon"><i class="fa-solid fa-chart-line"></i></div>
-                    <h3>Direito Tributário & Planejamento Fiscal</h3>
-                    <p>Recuperação administrativa de créditos tributários, defesa em autuações fiscais e elaboração de planejamentos tributários eficientes e seguros dentro da lei.</p>
-                    <a href="https://wa.me/559192432044?text=Quero%20consultoria%20em%20Direito%20Tribut%C3%A1rio." target="_blank" rel="noopener noreferrer" class="area-link">Consultar Especialista <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-
-                <!-- Card 3: Trabalhista Empresarial -->
-                <div class="area-card">
-                    <div class="area-icon"><i class="fa-solid fa-users-gear"></i></div>
-                    <h3>Direito Trabalhista Preventivo</h3>
-                    <p>Auditoria de rotinas de RH para eliminação de passivos ocultos, elaboração de políticas internas e defesa técnica em reclamatórias trabalhistas de alto valor.</p>
-                    <a href="https://wa.me/559192432044?text=Quero%20consultoria%20em%20Trabalhista%20Empresarial." target="_blank" rel="noopener noreferrer" class="area-link">Consultar Especialista <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-
-                <!-- Card 4: Planejamento Sucessório & Cível -->
-                <div class="area-card">
-                    <div class="area-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                    <h3>Proteção Patrimonial & Sucessória</h3>
-                    <p>Criação de holdings familiares, doações estratégicas, testamentos e estruturação de blindagem legal de bens para preservar o legado familiar sem conflitos.</p>
-                    <a href="https://wa.me/559192432044?text=Quero%20consultoria%20em%20Prote%C3%A7%C3%A3o%20Patrimonial." target="_blank" rel="noopener noreferrer" class="area-link">Consultar Especialista <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. METODOLOGIA -->
-    <section id="metodo" class="section-padding method-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Nossa Metodologia</span>
-                <h2>Como conduzimos cada caso e assessoria</h2>
-                <p>Transparência total, relatórios periódicos e linguagem acessível, sem jargões jurídicos desnecessários.</p>
-            </div>
-
-            <div class="method-grid">
-                <div class="method-card">
-                    <div class="method-num">01.</div>
-                    <h3>Diagnóstico de Riscos</h3>
-                    <p>Análise minuciosa de documentos e contratos para identificar vulnerabilidades e oportunidades antes de tomar qualquer ação judicial ou administrativa.</p>
-                </div>
-
-                <div class="method-card">
-                    <div class="method-num">02.</div>
-                    <h3>Estratégia Personalizada</h3>
-                    <p>Elaboração de pareceres claros e planos de ação sob medida para a realidade operacional e orçamentária do cliente.</p>
-                </div>
-
-                <div class="method-card">
-                    <div class="method-num">03.</div>
-                    <h3>Acompanhamento Contínuo</h3>
-                    <p>Canal direto com o advogado responsável pelo seu caso, com atualizações em tempo real sobre movimentações e decisões.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. SÓCIOS -->
-    <section id="socios" class="section-padding">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Corpo Jurídico</span>
-                <h2>Sócios Fundadores</h2>
-                <p>Liderança experiente com formação nas principais instituições acadêmicas do país e sólida atuação prática.</p>
-            </div>
-
-            <div class="partners-grid">
-                <!-- Sócio 1 -->
-                <div class="partner-card">
-                    <img src="/templates/advocacia/assets/images/advogado-perfil.webp" alt="Dr. Marcos Valente" class="partner-img" loading="lazy">
-                    <div class="partner-info">
-                        <h3>Dr. Marcos Valente</h3>
-                        <span class="partner-oab">OAB/SP 234.890</span>
-                        <p>Especialista em Direito Societário e Tributário pela USP. Mais de 16 anos assessorando indústrias, construtoras e holdings familiares em operações estratégicas.</p>
+    <main>
+        <!-- HERO SECTION -->
+        <section class="sv_hero">
+            <div class="container hero_grid">
+                <div class="hero_content">
+                    <div class="hero_eyebrow">
+                        <span class="eyebrow_line"></span>
+                        Advocacia Estratégica & Defesa Patrimonial
                     </div>
-                </div>
 
-                <!-- Sócio 2 -->
-                <div class="partner-card">
-                    <img src="/templates/advocacia/assets/images/advogada-perfil.webp" alt="Dra. Beatriz Santos" class="partner-img" loading="lazy">
-                    <div class="partner-info">
-                        <h3>Dra. Beatriz Santos</h3>
-                        <span class="partner-oab">OAB/SP 289.145</span>
-                        <p>Mestre em Direito do Trabalho e Governança Corporativa pela PUC-SP. Focada em contencioso estratégico de alto valor e compliance trabalhista para empresas.</p>
+                    <h1 class="hero_title">
+                        Defesa jurídica de alta precisão para <em>proteger seu patrimônio e sua empresa.</em>
+                    </h1>
+
+                    <p class="hero_lead">
+                        Atuação consultiva e contenciosa de alta complexidade para indústrias, fundos de investimento e holdings familiares. Prevenção rigorosa de passivos e defesa intransigente de direitos.
+                    </p>
+
+                    <div class="hero_actions">
+                        <a href="https://wa.me/5511999990000?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20reuni%C3%A3o%20com%20os%20advogados." target="_blank" rel="noopener noreferrer" class="btn_sv btn_sv_gold btn_sv_lg">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>Agendar Reunião no WhatsApp</span>
+                        </a>
+                        <a href="#areas" class="btn_sv btn_sv_outline btn_sv_lg">
+                            <span>Conhecer Especialidades</span>
+                        </a>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- 7. LOCALIZAÇÃO E CONTATO -->
-    <section id="contato" class="section-padding location-section">
-        <div class="container location-grid">
-            <div class="location-info">
-                <span class="section-tag">Atendimento Presencial & Online</span>
-                <h2>Agende uma reunião em nosso escritório</h2>
-                <p>Ambiente privativo e seguro para receber você e sua equipe de diretoria com total confidencialidade.</p>
-
-                <div class="contact-items">
-                    <div class="contact-item">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <div>
-                            <strong>Endereço</strong>
-                            <span>Av. Brigadeiro Faria Lima, 3477 - 14º Andar - Itaim Bibi, São Paulo - SP</span>
+                    <div class="hero_trust_strip">
+                        <div class="trust_cell">
+                            <i class="fa-solid fa-building-shield"></i>
+                            <span>Atuação Nacional & Internacional</span>
                         </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fa-solid fa-phone"></i>
-                        <div>
-                            <strong>Telefone & WhatsApp</strong>
-                            <span>(11) 3000-0000 / (11) 99999-0000</span>
+                        <div class="trust_cell">
+                            <i class="fa-solid fa-lock"></i>
+                            <span>Sigilo Profissional Rígido</span>
                         </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fa-solid fa-envelope"></i>
-                        <div>
-                            <strong>E-mail Institucional</strong>
-                            <span>contato@santosvalenteadv.com.br</span>
+                        <div class="trust_cell">
+                            <i class="fa-solid fa-award"></i>
+                            <span>16 Anos de Tradição</span>
                         </div>
                     </div>
                 </div>
 
-                <a href="https://wa.me/559192432044?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20atendimento%20jur%C3%ADdico." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
-                    <i class="fa-brands fa-whatsapp"></i> Falar com o Plantão Jurídico
-                </a>
+                <div class="hero_visual">
+                    <div class="hero_frame">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="/templates/advocacia/assets/images/hero-advocacia-desktop.webp">
+                            <img src="/templates/advocacia/assets/images/hero-advocacia.webp" alt="Sede Corporativa Santos & Valente na Faria Lima" class="hero_img">
+                        </picture>
+                        <div class="hero_stat_card">
+                            <strong class="stat_number">+16 Anos</strong>
+                            <span class="stat_desc">De solidez jurídica assessorando grandes grupos empresariais</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STATS BAR -->
+        <section class="sv_stats_bar" aria-label="Indicadores institucionais">
+            <div class="container stats_grid">
+                <div class="stat_box">
+                    <h2 class="stat_val">+16 Anos</h2>
+                    <p class="stat_label">De Tradição & Excelência</p>
+                </div>
+                <div class="stat_box">
+                    <h2 class="stat_val">+R$ 120M</h2>
+                    <p class="stat_label">Em Passivos e Riscos Mitigados</p>
+                </div>
+                <div class="stat_box">
+                    <h2 class="stat_val">+1.800</h2>
+                    <p class="stat_label">Demandas Conduzidas com Êxito</p>
+                </div>
+                <div class="stat_box">
+                    <h2 class="stat_val">100% Ético</h2>
+                    <p class="stat_label">Em Conformidade com a OAB</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ÁREAS DE ATUAÇÃO -->
+        <section id="areas" class="sv_section section_light">
+            <div class="container">
+                <div class="section_intro text-center">
+                    <span class="section_badge">Núcleos Especializados</span>
+                    <h2 class="section_title">Soluções jurídicas estratégicas sob medida para seu negócio.</h2>
+                    <p class="section_desc">
+                        Nossa banca é estruturada por núcleos de especialidade para entregar diagnósticos rápidos e decisões fundamentadas em jurisprudência atualizada.
+                    </p>
+                </div>
+
+                <div class="areas_grid">
+                    <!-- Card 1 -->
+                    <article class="area_card">
+                        <div class="area_icon_wrap"><i class="fa-solid fa-briefcase"></i></div>
+                        <span class="area_category">Societário & Negócios</span>
+                        <h3 class="area_title">Direito Empresarial & Fusões (M&A)</h3>
+                        <p class="area_desc">
+                            Estruturação de contratos mercantis de alta complexidade, acordos de sócios e acionistas, processos de due diligence, compra e venda de empresas e governança corporativa.
+                        </p>
+                        <ul class="area_points">
+                            <li>Acordos de Quotistas e Acionistas</li>
+                            <li>Operações de M&A e Reorganização</li>
+                            <li>Resolução de Conflitos Societários</li>
+                        </ul>
+                        <a href="https://wa.me/5511999990000?text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20sobre%20Direito%20Societ%C3%A1rio%20e%20M%26A." target="_blank" rel="noopener noreferrer" class="area_action">
+                            <span>Consultar especialista</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="area_card">
+                        <div class="area_icon_wrap"><i class="fa-solid fa-chart-line"></i></div>
+                        <span class="area_category">Fiscal & Tributário</span>
+                        <h3 class="area_title">Direito Tributário & Planejamento Fiscal</h3>
+                        <p class="area_desc">
+                            Recuperação administrativa de créditos tributários acumulados, defesas estratégicas em autos de infração federais e estaduais e planejamento fiscal lícito para redução de custos.
+                        </p>
+                        <ul class="area_points">
+                            <li>Defesa em Execuções Fiscais</li>
+                            <li>Recuperação de Créditos e PIS/Cofins</li>
+                            <li>Planejamento Tributário Preventivo</li>
+                        </ul>
+                        <a href="https://wa.me/5511999990000?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20consultoria%20de%20Direito%20Tribut%C3%A1rio." target="_blank" rel="noopener noreferrer" class="area_action">
+                            <span>Consultar especialista</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="area_card">
+                        <div class="area_icon_wrap"><i class="fa-solid fa-users-gear"></i></div>
+                        <span class="area_category">Trabalhista Patronal</span>
+                        <h3 class="area_title">Direito do Trabalho Preventivo & Contencioso</h3>
+                        <p class="area_desc">
+                            Auditoria em rotinas de RH e departamento pessoal para estancar passivos ocultos, negociações coletivas sindicais e defesa técnica em reclamatórias trabalhistas de executivos.
+                        </p>
+                        <ul class="area_points">
+                            <li>Auditoria Trabalhista Preventiva</li>
+                            <li>Defesas em Demandas de Alto Valor</li>
+                            <li>Acordos Coletivos & Compliance de RH</li>
+                        </ul>
+                        <a href="https://wa.me/5511999990000?text=Ol%C3%A1%2C%20preciso%20de%20assessoria%20em%20Trabalhista%20Empresarial." target="_blank" rel="noopener noreferrer" class="area_action">
+                            <span>Consultar especialista</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                    <!-- Card 4 -->
+                    <article class="area_card">
+                        <div class="area_icon_wrap"><i class="fa-solid fa-shield-halved"></i></div>
+                        <span class="area_category">Patrimônio & Família</span>
+                        <h3 class="area_title">Proteção Patrimonial & Sucessão Familiar</h3>
+                        <p class="area_desc">
+                            Constituição de holdings patrimoniais familiares, doações com reserva de usufruto, testamentos e blindagem legal contra volatilidades econômicas e litígios sucessórios.
+                        </p>
+                        <ul class="area_points">
+                            <li>Holdings Familiares e Imobiliárias</li>
+                            <li>Planejamento Sucessório Antecipado</li>
+                            <li>Proteção Jurídica de Ativos Reais</li>
+                        </ul>
+                        <a href="https://wa.me/5511999990000?text=Ol%C3%A1%2C%20gostaria%20de%20avaliar%20Prote%C3%A7%C3%A3o%20Patrimonial%20e%20Holdings." target="_blank" rel="noopener noreferrer" class="area_action">
+                            <span>Consultar especialista</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- METODOLOGIA -->
+        <section id="metodo" class="sv_section section_sand">
+            <div class="container">
+                <div class="section_intro text-center">
+                    <span class="section_badge">Nossa Metodologia</span>
+                    <h2 class="section_title">Como conduzimos cada caso com rigor e clareza.</h2>
+                    <p class="section_desc">
+                        Eliminamos o jargão excessivo para apresentar pareceres objetivos que orientam decisões executivas com rapidez.
+                    </p>
+                </div>
+
+                <div class="method_timeline">
+                    <div class="method_item">
+                        <span class="method_number">01</span>
+                        <h3 class="method_heading">Diagnóstico de Riscos & Análise Factual</h3>
+                        <p class="method_text">
+                            Auditoria preliminar de contratos, certidões e antecedentes processuais para dimensionar riscos reais antes de qualquer iniciativa contenciosa.
+                        </p>
+                    </div>
+
+                    <div class="method_item">
+                        <span class="method_number">02</span>
+                        <h3 class="method_heading">Estratégia Jurídica Customizada</h3>
+                        <p class="method_text">
+                            Desenvolvimento de teses jurídicas sólidas, calculando a relação custo-benefício financeiro e os impactos na reputação e no caixa do cliente.
+                        </p>
+                    </div>
+
+                    <div class="method_item">
+                        <span class="method_number">03</span>
+                        <h3 class="method_heading">Acompanhamento e Canal Direto</h3>
+                        <p class="method_text">
+                            Comunicação permanente com o sócio responsável pelo processo, relatórios executivos mensais e aviso imediato de decisões judiciais relevantes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OS SÓCIOS -->
+        <section id="socios" class="sv_section section_light">
+            <div class="container">
+                <div class="section_intro text-center">
+                    <span class="section_badge">Corpo Jurídico</span>
+                    <h2 class="section_title">Sócios Fundadores</h2>
+                    <p class="section_desc">
+                        Liderança com sólida formação acadêmica nas principais instituições do país e atuação comprovada em casos corporativos de destaque.
+                    </p>
+                </div>
+
+                <div class="partners_grid">
+                    <!-- Sócio 1 -->
+                    <article class="partner_card">
+                        <div class="partner_img_wrap">
+                            <img src="/templates/advocacia/assets/images/advogado-perfil.webp" alt="Dr. Marcos Valente, Sócio Fundador" class="partner_photo">
+                        </div>
+                        <div class="partner_details">
+                            <h3 class="partner_name">Dr. Marcos Valente</h3>
+                            <span class="partner_oab">OAB/SP 234.890 • Sócio Coordenador</span>
+                            <p class="partner_bio">
+                                Especialista em Direito Societário e Planejamento Tributário pela Faculdade de Direito da Universidade de São Paulo (Largo São Francisco - USP). Com mais de 16 anos de prática, lidera operações de fusão e aquisição, reorganizações societárias e defesa fiscal para indústrias e holdings familiares.
+                            </p>
+                            <ul class="partner_milestones">
+                                <li><i class="fa-solid fa-angle-right"></i> Pós-graduado em Direito Tributário Internacional</li>
+                                <li><i class="fa-solid fa-angle-right"></i> Membro do Instituto dos Advogados de São Paulo (IASP)</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Sócio 2 -->
+                    <article class="partner_card">
+                        <div class="partner_img_wrap">
+                            <img src="/templates/advocacia/assets/images/advogada-perfil.webp" alt="Dra. Beatriz Santos, Sócia Fundadora" class="partner_photo">
+                        </div>
+                        <div class="partner_details">
+                            <h3 class="partner_name">Dra. Beatriz Santos</h3>
+                            <span class="partner_oab">OAB/SP 289.145 • Sócia Coordenadora</span>
+                            <p class="partner_bio">
+                                Mestre em Direito das Relações Sociais e Trabalhistas pela Pontifícia Universidade Católica de São Paulo (PUC-SP). Atua na coordenação do núcleo trabalhista patronal estratégico, auditoria de governança corporativa e prevenção de passivos em empresas de médio e grande porte.
+                            </p>
+                            <ul class="partner_milestones">
+                                <li><i class="fa-solid fa-angle-right"></i> Especialista em Compliance e Mediação Empresarial</li>
+                                <li><i class="fa-solid fa-angle-right"></i> Consultora convidada em programas de governança familiar</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- GOVERNANÇA & CONFIDENCIALIDADE -->
+        <section id="governanca" class="sv_section section_slate">
+            <div class="container">
+                <div class="governance_layout">
+                    <div class="governance_text">
+                        <span class="section_badge badge_gold">Governança & Rigor</span>
+                        <h2 class="section_title text_white">Segurança da informação e sigilo profissional inegociáveis.</h2>
+                        <p class="section_desc text_light">
+                            Nossa infraestrutura tecnológica opera com criptografia de ponta a ponta, servidores seguros e rigorosa conformidade com a LGPD para salvaguardar todos os dados estratégicos de nossos clientes.
+                        </p>
+
+                        <div class="governance_checklist">
+                            <div class="gov_item">
+                                <i class="fa-solid fa-lock"></i>
+                                <div>
+                                    <strong class="gov_title">Criptografia em Nuvem Privada</strong>
+                                    <span class="gov_desc">Documentos e contratos armazenados com certificação bancária de segurança.</span>
+                                </div>
+                            </div>
+
+                            <div class="gov_item">
+                                <i class="fa-solid fa-file-contract"></i>
+                                <div>
+                                    <strong class="gov_title">Acordos de Confidencialidade (NDA)</strong>
+                                    <span class="gov_desc">Assinados antes de qualquer análise documental preliminar.</span>
+                                </div>
+                            </div>
+
+                            <div class="gov_item">
+                                <i class="fa-solid fa-handshake-angle"></i>
+                                <div>
+                                    <strong class="gov_title">Conformidade com o Provimento 205/2021 OAB</strong>
+                                    <span class="gov_desc">Comunicação e atuação em estrito alinhamento às normas éticas da advocacia.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="governance_quote_card">
+                        <i class="fa-solid fa-quote-left quote_symbol"></i>
+                        <blockquote class="gov_quote">
+                            "A advocacia corporativa moderna não é apenas reativa aos litígios; ela é o alicerce silencioso que permite às empresas ousar, crescer e liderar seus mercados com segurança absoluta."
+                        </blockquote>
+                        <span class="gov_author">— Diretoria Santos & Valente Advogados</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LOCALIZAÇÃO E CONTATO -->
+        <section id="contato" class="sv_section section_light">
+            <div class="container location_grid">
+                <div class="location_details">
+                    <span class="section_badge">Atendimento Presencial & Remoto</span>
+                    <h2 class="section_title">Agende uma reunião estratégica.</h2>
+                    <p class="section_desc">
+                        Ambiente corporativo privativo na Faria Lima para receber sua diretoria com total confidencialidade, além de canais criptografados para videoconferências.
+                    </p>
+
+                    <div class="contact_list">
+                        <div class="contact_row">
+                            <div class="contact_icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="contact_txt">
+                                <strong>Sede Faria Lima</strong>
+                                <span>Av. Brigadeiro Faria Lima, 3477 • 14º Andar • Itaim Bibi, São Paulo - SP</span>
+                            </div>
+                        </div>
+
+                        <div class="contact_row">
+                            <div class="contact_icon"><i class="fa-brands fa-whatsapp"></i></div>
+                            <div class="contact_txt">
+                                <strong>Plantão Executivo & WhatsApp</strong>
+                                <span>(11) 99999-0000 / (11) 3000-0000</span>
+                            </div>
+                        </div>
+
+                        <div class="contact_row">
+                            <div class="contact_icon"><i class="fa-regular fa-envelope"></i></div>
+                            <div class="contact_txt">
+                                <strong>E-mail Institucional</strong>
+                                <span>contato@santosvalenteadv.com.br</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/5511999990000?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20reuni%C3%A3o%20com%20os%20advogados." target="_blank" rel="noopener noreferrer" class="btn_sv btn_sv_gold btn_sv_lg">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span>Falar com o Plantão Jurídico</span>
+                    </a>
+                </div>
+
+                <div class="location_map_wrap">
+                    <div class="map_inner_frame">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.347589255018!2d-46.68962292384664!3d-23.592182062920264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5745199cf887%3A0xb3ad167d4fdfa0ec!2sAv.%20Brig.%20Faria%20Lima%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização da Sede Faria Lima"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="sv_footer">
+        <div class="container footer_main_grid">
+            <div class="footer_col brand_col">
+                <div class="brand_signature">
+                    <span class="brand_name">Santos & Valente</span>
+                    <span class="brand_sub">Advogados Associados</span>
+                </div>
+                <p class="footer_text">
+                    Assessoria jurídica estratégica e contencioso especializado para empresas e grupos familiares. Ética, técnica refinada e proteção intransigente de direitos.
+                </p>
+                <span class="oab_seal">Registro na OAB/SP sob nº 45.890</span>
             </div>
 
-            <div class="map-box">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.347589255018!2d-46.68962292384664!3d-23.592182062920264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5745199cf887%3A0xb3ad167d4fdfa0ec!2sAv.%20Brig.%20Faria%20Lima%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="footer_col">
+                <h3 class="footer_heading">Endereço</h3>
+                <p class="footer_line"><i class="fa-solid fa-location-dot"></i> Av. Brig. Faria Lima, 3477 • 14º Andar<br>Itaim Bibi, São Paulo • SP</p>
+                <p class="footer_line"><i class="fa-solid fa-square-parking"></i> Estacionamento e heliponto no edifício</p>
+            </div>
+
+            <div class="footer_col">
+                <h3 class="footer_heading">Contato Direto</h3>
+                <p class="footer_line"><i class="fa-brands fa-whatsapp"></i> (11) 99999-0000</p>
+                <p class="footer_line"><i class="fa-solid fa-phone"></i> (11) 3000-0000</p>
+                <p class="footer_line"><i class="fa-regular fa-clock"></i> Seg a Sex: 08:30 às 19:30</p>
             </div>
         </div>
-    </section>
 
-    <!-- 8. FOOTER -->
-    <footer>
-        <div class="container">
-            <div class="footer-top">
-                <div class="footer-logo">
-                    <div class="brand-name">Santos & Valente</div>
-                    <div class="brand-tagline">Advogados Associados</div>
-                </div>
-                <div>
-                    <a href="https://wa.me/559192432044?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20assessoria%20jur%C3%ADdica." target="_blank" rel="noopener noreferrer" class="btn btn-primary">Atendimento Exclusivo</a>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <div>© 2026 Santos & Valente Advogados Associados. Todos os direitos reservados. Em conformidade com o Provimento 205/2021 da OAB.</div>
-                <div>Desenvolvido com tecnologia <a href="../../index.html" target="_blank" rel="noopener noreferrer"><strong>Boomo</strong></a>.</div>
-            </div>
+        <div class="container footer_baseline">
+            <p>&copy; 2026 Santos & Valente Advogados Associados. Todos os direitos reservados. Em conformidade com o Provimento 205/2021 da OAB.</p>
+            <p class="boomo_badge">Site criado por <strong>Boomo</strong></p>
         </div>
     </footer>
 
-    <!-- BOTÃO FLUTUANTE DE WHATSAPP -->
-    <a href="https://wa.me/559192432044?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20assessoria%20jur%C3%ADdica." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Falar com Advogado no WhatsApp" title="Falar no WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
-
     <!-- SCRIPT MENU MOBILE -->
     <script>
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const navMenu = document.getElementById('nav-menu');
-        const navLinks = document.querySelectorAll('.nav-links a');
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
 
         function toggleMobileMenu() {
-            mobileMenuBtn.classList.toggle('active');
-            navMenu.classList.toggle('active');
+            mobileMenuBtn?.classList.toggle('active');
+            navLinks?.classList.toggle('active');
             document.body.classList.toggle('menu-open');
         }
 
-        function closeMobileMenu() {
-            mobileMenuBtn.classList.remove('active');
-            navMenu.classList.remove('active');
-            document.body.classList.remove('menu-open');
-        }
+        mobileMenuBtn?.addEventListener('click', toggleMobileMenu);
 
-        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
-
-        navLinks.forEach(link => {
-            link.addEventListener('click', closeMobileMenu);
+        navLinks?.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuBtn?.classList.remove('active');
+                navLinks?.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            });
         });
     </script>
 </body>
 </html>
-
