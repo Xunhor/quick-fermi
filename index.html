@@ -639,6 +639,16 @@
             border: 1px solid var(--color-border);
             border-radius: 4px;
             overflow: hidden;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .mobile_swipe_hint {
+            display: none;
+            font-size: 11px;
+            color: var(--color-muted);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
         }
 
         .comp_table {
@@ -975,6 +985,20 @@
             .capabilities_grid {
                 grid-template-columns: 1fr;
             }
+            .comparison_table_wrap {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            .mobile_swipe_hint {
+                display: block;
+            }
+            .comp_table {
+                min-width: 620px;
+            }
+            .comp_table th, .comp_table td {
+                padding: 14px 16px;
+                font-size: 13px;
+            }
             footer.site_footer {
                 flex-direction: column;
                 gap: 16px;
@@ -1118,6 +1142,7 @@
             <h2 class="section_headline">Por que a Boomo é a escolha <em>mais inteligente</em>?</h2>
             <p class="section_desc">Compare a velocidade, qualidade e previsibilidade de custo da Boomo com as alternativas do mercado.</p>
 
+            <div class="mobile_swipe_hint">Deslize para ver todas as colunas →</div>
             <div class="comparison_table_wrap">
                 <table class="comp_table">
                     <thead>
