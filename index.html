@@ -15,10 +15,6 @@
     <meta property="og:description" content="Sites profissionais por assinatura com design de estúdio internacional.">
     <meta property="og:image" content="https://quick-fermi.vercel.app/assets/images/og-boomo.jpg">
 
-    <!-- Three.js & GSAP for Cinema-Grade 3D Physics -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-
     <!-- Fonts: ABC Favorit & ABC Arizona (Cipher.tv Authentic Fonts) -->
     <style>
         @font-face {
@@ -39,13 +35,11 @@
         :root {
             --color-dark: #000000;
             --color-light: #E9EAE4;
-            --color-muted: #8C8C85;
+            --color-muted: #73736E;
             --color-accent: #00E5FF;
-            --color-green: #10B981;
             --fontXXS: 9px;
             --fontXS: 11px;
             --fontS: 12px;
-            --fontM: 16px;
         }
 
         * {
@@ -133,8 +127,8 @@
         }
 
         .btn_nav_cta {
-            padding: 6px 16px;
-            border: 1px solid rgba(233, 234, 228, 0.45);
+            padding: 5px 14px;
+            border: 1px solid rgba(233, 234, 228, 0.4);
             border-radius: 999px;
             font-size: 11px;
             transition: all 0.25s ease !important;
@@ -181,20 +175,26 @@
             transition: opacity 0.3s;
         }
 
-        /* 3. WEBGL & 3D INTERACTION STAGE */
-        #webgl_canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
+        /* 3. CONSTELLATION ORBIT STAGE (CIPHER FAITHFUL FLAT-BILLBOARD CIRCLE) */
+        .constellation_stage {
+            position: relative;
             width: 100vw;
             height: 100svh;
-            z-index: 1;
-            outline: none;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #000000;
+            cursor: grab;
         }
 
-        /* Center Glyph */
+        .constellation_stage:active {
+            cursor: grabbing;
+        }
+
+        /* Center Glyph (Cipher Center Eye/Symbol) */
         .constellation_center_glyph {
-            position: fixed;
+            position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -205,8 +205,7 @@
             justify-content: center;
             color: rgba(233, 234, 228, 0.4);
             pointer-events: none;
-            z-index: 10;
-            mix-blend-mode: difference;
+            z-index: 1;
         }
 
         .constellation_center_glyph svg {
@@ -218,6 +217,53 @@
         @keyframes pulseGlyph {
             0%, 100% { opacity: 0.25; transform: scale(0.95); }
             50% { opacity: 0.85; transform: scale(1.05); }
+        }
+
+        /* 2D Flat Orbit Container */
+        .orbit_container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+        }
+
+        /* Individual Card in Orbit (Front-Facing, Grayscale by default, Color + Zoom on Hover) */
+        .orbit_card {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 260px;
+            height: 155px;
+            background: #0A0A0A;
+            border-radius: 2px;
+            overflow: hidden;
+            cursor: pointer;
+            filter: grayscale(100%) brightness(0.65) contrast(1.15);
+            opacity: 0.82;
+            transition: filter 0.45s cubic-bezier(0.16, 1, 0.3, 1), 
+                        opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+                        box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: transform, filter, opacity;
+        }
+
+        .orbit_card:hover, .orbit_card.is-hovered {
+            filter: grayscale(0%) brightness(1) contrast(1.05);
+            opacity: 1;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.95), 0 0 0 1px rgba(255, 255, 255, 0.12);
+        }
+
+        .orbit_card_img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            pointer-events: none;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .orbit_card:hover .orbit_card_img {
+            transform: scale(1.04);
         }
 
         /* 4. CIPHER BOTTOM BAR (WORKS INFOS) */
@@ -242,6 +288,7 @@
         .works_infos .l {
             font-size: 10px;
             letter-spacing: 0.16em;
+            font-family: monospace;
         }
 
         .works_infos .m {
@@ -695,6 +742,10 @@
             .works_infos .m {
                 display: none;
             }
+            .orbit_card {
+                width: 190px;
+                height: 115px;
+            }
             .cursor_cube, .cursor_label {
                 display: none;
             }
@@ -727,22 +778,25 @@
     <div class="cursor_cube" id="cursorCube"></div>
     <div class="cursor_label" id="cursorLabel">BOOMO // STUDIO</div>
 
-    <!-- 3. WEBGL 3D KINETIC CONSTELLATION CANVAS -->
-    <canvas id="webgl_canvas"></canvas>
+    <!-- 3. CIPHER FAITHFUL CONSTELLATION ORBIT STAGE -->
+    <main class="constellation_stage" id="stage">
+        <!-- Center Glyph -->
+        <div class="constellation_center_glyph">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                <path d="M2 12h20"/>
+            </svg>
+        </div>
 
-    <!-- Center Glyph -->
-    <div class="constellation_center_glyph">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <circle cx="12" cy="12" r="10"/>
-            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-            <path d="M2 12h20"/>
-        </svg>
-    </div>
+        <!-- 2D Billboard Orbit Container -->
+        <div class="orbit_container" id="orbitContainer"></div>
+    </main>
 
     <!-- 4. CIPHER BOTTOM BAR (WORKS INFOS) -->
     <div class="works_infos">
         <div class="l">
-            <span>SITES POR ASSINATURA // ESTÚDIO DIGITAL</span>
+            <span id="workIndexNum">001</span>
         </div>
         <div class="m">
             <span id="centerStatus">CONSTELLATION</span>
@@ -921,151 +975,134 @@
         </div>
     </div>
 
-    <!-- WEBGL 3D KINETIC ENGINE (THREE.JS CINEMATIC CONSTELLATION) -->
+    <!-- SCRIPTS: CIPHER EXACT ORBIT ENGINE -->
     <script>
         const templates = [
-            { title: "AURA ESTÉTICA", niche: "Clínica & Procedimentos", img: "templates/estetica/assets/images/hero-estetica.webp", url: "/templates/estetica", domain: "auraestetica.com.br" },
-            { title: "ODONTO PRIME", niche: "Odontologia & Implantes", img: "templates/odontologia/assets/images/hero-odonto.webp", url: "/templates/odontologia", domain: "odontoprime.com.br" },
-            { title: "SANTOS VALENTE", niche: "Advocacia Empresarial", img: "templates/advocacia/assets/images/hero-advocacia.webp", url: "/templates/advocacia", domain: "santosvalente.com.br" },
-            { title: "LUMINA CONTÁBIL", niche: "Contabilidade & B2B", img: "templates/contabilidade/assets/images/hero-contabilidade.webp", url: "/templates/contabilidade", domain: "luminacontabil.com.br" },
-            { title: "AURA LASER", niche: "Estética & Bem-Estar", img: "templates/estetica/assets/images/hero-estetica.webp", url: "/templates/estetica", domain: "auralaser.com.br" },
-            { title: "PRIME ALINHADORES", niche: "Estética Dental", img: "templates/odontologia/assets/images/hero-odonto.webp", url: "/templates/odontologia", domain: "primealinhadores.com.br" },
-            { title: "VALENTE CONSULTORIA", niche: "Direito Tributário", img: "templates/advocacia/assets/images/hero-advocacia.webp", url: "/templates/advocacia", domain: "valenteconsultoria.com.br" },
-            { title: "LUMINA GESTÃO", niche: "B2B & Finanças", img: "templates/contabilidade/assets/images/hero-contabilidade.webp", url: "/templates/contabilidade", domain: "luminagestao.com.br" },
-            { title: "AURA HARMONIZAÇÃO", niche: "Dermatologia & Estética", img: "templates/estetica/assets/images/hero-estetica.webp", url: "/templates/estetica", domain: "auraharmonizacao.com.br" },
-            { title: "PRIME CIRURGIA", niche: "Odontologia Digital", img: "templates/odontologia/assets/images/hero-odonto.webp", url: "/templates/odontologia", domain: "primecirurgia.com.br" }
+            { id: "001", title: "AURA ESTÉTICA", niche: "Clínica & Procedimentos", img: "templates/estetica/assets/images/hero-estetica.webp", url: "/templates/estetica", domain: "auraestetica.com.br" },
+            { id: "002", title: "ODONTO PRIME", niche: "Odontologia & Implantes", img: "templates/odontologia/assets/images/hero-odonto.webp", url: "/templates/odontologia", domain: "odontoprime.com.br" },
+            { id: "003", title: "SANTOS VALENTE", niche: "Advocacia Empresarial", img: "templates/advocacia/assets/images/hero-advocacia.webp", url: "/templates/advocacia", domain: "santosvalente.com.br" },
+            { id: "004", title: "LUMINA CONTÁBIL", niche: "Contabilidade & B2B", img: "templates/contabilidade/assets/images/hero-contabilidade.webp", url: "/templates/contabilidade", domain: "luminacontabil.com.br" },
+            { id: "005", title: "AURA LASER", niche: "Estética & Bem-Estar", img: "templates/estetica/assets/images/hero-estetica.webp", url: "/templates/estetica", domain: "auralaser.com.br" },
+            { id: "006", title: "PRIME ALINHADORES", niche: "Estética Dental", img: "templates/odontologia/assets/images/hero-odonto.webp", url: "/templates/odontologia", domain: "primealinhadores.com.br" },
+            { id: "007", title: "VALENTE CONSULTORIA", niche: "Direito Tributário", img: "templates/advocacia/assets/images/hero-advocacia.webp", url: "/templates/advocacia", domain: "valenteconsultoria.com.br" },
+            { id: "008", title: "LUMINA GESTÃO", niche: "B2B & Finanças", img: "templates/contabilidade/assets/images/hero-contabilidade.webp", url: "/templates/contabilidade", domain: "luminagestao.com.br" },
+            { id: "009", title: "AURA HARMONIZAÇÃO", niche: "Dermatologia & Estética", img: "templates/estetica/assets/images/hero-estetica.webp", url: "/templates/estetica", domain: "auraharmonizacao.com.br" },
+            { id: "010", title: "PRIME CIRURGIA", niche: "Odontologia Digital", img: "templates/odontologia/assets/images/hero-odonto.webp", url: "/templates/odontologia", domain: "primecirurgia.com.br" }
         ];
 
-        // 1. THREE.JS SCENE SETUP
-        const canvas = document.getElementById('webgl_canvas');
-        const scene = new THREE.Scene();
-        scene.fog = new THREE.FogExp2(0x000000, 0.0012);
+        const orbitContainer = document.getElementById('orbitContainer');
+        const centerStatus = document.getElementById('centerStatus');
+        const workIndexNum = document.getElementById('workIndexNum');
+        const cardNodes = [];
 
-        const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 3000);
-        camera.position.z = 1000;
+        let hoveredIndex = -1;
 
-        const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-
-        // 2. CREATE 3D CONSTELLATION MESHES
-        const textureLoader = new THREE.TextureLoader();
-        const planeGeo = new THREE.PlaneGeometry(240, 150, 16, 16);
-        const cardMeshes = [];
-        const constellationGroup = new THREE.Group();
-        scene.add(constellationGroup);
-
-        const total = templates.length;
-        const radiusX = 420;
-        const radiusZ = 380;
-
+        // Build Cards
         templates.forEach((tpl, i) => {
-            const texture = textureLoader.load(tpl.img);
-            texture.generateMipmaps = true;
-
-            const material = new THREE.MeshBasicMaterial({
-                map: texture,
-                transparent: true,
-                opacity: 0.95,
-                side: THREE.DoubleSide
+            const card = document.createElement('div');
+            card.className = 'orbit_card';
+            card.innerHTML = `<img class="orbit_card_img" src="${tpl.img}" alt="${tpl.title}" loading="eager">`;
+            
+            card.addEventListener('mouseenter', () => {
+                hoveredIndex = i;
+                card.classList.add('is-hovered');
+                if (centerStatus) centerStatus.textContent = tpl.title;
+                if (workIndexNum) workIndexNum.textContent = tpl.id;
+                if (label) label.textContent = `${tpl.title} // ${tpl.niche}`;
             });
 
-            const mesh = new THREE.Mesh(planeGeo, material);
-            const angle = (i / total) * Math.PI * 2;
-            
-            mesh.position.x = Math.cos(angle) * radiusX;
-            mesh.position.z = Math.sin(angle) * radiusZ;
-            mesh.position.y = Math.sin(angle * 2) * 60; // subtle undulating wave
+            card.addEventListener('mouseleave', () => {
+                if (hoveredIndex === i) {
+                    hoveredIndex = -1;
+                    card.classList.remove('is-hovered');
+                    if (centerStatus) centerStatus.textContent = 'CONSTELLATION';
+                    if (label) label.textContent = 'BOOMO // STUDIO';
+                }
+            });
 
-            // Face slightly towards center with natural tangent angle
-            mesh.rotation.y = -angle + Math.PI / 2;
-            mesh.userData = { ...tpl, index: i, baseAngle: angle, baseScale: 1 };
+            card.addEventListener('click', () => {
+                openPreview(tpl.url, tpl.domain, tpl.title);
+            });
 
-            constellationGroup.add(mesh);
-            cardMeshes.push(mesh);
+            orbitContainer.appendChild(card);
+            cardNodes.push({ el: card, data: tpl });
         });
 
-        // 3. BACKGROUND DUST PARTICLES (CIPHER AMBIENT)
-        const particleGeo = new THREE.BufferGeometry();
-        const particleCount = 200;
-        const posArray = new Float32Array(particleCount * 3);
-
-        for(let i=0; i<particleCount*3; i+=3) {
-            posArray[i] = (Math.random() - 0.5) * 1600;
-            posArray[i+1] = (Math.random() - 0.5) * 1000;
-            posArray[i+2] = (Math.random() - 0.5) * 1200;
-        }
-
-        particleGeo.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
-        const particleMat = new THREE.PointsMaterial({
-            size: 2,
-            color: 0xE9EAE4,
-            transparent: true,
-            opacity: 0.35
-        });
-        const particles = new THREE.Points(particleGeo, particleMat);
-        scene.add(particles);
-
-        // 4. KINETIC PHYSICS, INTERTIA & MOUSE PARALLAX
-        let mouseX = 0, mouseY = 0;
-        let targetTiltX = 0, targetTiltY = 0;
-        let currentTiltX = 0, currentTiltY = 0;
-
-        let rotationSpeed = 0.0016;
-        let rotationVelocity = 0;
+        // Orbit Loop Physics
+        let currentAngle = 0;
+        let targetAngleVelocity = 0.0015; // smooth hypnotic orbit
+        let currentAngleVelocity = 0.0015;
         let isDragging = false;
-        let prevMouseX = 0;
-        let prevMouseY = 0;
+        let startX = 0;
 
-        // Raycasting for interactive hover and click
-        const raycaster = new THREE.Raycaster();
-        const mouseNorm = new THREE.Vector2(-100, -100);
-        let hoveredMesh = null;
-        const centerStatus = document.getElementById('centerStatus');
-
-        window.addEventListener('mousemove', (e) => {
-            const normX = (e.clientX / window.innerWidth) * 2 - 1;
-            const normY = -(e.clientY / window.innerHeight) * 2 + 1;
-            mouseNorm.x = normX;
-            mouseNorm.y = normY;
-
-            // Parallax camera tilt
-            targetTiltX = normY * 0.18;
-            targetTiltY = normX * 0.28;
-
-            if (isDragging) {
-                const deltaX = e.clientX - prevMouseX;
-                rotationVelocity += deltaX * 0.0006;
-                prevMouseX = e.clientX;
-                prevMouseY = e.clientY;
+        function animateOrbit() {
+            // Smoothly slow down when hovering a card for easy clicking
+            const baseSpeed = (hoveredIndex !== -1) ? 0.0003 : 0.0015;
+            
+            if (!isDragging) {
+                targetAngleVelocity += (baseSpeed - targetAngleVelocity) * 0.05;
+                currentAngleVelocity += (targetAngleVelocity - currentAngleVelocity) * 0.08;
             }
-        });
+            
+            currentAngle += currentAngleVelocity;
 
-        window.addEventListener('mousedown', (e) => {
-            if (e.target.closest('nav') || e.target.closest('.drawer_overlay') || e.target.closest('.preview_modal_overlay')) return;
+            const total = cardNodes.length;
+            const radiusX = Math.min(window.innerWidth * 0.38, 480);
+            const radiusY = Math.min(window.innerHeight * 0.28, 280);
+
+            cardNodes.forEach((node, i) => {
+                const angle = (i / total) * Math.PI * 2 + currentAngle;
+                const x = Math.cos(angle) * radiusX;
+                const y = Math.sin(angle) * radiusY;
+                
+                // Depth stacking: items lower on the screen (sin > 0) have higher base z-index
+                const sinVal = Math.sin(angle);
+                const depthOrder = Math.round((sinVal + 1) * 20) + 10;
+                
+                const isHover = (hoveredIndex === i);
+                const scale = isHover ? 1.32 : (0.92 + (sinVal + 1) * 0.06);
+                const zIndex = isHover ? 200 : depthOrder;
+
+                node.el.style.transform = `translate3d(calc(-50% + ${x.toFixed(2)}px), calc(-50% + ${y.toFixed(2)}px), 0) scale(${scale.toFixed(3)})`;
+                node.el.style.zIndex = zIndex;
+            });
+
+            requestAnimationFrame(animateOrbit);
+        }
+        requestAnimationFrame(animateOrbit);
+
+        // Drag / Swipe Interaction
+        const stage = document.getElementById('stage');
+
+        stage.addEventListener('mousedown', (e) => {
+            if (e.target.closest('.orbit_card')) return;
             isDragging = true;
-            prevMouseX = e.clientX;
-            prevMouseY = e.clientY;
+            startX = e.clientX;
         });
 
         window.addEventListener('mouseup', () => {
             isDragging = false;
         });
 
-        // Touch support
-        window.addEventListener('touchstart', (e) => {
-            if (e.target.closest('nav') || e.target.closest('.drawer_overlay') || e.target.closest('.preview_modal_overlay')) return;
+        window.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            const deltaX = e.clientX - startX;
+            startX = e.clientX;
+            currentAngleVelocity = deltaX * 0.003;
+        });
+
+        // Touch Interaction (Mobile)
+        stage.addEventListener('touchstart', (e) => {
+            if (e.target.closest('.orbit_card')) return;
             isDragging = true;
-            prevMouseX = e.touches[0].clientX;
-            prevMouseY = e.touches[0].clientY;
+            startX = e.touches[0].clientX;
         }, { passive: true });
 
         window.addEventListener('touchmove', (e) => {
             if (!isDragging) return;
-            const deltaX = e.touches[0].clientX - prevMouseX;
-            rotationVelocity += deltaX * 0.0008;
-            prevMouseX = e.touches[0].clientX;
-            prevMouseY = e.touches[0].clientY;
+            const deltaX = e.touches[0].clientX - startX;
+            startX = e.touches[0].clientX;
+            currentAngleVelocity = deltaX * 0.004;
         }, { passive: true });
 
         window.addEventListener('touchend', () => {
@@ -1076,95 +1113,10 @@
         window.addEventListener('wheel', (e) => {
             if (document.getElementById('drawerOverlay')?.classList.contains('active')) return;
             if (document.getElementById('previewModal')?.classList.contains('active')) return;
-            rotationVelocity += (e.deltaY || e.deltaX) * 0.0003;
+            currentAngleVelocity += (e.deltaY || e.deltaX) * 0.0004;
         }, { passive: true });
 
-        // Click to Zoom & Open Preview
-        window.addEventListener('click', (e) => {
-            if (e.target.closest('nav') || e.target.closest('.drawer_overlay') || e.target.closest('.preview_modal_overlay')) return;
-            if (Math.abs(rotationVelocity) > 0.008) return; // ignore click during fast spin
-
-            raycaster.setFromCamera(mouseNorm, camera);
-            const intersects = raycaster.intersectObjects(cardMeshes);
-
-            if (intersects.length > 0) {
-                const clickedMesh = intersects[0].object;
-                const d = clickedMesh.userData;
-                
-                // Kinetic zoom pulse on click
-                gsap.to(clickedMesh.scale, {
-                    x: 1.35, y: 1.35, z: 1.35,
-                    duration: 0.35,
-                    ease: "power2.out",
-                    onComplete: () => {
-                        gsap.to(clickedMesh.scale, { x: 1, y: 1, z: 1, duration: 0.3 });
-                        openPreview(d.url, d.domain, d.title);
-                    }
-                });
-            }
-        });
-
-        // 5. ANIMATION & RENDER LOOP
-        function animate() {
-            requestAnimationFrame(animate);
-
-            // Inertia decay
-            rotationVelocity *= 0.94;
-            constellationGroup.rotation.y += rotationSpeed + rotationVelocity;
-
-            // Camera tilt parallax lerp
-            currentTiltX += (targetTiltX - currentTiltX) * 0.05;
-            currentTiltY += (targetTiltY - currentTiltY) * 0.05;
-            camera.rotation.x = currentTiltX;
-            camera.rotation.y = -currentTiltY;
-
-            // Slow particle drift
-            particles.rotation.y += 0.0004;
-
-            // Raycasting & Hover Feedback
-            raycaster.setFromCamera(mouseNorm, camera);
-            const intersects = raycaster.intersectObjects(cardMeshes);
-
-            if (intersects.length > 0) {
-                const hit = intersects[0].object;
-                if (hoveredMesh !== hit) {
-                    if (hoveredMesh) {
-                        gsap.to(hoveredMesh.scale, { x: 1, y: 1, z: 1, duration: 0.4 });
-                        hoveredMesh.material.opacity = 0.9;
-                    }
-                    hoveredMesh = hit;
-                    gsap.to(hoveredMesh.scale, { x: 1.18, y: 1.18, z: 1.18, duration: 0.4, ease: "power2.out" });
-                    hoveredMesh.material.opacity = 1;
-                    
-                    const d = hit.userData;
-                    if (centerStatus) centerStatus.textContent = `${d.title} // ${d.niche}`;
-                    if (label) label.textContent = `${d.title} // ${d.niche}`;
-                    canvas.style.cursor = 'pointer';
-                }
-            } else {
-                if (hoveredMesh) {
-                    gsap.to(hoveredMesh.scale, { x: 1, y: 1, z: 1, duration: 0.4 });
-                    hoveredMesh.material.opacity = 0.9;
-                    hoveredMesh = null;
-                    if (centerStatus) centerStatus.textContent = 'CONSTELLATION';
-                    if (label) label.textContent = 'BOOMO // STUDIO';
-                    canvas.style.cursor = isDragging ? 'grabbing' : 'grab';
-                }
-            }
-
-            renderer.render(scene, camera);
-        }
-        animate();
-
-        // 6. RESIZE HANDLER
-        window.addEventListener('resize', () => {
-            camera.aspect = window.innerWidth / window.innerHeight;
-            camera.updateProjectionMatrix();
-            renderer.setSize(window.innerWidth, window.innerHeight);
-            updateModalIframeScale();
-        });
-
-        // 7. Cursor Follower (Cipher Style)
+        // Cursor Follower (Cipher Style)
         const cube = document.getElementById('cursorCube');
         const label = document.getElementById('cursorLabel');
         let cMouseX = window.innerWidth / 2;
@@ -1191,7 +1143,7 @@
         }
         animateCursor();
 
-        // 8. Preview Modal Logic
+        // Preview Modal Logic
         function updateModalIframeScale() {
             const scaler = document.getElementById('modalIframeScaler');
             const parent = scaler?.parentElement;
@@ -1226,7 +1178,9 @@
             if (e.target.id === 'previewModal') closePreviewModal();
         }
 
-        // 9. Drawer Logic
+        window.addEventListener('resize', updateModalIframeScale);
+
+        // Drawer Logic
         function openDrawer(sectionId) {
             const overlay = document.getElementById('drawerOverlay');
             const titleEl = document.getElementById('drawerSectionTitle');
