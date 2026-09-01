@@ -3,158 +3,531 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lumina Contábil | Soluções Financeiras B2B</title>
+    <title>Lumina Contábil | Inteligência Financeira & Gestão Tributária Estratégica</title>
+    <meta name="description" content="Contabilidade consultiva e estratégica para empresas de médio e grande porte. Planejamento tributário para Lucro Real e Presumido, BPO Financeiro e compliance rigoroso.">
     
+    <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+
     <!-- Fonts -->
-    
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,400;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/vendor/fontawesome/css/all.min.css">
     
+    <!-- CSS -->
     <link rel="stylesheet" href="/templates/contabilidade/css/style.css">
 </head>
 <body>
 
-    <!-- TOPBAR -->
-    <div class="topbar">
-        <div class="container topbar-content">
-            <span class="phone"><i class="fa-solid fa-phone"></i> (11) 4000-0000</span>
-            <div class="topbar-links">
-                <a href="#"><i class="fa-solid fa-user-lock"></i> Área do Cliente</a>
-                <a href="#"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-            </div>
+    <!-- TOPBAR INSTITUCIONAL -->
+    <aside class="lumina_topbar" aria-label="Aviso institucional">
+        <div class="container topbar_content">
+            <span class="topbar_tag"><i class="fa-solid fa-chart-line"></i> Contabilidade Estratégica & CFO as a Service</span>
+            <span class="topbar_location">Edifício JK Finance, Vila Olímpia • São Paulo, SP</span>
+            <span class="topbar_crc">Registro CRC-SP 2SP034890/O</span>
         </div>
-    </div>
+    </aside>
 
     <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="container nav-content">
-            <a href="#" class="logo">
-                <i class="fa-solid fa-chart-pie"></i> Lumina<span>Contábil</span>
+    <header class="lumina_header">
+        <nav class="container nav_content" aria-label="Navegação principal">
+            <a href="#" class="brand_signature">
+                <span class="brand_name">LUMINA<span class="brand_accent">CONTÁBIL</span></span>
+                <span class="brand_sub">Estratégia Financeira & Tributária</span>
             </a>
-            <div class="nav-links">
+            
+            <div class="nav_links" id="navLinks">
                 <a href="#solucoes">Soluções</a>
-                <a href="#diferenciais">Por que a Lumina?</a>
-                <a href="#sobre">Nossa Equipe</a>
-                <a href="https://wa.me/5511999999999" target="_blank" class="btn btn-primary">Fale com um Consultor</a>
+                <a href="#diferenciais">Diferenciais</a>
+                <a href="#transicao">Como Migrar</a>
+                <a href="#lideranca">A Liderança</a>
+                <a href="#faq">FAQ</a>
             </div>
-        </div>
-    </nav>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="container hero-container">
-            <div class="hero-content">
-                <div class="badge">Gestão Contábil & Tributária</div>
-                <h1>Inteligência financeira para impulsionar o seu negócio.</h1>
-                <p>Muito além da contabilidade tradicional. Somos seus parceiros estratégicos para reduzir tributos, blindar seu patrimônio e garantir o crescimento sustentável da sua empresa.</p>
-                <div class="hero-actions">
-                    <a href="https://wa.me/5511999999999" target="_blank" class="btn btn-primary btn-large">
-                        Solicitar Proposta <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                    <a href="#solucoes" class="btn btn-outline">Ver Especialidades</a>
-                </div>
+            <div class="nav_cta_wrap">
+                <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20diagn%C3%B3stico%20tribut%C3%A1rio%20com%20a%20Lumina%20Cont%C3%A1bil." target="_blank" rel="noopener noreferrer" class="btn_lumina btn_lumina_primary">
+                    <span>Diagnóstico Fiscal</span>
+                </a>
+                <button id="mobileMenuBtn" class="mobile_toggle" aria-label="Abrir Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-            <div class="hero-image">
-                <picture>
-              <source media="(min-width: 768px)" srcset="/templates/contabilidade/assets/images/hero-contabilidade-desktop.webp">
-              <img src="/templates/contabilidade/assets/images/hero-contabilidade.webp" alt="Escritório da Lumina Contábil">
-            </picture>
-                <div class="hero-card">
-                    <i class="fa-solid fa-shield-halved"></i>
-                    <div>
-                        <strong>Segurança Fiscal</strong>
-                        <span>100% de compliance com a legislação</span>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="lumina_hero">
+            <div class="container hero_grid">
+                <div class="hero_content">
+                    <div class="hero_badge">
+                        <span class="badge_dot"></span>
+                        Contabilidade Consultiva & Inteligência B2B
+                    </div>
+
+                    <h1 class="hero_title">
+                        Inteligência contábil e fiscal para impulsionar o lucro real e a <em>solidez da sua empresa.</em>
+                    </h1>
+
+                    <p class="hero_lead">
+                        Muito além de emitir guias. Transformamos sua contabilidade em uma bússola financeira de tomada de decisão: planejamento tributário lícito, BPO financeiro completo e compliance preventivo contra autuações.
+                    </p>
+
+                    <div class="hero_actions">
+                        <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20reuni%C3%A3o%20com%20a%20Lumina%20Cont%C3%A1bil." target="_blank" rel="noopener noreferrer" class="btn_lumina btn_lumina_emerald btn_lumina_lg">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>Solicitar Diagnóstico no WhatsApp</span>
+                        </a>
+                        <a href="#solucoes" class="btn_lumina btn_lumina_outline btn_lumina_lg">
+                            <span>Conhecer Especialidades</span>
+                        </a>
+                    </div>
+
+                    <div class="hero_trust_row">
+                        <div class="trust_pill">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <span>Especialistas em Lucro Real & Presumido</span>
+                        </div>
+                        <div class="trust_pill">
+                            <i class="fa-solid fa-arrows-split-up-and-left"></i>
+                            <span>Auditoria SPED Contínua</span>
+                        </div>
+                        <div class="trust_pill">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <span>Gerente de Contas Dedicado</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero_visual">
+                    <div class="hero_frame">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="/templates/contabilidade/assets/images/hero-contabilidade-desktop.webp">
+                            <img src="/templates/contabilidade/assets/images/hero-contabilidade.webp" alt="Sede Corporativa da Lumina Contábil no Edifício JK Finance" class="hero_img">
+                        </picture>
+                        <div class="hero_floating_card">
+                            <div class="floating_icon">
+                                <i class="fa-solid fa-scale-balanced"></i>
+                            </div>
+                            <div class="floating_text">
+                                <strong class="card_number">+R$ 48M</strong>
+                                <span class="card_sub">Em economia tributária lícita e créditos recuperados para nossos clientes</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- SOLUÇÕES -->
-    <section id="solucoes" class="section-padding bg-gray">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2>Nossas Especialidades</h2>
-                <p>Terceirize a burocracia e foque no core business da sua empresa. Atendemos de startups a grandes indústrias.</p>
-            </div>
-
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fa-solid fa-calculator"></i>
-                    <h3>Contabilidade Digital</h3>
-                    <p>Fechamento contábil rápido, emissão de balancetes mensais e total transparência financeira através de dashboards interativos em tempo real.</p>
+        <!-- STATS BAR -->
+        <section class="lumina_stats" aria-label="Métricas de autoridade">
+            <div class="container stats_grid">
+                <div class="stat_item">
+                    <h2 class="stat_number">+15 Anos</h2>
+                    <p class="stat_label">De Excelência no Mercado B2B</p>
                 </div>
-                <div class="service-card">
-                    <i class="fa-solid fa-scale-balanced"></i>
-                    <h3>Planejamento Tributário</h3>
-                    <p>Revisão completa da sua carga tributária. Buscamos o melhor enquadramento (Simples, Presumido ou Real) para sua empresa pagar menos impostos legalmente.</p>
+                <div class="stat_item">
+                    <h2 class="stat_number">+R$ 48M</h2>
+                    <p class="stat_label">Em Economia e Créditos Fiscais</p>
                 </div>
-                <div class="service-card">
-                    <i class="fa-solid fa-users-gear"></i>
-                    <h3>BPO Financeiro</h3>
-                    <p>Terceirização completa do seu departamento financeiro. Gestão de contas a pagar, receber, fluxo de caixa e conciliação bancária diária.</p>
+                <div class="stat_item">
+                    <h2 class="stat_number">+350</h2>
+                    <p class="stat_label">Empresas Assessoradas com Rigor</p>
                 </div>
-                <div class="service-card">
-                    <i class="fa-solid fa-building"></i>
-                    <h3>Abertura de Empresa</h3>
-                    <p>Processo 100% ágil e sem dor de cabeça. Desde a escolha do CNAE ideal até a liberação do seu Alvará e emissão da primeira nota fiscal.</p>
+                <div class="stat_item">
+                    <h2 class="stat_number">100%</h2>
+                    <p class="stat_label">De Conformidade com a Legislação</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- SOBRE O SÓCIO -->
-    <section id="sobre" class="section-padding">
-        <div class="container">
-            <div class="about-flex">
-                <div class="about-image">
-                    <img src="/templates/contabilidade/assets/images/contador-perfil.webp" alt="Sócio Diretor">
+        <!-- DIFERENCIAIS ESTRATÉGICOS -->
+        <section id="diferenciais" class="lumina_section section_light">
+            <div class="container">
+                <div class="section_intro text-center">
+                    <span class="section_badge">Por Que a Lumina</span>
+                    <h2 class="section_title">O fim da contabilidade reativa que só gera boletos.</h2>
+                    <p class="section_desc">
+                        Adotamos uma abordagem consultiva onde nossos especialistas analisam dados financeiros para otimizar tributos e proteger a margem do seu negócio.
+                    </p>
                 </div>
-                <div class="about-content">
-                    <h2>Roberto Lumina</h2>
-                    <span class="crc">Sócio-Diretor | CRC-SP 12345/O</span>
-                    <p>Com formação em Ciências Contábeis pela FEA-USP e MBA em Finanças Corporativas, Roberto lidera a Lumina Contábil há mais de 15 anos com um foco obsessivo em resultados e compliance.</p>
-                    <p>"Nosso papel deixou de ser o de apurar impostos há muito tempo. Hoje, o contador precisa sentar à mesa com o empresário e ajudar a desenhar a estratégia financeira do negócio."</p>
-                    <ul class="check-list">
-                        <li><i class="fa-solid fa-check-circle"></i> Especialista em Lucro Real</li>
-                        <li><i class="fa-solid fa-check-circle"></i> Consultoria de M&A e Valuation</li>
-                        <li><i class="fa-solid fa-check-circle"></i> Auditoria Interna Preventiva</li>
-                    </ul>
-                    <a href="https://wa.me/5511999999999" target="_blank" class="btn btn-primary" style="margin-top: 1.5rem;">Agendar Reunião Consultiva</a>
+
+                <div class="differentials_grid">
+                    <article class="diff_card">
+                        <div class="diff_icon"><i class="fa-solid fa-microchip"></i></div>
+                        <h3 class="diff_title">Auditoria SPED Preventiva</h3>
+                        <p class="diff_text">
+                            Cruzamos todas as notas fiscais e obrigações acessórias com algoritmos de validação tributária antes da transmissão para o Fisco, eliminando o risco de autuações e malha fina.
+                        </p>
+                    </article>
+
+                    <article class="diff_card">
+                        <div class="diff_icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                        <h3 class="diff_title">CFO as a Service & BPO</h3>
+                        <p class="diff_text">
+                            Terceirize contas a pagar, a receber, conciliação e relatórios de fluxo de caixa diários. Sua diretoria ganha relatórios executivos de DRE gerencial sem o custo de um time financeiro interno inchado.
+                        </p>
+                    </article>
+
+                    <article class="diff_card">
+                        <div class="diff_icon"><i class="fa-solid fa-headset"></i></div>
+                        <h3 class="diff_title">Gerente Dedicado & Resposta Rápida</h3>
+                        <p class="diff_text">
+                            Chega de abrir tickets ou falar com robôs. Sua empresa conta com um contador sênior dedicado acessível via WhatsApp e telefone direto para sanar dúvidas operacionais com agilidade.
+                        </p>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- SOLUÇÕES / ESPECIALIDADES -->
+        <section id="solucoes" class="lumina_section section_mint">
+            <div class="container">
+                <div class="section_intro text-center">
+                    <span class="section_badge">Nossas Especialidades</span>
+                    <h2 class="section_title">Soluções completas para cada fase do seu negócio.</h2>
+                    <p class="section_desc">
+                        De startups e prestadores de serviços de alto valor a indústrias e comércios atacadistas tributados pelo Lucro Real.
+                    </p>
+                </div>
+
+                <div class="solutions_grid">
+                    <!-- 1 -->
+                    <article class="sol_card">
+                        <div class="sol_header">
+                            <span class="sol_tag">Regime Tributário</span>
+                            <span class="sol_type">Lucro Real & Presumido</span>
+                        </div>
+                        <h3 class="sol_title">Gestão Contábil & Fiscal Estratégica</h3>
+                        <p class="sol_desc">
+                            Fechamento contábil mensal rigoroso, conciliação patrimonial detalhada e emissão de DRE analítico para acompanhamento da saúde financeira e da margem de contribuição da empresa.
+                        </p>
+                        <div class="sol_pills">
+                            <span>Balancetes Mensais</span>
+                            <span>SPED Contábil e Fiscal</span>
+                        </div>
+                        <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20Gest%C3%A3o%20Cont%C3%A1bil%20e%20Fiscal." target="_blank" rel="noopener noreferrer" class="sol_action">
+                            <span>Consultar especialista</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                    <!-- 2 -->
+                    <article class="sol_card">
+                        <div class="sol_header">
+                            <span class="sol_tag">Terceirização</span>
+                            <span class="sol_type">Gestão de Tesouraria</span>
+                        </div>
+                        <h3 class="sol_title">BPO Financeiro Completo</h3>
+                        <p class="sol_desc">
+                            Assumimos a rotina operacional do seu financeiro: agendamento de contas a pagar com aprovação em 1 clique no seu banco, gestão de recebíveis, conciliação bancária diária e relatórios de fluxo.
+                        </p>
+                        <div class="sol_pills">
+                            <span>Zero Erros Operacionais</span>
+                            <span>Relatórios Diários</span>
+                        </div>
+                        <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20avaliar%20BPO%20Financeiro%20para%20minha%20empresa." target="_blank" rel="noopener noreferrer" class="sol_action">
+                            <span>Consultar especialista</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                    <!-- 3 -->
+                    <article class="sol_card">
+                        <div class="sol_header">
+                            <span class="sol_tag">Eficiência Fiscal</span>
+                            <span class="sol_type">Redução Lícita</span>
+                        </div>
+                        <h3 class="sol_title">Planejamento Tributário & Créditos</h3>
+                        <p class="sol_desc">
+                            Estudo detalhado do modelo tributário ideal para diminuir a carga de impostos federais e estaduais de forma 100% legal, além de auditoria dos últimos 5 anos para recuperar tributos pagos a mais.
+                        </p>
+                        <div class="sol_pills">
+                            <span>Recuperação de PIS/COFINS</span>
+                            <span>Segurança Jurídica</span>
+                        </div>
+                        <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20an%C3%A1lise%20de%20Planejamento%20Tribut%C3%A1rio." target="_blank" rel="noopener noreferrer" class="sol_action">
+                            <span>Consultar especialista</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                    <!-- 4 -->
+                    <article class="sol_card">
+                        <div class="sol_header">
+                            <span class="sol_tag">Recursos Humanos</span>
+                            <span class="sol_type">Compliance Trabalhista</span>
+                        </div>
+                        <h3 class="sol_title">Folha de Pagamento & Gestão de DP</h3>
+                        <p class="sol_desc">
+                            Gestão completa de admissões, rescisões, férias, folha de pagamento e distribuição de pró-labore. Transmissão precisa dos eventos do eSocial sem passivos trabalhistas ocultos.
+                        </p>
+                        <div class="sol_pills">
+                            <span>100% Integrado ao eSocial</span>
+                            <span>Cálculos Rigorosos</span>
+                        </div>
+                        <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20preciso%20de%20assessoria%20em%20Departamento%20Pessoal." target="_blank" rel="noopener noreferrer" class="sol_action">
+                            <span>Consultar especialista</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                    <!-- 5 -->
+                    <article class="sol_card">
+                        <div class="sol_header">
+                            <span class="sol_tag">Societário</span>
+                            <span class="sol_type">Legalização Expressa</span>
+                        </div>
+                        <h3 class="sol_title">Abertura de Empresas & Holdings</h3>
+                        <p class="sol_desc">
+                            Constituição de CNPJ com planejamento prévio de CNAEs, contratos sociais com cláusulas de blindagem, acordos de sócios e registro ágil em todos os órgãos competentes.
+                        </p>
+                        <div class="sol_pills">
+                            <span>CNAEs Otimizados</span>
+                            <span>Abertura Rápida</span>
+                        </div>
+                        <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20quero%20abrir%20uma%20empresa%20ou%20holding." target="_blank" rel="noopener noreferrer" class="sol_action">
+                            <span>Consultar especialista</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                    <!-- 6 -->
+                    <article class="sol_card">
+                        <div class="sol_header">
+                            <span class="sol_tag">Auditoria & Valuation</span>
+                            <span class="sol_type">Operações M&A</span>
+                        </div>
+                        <h3 class="sol_title">Auditoria Contábil & Apoio a Captação</h3>
+                        <p class="sol_desc">
+                            Preparação de demonstrações financeiras para captação de recursos com investidores, linhas de crédito bancárias (BNDES) e suporte contábil em operações de due diligence de fusão e aquisição.
+                        </p>
+                        <div class="sol_pills">
+                            <span>Auditoria Independente</span>
+                            <span>Balanços para Crédito</span>
+                        </div>
+                        <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20preciso%20de%20suporte%20em%20Auditoria%20Cont%C3%A1bil." target="_blank" rel="noopener noreferrer" class="sol_action">
+                            <span>Consultar especialista</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- A LIDERANÇA -->
+        <section id="lideranca" class="lumina_section section_light">
+            <div class="container">
+                <div class="leader_split">
+                    <div class="leader_photo_frame">
+                        <img src="/templates/contabilidade/assets/images/contador-perfil.webp" alt="Roberto Lumina, Sócio-Diretor da Lumina Contábil" class="leader_photo">
+                        <div class="leader_badge_box">
+                            <strong class="leader_badge_title">15+ Anos de Liderança</strong>
+                            <span class="leader_badge_sub">Especialista em Lucro Real e Finanças Corporativas</span>
+                        </div>
+                    </div>
+
+                    <div class="leader_content">
+                        <span class="section_badge">Corpo Diretivo</span>
+                        <h2 class="leader_name">Roberto Lumina</h2>
+                        <span class="leader_crc">Sócio-Diretor • CRC-SP 12345/O</span>
+
+                        <blockquote class="leader_quote">
+                            "Nosso papel deixou de ser o de apurar impostos há muito tempo. O contador consultivo senta à mesa com o empresário para desenhar o futuro e a lucratividade sustentável do negócio."
+                        </blockquote>
+
+                        <div class="leader_bio">
+                            <p>
+                                Bacharel em Ciências Contábeis pela Faculdade de Economia, Administração e Contabilidade da Universidade de São Paulo (FEA-USP) e com MBA em Finanças Corporativas pelo Insper, Roberto Lumina construiu sua carreira assessorando médias e grandes empresas na otimização de suas estruturas tributárias.
+                            </p>
+                            <p>
+                                Especialista em regimes de Lucro Real e reestruturações societárias, lidera uma equipe multidisciplinar focada em entregar segurança jurídica irrepreensível e dados precisos para o crescimento de cada cliente.
+                            </p>
+                        </div>
+
+                        <ul class="leader_milestones">
+                            <li><i class="fa-solid fa-circle-check"></i> Consultor em transição de regimes tributários para indústrias e serviços</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Membro do Instituto dos Auditores Independentes do Brasil (IBRACON)</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Mais de 350 projetos de implantação de BPO Financeiro com sucesso</li>
+                        </ul>
+
+                        <div class="leader_cta">
+                            <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20reuni%C3%A3o%20com%20o%20Roberto%20Lumina." target="_blank" rel="noopener noreferrer" class="btn_lumina btn_lumina_emerald">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                <span>Agendar Reunião Consultiva</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRANSIÇÃO EM 3 PASSOS -->
+        <section id="transicao" class="lumina_section section_dark">
+            <div class="container">
+                <div class="section_intro text-center">
+                    <span class="section_badge badge_mint">Transição Sem Burocracia</span>
+                    <h2 class="section_title text_white">Trocar de contabilidade é mais simples do que você imagina.</h2>
+                    <p class="section_desc text_light">
+                        Cuidamos de 100% da transferência dos seus documentos fiscais com o seu contador anterior sem atrito e sem interromper as operações da sua empresa.
+                    </p>
+                </div>
+
+                <div class="steps_grid">
+                    <div class="step_box">
+                        <span class="step_num">01</span>
+                        <h3 class="step_title">Diagnóstico Fiscal Preliminar</h3>
+                        <p class="step_text">Analisamos gratuitamente o enquadramento atual e identificamos oportunidades tributárias imediatas e eventuais pendências.</p>
+                    </div>
+
+                    <div class="step_box">
+                        <span class="step_num">02</span>
+                        <h3 class="step_title">Transição Segura e Assistida</h3>
+                        <p class="step_text">Nossa equipe solicita os arquivos contábeis e fiscais diretamente ao seu prestador anterior com total respaldo legal e discrição.</p>
+                    </div>
+
+                    <div class="step_box">
+                        <span class="step_num">03</span>
+                        <h3 class="step_title">Onboarding e Gerente Dedicado</h3>
+                        <p class="step_text">Configuração do seu portal do cliente, alinhamento dos canais de comunicação no WhatsApp e início imediato dos fechamentos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="lumina_section section_light">
+            <div class="container faq_container">
+                <div class="section_intro text-center">
+                    <span class="section_badge">Tire Suas Dúvidas</span>
+                    <h2 class="section_title">Perguntas frequentes sobre nossos serviços contábeis.</h2>
+                    <p class="section_desc">Transparência operacional para que você tome a melhor decisão para o seu CNPJ.</p>
+                </div>
+
+                <div class="faq_accordion">
+                    <details class="faq_item" open>
+                        <summary class="faq_question">
+                            <span>Como funciona a troca de contabilidade? Dá muito trabalho?</span>
+                            <i class="fa-solid fa-chevron-down faq_toggle_icon"></i>
+                        </summary>
+                        <div class="faq_answer">
+                            <p>
+                                O processo é extremamente simples para a sua empresa. Após assinar a proposta, a equipe de onboarding da Lumina assume o contato com o seu contador anterior, solicita toda a documentação legal e o termo de transferência de responsabilidade técnica (conforme normas do CRC). Sua empresa não fica desassistida em nenhum momento.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="faq_item">
+                        <summary class="faq_question">
+                            <span>Minha empresa está no Lucro Presumido. Vale a pena mudar para o Lucro Real?</span>
+                            <i class="fa-solid fa-chevron-down faq_toggle_icon"></i>
+                        </summary>
+                        <div class="faq_answer">
+                            <p>
+                                Depende da sua margem líquida real e do volume de despesas dedutíveis (insumos, energia, aluguel, depreciação). Realizamos um estudo comparativo detalhado com base no histórico dos últimos 12 meses da sua empresa para simular com precisão matemática em qual regime sua empresa pagará menos impostos legalmente.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="faq_item">
+                        <summary class="faq_question">
+                            <span>O que está incluso no BPO Financeiro da Lumina?</span>
+                            <i class="fa-solid fa-chevron-down faq_toggle_icon"></i>
+                        </summary>
+                        <div class="faq_answer">
+                            <p>
+                                O BPO Financeiro assume toda a operação de tesouraria da empresa: lançamentos no sistema, agendamento de pagamentos bancários (onde o sócio apenas aprova com o token no celular), emissão de notas fiscais, cobrança de inadimplentes e conciliação bancária diária com relatórios semanais de fluxo de caixa.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="faq_item">
+                        <summary class="faq_question">
+                            <span>Como é o canal de atendimento no dia a dia?</span>
+                            <i class="fa-solid fa-chevron-down faq_toggle_icon"></i>
+                        </summary>
+                        <div class="faq_answer">
+                            <p>
+                                Sua empresa terá um Gerente de Contas dedicado e especializado no seu segmento de atuação. O contato é direto por WhatsApp corporativo, telefone e videoconferência, com prazo de retorno ágil e sem a lentidão dos sistemas de chamados tradicionais.
+                            </p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section class="lumina_cta">
+            <div class="container text-center">
+                <span class="cta_badge">Inteligência Financeira B2B</span>
+                <h2 class="cta_headline">Pronto para transformar sua contabilidade em uma vantagem competitiva?</h2>
+                <p class="cta_sub">
+                    Solicite um diagnóstico fiscal gratuito com nossos especialistas e descubra onde sua empresa pode economizar tributos imediatamente.
+                </p>
+                <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20um%20diagn%C3%B3stico%20fiscal%20gratuito%20com%20a%20Lumina." target="_blank" rel="noopener noreferrer" class="btn_lumina btn_lumina_emerald btn_lumina_lg">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Solicitar Diagnóstico Fiscal no WhatsApp</span>
+                </a>
+            </div>
+        </section>
+    </main>
 
     <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-top">
-                <div class="footer-brand">
-                    <a href="#" class="logo">
-                        <i class="fa-solid fa-chart-pie"></i> Lumina<span>Contábil</span>
-                    </a>
-                    <p>Transformando números em estratégias de crescimento desde 2008.</p>
+    <footer class="lumina_footer">
+        <div class="container footer_main_grid">
+            <div class="footer_col brand_section">
+                <div class="brand_signature">
+                    <span class="brand_name">LUMINA<span class="brand_accent">CONTÁBIL</span></span>
+                    <span class="brand_sub">Estratégia Financeira & Tributária</span>
                 </div>
-                <div class="footer-links">
-                    <h4>Empresa</h4>
-                    <a href="#solucoes">Soluções</a>
-                    <a href="#sobre">Nossa Equipe</a>
-                    <a href="#">Trabalhe Conosco</a>
-                </div>
-                <div class="footer-contact">
-                    <h4>Fale Conosco</h4>
-                    <p><i class="fa-solid fa-map-pin"></i> Edifício JK Finance - 15º Andar, SP</p>
-                    <p><i class="fa-solid fa-envelope"></i> contato@luminacontabil.com.br</p>
-                    <p><i class="fa-brands fa-whatsapp"></i> (11) 99999-9999</p>
-                </div>
+                <p class="footer_bio">
+                    Contabilidade consultiva, planejamento fiscal avançado e BPO financeiro para empresas de alto crescimento. Rigor técnico e inteligência de dados.
+                </p>
+                <span class="crc_seal">Registro CRC-SP 2SP034890/O</span>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Lumina Contábil. Todos os direitos reservados. <span>Site por Boomo</span></p>
+
+            <div class="footer_col">
+                <h3 class="footer_col_title">Sede Corporativa</h3>
+                <p class="footer_row"><i class="fa-solid fa-location-dot"></i> Av. Pres. Juscelino Kubitschek, 1400 • 15º Andar<br>Edifício JK Finance • Vila Olímpia, SP</p>
+                <p class="footer_row"><i class="fa-solid fa-shield-halved"></i> Infraestrutura certificada ISO 27001</p>
             </div>
+
+            <div class="footer_col">
+                <h3 class="footer_col_title">Canais Executivos</h3>
+                <p class="footer_row"><i class="fa-brands fa-whatsapp"></i> (11) 99999-9999</p>
+                <p class="footer_row"><i class="fa-solid fa-phone"></i> (11) 4000-0000</p>
+                <p class="footer_row"><i class="fa-regular fa-envelope"></i> contato@luminacontabil.com.br</p>
+            </div>
+        </div>
+
+        <div class="container footer_bottom_bar">
+            <p>&copy; 2026 Lumina Contábil Consultoria e Assessoria Contábil Ltda. Todos os direitos reservados.</p>
+            <p class="boomo_seal">Site criado por <strong>Boomo</strong></p>
         </div>
     </footer>
 
+    <!-- SCRIPT MENU MOBILE -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        function toggleMobileMenu() {
+            mobileMenuBtn?.classList.toggle('active');
+            navLinks?.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        }
+
+        mobileMenuBtn?.addEventListener('click', toggleMobileMenu);
+
+        navLinks?.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuBtn?.classList.remove('active');
+                navLinks?.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            });
+        });
+    </script>
 </body>
 </html>
