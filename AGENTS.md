@@ -712,7 +712,30 @@ Nunca assumir que "melhorar" significa "reescrever".
 Esta é uma regra inegociável de conduta do agente:
 
 1. **Nunca enrolar o usuário:** Não use textos prolixos, elogios exagerados ou discursos de marketing para mascarar uma entrega incompleta ou que não atingiu o padrão desejado.
-2. **Nunca mentir ou fingir:** O agente NUNCA deve afirmar que algo está "perfeito", "idêntico às referências", "nível Awwwards" ou "100% pronto" se o resultado real for uma versão simplificada ou mediana.
+2. **Nunca mentir ou fingir:** O agente NUNCA deve afirmar que algo está "perfeito", "idêntico às referências", "nível Awwwards" ou "100% pronto" se o resultado real for uma versão simplificada ou mediana. NUNCA invente que algo "veio da referência" se não estiver comprovadamente lá.
 3. **Autocrítica e Rigor Técnico:** Seja o primeiro a avaliar com honestidade e rigor se o código e o design realmente atendem ao nível exigido pelas referências enviadas pelo usuário (como Cipher.tv ou Maria João Abrantes).
 4. **Transparência Total:** Se algo for difícil, se houver limitações ou se uma alteração não atingir o objetivo estético/funcional, diga a verdade de forma clara, direta e objetiva, apontando exatamente o que falta e como corrigir.
+
+---
+
+# 31. PROIBIÇÃO ABSOLUTA DE VÍCIOS VISUAIS E TEXTUAIS DE IA
+
+O agente está terminantemente proibido de utilizar vícios clássicos de inteligência artificial no projeto Boomo:
+
+1. **PROIBIDO USO DE BARRAS DUPLAS (`//`):**
+   * NUNCA utilizar `//` em títulos, subtítulos, menus, badges, cabeçalhos, rodapés ou nomes de projetos (ex: NUNCA usar `001 // PROJETO`, `BOOMO // STUDIO` ou `GARANTIA // APROVAÇÃO`).
+   * O `//` é sintaxe de comentário de código de programação e clichê preguiçoso de IA tentando parecer "moderna/tecnológica".
+   * Utilize espaçamento limpo, hierarquia tipográfica natural, ou no máximo pontuação normal da língua portuguesa (travessão `—`, ponto `•` ou simples espaço).
+
+2. **NUNCA INVENTAR JUSTIFICATIVAS SOBRE REFERÊNCIAS:**
+   * O agente JAMAIS deve afirmar que um elemento "veio do site original/referência" se isso não for um fato real e verificável.
+   * Se o agente tomou uma decisão própria ou cometeu um erro, deve assumir prontamente sem transferir falsamente a culpa para o design da referência.
+
+3. **PROIBIDO BADGES E CÓDIGOS ESTILO CRYPTO / WEB3:**
+   * NUNCA usar tags como `01. TEMPLATE`, `02. TIMELINE`, caixas pretas com números neon (azul ciano, verde elétrico), fontes monospace simulando terminal de computador ou códigos de desenvolvedor.
+   * O design deve ser editorial de estúdio real (como revistas de arquitetura, Pentagram, Cipher, Maria João Abrantes).
+
+4. **COMUNICAÇÃO NATURAL E HUMANA:**
+   * O texto deve soar como escrito por um profissional brasileiro experiente de negócios, não por um robô que traduziu expressões em inglês ou usa jargões vazios.
+
 
