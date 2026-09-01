@@ -172,7 +172,8 @@
             background-color: var(--color-light);
             mix-blend-mode: difference;
             pointer-events: none;
-            z-index: 200;
+            z-index: 300;
+            opacity: 0;
             transition: opacity 0.3s;
             transform: translate(-50%, -50%);
         }
@@ -184,7 +185,8 @@
             color: var(--color-light);
             mix-blend-mode: difference;
             pointer-events: none;
-            z-index: 200;
+            z-index: 300;
+            opacity: 0;
             font-size: 9px;
             font-family: 'Arizona', serif;
             letter-spacing: 0.08em;
@@ -211,7 +213,7 @@
             inset: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at center, #141210 0%, #060403 100%);
+            background: radial-gradient(circle at center, #11100E 0%, #060403 100%);
             z-index: 1;
         }
 
@@ -224,37 +226,44 @@
             align-items: center;
             justify-content: center;
             z-index: 5;
+            perspective: 1200px;
         }
 
         .showcase_slide {
             position: absolute;
-            width: min(880px, 86vw);
-            height: min(540px, 66vh);
+            width: min(1040px, 90vw);
+            height: min(640px, 72vh);
             border-radius: 12px;
             overflow: hidden;
-            background: #0D0F12;
-            border: 1px solid rgba(233, 234, 228, 0.12);
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.04);
+            background: #080706;
+            border: 1px solid rgba(233, 234, 228, 0.14);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(255, 255, 255, 0.05);
             opacity: 0;
+            z-index: 1;
             transform: scale(0.92) translateY(20px);
             pointer-events: none;
-            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
         }
 
         .showcase_slide.active {
             opacity: 1;
-            transform: scale(1) translateY(0);
+            z-index: 20;
+            transform: scale(1) translateX(0) translateY(0);
             pointer-events: auto;
         }
 
         .showcase_slide.prev {
-            transform: scale(0.85) translateX(-60%) rotateY(15deg);
-            opacity: 0.15;
+            transform: scale(0.88) translateX(-110%);
+            opacity: 0;
+            z-index: 5;
+            pointer-events: none;
         }
 
         .showcase_slide.next {
-            transform: scale(0.85) translateX(60%) rotateY(-15deg);
-            opacity: 0.15;
+            transform: scale(0.88) translateX(110%);
+            opacity: 0;
+            z-index: 5;
+            pointer-events: none;
         }
 
         /* Slide Topbar */
@@ -1061,10 +1070,16 @@
         let mouseX = window.innerWidth / 2;
         let mouseY = window.innerHeight / 2;
         let curX = mouseX, curY = mouseY;
+        let mouseMoved = false;
 
         document.addEventListener('mousemove', (e) => {
             mouseX = e.clientX;
             mouseY = e.clientY;
+            if (!mouseMoved) {
+                mouseMoved = true;
+                if (cube) cube.style.opacity = '1';
+                if (label) label.style.opacity = '1';
+            }
         });
 
         function animateCursor() {
