@@ -69,7 +69,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            padding: 22px 28px;
+            padding: 24px 32px;
             display: grid;
             grid-template-columns: 1fr auto 1fr;
             align-items: center;
@@ -190,13 +190,11 @@
             height: 0;
         }
 
-        /* Individual Card in Spiral Orbit (Cipher Precise Aspect, Overlapping Petals) */
+        /* Individual Card in Spiral Orbit */
         .orbit_card {
             position: absolute;
             top: 0;
             left: 0;
-            width: 290px;
-            height: 170px;
             background: #050505;
             border-radius: 0px;
             overflow: hidden;
@@ -228,13 +226,13 @@
             transform: scale(1.03);
         }
 
-        /* 4. CIPHER BOTTOM BAR (WORKS INFOS) */
+        /* 3. CIPHER BOTTOM BAR (WORKS INFOS) */
         .works_infos {
             position: fixed;
             bottom: 0;
             left: 0;
             width: 100%;
-            padding: 22px 28px;
+            padding: 24px 32px;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             align-items: center;
@@ -249,16 +247,23 @@
 
         .works_infos .l {
             font-size: 10px;
-            letter-spacing: 0.16em;
+            letter-spacing: 0.18em;
             font-family: monospace;
+            color: var(--color-muted);
+            transition: color 0.3s;
         }
 
         .works_infos .m {
             text-align: center;
             font-size: 10px;
             font-family: monospace;
-            letter-spacing: 0.22em;
-            transition: opacity 0.3s;
+            letter-spacing: 0.24em;
+            color: var(--color-light);
+            transition: color 0.3s;
+        }
+
+        .works_infos .m.highlight {
+            color: var(--color-accent);
         }
 
         .works_infos .r {
@@ -316,15 +321,15 @@
             transform: translate(0, 0);
         }
 
-        /* 5. PREVIEW MODAL AO CLICAR EM UM TEMPLATE */
+        /* 4. PREVIEW MODAL COM ALTERNADOR DESKTOP/MOBILE */
         .preview_modal_overlay {
             position: fixed;
             inset: 0;
             width: 100vw;
             height: 100vh;
-            background: rgba(0, 0, 0, 0.92);
-            backdrop-filter: blur(24px);
-            -webkit-backdrop-filter: blur(24px);
+            background: rgba(0, 0, 0, 0.94);
+            backdrop-filter: blur(28px);
+            -webkit-backdrop-filter: blur(28px);
             z-index: 600;
             opacity: 0;
             pointer-events: none;
@@ -342,7 +347,7 @@
 
         .preview_modal_window {
             width: min(1120px, 94vw);
-            height: min(700px, 86vh);
+            height: min(720px, 88vh);
             background: #0D0F12;
             border: 1px solid rgba(233, 234, 228, 0.18);
             border-radius: 12px;
@@ -351,7 +356,12 @@
             display: flex;
             flex-direction: column;
             transform: scale(0.94);
-            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), width 0.3s ease;
+        }
+
+        .preview_modal_window.is-mobile-view {
+            width: 410px;
+            height: min(760px, 90vh);
         }
 
         .preview_modal_overlay.active .preview_modal_window {
@@ -359,7 +369,7 @@
         }
 
         .modal_topbar {
-            height: 44px;
+            height: 46px;
             padding: 0 18px;
             background: rgba(18, 20, 24, 0.95);
             border-bottom: 1px solid rgba(233, 234, 228, 0.08);
@@ -381,6 +391,38 @@
             border-radius: 50%;
             background: rgba(233, 234, 228, 0.25);
             cursor: pointer;
+        }
+
+        .modal_center_tools {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .modal_device_switch {
+            display: flex;
+            background: rgba(0,0,0,0.4);
+            border: 1px solid rgba(233, 234, 228, 0.1);
+            border-radius: 6px;
+            padding: 2px;
+        }
+
+        .device_btn {
+            padding: 3px 10px;
+            border-radius: 4px;
+            border: none;
+            background: transparent;
+            color: var(--color-muted);
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .device_btn.active {
+            background: rgba(233, 234, 228, 0.15);
+            color: var(--color-light);
         }
 
         .modal_address {
@@ -432,7 +474,7 @@
         .modal_iframe_wrap {
             position: relative;
             width: 100%;
-            height: calc(100% - 44px);
+            height: calc(100% - 46px);
             overflow: hidden;
             background: #000;
         }
@@ -446,13 +488,18 @@
             transform-origin: top left;
         }
 
+        .preview_modal_window.is-mobile-view .modal_iframe_scaler {
+            width: 375px;
+            height: 812px;
+        }
+
         .modal_iframe_scaler iframe {
             width: 100%;
             height: 100%;
             border: none;
         }
 
-        /* 6. SLIDE-OVER DRAWER MODAL (COMO FUNCIONA / PLANOS / FAQ) */
+        /* 5. SLIDE-OVER DRAWER MODAL (COMO FUNCIONA / PLANOS / FAQ) */
         .drawer_overlay {
             position: fixed;
             inset: 0;
@@ -705,11 +752,8 @@
                 display: none;
             }
             .orbit_card {
-                width: 200px;
-                height: 120px;
-            }
-            .cursor_cube, .cursor_label {
-                display: none !important;
+                width: 200px !important;
+                height: 120px !important;
             }
         }
     </style>
@@ -736,7 +780,7 @@
         </div>
     </nav>
 
-    <!-- 3. CIPHER FAITHFUL CONSTELLATION ORBIT STAGE -->
+    <!-- 2. CIPHER FAITHFUL CONSTELLATION ORBIT STAGE -->
     <main class="constellation_stage" id="stage">
         <!-- Center Aperture Glyph (Cipher Mark) -->
         <div class="constellation_center_glyph">
@@ -751,7 +795,7 @@
         <div class="orbit_container" id="orbitContainer"></div>
     </main>
 
-    <!-- 4. CIPHER BOTTOM BAR (WORKS INFOS) -->
+    <!-- 3. CIPHER BOTTOM BAR (WORKS INFOS) -->
     <div class="works_infos">
         <div class="l">
             <span id="workIndexNum">001</span>
@@ -770,17 +814,23 @@
         </div>
     </div>
 
-    <!-- 5. PREVIEW MODAL AO CLICAR EM UM CARD -->
+    <!-- 4. PREVIEW MODAL COM ALTERNADOR DESKTOP/MOBILE -->
     <div class="preview_modal_overlay" id="previewModal" onclick="closePreviewModalOutside(event)">
-        <div class="preview_modal_window">
+        <div class="preview_modal_window" id="previewModalWindow">
             <div class="modal_topbar">
                 <div class="modal_controls">
                     <span onclick="closePreviewModal()" style="background: #FF5F56;"></span>
                     <span style="background: #FFBD2E;"></span>
                     <span style="background: #27C93F;"></span>
                 </div>
-                <div class="modal_address">
-                    <span id="modalAddressText">🔒 auraestetica.com.br</span>
+                <div class="modal_center_tools">
+                    <div class="modal_address">
+                        <span id="modalAddressText">🔒 auraestetica.com.br</span>
+                    </div>
+                    <div class="modal_device_switch">
+                        <button class="device_btn active" id="btnDeskView" onclick="setModalDevice('desktop')">Desktop</button>
+                        <button class="device_btn" id="btnMobView" onclick="setModalDevice('mobile')">Mobile</button>
+                    </div>
                 </div>
                 <div class="modal_actions">
                     <a href="https://wa.me/559192432044" target="_blank" class="modal_btn_wa" id="modalWaBtn">Pedir Este Site</a>
@@ -795,7 +845,7 @@
         </div>
     </div>
 
-    <!-- 6. SLIDE-OVER DRAWER MODAL (COMO FUNCIONA / PLANOS / FAQ) -->
+    <!-- 5. SLIDE-OVER DRAWER MODAL (COMO FUNCIONA / PLANOS / FAQ) -->
     <div class="drawer_overlay" id="drawerOverlay" onclick="closeDrawerOutside(event)">
         <div class="drawer_content" id="drawerContent">
             <div class="drawer_header">
@@ -935,19 +985,20 @@
 
     <!-- SCRIPTS: CIPHER TIGHT SPIRAL VORTEX ENGINE -->
     <script>
+        // 12 Distinct High-Craft Project Cards
         const templates = [
-            { id: "001", title: "AURA ESTÉTICA", niche: "Clínica & Procedimentos", img: "templates/estetica/assets/images/hero-estetica.webp", url: "/templates/estetica", domain: "auraestetica.com.br" },
-            { id: "002", title: "ODONTO PRIME", niche: "Odontologia & Implantes", img: "templates/odontologia/assets/images/hero-odonto.webp", url: "/templates/odontologia", domain: "odontoprime.com.br" },
-            { id: "003", title: "SANTOS VALENTE", niche: "Advocacia Empresarial", img: "templates/advocacia/assets/images/hero-advocacia.webp", url: "/templates/advocacia", domain: "santosvalente.com.br" },
-            { id: "004", title: "LUMINA CONTÁBIL", niche: "Contabilidade & B2B", img: "templates/contabilidade/assets/images/hero-contabilidade.webp", url: "/templates/contabilidade", domain: "luminacontabil.com.br" },
-            { id: "005", title: "AURA LASER", niche: "Estética & Bem-Estar", img: "templates/estetica/assets/images/hero-estetica.webp", url: "/templates/estetica", domain: "auralaser.com.br" },
-            { id: "006", title: "PRIME ALINHADORES", niche: "Estética Dental", img: "templates/odontologia/assets/images/hero-odonto.webp", url: "/templates/odontologia", domain: "primealinhadores.com.br" },
-            { id: "007", title: "VALENTE CONSULTORIA", niche: "Direito Tributário", img: "templates/advocacia/assets/images/hero-advocacia.webp", url: "/templates/advocacia", domain: "valenteconsultoria.com.br" },
-            { id: "008", title: "LUMINA GESTÃO", niche: "B2B & Finanças", img: "templates/contabilidade/assets/images/hero-contabilidade.webp", url: "/templates/contabilidade", domain: "luminagestao.com.br" },
-            { id: "009", title: "AURA DERMO", niche: "Dermatologia & Saúde", img: "templates/estetica/assets/images/hero-estetica.webp", url: "/templates/estetica", domain: "auradermo.com.br" },
-            { id: "010", title: "PRIME DIGITAL", niche: "Odontologia Avançada", img: "templates/odontologia/assets/images/hero-odonto.webp", url: "/templates/odontologia", domain: "primedigital.com.br" },
-            { id: "011", title: "SANTOS CORPORATE", niche: "Contratos & Fusões", img: "templates/advocacia/assets/images/hero-advocacia.webp", url: "/templates/advocacia", domain: "santoscorporate.com.br" },
-            { id: "012", title: "LUMINA AUDITORIA", niche: "Auditoria & Compliance", img: "templates/contabilidade/assets/images/hero-contabilidade.webp", url: "/templates/contabilidade", domain: "luminaauditoria.com.br" }
+            { id: "001", title: "AURA ESTÉTICA", niche: "Clínica & Lounge", img: "templates/estetica/assets/images/hero-estetica.webp", url: "/templates/estetica", domain: "auraestetica.com.br", w: 290, h: 165 },
+            { id: "002", title: "ODONTO PRIME", niche: "Odontologia & Implantes", img: "templates/odontologia/assets/images/hero-odonto.webp", url: "/templates/odontologia", domain: "odontoprime.com.br", w: 310, h: 170 },
+            { id: "003", title: "SANTOS VALENTE", niche: "Advocacia Empresarial", img: "templates/advocacia/assets/images/hero-advocacia.webp", url: "/templates/advocacia", domain: "santosvalente.com.br", w: 275, h: 175 },
+            { id: "004", title: "LUMINA CONTÁBIL", niche: "Corporate & B2B", img: "templates/contabilidade/assets/images/hero-contabilidade.webp", url: "/templates/contabilidade", domain: "luminacontabil.com.br", w: 295, h: 165 },
+            { id: "005", title: "DRA. BEATRIZ", niche: "Direito Tributário", img: "templates/advocacia/assets/images/dra-beatriz.webp", url: "/templates/advocacia", domain: "beatrizvalente.com.br", w: 270, h: 180 },
+            { id: "006", title: "PRIME ALINHADORES", niche: "Estética Dental Digital", img: "templates/odontologia/assets/images/dr-odonto.webp", url: "/templates/odontologia", domain: "primealinhadores.com.br", w: 300, h: 165 },
+            { id: "007", title: "AURA DERMO", niche: "Dermatologia Avançada", img: "templates/estetica/assets/images/dra-estetica.webp", url: "/templates/estetica", domain: "auradermo.com.br", w: 280, h: 175 },
+            { id: "008", title: "LUMINA ADVISORY", niche: "Gestão Fiscal & Holding", img: "templates/contabilidade/assets/images/contador-perfil.webp", url: "/templates/contabilidade", domain: "luminaadvisory.com.br", w: 290, h: 165 },
+            { id: "009", title: "CLÍNICA PEDIÁTRICA", niche: "Saúde Infantil", img: "assets/images/hero-pediatria.webp", url: "/templates/estetica", domain: "clinicapediatrica.com.br", w: 305, h: 170 },
+            { id: "010", title: "DR. MARCOS VALENTE", niche: "Direito Societário", img: "templates/advocacia/assets/images/dr-marcos.webp", url: "/templates/advocacia", domain: "marcosvalente.com.br", w: 275, h: 175 },
+            { id: "011", title: "SANTOS PARTNERS", niche: "Contratos & Fusões", img: "templates/advocacia/assets/images/advogada-perfil.webp", url: "/templates/advocacia", domain: "santospartners.com.br", w: 285, h: 170 },
+            { id: "012", title: "CONSULTORIA JURÍDICA", niche: "Compliance Corporativo", img: "templates/advocacia/assets/images/advogado-perfil.webp", url: "/templates/advocacia", domain: "consultoriajuridica.com.br", w: 295, h: 165 }
         ];
 
         const orbitContainer = document.getElementById('orbitContainer');
@@ -957,24 +1008,38 @@
 
         let hoveredIndex = -1;
 
-        // Build Cards with Layering
+        // Build Cards with Layering & Varied Organic Proportions
         templates.forEach((tpl, i) => {
             const card = document.createElement('div');
             card.className = 'orbit_card';
+            card.style.width = `${tpl.w}px`;
+            card.style.height = `${tpl.h}px`;
             card.innerHTML = `<img class="orbit_card_img" src="${tpl.img}" alt="${tpl.title}" loading="eager">`;
             
             card.addEventListener('mouseenter', () => {
                 hoveredIndex = i;
                 card.classList.add('is-hovered');
-                if (centerStatus) centerStatus.textContent = tpl.title;
-                if (workIndexNum) workIndexNum.textContent = tpl.id;
+                if (centerStatus) {
+                    centerStatus.textContent = tpl.title;
+                    centerStatus.classList.add('highlight');
+                }
+                if (workIndexNum) {
+                    workIndexNum.textContent = tpl.id;
+                    workIndexNum.style.color = 'var(--color-light)';
+                }
             });
 
             card.addEventListener('mouseleave', () => {
                 if (hoveredIndex === i) {
                     hoveredIndex = -1;
                     card.classList.remove('is-hovered');
-                    if (centerStatus) centerStatus.textContent = 'CONSTELLATION';
+                    if (centerStatus) {
+                        centerStatus.textContent = 'CONSTELLATION';
+                        centerStatus.classList.remove('highlight');
+                    }
+                    if (workIndexNum) {
+                        workIndexNum.style.color = 'var(--color-muted)';
+                    }
                 }
             });
 
@@ -1005,7 +1070,6 @@
             currentAngle += currentAngleVelocity;
 
             const total = cardNodes.length;
-            // Tighter radius for overlapping vortex spiral (identical to Cipher)
             const radiusX = Math.min(window.innerWidth * 0.28, 360);
             const radiusY = Math.min(window.innerHeight * 0.22, 230);
 
@@ -1018,7 +1082,7 @@
                 const baseZIndex = ((i + Math.round(currentAngle * 2)) % total + total) % total + 10;
                 
                 const isHover = (hoveredIndex === i);
-                const scale = isHover ? 1.25 : 1.0;
+                const scale = isHover ? 1.24 : 1.0;
                 const zIndex = isHover ? 200 : baseZIndex;
 
                 node.el.style.transform = `translate3d(calc(-50% + ${x.toFixed(2)}px), calc(-50% + ${y.toFixed(2)}px), 0) scale(${scale.toFixed(3)})`;
@@ -1074,14 +1138,36 @@
             currentAngleVelocity += (e.deltaY || e.deltaX) * 0.0004;
         }, { passive: true });
 
-        // Preview Modal Logic
+        // Preview Modal Logic (With Desktop/Mobile toggle)
+        let currentModalMode = 'desktop';
+
         function updateModalIframeScale() {
             const scaler = document.getElementById('modalIframeScaler');
             const parent = scaler?.parentElement;
             if (scaler && parent && parent.offsetWidth > 0) {
-                const scale = parent.offsetWidth / 1366;
+                const baseWidth = (currentModalMode === 'mobile') ? 375 : 1366;
+                const scale = parent.offsetWidth / baseWidth;
                 scaler.style.transform = `scale(${scale})`;
             }
+        }
+
+        function setModalDevice(mode) {
+            currentModalMode = mode;
+            const modalWindow = document.getElementById('previewModalWindow');
+            const btnDesk = document.getElementById('btnDeskView');
+            const btnMob = document.getElementById('btnMobView');
+
+            if (mode === 'mobile') {
+                modalWindow.classList.add('is-mobile-view');
+                btnMob.classList.add('active');
+                btnDesk.classList.remove('active');
+            } else {
+                modalWindow.classList.remove('is-mobile-view');
+                btnDesk.classList.add('active');
+                btnMob.classList.remove('active');
+            }
+
+            setTimeout(updateModalIframeScale, 30);
         }
 
         function openPreview(url, domain, title) {
@@ -1094,6 +1180,7 @@
             if (iframe) iframe.src = url;
             if (waBtn) waBtn.href = `https://wa.me/559192432044?text=Ol%C3%A1%21%20Gostei%20do%20modelo%20${encodeURIComponent(title)}%20e%20gostaria%20de%20um%20site%20para%20minha%20empresa.`;
 
+            setModalDevice('desktop');
             if (modal) modal.classList.add('active');
             setTimeout(updateModalIframeScale, 50);
         }
