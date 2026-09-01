@@ -34,12 +34,17 @@
 
         :root {
             --color-dark: #000000;
+            --color-surface: #0A0A0A;
+            --color-card: #0F0F0F;
             --color-light: #E9EAE4;
-            --color-muted: #73736E;
-            --color-accent: #00E5FF;
+            --color-muted: #888882;
+            --color-subtle: #444440;
+            --color-border: rgba(233, 234, 228, 0.08);
+            --color-border-hover: rgba(233, 234, 228, 0.22);
+            --color-accent: #E9EAE4;
             --fontXXS: 9px;
             --fontXS: 11px;
-            --fontS: 12px;
+            --fontS: 13px;
         }
 
         * {
@@ -49,18 +54,16 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             text-rendering: optimizeLegibility;
-            user-select: none;
-            -webkit-user-select: none;
         }
 
         body, html {
             width: 100%;
-            height: 100%;
-            overflow: hidden;
+            min-height: 100%;
             background-color: #000000;
             color: var(--color-light);
             font-family: 'Favorit', -apple-system, BlinkMacSystemFont, sans-serif;
-            cursor: default;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
         }
 
         /* 1. CIPHER TOP NAVIGATION */
@@ -69,22 +72,22 @@
             top: 0;
             left: 0;
             width: 100%;
-            padding: 24px 32px;
+            padding: 22px 32px;
             display: grid;
             grid-template-columns: 1fr auto 1fr;
             align-items: center;
-            font-size: var(--fontS);
+            font-size: var(--fontXS);
             font-weight: 500;
             text-transform: uppercase;
-            letter-spacing: 0.12em;
+            letter-spacing: 0.14em;
             color: var(--color-light);
-            mix-blend-mode: difference;
+            background: linear-gradient(180deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
             z-index: 100;
-            pointer-events: none;
         }
 
         nav a, nav button {
-            pointer-events: auto;
             color: inherit;
             text-decoration: none;
             cursor: pointer;
@@ -112,6 +115,7 @@
             font-size: 28px;
             letter-spacing: -0.04em;
             line-height: 1;
+            color: #FFFFFF;
         }
 
         .nav_center {
@@ -122,16 +126,17 @@
 
         .nav_right {
             display: flex;
-            gap: 24px;
+            gap: 20px;
             justify-content: flex-end;
             align-items: center;
         }
 
         .btn_nav_cta {
-            padding: 6px 16px;
+            padding: 7px 18px;
             border: 1px solid rgba(233, 234, 228, 0.4);
             border-radius: 999px;
             font-size: 11px;
+            letter-spacing: 0.1em;
             transition: all 0.25s ease !important;
         }
 
@@ -141,20 +146,20 @@
             color: var(--color-dark) !important;
         }
 
-        /* 2. CONSTELLATION ORBIT STAGE (CIPHER TIGHT VORTEX SPIRAL) */
-        .constellation_stage {
+        /* 2. HERO ORBITAL CONSTELLATION STAGE */
+        .constellation_hero {
             position: relative;
             width: 100vw;
             height: 100svh;
+            min-height: 640px;
             overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
             background: #000000;
-            cursor: default;
         }
 
-        /* Center Glyph (Cipher Iconic Ellipse Aperture Mark) */
+        /* Center Glyph */
         .constellation_center_glyph {
             position: absolute;
             top: 50%;
@@ -165,7 +170,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: rgba(233, 234, 228, 0.45);
+            color: rgba(233, 234, 228, 0.4);
             pointer-events: none;
             z-index: 1;
         }
@@ -177,8 +182,8 @@
         }
 
         @keyframes pulseAperture {
-            0%, 100% { opacity: 0.35; transform: scale(0.96); }
-            50% { opacity: 0.85; transform: scale(1.04); }
+            0%, 100% { opacity: 0.3; transform: scale(0.96); }
+            50% { opacity: 0.8; transform: scale(1.04); }
         }
 
         /* 2D Flat Orbit Container */
@@ -190,33 +195,35 @@
             height: 0;
         }
 
-        /* Individual Card in Spiral Orbit */
+        /* Individual Website Template Card */
         .orbit_card {
             position: absolute;
             top: 0;
             left: 0;
-            background: #050505;
+            background: #080808;
             border-radius: 0px;
             overflow: hidden;
             cursor: pointer;
-            filter: brightness(0.68) contrast(1.1);
+            filter: brightness(0.68) contrast(1.08);
             opacity: 0.88;
             transition: filter 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
                         opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
                         box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             will-change: transform, filter, opacity;
+            border: 1px solid rgba(255, 255, 255, 0.06);
         }
 
         .orbit_card:hover, .orbit_card.is-hovered {
-            filter: brightness(1.05) contrast(1.08);
+            filter: brightness(1.05) contrast(1.05);
             opacity: 1;
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.98), 0 0 0 1px rgba(255, 255, 255, 0.15);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.98), 0 0 0 1px rgba(255, 255, 255, 0.18);
         }
 
         .orbit_card_img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: top center;
             display: block;
             pointer-events: none;
             transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
@@ -226,13 +233,13 @@
             transform: scale(1.03);
         }
 
-        /* 3. CIPHER BOTTOM BAR (WORKS INFOS) */
-        .works_infos {
-            position: fixed;
-            bottom: 0;
+        /* Hero Works Info (Cipher Bottom Bar inside Hero) */
+        .hero_works_infos {
+            position: absolute;
+            bottom: 24px;
             left: 0;
             width: 100%;
-            padding: 24px 32px;
+            padding: 0 32px;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             align-items: center;
@@ -240,33 +247,29 @@
             text-transform: uppercase;
             letter-spacing: 0.14em;
             color: var(--color-light);
-            mix-blend-mode: difference;
-            z-index: 100;
+            z-index: 10;
             pointer-events: none;
         }
 
-        .works_infos .l {
+        .hero_works_infos .l {
             font-size: 10px;
             letter-spacing: 0.18em;
-            font-family: monospace;
             color: var(--color-muted);
-            transition: color 0.3s;
         }
 
-        .works_infos .m {
+        .hero_works_infos .m {
             text-align: center;
             font-size: 10px;
-            font-family: monospace;
-            letter-spacing: 0.24em;
+            letter-spacing: 0.22em;
             color: var(--color-light);
             transition: color 0.3s;
         }
 
-        .works_infos .m.highlight {
-            color: var(--color-accent);
+        .hero_works_infos .m.highlight {
+            color: #FFFFFF;
         }
 
-        .works_infos .r {
+        .hero_works_infos .r {
             display: flex;
             justify-content: flex-end;
             align-items: center;
@@ -281,7 +284,6 @@
             color: var(--color-light);
             text-decoration: none;
             cursor: pointer;
-            pointer-events: auto;
             font-weight: 600;
             font-size: 11px;
             letter-spacing: 0.1em;
@@ -319,6 +321,409 @@
 
         .jour:hover .arrow_c svg.abs {
             transform: translate(0, 0);
+        }
+
+        /* 3. EDITORIAL SCROLLABLE SECTIONS */
+        .page_content {
+            position: relative;
+            width: 100%;
+            background: #000000;
+            z-index: 20;
+        }
+
+        .section_wrap {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 120px 32px;
+            border-top: 1px solid var(--color-border);
+        }
+
+        .section_tag {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--color-muted);
+            margin-bottom: 18px;
+            display: block;
+        }
+
+        .section_headline {
+            font-size: clamp(32px, 4.5vw, 54px);
+            font-weight: 700;
+            letter-spacing: -0.035em;
+            line-height: 1.1;
+            color: var(--color-light);
+            max-width: 840px;
+            margin-bottom: 24px;
+        }
+
+        .section_headline em {
+            font-family: 'Arizona', serif;
+            font-style: italic;
+            font-weight: 400;
+            color: #FFFFFF;
+        }
+
+        .section_desc {
+            font-size: 16px;
+            color: var(--color-muted);
+            line-height: 1.65;
+            max-width: 620px;
+            margin-bottom: 60px;
+        }
+
+        /* Grid: 3 Steps (Process) */
+        .process_grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .process_card {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            padding: 36px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 280px;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        .process_card:hover {
+            border-color: var(--color-border-hover);
+            transform: translateY(-3px);
+        }
+
+        .process_top {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 32px;
+        }
+
+        .process_index {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--color-light);
+            letter-spacing: 0.05em;
+        }
+
+        .process_timeline {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--color-muted);
+        }
+
+        .process_title {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+            color: var(--color-light);
+        }
+
+        .process_text {
+            font-size: 14px;
+            color: var(--color-muted);
+            line-height: 1.6;
+        }
+
+        .process_text strong {
+            color: var(--color-light);
+            font-weight: 600;
+        }
+
+        /* Grid: Capabilities (Studio Engineering) */
+        .capabilities_grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .cap_item {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            padding: 30px 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            transition: border-color 0.3s;
+        }
+
+        .cap_item:hover {
+            border-color: var(--color-border-hover);
+        }
+
+        .cap_item h4 {
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            color: var(--color-light);
+        }
+
+        .cap_item p {
+            font-size: 13px;
+            color: var(--color-muted);
+            line-height: 1.55;
+        }
+
+        /* Grid: Pricing (Planos) */
+        .pricing_grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            align-items: stretch;
+        }
+
+        .plan_card {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            padding: 40px 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        .plan_card.featured {
+            border-color: rgba(233, 234, 228, 0.4);
+            background: #0E0E0E;
+        }
+
+        .plan_card:hover {
+            border-color: var(--color-border-hover);
+            transform: translateY(-3px);
+        }
+
+        .plan_header {
+            margin-bottom: 24px;
+        }
+
+        .plan_name {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 6px;
+            color: var(--color-light);
+        }
+
+        .plan_desc {
+            font-size: 13px;
+            color: var(--color-muted);
+            line-height: 1.5;
+        }
+
+        .plan_price_wrap {
+            padding: 24px 0;
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+            margin-bottom: 28px;
+        }
+
+        .plan_price {
+            font-size: 38px;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            color: #FFFFFF;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .plan_price span {
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--color-muted);
+        }
+
+        .plan_setup {
+            font-size: 12px;
+            color: var(--color-muted);
+        }
+
+        .plan_setup strong {
+            color: var(--color-light);
+        }
+
+        .plan_features {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 36px;
+            flex-grow: 1;
+        }
+
+        .plan_features li {
+            font-size: 13px;
+            color: var(--color-light);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .plan_features li::before {
+            content: "—";
+            color: var(--color-muted);
+        }
+
+        .btn_plan {
+            display: block;
+            width: 100%;
+            padding: 13px;
+            text-align: center;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            text-decoration: none;
+            background: var(--color-light);
+            color: var(--color-dark);
+            transition: opacity 0.2s;
+        }
+
+        .btn_plan:hover {
+            opacity: 0.85;
+        }
+
+        .plan_card.featured .btn_plan {
+            background: #FFFFFF;
+            color: #000000;
+        }
+
+        /* Comparison Table */
+        .comparison_table_wrap {
+            width: 100%;
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .comp_table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        .comp_table th, .comp_table td {
+            padding: 18px 24px;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .comp_table th {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--color-muted);
+            background: var(--color-surface);
+        }
+
+        .comp_table th.highlight {
+            color: #FFFFFF;
+            background: rgba(233, 234, 228, 0.05);
+            border-top: 2px solid var(--color-light);
+        }
+
+        .comp_table td.highlight {
+            background: rgba(233, 234, 228, 0.02);
+            color: #FFFFFF;
+            font-weight: 600;
+        }
+
+        /* FAQ Accordion */
+        .faq_wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 860px;
+        }
+
+        .faq_item {
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            background: var(--color-surface);
+            padding: 20px 24px;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+
+        .faq_item[open] {
+            border-color: var(--color-border-hover);
+        }
+
+        .faq_item summary {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--color-light);
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq_item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq_item .faq_ans {
+            margin-top: 14px;
+            font-size: 14px;
+            color: var(--color-muted);
+            line-height: 1.65;
+        }
+
+        /* CTA Section Banner */
+        .cta_section {
+            text-align: center;
+            padding: 140px 32px;
+            border-top: 1px solid var(--color-border);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cta_btn_large {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 36px;
+            background: var(--color-light);
+            color: var(--color-dark);
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-top: 36px;
+            transition: opacity 0.2s, transform 0.2s;
+        }
+
+        .cta_btn_large:hover {
+            opacity: 0.9;
+            transform: scale(1.02);
+        }
+
+        /* Footer */
+        footer.site_footer {
+            padding: 60px 32px 40px;
+            border-top: 1px solid var(--color-border);
+            max-width: 1240px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: var(--color-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
         }
 
         /* 4. PREVIEW MODAL COM ALTERNADOR DESKTOP/MOBILE */
@@ -499,261 +904,46 @@
             border: none;
         }
 
-        /* 5. SLIDE-OVER DRAWER MODAL (COMO FUNCIONA / PLANOS / FAQ) */
-        .drawer_overlay {
-            position: fixed;
-            inset: 0;
-            width: 100vw;
-            height: 100vh;
-            background: rgba(0, 0, 0, 0.85);
-            backdrop-filter: blur(28px);
-            -webkit-backdrop-filter: blur(28px);
-            z-index: 500;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            display: flex;
-            justify-content: flex-end;
+        /* 5. RESPONSIVE MOBILE OPTIMIZATION */
+        @media (max-width: 992px) {
+            .process_grid, .pricing_grid {
+                grid-template-columns: 1fr;
+            }
+            .capabilities_grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
-        .drawer_overlay.active {
-            opacity: 1;
-            pointer-events: auto;
-        }
-
-        .drawer_content {
-            width: min(680px, 92vw);
-            height: 100%;
-            background: #080808;
-            border-left: 1px solid rgba(233, 234, 228, 0.12);
-            padding: 48px 40px;
-            overflow-y: auto;
-            transform: translateX(100%);
-            transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
-        }
-
-        .drawer_overlay.active .drawer_content {
-            transform: translateX(0);
-        }
-
-        .drawer_header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding-bottom: 20px;
-            border-bottom: 1px solid rgba(233, 234, 228, 0.1);
-        }
-
-        .drawer_title {
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: var(--color-muted);
-        }
-
-        .btn_close_drawer {
-            background: transparent;
-            border: 1px solid rgba(233, 234, 228, 0.2);
-            border-radius: 50%;
-            width: 32px;
-            height: 32px;
-            color: var(--color-light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-size: 12px;
-            transition: all 0.2s;
-        }
-
-        .btn_close_drawer:hover {
-            background: var(--color-light);
-            color: var(--color-dark);
-        }
-
-        .panel_section {
-            display: none;
-            flex-direction: column;
-            gap: 32px;
-        }
-
-        .panel_section.active {
-            display: flex;
-        }
-
-        .panel_headline {
-            font-size: 28px;
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            line-height: 1.15;
-            color: var(--color-light);
-        }
-
-        .panel_subtext {
-            font-size: 14px;
-            color: var(--color-muted);
-            line-height: 1.6;
-        }
-
-        /* 3 Steps */
-        .drawer_steps {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .step_item {
-            padding: 20px;
-            border: 1px solid rgba(233, 234, 228, 0.08);
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.02);
-        }
-
-        .step_num {
-            font-family: monospace;
-            font-size: 11px;
-            color: var(--color-accent);
-            letter-spacing: 0.1em;
-            margin-bottom: 6px;
-            display: block;
-        }
-
-        .step_item h4 {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 6px;
-        }
-
-        .step_item p {
-            font-size: 13px;
-            color: var(--color-muted);
-            line-height: 1.5;
-        }
-
-        /* Pricing Cards */
-        .drawer_pricing_grid {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        .pricing_card_mini {
-            padding: 24px;
-            border-radius: 8px;
-            border: 1px solid rgba(233, 234, 228, 0.1);
-            background: rgba(255, 255, 255, 0.02);
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .pricing_card_mini.featured {
-            border-color: var(--color-accent);
-            background: rgba(0, 229, 255, 0.03);
-        }
-
-        .card_top {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-        }
-
-        .card_top h4 {
-            font-size: 18px;
-            font-weight: 700;
-        }
-
-        .card_top .val {
-            font-size: 22px;
-            font-weight: 800;
-            font-family: monospace;
-            color: var(--color-accent);
-        }
-
-        .card_setup {
-            font-size: 11px;
-            color: var(--color-muted);
-            font-family: monospace;
-        }
-
-        .card_features {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            font-size: 12px;
-            color: var(--color-muted);
-        }
-
-        .card_btn {
-            margin-top: 10px;
-            padding: 10px;
-            text-align: center;
-            border-radius: 6px;
-            background: var(--color-light);
-            color: var(--color-dark);
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            transition: opacity 0.2s;
-        }
-
-        .card_btn:hover {
-            opacity: 0.85;
-        }
-
-        /* FAQ Details */
-        .drawer_faq {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .drawer_faq details {
-            border: 1px solid rgba(233, 234, 228, 0.08);
-            border-radius: 6px;
-            padding: 14px 18px;
-            background: rgba(255, 255, 255, 0.02);
-        }
-
-        .drawer_faq summary {
-            font-size: 13px;
-            font-weight: 600;
-            cursor: pointer;
-            list-style: none;
-        }
-
-        .drawer_faq .content {
-            margin-top: 10px;
-            font-size: 12px;
-            color: var(--color-muted);
-            line-height: 1.6;
-        }
-
-        /* MOBILE ADJUSTMENTS */
         @media (max-width: 768px) {
             nav.main_links {
                 grid-template-columns: 1fr auto;
-                padding: 16px;
+                padding: 16px 20px;
             }
             .nav_center {
                 display: none;
             }
-            .works_infos {
+            .hero_works_infos {
                 grid-template-columns: 1fr auto;
-                padding: 16px;
+                padding: 0 20px;
             }
-            .works_infos .m {
+            .hero_works_infos .m {
                 display: none;
             }
             .orbit_card {
                 width: 200px !important;
                 height: 120px !important;
+            }
+            .section_wrap {
+                padding: 80px 20px;
+            }
+            .capabilities_grid {
+                grid-template-columns: 1fr;
+            }
+            footer.site_footer {
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+                padding: 40px 20px;
             }
         }
     </style>
@@ -763,14 +953,14 @@
     <!-- 1. CIPHER TOP NAVIGATION -->
     <nav class="main_links">
         <div class="nav_left">
-            <a href="/" class="brand_logo">BOOMO<span style="color: var(--color-accent);">.</span></a>
+            <a href="/" class="brand_logo">BOOMO.</a>
         </div>
 
         <div class="nav_center">
-            <button onclick="openDrawer('modelos')">TEMPLATES</button>
-            <button onclick="openDrawer('como-funciona')">COMO FUNCIONA</button>
-            <button onclick="openDrawer('planos')">PLANOS</button>
-            <button onclick="openDrawer('faq')">FAQ</button>
+            <a href="#templates">TEMPLATES</a>
+            <a href="#como-funciona">COMO FUNCIONA</a>
+            <a href="#planos">PLANOS</a>
+            <a href="#faq">FAQ</a>
         </div>
 
         <div class="nav_right">
@@ -780,8 +970,8 @@
         </div>
     </nav>
 
-    <!-- 2. CIPHER FAITHFUL CONSTELLATION ORBIT STAGE -->
-    <main class="constellation_stage" id="stage">
+    <!-- 2. HERO CONSTELLATION ORBIT STAGE -->
+    <header class="constellation_hero" id="templates">
         <!-- Center Aperture Glyph (Cipher Mark) -->
         <div class="constellation_center_glyph">
             <svg viewBox="0 0 36 18" fill="none" stroke="currentColor" stroke-width="1.2">
@@ -791,28 +981,274 @@
             </svg>
         </div>
 
-        <!-- 2D Billboard Orbit Container (Tight Vortex Arrangement) -->
+        <!-- 2D Billboard Orbit Container (Real Website Template Mockups) -->
         <div class="orbit_container" id="orbitContainer"></div>
-    </main>
 
-    <!-- 3. CIPHER BOTTOM BAR (WORKS INFOS) -->
-    <div class="works_infos">
-        <div class="l">
-            <span id="workIndexNum">001</span>
+        <!-- Hero Bottom Bar -->
+        <div class="hero_works_infos">
+            <div class="l">
+                <span id="workIndexNum">001</span> // MODELOS DEMONSTRATIVOS
+            </div>
+            <div class="m">
+                <span id="centerStatus">CLIQUE EM UM MODELO PARA VISUALIZAR</span>
+            </div>
+            <div class="r">
+                <a href="#como-funciona" class="jour">
+                    <span>CONHECER O PROCESSO</span>
+                    <div class="arrow_c">
+                        <svg class="rel" viewBox="0 0 7 7"><path d="M4.5 1.296H1.5L1.488 0.0119998L6.756 0L6.744 5.268L5.46 5.256V2.256L0.96 6.756L0 5.796L4.5 1.296Z"/></svg>
+                        <svg class="abs" viewBox="0 0 7 7"><path d="M4.5 1.296H1.5L1.488 0.0119998L6.756 0L6.744 5.268L5.46 5.256V2.256L0.96 6.756L0 5.796L4.5 1.296Z"/></svg>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="m">
-            <span id="centerStatus">CONSTELLATION</span>
-        </div>
-        <div class="r">
-            <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Gostaria%20de%20um%20site%20profissional%20para%20minha%20empresa." target="_blank" rel="noopener noreferrer" class="jour">
-                <span>FALAR NO WHATSAPP</span>
+    </header>
+
+    <!-- 3. MAIN PAGE CONTENT -->
+    <main class="page_content">
+
+        <!-- SECTION: COMO FUNCIONA (PROCESSO) -->
+        <section class="section_wrap" id="como-funciona">
+            <span class="section_tag">O MÉTODO BOOMO</span>
+            <h2 class="section_headline">Do WhatsApp ao seu site no ar em <em>3 dias</em>.</h2>
+            <p class="section_desc">Sem reuniões demoradas, sem código para você mexer e com garantia total de aprovação visual antes de pagar o setup.</p>
+
+            <div class="process_grid">
+                <div class="process_card">
+                    <div class="process_top">
+                        <span class="process_index">01.</span>
+                        <span class="process_timeline">15 MINUTOS</span>
+                    </div>
+                    <div>
+                        <h3 class="process_title">Briefing no WhatsApp</h3>
+                        <p class="process_text">Você escolhe o modelo base, nos envia as fotos, textos e serviços da sua empresa diretamente pelo WhatsApp.</p>
+                    </div>
+                </div>
+
+                <div class="process_card">
+                    <div class="process_top">
+                        <span class="process_index">02.</span>
+                        <span class="process_timeline">48 HORAS</span>
+                    </div>
+                    <div>
+                        <h3 class="process_title">Criação & Aprovação</h3>
+                        <p class="process_text">Nossa equipe constrói seu site sob medida. Você visualiza e <strong>aprova o design antes de pagar o setup</strong>.</p>
+                    </div>
+                </div>
+
+                <div class="process_card">
+                    <div class="process_top">
+                        <span class="process_index">03.</span>
+                        <span class="process_timeline">72 HORAS NO AR</span>
+                    </div>
+                    <div>
+                        <h3 class="process_title">Publicação & Manutenção</h3>
+                        <p class="process_text">Publicamos no seu domínio próprio com SSL, CDN de alta velocidade e alterações contínuas inclusas na assinatura.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: CAPACIDADES & ENGENHARIA -->
+        <section class="section_wrap">
+            <span class="section_tag">ENGENHARIA DE ESTÚDIO</span>
+            <h2 class="section_headline">Tudo o que sua empresa precisa. <em>Sem custos ocultos</em>.</h2>
+            <p class="section_desc">Cuidamos da infraestrutura completa para que você foque apenas em atender seus clientes.</p>
+
+            <div class="capabilities_grid">
+                <div class="cap_item">
+                    <h4>Velocidade Extrema</h4>
+                    <p>Sites leves construídos com HTML/CSS puro e CDN global, abrindo instantaneamente em qualquer conexão.</p>
+                </div>
+                <div class="cap_item">
+                    <h4>SEO Estruturado</h4>
+                    <p>Arquitetura otimizada para o Google encontrar seu negócio na sua cidade e nicho de atuação.</p>
+                </div>
+                <div class="cap_item">
+                    <h4>Domínio & SSL Inclusos</h4>
+                    <p>Configuramos seu domínio .com.br registrado 100% no seu CPF ou CNPJ com certificado de segurança.</p>
+                </div>
+                <div class="cap_item">
+                    <h4>Alterações no WhatsApp</h4>
+                    <p>Precisa trocar um preço, foto ou horário? Basta nos mandar uma mensagem. Cuidamos em até 24h úteis.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: TABELA COMPARATIVA -->
+        <section class="section_wrap">
+            <span class="section_tag">COMPARAÇÃO DE VALOR</span>
+            <h2 class="section_headline">Por que a Boomo é a escolha <em>mais inteligente</em>?</h2>
+            <p class="section_desc">Compare a velocidade, qualidade e previsibilidade de custo da Boomo com as alternativas do mercado.</p>
+
+            <div class="comparison_table_wrap">
+                <table class="comp_table">
+                    <thead>
+                        <tr>
+                            <th>Critério</th>
+                            <th class="highlight">Boomo (Assinatura)</th>
+                            <th>Agência Tradicional</th>
+                            <th>Fazer Sozinho</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Tempo de Entrega</strong></td>
+                            <td class="highlight">Até 3 dias úteis</td>
+                            <td>30 a 60 dias</td>
+                            <td>Semanas de tentativa</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Custo Inicial (Setup)</strong></td>
+                            <td class="highlight">R$ 300 a R$ 500 (após aprovar)</td>
+                            <td>R$ 4.000 a R$ 8.000</td>
+                            <td>"Grátis" + seu tempo</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Garantia de Risco</strong></td>
+                            <td class="highlight">Aprova o design antes de pagar</td>
+                            <td>50% adiantado sem garantia</td>
+                            <td>Risco de abandono</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hospedagem & Manutenção</strong></td>
+                            <td class="highlight">100% Inclusas na mensalidade</td>
+                            <td>Cobrança à parte (R$ 300+/mês)</td>
+                            <td>Você cuida de bugs e quedas</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Qualidade Visual</strong></td>
+                            <td class="highlight">Design de Estúdio Internacional</td>
+                            <td>Variável conforme agência</td>
+                            <td>Aparência amadora</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SECTION: PLANOS & PREÇOS -->
+        <section class="section_wrap" id="planos">
+            <span class="section_tag">INVESTIMENTO TRANSPARENTE</span>
+            <h2 class="section_headline">Planos simples. <em>Sem multas ou fidelidade</em>.</h2>
+            <p class="section_desc">Escolha a estrutura ideal para o seu momento. Cancele quando quiser.</p>
+
+            <div class="pricing_grid">
+                <!-- Essencial -->
+                <div class="plan_card">
+                    <div>
+                        <div class="plan_header">
+                            <h3 class="plan_name">Essencial</h3>
+                            <p class="plan_desc">Ideal para profissionais autônomos e pequenos negócios que buscam presença profissional imediata.</p>
+                        </div>
+                        <div class="plan_price_wrap">
+                            <div class="plan_price">R$ 149<span>/mês</span></div>
+                            <div class="plan_setup">+ setup único de <strong>R$ 300</strong> (após aprovar)</div>
+                        </div>
+                        <ul class="plan_features">
+                            <li>Site institucional sob medida</li>
+                            <li>Botão de contato direto no WhatsApp</li>
+                            <li>Hospedagem de alta velocidade e SSL</li>
+                            <li>Alterações mensais inclusas</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Gostaria%20de%20assinar%20o%20plano%20Essencial%20da%20Boomo." target="_blank" class="btn_plan">Assinar Essencial</a>
+                </div>
+
+                <!-- Pro -->
+                <div class="plan_card featured">
+                    <div>
+                        <div class="plan_header">
+                            <h3 class="plan_name">Pro Negócios Locais</h3>
+                            <p class="plan_desc">Para clínicas, consultórios e empresas que desejam atrair novos clientes pelo Google.</p>
+                        </div>
+                        <div class="plan_price_wrap">
+                            <div class="plan_price">R$ 249<span>/mês</span></div>
+                            <div class="plan_setup">+ setup único de <strong>R$ 500</strong> (após aprovar)</div>
+                        </div>
+                        <ul class="plan_features">
+                            <li>Tudo do Plano Essencial</li>
+                            <li>SEO Local estruturado para o Google</li>
+                            <li>Integração com Google Maps e Avaliações</li>
+                            <li>Suporte prioritário via WhatsApp</li>
+                            <li>Alterações ilimitadas de textos e fotos</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Gostaria%20de%20assinar%20o%20plano%20Pro%20Neg%C3%B3cios%20Locais%20da%20Boomo." target="_blank" class="btn_plan">Assinar Plano Pro</a>
+                </div>
+
+                <!-- Personalizado -->
+                <div class="plan_card">
+                    <div>
+                        <div class="plan_header">
+                            <h3 class="plan_name">Personalizado</h3>
+                            <p class="plan_desc">Para empresas consolidadas com demandas específicas, múltiplas filiais ou integrações.</p>
+                        </div>
+                        <div class="plan_price_wrap">
+                            <div class="plan_price">R$ 399<span>/mês</span></div>
+                            <div class="plan_setup">Setup sob consulta técnica</div>
+                        </div>
+                        <ul class="plan_features">
+                            <li>Múltiplas páginas institucionais</li>
+                            <li>Integrações com APIs e CRM</li>
+                            <li>Gestor técnico de conta dedicado</li>
+                            <li>SLA prioritário de atendimento</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Gostaria%20de%20um%20or%C3%A7amento%20personalizado%20com%20a%20Boomo." target="_blank" class="btn_plan">Falar com Consultor</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: FAQ -->
+        <section class="section_wrap" id="faq">
+            <span class="section_tag">TRANSPARÊNCIA TOTAL</span>
+            <h2 class="section_headline">Dúvidas Frequentes</h2>
+            <p class="section_desc">Respostas diretas sobre como cuidamos do seu site.</p>
+
+            <div class="faq_wrap">
+                <details class="faq_item" open>
+                    <summary>O domínio (.com.br) fica registrado no meu nome? <span>+</span></summary>
+                    <div class="faq_ans">Sim, 100% no seu CPF ou CNPJ. Você é o proprietário definitivo do domínio. A Boomo cuida apenas de toda a configuração técnica de DNS, servidores e segurança.</div>
+                </details>
+
+                <details class="faq_item">
+                    <summary>Como funcionam os pedidos de alteração no site? <span>+</span></summary>
+                    <div class="faq_ans">É tão simples quanto mandar um áudio ou texto no WhatsApp. Precisa atualizar um preço, mudar uma foto ou adicionar um serviço? Envie para nossa equipe e realizamos a alteração técnica em até 24 horas úteis.</div>
+                </details>
+
+                <details class="faq_item">
+                    <summary>Existe tempo mínimo de fidelidade ou multa de cancelamento? <span>+</span></summary>
+                    <div class="faq_ans">Zero fidelidade. Você pode cancelar sua assinatura mensal a qualquer momento sem nenhuma taxa ou multa de rescisão.</div>
+                </details>
+
+                <details class="faq_item">
+                    <summary>Como funciona a garantia de aprovação antes de pagar o setup? <span>+</span></summary>
+                    <div class="faq_ans">Nós criamos a demonstração personalizada do seu site primeiro. Você só paga a taxa única de setup após ver o design pronto e aprová-lo para publicação.</div>
+                </details>
+            </div>
+        </section>
+
+        <!-- SECTION: CTA BANNER -->
+        <section class="cta_section">
+            <span class="section_tag">SEU SITE NO AR EM 3 DIAS</span>
+            <h2 class="section_headline" style="max-width: 700px;">Pronto para transformar a presença digital da sua empresa?</h2>
+            <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Quero%20colocar%20meu%20site%20no%20ar%20com%20a%20Boomo." target="_blank" class="cta_btn_large">
+                <span>Falar com a equipe no WhatsApp</span>
                 <div class="arrow_c">
                     <svg class="rel" viewBox="0 0 7 7"><path d="M4.5 1.296H1.5L1.488 0.0119998L6.756 0L6.744 5.268L5.46 5.256V2.256L0.96 6.756L0 5.796L4.5 1.296Z"/></svg>
                     <svg class="abs" viewBox="0 0 7 7"><path d="M4.5 1.296H1.5L1.488 0.0119998L6.756 0L6.744 5.268L5.46 5.256V2.256L0.96 6.756L0 5.796L4.5 1.296Z"/></svg>
                 </div>
             </a>
-        </div>
-    </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="site_footer">
+            <div>BOOMO © 2026 — ESTÚDIO DIGITAL DE SITES POR ASSINATURA</div>
+            <div>BRASIL // ALTA PERFORMANCE</div>
+        </footer>
+
+    </main>
 
     <!-- 4. PREVIEW MODAL COM ALTERNADOR DESKTOP/MOBILE -->
     <div class="preview_modal_overlay" id="previewModal" onclick="closePreviewModalOutside(event)">
@@ -845,160 +1281,22 @@
         </div>
     </div>
 
-    <!-- 5. SLIDE-OVER DRAWER MODAL (COMO FUNCIONA / PLANOS / FAQ) -->
-    <div class="drawer_overlay" id="drawerOverlay" onclick="closeDrawerOutside(event)">
-        <div class="drawer_content" id="drawerContent">
-            <div class="drawer_header">
-                <span class="drawer_title" id="drawerSectionTitle">INFORMAÇÕES</span>
-                <button class="btn_close_drawer" onclick="closeDrawer()">✕</button>
-            </div>
-
-            <!-- Section: Modelos -->
-            <div class="panel_section" id="panel-modelos">
-                <h3 class="panel_headline">Projetos & Modelos Sob Medida</h3>
-                <p class="panel_subtext">Criamos sites institucionais de alto padrão para o seu nicho de atuação com foco total em autoridade e captação de clientes pelo WhatsApp.</p>
-                <div class="drawer_steps">
-                    <div class="step_item" style="cursor: pointer;" onclick="openPreview('/templates/estetica', 'auraestetica.com.br', 'Clínica & Estética'); closeDrawer();">
-                        <span class="step_num">01. TEMPLATE</span>
-                        <h4>Clínica & Estética</h4>
-                        <p>Design sofisticado, apresentação de procedimentos e agendamento direto.</p>
-                    </div>
-                    <div class="step_item" style="cursor: pointer;" onclick="openPreview('/templates/odontologia', 'odontoprime.com.br', 'Odontologia & Implantes'); closeDrawer();">
-                        <span class="step_num">02. TEMPLATE</span>
-                        <h4>Odontologia & Implantes</h4>
-                        <p>Foco em tratamentos, estética do sorriso e autoridade médica.</p>
-                    </div>
-                    <div class="step_item" style="cursor: pointer;" onclick="openPreview('/templates/advocacia', 'santosvalente.com.br', 'Advocacia & Consultoria'); closeDrawer();">
-                        <span class="step_num">03. TEMPLATE</span>
-                        <h4>Advocacia & Finanças</h4>
-                        <p>Elegância, áreas de atuação e contato imediato para consultas.</p>
-                    </div>
-                    <div class="step_item" style="cursor: pointer;" onclick="openPreview('/templates/contabilidade', 'luminacontabil.com.br', 'Contabilidade & B2B'); closeDrawer();">
-                        <span class="step_num">04. TEMPLATE</span>
-                        <h4>Contabilidade & B2B</h4>
-                        <p>Clareza nos serviços contábeis, gestão fiscal e conversão corporativa.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Section: Como Funciona -->
-            <div class="panel_section" id="panel-como-funciona">
-                <h3 class="panel_headline">Do WhatsApp ao seu site no ar em 3 dias.</h3>
-                <p class="panel_subtext">Sem reuniões demoradas, sem código para você mexer e com garantia total de aprovação.</p>
-                <div class="drawer_steps">
-                    <div class="step_item">
-                        <span class="step_num">01 // BRIEFING SIMPLES</span>
-                        <h4>Você escolhe o modelo e envia os dados</h4>
-                        <p>Envie fotos, textos, serviços e horários pelo WhatsApp em menos de 15 minutos.</p>
-                    </div>
-                    <div class="step_item">
-                        <span class="step_num">02 // CRIAÇÃO & APROVAÇÃO</span>
-                        <h4>Estruturamos o site sob medida</h4>
-                        <p>Você visualiza o site pronto e <strong>aprova o design antes de pagar o setup</strong>.</p>
-                    </div>
-                    <div class="step_item">
-                        <span class="step_num">03 // PUBLICAÇÃO & CUIDADO</span>
-                        <h4>Publicamos no seu domínio próprio</h4>
-                        <p>Configuramos SSL, CDN de alta velocidade e cuidamos de toda manutenção contínua.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Section: Planos -->
-            <div class="panel_section" id="panel-planos">
-                <h3 class="panel_headline">Assinatura Transparente. Sem Fidelidade.</h3>
-                <p class="panel_subtext">Hospedagem, segurança, domínio e alterações mensais inclusas em um valor simples.</p>
-                <div class="drawer_pricing_grid">
-                    <div class="pricing_card_mini">
-                        <div class="card_top">
-                            <h4>Essencial</h4>
-                            <div class="val">R$ 149<span style="font-size: 12px; color: var(--color-muted);">/mês</span></div>
-                        </div>
-                        <div class="card_setup">+ setup único de R$ 300 (após aprovar)</div>
-                        <ul class="card_features">
-                            <li>✓ Site institucional sob medida</li>
-                            <li>✓ Botão direto de WhatsApp</li>
-                            <li>✓ Hospedagem e SSL inclusos</li>
-                            <li>✓ Alterações de conteúdo inclusas</li>
-                        </ul>
-                        <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Quero%20o%20plano%20Essencial%20da%20Boomo." target="_blank" class="card_btn">Assinar Essencial</a>
-                    </div>
-
-                    <div class="pricing_card_mini featured">
-                        <div class="card_top">
-                            <h4>Pro Negócios Locais</h4>
-                            <div class="val">R$ 249<span style="font-size: 12px; color: var(--color-muted);">/mês</span></div>
-                        </div>
-                        <div class="card_setup">+ setup único de R$ 500 (após aprovar)</div>
-                        <ul class="card_features">
-                            <li>✓ Tudo do Plano Essencial</li>
-                            <li>✓ <strong>SEO Local (Otimização Google)</strong></li>
-                            <li>✓ Integração com Google Maps</li>
-                            <li>✓ Suporte prioritário via WhatsApp</li>
-                            <li>✓ Alterações ilimitadas de texto e fotos</li>
-                        </ul>
-                        <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Quero%20o%20plano%20Pro%20Neg%C3%B3cios%20Locais%20da%20Boomo." target="_blank" class="card_btn" style="background: var(--color-accent); color: #000;">Assinar Plano Pro</a>
-                    </div>
-
-                    <div class="pricing_card_mini">
-                        <div class="card_top">
-                            <h4>Personalizado</h4>
-                            <div class="val">R$ 399<span style="font-size: 12px; color: var(--color-muted);">/mês</span></div>
-                        </div>
-                        <div class="card_setup">Setup sob consulta técnica</div>
-                        <ul class="card_features">
-                            <li>✓ Múltiplas páginas institucionais</li>
-                            <li>✓ Integrações com APIs e sistemas</li>
-                            <li>✓ Gestor técnico dedicado</li>
-                        </ul>
-                        <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Quero%20um%20or%C3%A7amento%20personalizado%20com%20a%20Boomo." target="_blank" class="card_btn">Falar com Consultor</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Section: FAQ -->
-            <div class="panel_section" id="panel-faq">
-                <h3 class="panel_headline">Dúvidas Frequentes</h3>
-                <p class="panel_subtext">Respostas diretas sobre o funcionamento do nosso estúdio.</p>
-                <div class="drawer_faq">
-                    <details open>
-                        <summary>O domínio (.com.br) fica no meu nome?</summary>
-                        <div class="content">Sim, 100% no seu CPF ou CNPJ. Você é o proprietário definitivo. Cuidamos apenas da configuração técnica.</div>
-                    </details>
-                    <details>
-                        <summary>Como peço alterações no meu site?</summary>
-                        <div class="content">Basta nos enviar uma mensagem ou áudio no WhatsApp. Nossa equipe realiza a alteração técnica em até 24 horas úteis.</div>
-                    </details>
-                    <details>
-                        <summary>Existe fidelidade ou multa?</summary>
-                        <div class="content">Zero fidelidade. Você pode cancelar a qualquer momento sem nenhuma taxa de rescisão.</div>
-                    </details>
-                    <details>
-                        <summary>Em quanto tempo fica pronto?</summary>
-                        <div class="content">Em até 3 dias úteis após o envio das informações básicas pelo WhatsApp.</div>
-                    </details>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- SCRIPTS: CIPHER TIGHT SPIRAL VORTEX ENGINE -->
+    <!-- SCRIPTS: CIPHER TIGHT SPIRAL VORTEX ENGINE COM SCREENSHOTS REAIS DOS WEBSITES -->
     <script>
-        // 12 Distinct High-Craft Project Cards
+        // 12 Website Template Mockup Cards
         const templates = [
-            { id: "001", title: "AURA ESTÉTICA", niche: "Clínica & Lounge", img: "templates/estetica/assets/images/hero-estetica.webp", url: "/templates/estetica", domain: "auraestetica.com.br", w: 290, h: 165 },
-            { id: "002", title: "ODONTO PRIME", niche: "Odontologia & Implantes", img: "templates/odontologia/assets/images/hero-odonto.webp", url: "/templates/odontologia", domain: "odontoprime.com.br", w: 310, h: 170 },
-            { id: "003", title: "SANTOS VALENTE", niche: "Advocacia Empresarial", img: "templates/advocacia/assets/images/hero-advocacia.webp", url: "/templates/advocacia", domain: "santosvalente.com.br", w: 275, h: 175 },
-            { id: "004", title: "LUMINA CONTÁBIL", niche: "Corporate & B2B", img: "templates/contabilidade/assets/images/hero-contabilidade.webp", url: "/templates/contabilidade", domain: "luminacontabil.com.br", w: 295, h: 165 },
-            { id: "005", title: "DRA. BEATRIZ", niche: "Direito Tributário", img: "templates/advocacia/assets/images/dra-beatriz.webp", url: "/templates/advocacia", domain: "beatrizvalente.com.br", w: 270, h: 180 },
-            { id: "006", title: "PRIME ALINHADORES", niche: "Estética Dental Digital", img: "templates/odontologia/assets/images/dr-odonto.webp", url: "/templates/odontologia", domain: "primealinhadores.com.br", w: 300, h: 165 },
-            { id: "007", title: "AURA DERMO", niche: "Dermatologia Avançada", img: "templates/estetica/assets/images/dra-estetica.webp", url: "/templates/estetica", domain: "auradermo.com.br", w: 280, h: 175 },
-            { id: "008", title: "LUMINA ADVISORY", niche: "Gestão Fiscal & Holding", img: "templates/contabilidade/assets/images/contador-perfil.webp", url: "/templates/contabilidade", domain: "luminaadvisory.com.br", w: 290, h: 165 },
-            { id: "009", title: "CLÍNICA PEDIÁTRICA", niche: "Saúde Infantil", img: "assets/images/hero-pediatria.webp", url: "/templates/estetica", domain: "clinicapediatrica.com.br", w: 305, h: 170 },
-            { id: "010", title: "DR. MARCOS VALENTE", niche: "Direito Societário", img: "templates/advocacia/assets/images/dr-marcos.webp", url: "/templates/advocacia", domain: "marcosvalente.com.br", w: 275, h: 175 },
-            { id: "011", title: "SANTOS PARTNERS", niche: "Contratos & Fusões", img: "templates/advocacia/assets/images/advogada-perfil.webp", url: "/templates/advocacia", domain: "santospartners.com.br", w: 285, h: 170 },
-            { id: "012", title: "CONSULTORIA JURÍDICA", niche: "Compliance Corporativo", img: "templates/advocacia/assets/images/advogado-perfil.webp", url: "/templates/advocacia", domain: "consultoriajuridica.com.br", w: 295, h: 165 }
+            { id: "001", title: "AURA ESTÉTICA // HERO", niche: "Clínica & Procedimentos", img: "assets/images/templates-mockups/estetica-hero.webp", url: "/templates/estetica", domain: "auraestetica.com.br", w: 295, h: 170 },
+            { id: "002", title: "ODONTO PRIME // HERO", niche: "Odontologia & Implantes", img: "assets/images/templates-mockups/odontologia-hero.webp", url: "/templates/odontologia", domain: "odontoprime.com.br", w: 310, h: 170 },
+            { id: "003", title: "SANTOS VALENTE // HERO", niche: "Advocacia Empresarial", img: "assets/images/templates-mockups/advocacia-hero.webp", url: "/templates/advocacia", domain: "santosvalente.com.br", w: 280, h: 175 },
+            { id: "004", title: "LUMINA CONTÁBIL // HERO", niche: "Contabilidade & B2B", img: "assets/images/templates-mockups/contabilidade-hero.webp", url: "/templates/contabilidade", domain: "luminacontabil.com.br", w: 295, h: 165 },
+            { id: "005", title: "AURA ESTÉTICA // SERVIÇOS", niche: "Protocolos Exclusivos", img: "assets/images/templates-mockups/estetica-section.webp", url: "/templates/estetica", domain: "auraestetica.com.br", w: 285, h: 170 },
+            { id: "006", title: "ODONTO PRIME // TRATAMENTOS", niche: "Estética do Sorriso", img: "assets/images/templates-mockups/odontologia-section.webp", url: "/templates/odontologia", domain: "odontoprime.com.br", w: 300, h: 165 },
+            { id: "007", title: "SANTOS VALENTE // ÁREAS", niche: "Direito Tributário & Societário", img: "assets/images/templates-mockups/advocacia-section.webp", url: "/templates/advocacia", domain: "santosvalente.com.br", w: 280, h: 175 },
+            { id: "008", title: "LUMINA // SOLUÇÕES B2B", niche: "Gestão Fiscal & BPO", img: "assets/images/templates-mockups/contabilidade-section.webp", url: "/templates/contabilidade", domain: "luminacontabil.com.br", w: 290, h: 165 },
+            { id: "009", title: "AURA // MOBILE VIEW", niche: "Design Responsivo Mobile", img: "assets/images/templates-mockups/estetica-mobile.webp", url: "/templates/estetica", domain: "auraestetica.com.br", w: 240, h: 180 },
+            { id: "010", title: "ODONTO // MOBILE VIEW", niche: "Design Responsivo Mobile", img: "assets/images/templates-mockups/odontologia-mobile.webp", url: "/templates/odontologia", domain: "odontoprime.com.br", w: 240, h: 180 },
+            { id: "011", title: "ADVOCACIA // MOBILE VIEW", niche: "Design Responsivo Mobile", img: "assets/images/templates-mockups/advocacia-mobile.webp", url: "/templates/advocacia", domain: "santosvalente.com.br", w: 240, h: 180 },
+            { id: "012", title: "CONTABILIDADE // MOBILE VIEW", niche: "Design Responsivo Mobile", img: "assets/images/templates-mockups/contabilidade-mobile.webp", url: "/templates/contabilidade", domain: "luminacontabil.com.br", w: 240, h: 180 }
         ];
 
         const orbitContainer = document.getElementById('orbitContainer');
@@ -1008,7 +1306,7 @@
 
         let hoveredIndex = -1;
 
-        // Build Cards with Layering & Varied Organic Proportions
+        // Build Cards
         templates.forEach((tpl, i) => {
             const card = document.createElement('div');
             card.className = 'orbit_card';
@@ -1034,7 +1332,7 @@
                     hoveredIndex = -1;
                     card.classList.remove('is-hovered');
                     if (centerStatus) {
-                        centerStatus.textContent = 'CONSTELLATION';
+                        centerStatus.textContent = 'CLIQUE EM UM MODELO PARA VISUALIZAR';
                         centerStatus.classList.remove('highlight');
                     }
                     if (workIndexNum) {
@@ -1094,10 +1392,10 @@
         requestAnimationFrame(animateOrbit);
 
         // Drag / Swipe Interaction
-        const stage = document.getElementById('stage');
+        const heroStage = document.getElementById('templates');
 
-        stage.addEventListener('mousedown', (e) => {
-            if (e.target.closest('.orbit_card')) return;
+        heroStage.addEventListener('mousedown', (e) => {
+            if (e.target.closest('.orbit_card') || e.target.closest('a') || e.target.closest('button')) return;
             isDragging = true;
             startX = e.clientX;
         });
@@ -1114,8 +1412,8 @@
         });
 
         // Touch Interaction (Mobile)
-        stage.addEventListener('touchstart', (e) => {
-            if (e.target.closest('.orbit_card')) return;
+        heroStage.addEventListener('touchstart', (e) => {
+            if (e.target.closest('.orbit_card') || e.target.closest('a') || e.target.closest('button')) return;
             isDragging = true;
             startX = e.touches[0].clientX;
         }, { passive: true });
@@ -1130,13 +1428,6 @@
         window.addEventListener('touchend', () => {
             isDragging = false;
         });
-
-        // Wheel Momentum
-        window.addEventListener('wheel', (e) => {
-            if (document.getElementById('drawerOverlay')?.classList.contains('active')) return;
-            if (document.getElementById('previewModal')?.classList.contains('active')) return;
-            currentAngleVelocity += (e.deltaY || e.deltaX) * 0.0004;
-        }, { passive: true });
 
         // Preview Modal Logic (With Desktop/Mobile toggle)
         let currentModalMode = 'desktop';
@@ -1197,29 +1488,6 @@
         }
 
         window.addEventListener('resize', updateModalIframeScale);
-
-        // Drawer Logic
-        function openDrawer(sectionId) {
-            const overlay = document.getElementById('drawerOverlay');
-            const titleEl = document.getElementById('drawerSectionTitle');
-            document.querySelectorAll('.panel_section').forEach(s => s.classList.remove('active'));
-            
-            const target = document.getElementById(`panel-${sectionId}`);
-            if (target) {
-                target.classList.add('active');
-                if (titleEl) titleEl.textContent = sectionId.toUpperCase().replace('-', ' ');
-            }
-            if (overlay) overlay.classList.add('active');
-        }
-
-        function closeDrawer() {
-            const overlay = document.getElementById('drawerOverlay');
-            if (overlay) overlay.classList.remove('active');
-        }
-
-        function closeDrawerOutside(e) {
-            if (e.target.id === 'drawerOverlay') closeDrawer();
-        }
     </script>
 </body>
 </html>
