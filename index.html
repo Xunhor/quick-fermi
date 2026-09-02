@@ -21,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- Stylesheet Clone Squarespace -->
+    <!-- Stylesheet Clone Squarespace Oficial -->
     <link rel="stylesheet" href="css/desktop/style.css">
 </head>
 <body>
@@ -35,7 +35,7 @@
                 <a href="#modelos" class="nav_item">Modelos</a>
                 <a href="#plataforma" class="nav_item">Recursos</a>
                 <a href="#como-funciona" class="nav_item">O Método</a>
-                <a href="#planos" class="nav_item">Planos & Preços</a>
+                <a href="#planos" class="nav_item">Planos</a>
                 <a href="#faq" class="nav_item">FAQ</a>
             </nav>
 
@@ -54,60 +54,51 @@
         </div>
     </header>
 
-    <!-- 2. HERO CINEMATOGRÁFICO COM FOTO ARTÍSTICA E CARROSSEL FULL-BLEED -->
+    <!-- 2. HERO CINEMATOGRÁFICO COM CAPAS EDITORIAIS DE REVISTA (EXATO SQUARESPACE) -->
     <section class="sq_hero_cinema">
         <div class="hero_header_block">
             <h1 class="hero_cinema_title">
-                O site da sua empresa no ar em <em>72 horas</em>.
+                Um site faz <em>acontecer</em>
             </h1>
             <p class="hero_cinema_desc">
-                Criamos, publicamos e mantemos seu site institucional sob medida. Você aprova o design completo antes de pagar a taxa única de setup.
+                Criamos, hospedamos e mantemos seu site institucional sob medida. Você aprova o design completo antes de pagar a taxa única de setup.
             </p>
             <div class="hero_cta_box">
                 <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Quero%20colocar%20o%20site%20da%20minha%20empresa%20no%20ar%20em%2072%20horas." target="_blank" rel="noopener noreferrer" class="btn_cinema_primary">
-                    Comece Já no WhatsApp →
+                    Comece Já
                 </a>
                 <span class="hero_badge_guarantee">
-                    Aprovação prévia do design • Sem fidelidade ou multa
+                    Comece com aprovação prévia. Sem fidelidade ou multa.
                 </span>
             </div>
         </div>
 
-        <!-- CARROSSEL FULL-BLEED MONUMENTAL (100VW - IDENTICO AO SQUARESPACE) -->
+        <!-- CARROSSEL MONUMENTAL DE CAPAS EDITORIAIS (ASPECT RATIO 3:4 - IGUAL ACADEMIC LESSONS E BOTANICA) -->
         <div class="hero_fullbleed_showcase" id="heroShowcase">
-            <div class="showcase_track">
-                <!-- Card Esquerda: Santos & Valente Advogados -->
-                <div class="carousel_item side_peek" onclick="openPreviewModal('/templates/advocacia/index.html', 'Santos & Valente — Advocacia Corporativa')">
-                    <img src="assets/images/templates-mockups/advocacia-hero.webp" alt="Santos & Valente Advocacia">
-                    <div class="carousel_item_footer">
+            <div class="showcase_track_centered">
+                <!-- Capa Esquerda: Santos & Valente Advogados -->
+                <div class="editorial_cover_card side_cover" onclick="openPreviewModal('/templates/advocacia/index.html', 'Santos & Valente — Advocacia Corporativa')">
+                    <img src="assets/images/sqsp-cover-santos.jpg" alt="Santos & Valente — Capa Editorial">
+                    <div class="editorial_card_footer">
                         <span>Advocacia Corporativa</span>
                         <strong>Ver Demonstração →</strong>
                     </div>
                 </div>
 
-                <!-- Card Centro Monumental: Aura Clínica de Estética -->
-                <div class="carousel_item center_monumental" onclick="openPreviewModal('/templates/estetica/index.html', 'Aura — Clínica Dermatológica & Estética')">
-                    <img src="assets/images/templates-mockups/estetica-hero.webp" alt="Aura Clínica de Estética">
-                    <div class="carousel_item_footer">
-                        <span>Dermatologia & Estética Avançada</span>
+                <!-- Capa Central Monumental: Aura Clínica de Estética (A Estrela do Hero) -->
+                <div class="editorial_cover_card center_star" onclick="openPreviewModal('/templates/estetica/index.html', 'Aura — Clínica Dermatológica & Estética')">
+                    <img src="assets/images/sqsp-cover-aura.jpg" alt="Aura Clínica — Capa Editorial">
+                    <div class="editorial_card_footer">
+                        <span>Dermatologia & Estética Médica</span>
                         <strong>Testar Modelo Online →</strong>
                     </div>
                 </div>
 
-                <!-- Card Direita: Odonto Prime -->
-                <div class="carousel_item side_peek" onclick="openPreviewModal('/templates/odontologia/index.html', 'Odonto Prime — Odontologia Digital')">
-                    <img src="assets/images/templates-mockups/odontologia-hero.webp" alt="Odonto Prime Odontologia">
-                    <div class="carousel_item_footer">
+                <!-- Capa Direita: Odonto Prime -->
+                <div class="editorial_cover_card side_cover" onclick="openPreviewModal('/templates/odontologia/index.html', 'Odonto Prime — Odontologia Digital')">
+                    <img src="assets/images/sqsp-cover-odonto.jpg" alt="Odonto Prime — Capa Editorial">
+                    <div class="editorial_card_footer">
                         <span>Odontologia Digital & Estética</span>
-                        <strong>Ver Demonstração →</strong>
-                    </div>
-                </div>
-
-                <!-- Card Adicional: Lumina Contábil -->
-                <div class="carousel_item side_peek" onclick="openPreviewModal('/templates/contabilidade/index.html', 'Lumina — Contabilidade Estratégica')">
-                    <img src="assets/images/templates-mockups/contabilidade-hero.webp" alt="Lumina Contábil">
-                    <div class="carousel_item_footer">
-                        <span>Consultoria Contábil & CFO</span>
                         <strong>Ver Demonstração →</strong>
                     </div>
                 </div>
@@ -154,30 +145,32 @@
                 <button class="pill_white" onclick="switchShowcaseTab('contabil', this)">Contabilidade & B2B</button>
             </div>
 
-            <!-- Banner de Luxo Travertino com Mockup e Badges Flutuantes -->
-            <div class="showcase_banner_travertine">
-                <!-- Badges Flutuantes -->
-                <div class="badge_float_corner left_top">
-                    <i class="fa-brands fa-whatsapp"></i>
-                    <span id="stageFloatingText">Agendamento direto no WhatsApp</span>
-                </div>
-                <div class="badge_float_corner right_bottom">
-                    <i class="fa-solid fa-star" style="color: #F59E0B;"></i>
-                    <span>5.0 Avaliações no Google</span>
-                </div>
-
-                <!-- Browser Window Mockup -->
-                <div class="browser_window_mockup">
-                    <div class="browser_header_bar">
-                        <div class="browser_dots">
-                            <span></span><span></span><span></span>
-                        </div>
-                        <div class="browser_url" id="browserUrlText">
-                            https://suaempresa.com.br
-                        </div>
+            <!-- Carrossel de Banners Panorâmicos de Estúdio -->
+            <div class="panoramic_studio_track">
+                <div class="studio_banner_item travertine">
+                    <!-- Badges Flutuantes -->
+                    <div class="badge_float_corner left_top">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span id="stageFloatingText">Agendamento direto no WhatsApp</span>
                     </div>
-                    <div class="browser_screen">
-                        <img id="stageImg" src="assets/images/templates-mockups/estetica-hero.webp" alt="Demonstração do Modelo">
+                    <div class="badge_float_corner right_bottom">
+                        <i class="fa-solid fa-star" style="color: #F59E0B;"></i>
+                        <span>5.0 Avaliações no Google</span>
+                    </div>
+
+                    <!-- Browser Window Mockup -->
+                    <div class="browser_window_mockup">
+                        <div class="browser_header_bar">
+                            <div class="browser_dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="browser_url" id="browserUrlText">
+                                https://auraclinica.com.br
+                            </div>
+                        </div>
+                        <div class="browser_screen">
+                            <img id="stageImg" src="assets/images/templates-mockups/estetica-hero.webp" alt="Demonstração do Modelo">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -194,7 +187,7 @@
         </div>
     </section>
 
-    <!-- 5. "TUDO O QUE VOCÊ PRECISA EM UMA SÓ PLATAFORMA" (FUNDO BRANCO COM 4 PÔSTERES ESCUROS) -->
+    <!-- 5. "TUDO O QUE VOCÊ PRECISA EM UMA SÓ PLATAFORMA" (FUNDO BRANCO COM 4 PÔSTERES RICOS) -->
     <section class="sq_section_white" id="plataforma" style="padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.06);">
         <div class="container">
             <div class="posters_header_split">
@@ -203,62 +196,54 @@
             </div>
 
             <div class="posters_grid_4">
-                <!-- Poster 1: Alterações no WhatsApp -->
-                <div class="sq_dark_poster">
-                    <div class="poster_top_content">
-                        <h4 class="poster_h4">Alterações no WhatsApp</h4>
-                        <p class="poster_p">Troque fotos, serviços ou preços mandando apenas uma mensagem. Cuidamos de tudo em até 24h úteis.</p>
-                    </div>
-                    <div class="poster_bottom_art">
-                        <div class="poster_ui_box">
-                            <div style="font-size: 11px; color: var(--sq-accent-emerald); font-weight: 700; margin-bottom: 6px;"><i class="fa-brands fa-whatsapp"></i> SUPORTE DIRETO</div>
-                            <div style="font-size: 12.5px; color: #FFFFFF;">"Pode atualizar o valor da consulta?"</div>
-                            <div style="font-size: 11px; color: #9CA3AF; margin-top: 4px;">✓ Atualizado e publicado em 45min</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Poster 2: Design de Estúdio -->
-                <div class="sq_dark_poster">
+                <!-- Poster 1: Design de Estúdio -->
+                <div class="sq_rich_poster poster_1">
                     <div class="poster_top_content">
                         <h4 class="poster_h4">Design de Estúdio</h4>
-                        <p class="poster_p">Sem páginas amadoras ou templates genéricos de IA. Tipografia, cores e respiros de nível internacional.</p>
+                        <p class="poster_p">Tipografia autoral, paleta de alto nível e direção de arte sob medida sem amadorismo.</p>
                     </div>
                     <div class="poster_bottom_art">
-                        <div class="poster_ui_box">
-                            <div style="font-size: 11px; color: #9CA3AF; margin-bottom: 4px;">TIPOGRAFIA & ARQUITETURA</div>
-                            <div style="font-family: var(--font-serif); font-style: italic; font-size: 18px; color: #FFFFFF;">Editorial Luxury</div>
-                            <div style="font-size: 11px; color: var(--sq-accent-gold); margin-top: 4px;">Paleta Exclusiva por Nicho</div>
+                        <div class="poster_badge_pill">
+                            <i class="fa-solid fa-palette"></i> Editorial Luxury
                         </div>
                     </div>
                 </div>
 
-                <!-- Poster 3: Domínio & SSL Inclusos -->
-                <div class="sq_dark_poster">
+                <!-- Poster 2: Estrutura de Conversão -->
+                <div class="sq_rich_poster poster_2">
                     <div class="poster_top_content">
-                        <h4 class="poster_h4">Domínio Próprio & SSL</h4>
-                        <p class="poster_p">Configuramos seu endereço .com.br registrado 100% no seu CPF ou CNPJ com certificado de segurança vitalício.</p>
+                        <h4 class="poster_h4">Estrutura de Conversão</h4>
+                        <p class="poster_p">Arquitetura visual pensada para transformar visitantes casuais em contatos qualificados.</p>
                     </div>
                     <div class="poster_bottom_art">
-                        <div class="poster_ui_box">
-                            <div style="font-size: 11px; color: var(--sq-accent-emerald);"><i class="fa-solid fa-lock"></i> CONEXÃO SEGURA (SSL)</div>
-                            <div style="font-size: 13px; font-weight: 700; color: #FFFFFF; margin-top: 4px;">https://suaempresa.com.br</div>
-                            <div style="font-size: 11px; color: #9CA3AF; margin-top: 2px;">Proprietário: Seu CPF / CNPJ</div>
+                        <div class="poster_badge_pill">
+                            <i class="fa-solid fa-cube"></i> Alta Performance
                         </div>
                     </div>
                 </div>
 
-                <!-- Poster 4: Otimizado para o Google -->
-                <div class="sq_dark_poster">
+                <!-- Poster 3: Alterações no WhatsApp -->
+                <div class="sq_rich_poster poster_3">
                     <div class="poster_top_content">
-                        <h4 class="poster_h4">Otimizado para o Google</h4>
-                        <p class="poster_p">SEO estruturado, velocidade instantânea e integração com Google Maps para seu cliente te encontrar primeiro.</p>
+                        <h4 class="poster_h4">Alterações no WhatsApp</h4>
+                        <p class="poster_p">Troque fotos, serviços ou novidades mandando apenas uma mensagem. Cuidamos em até 24h úteis.</p>
                     </div>
                     <div class="poster_bottom_art">
-                        <div class="poster_ui_box">
-                            <div style="font-size: 11px; color: #38BDF8;"><i class="fa-brands fa-google"></i> BUSCA ORGÂNICA LOCAL</div>
-                            <div style="font-size: 12.5px; color: #FFFFFF; margin-top: 4px;">Top 1 na sua cidade e nicho</div>
-                            <div style="font-size: 11px; color: #9CA3AF; margin-top: 2px;">Indexação de alta performance</div>
+                        <div class="poster_badge_pill">
+                            <i class="fa-brands fa-whatsapp"></i> Suporte em 24h
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Poster 4: Domínio Próprio & SEO -->
+                <div class="sq_rich_poster poster_4">
+                    <div class="poster_top_content">
+                        <h4 class="poster_h4">Domínio Próprio & SEO</h4>
+                        <p class="poster_p">Endereço .com.br 100% no seu nome com indexação no Google para sua cidade e nicho.</p>
+                    </div>
+                    <div class="poster_bottom_art">
+                        <div class="poster_badge_pill">
+                            <i class="fa-solid fa-lock"></i> SSL & Google Maps
                         </div>
                     </div>
                 </div>
@@ -307,7 +292,7 @@
     </section>
 
     <!-- 7. ENCONTRE O DOMÍNIO PERFEITO (SQUARESPACE DOMAINS) -->
-    <section class="sq_section_domain">
+    <section class="sq_section_domain" id="planos">
         <div class="container">
             <h2 style="font-size: clamp(28px, 3.5vw, 44px); color: #FFFFFF; margin-bottom: 12px;">
                 Encontre o domínio perfeito para o seu site
@@ -329,84 +314,7 @@
         </div>
     </section>
 
-    <!-- 8. PLANOS & PREÇOS (CARDS ESCUROS DE LUXO) -->
-    <section class="sq_section_pricing_dark" id="planos">
-        <div class="container">
-            <div class="white_title_center">
-                <h2 style="color: #FFFFFF;">Planos simples. Sem multas ou fidelidade.</h2>
-                <p style="color: var(--sq-text-dark-secondary);">Escolha a estrutura ideal para o seu momento. Cancele quando quiser.</p>
-            </div>
-
-            <div class="pricing_grid_dark">
-                <!-- Essencial -->
-                <div class="plan_box_dark">
-                    <div>
-                        <h3 class="plan_h3">Essencial</h3>
-                        <p class="plan_sub">Para profissionais autônomos e pequenos negócios que buscam presença profissional imediata.</p>
-                        <div class="plan_price_row">
-                            <div class="price_big">R$ 149<span>/mês</span></div>
-                            <div class="price_setup_info">+ setup único de <strong>R$ 300</strong> (após aprovar)</div>
-                        </div>
-                        <ul class="plan_features_ul">
-                            <li><i class="fa-solid fa-check"></i> Site institucional profissional sob medida</li>
-                            <li><i class="fa-solid fa-check"></i> Botão de contato direto no WhatsApp</li>
-                            <li><i class="fa-solid fa-check"></i> Hospedagem de alta velocidade e SSL inclusos</li>
-                            <li><i class="fa-solid fa-check"></i> Alterações mensais de fotos e textos inclusas</li>
-                        </ul>
-                    </div>
-                    <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Gostaria%20de%20assinar%20o%20plano%20Essencial%20da%20Boomo." target="_blank" rel="noopener noreferrer" class="btn_cinema_primary" style="background: transparent; border: 1px solid rgba(255,255,255,0.25); color: #FFFFFF; text-align: center; justify-content: center; width: 100%;">
-                        Assinar Essencial
-                    </a>
-                </div>
-
-                <!-- Pro Negócios Locais (Featured) -->
-                <div class="plan_box_dark highlight_plan">
-                    <span class="plan_pill_badge">Mais Escolhido — Clínicas e Empresas</span>
-                    <div>
-                        <h3 class="plan_h3">Pro Negócios Locais</h3>
-                        <p class="plan_sub">Para clínicas, consultórios e empresas que desejam atrair novos clientes pelo Google.</p>
-                        <div class="plan_price_row">
-                            <div class="price_big">R$ 249<span>/mês</span></div>
-                            <div class="price_setup_info">+ setup único de <strong>R$ 500</strong> (após aprovar)</div>
-                        </div>
-                        <ul class="plan_features_ul">
-                            <li><i class="fa-solid fa-check"></i> Tudo do Plano Essencial</li>
-                            <li><i class="fa-solid fa-check"></i> SEO Local estruturado para o Google</li>
-                            <li><i class="fa-solid fa-check"></i> Integração com Google Maps e Avaliações</li>
-                            <li><i class="fa-solid fa-check"></i> Suporte prioritário via WhatsApp</li>
-                            <li><i class="fa-solid fa-check"></i> Alterações ilimitadas de textos e fotos</li>
-                        </ul>
-                    </div>
-                    <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Gostaria%20de%20assinar%20o%20plano%20Pro%20Neg%C3%B3cios%20Locais%20da%20Boomo." target="_blank" rel="noopener noreferrer" class="btn_cinema_primary" style="text-align: center; justify-content: center; width: 100%;">
-                        Assinar Plano Pro
-                    </a>
-                </div>
-
-                <!-- Personalizado -->
-                <div class="plan_box_dark">
-                    <div>
-                        <h3 class="plan_h3">Personalizado</h3>
-                        <p class="plan_sub">Para empresas consolidadas com demandas específicas, múltiplas filiais ou integrações.</p>
-                        <div class="plan_price_row">
-                            <div class="price_big">R$ 399<span>/mês</span></div>
-                            <div class="price_setup_info">Setup sob consulta técnica</div>
-                        </div>
-                        <ul class="plan_features_ul">
-                            <li><i class="fa-solid fa-check"></i> Múltiplas páginas institucionais</li>
-                            <li><i class="fa-solid fa-check"></i> Integrações com CRM, APIs e sistemas</li>
-                            <li><i class="fa-solid fa-check"></i> Gestor técnico de conta dedicado</li>
-                            <li><i class="fa-solid fa-check"></i> SLA prioritário de atendimento</li>
-                        </ul>
-                    </div>
-                    <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Gostaria%20de%20um%20or%C3%A7amento%20personalizado%20com%20a%20Boomo." target="_blank" rel="noopener noreferrer" class="btn_cinema_primary" style="background: transparent; border: 1px solid rgba(255,255,255,0.25); color: #FFFFFF; text-align: center; justify-content: center; width: 100%;">
-                        Falar com Consultor
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 9. FAQ EM LINHAS MINIMALISTAS NO PRETO (SQUARESPACE FAQ LINES) -->
+    <!-- 8. FAQ EM LINHAS MINIMALISTAS NO PRETO (SQUARESPACE FAQ LINES) -->
     <section class="sq_section_faq_lines" id="faq">
         <div class="container">
             <div class="white_title_center">
@@ -454,11 +362,21 @@
                         Zero fidelidade. Você pode cancelar sua assinatura mensal a qualquer momento sem nenhuma taxa, multa rescisória ou complicação.
                     </div>
                 </details>
+
+                <details class="faq_row_item">
+                    <summary class="faq_row_summary">
+                        <span>Quanto custa a assinatura e quais são os planos disponíveis?</span>
+                        <span class="faq_row_icon">+</span>
+                    </summary>
+                    <div class="faq_row_answer">
+                        Oferecemos planos claros adaptados ao momento da sua empresa: o <strong>Plano Essencial (R$ 149/mês com setup de R$ 300 após aprovação)</strong> para profissionais liberais; o <strong>Plano Pro Negócios Locais (R$ 249/mês com setup de R$ 500 após aprovação)</strong> com SEO estruturado no Google, Google Maps e alterações ilimitadas; e o <strong>Plano Personalizado (R$ 399/mês)</strong> com integrações avançadas e gestor dedicado.
+                    </div>
+                </details>
             </div>
         </div>
     </section>
 
-    <!-- 10. CTA COM A ESFERA DE PARTÍCULAS CÓSMICA (SQUARESPACE SPHERE OF LIGHTS) -->
+    <!-- 9. CTA COM A ESFERA DE PARTÍCULAS CÓSMICA (SQUARESPACE SPHERE OF LIGHTS) -->
     <section class="sq_section_sphere_cta">
         <div class="particle_sphere_bg"></div>
         <div class="container sphere_cta_content">
@@ -469,12 +387,12 @@
                 Aprove o design completo antes de qualquer cobrança de setup.
             </p>
             <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Quero%20colocar%20meu%20site%20no%20ar%20com%20a%20Boomo." target="_blank" rel="noopener noreferrer" class="btn_cinema_primary">
-                Falar com a Equipe no WhatsApp →
+                Comece Já no WhatsApp →
             </a>
         </div>
     </section>
 
-    <!-- 11. RODAPÉ INSTITUCIONAL (SQUARESPACE FOOTER) -->
+    <!-- 10. RODAPÉ INSTITUCIONAL (SQUARESPACE FOOTER) -->
     <footer class="sq_footer_cinema">
         <div class="container">
             <div class="footer_cinema_grid">
@@ -490,7 +408,7 @@
                         <li><a href="#modelos">Modelos</a></li>
                         <li><a href="#plataforma">Recursos</a></li>
                         <li><a href="#como-funciona">O Método</a></li>
-                        <li><a href="#planos">Planos & Preços</a></li>
+                        <li><a href="#faq">Dúvidas Frequentes</a></li>
                     </ul>
                 </div>
                 <div>
@@ -519,7 +437,7 @@
         </div>
     </footer>
 
-    <!-- 12. PREVIEW MODAL INTERATIVO COM ALTERNADOR DESKTOP / MOBILE -->
+    <!-- 11. PREVIEW MODAL INTERATIVO COM ALTERNADOR DESKTOP / MOBILE -->
     <div class="preview_modal_overlay" id="previewModal">
         <div class="preview_modal_container">
             <div class="preview_modal_header">

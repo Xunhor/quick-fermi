@@ -1,15 +1,6 @@
 /* ==========================================================================
    BOOMO — DESIGN SYSTEM CLONE EXATO DO SQUARESPACE (pt.squarespace.com)
-   Ritmo Oficial:
-   1. Hero Escuro com Foto Botânica Bronze + Carrossel Full-Bleed 100vw + Stats
-   2. Fundo Branco: Amplie seus Negócios (Banner Travertino com Mockup & Badges)
-   3. Fundo Branco: Tudo em Uma só Plataforma (4 Pôsteres Escuros Verticais)
-   4. Transição Gradiente Quente para Preto: O Método em 2 Grandes Blocos
-   5. Fundo Preto: Busca de Domínio + Avatares de Clientes
-   6. Fundo Preto: Planos & Preços (Cards Escuros de Luxo)
-   7. Fundo Preto: FAQ em Linhas Minimalistas com [+]
-   8. Fundo Preto: CTA com a Esfera de Partículas Cósmica
-   9. Fundo Preto: Rodapé Institucional em 4 Colunas
+   Estética: Editorial de Alto Padrão, Capas de Revista, Ritmo Oficial
    ========================================================================== */
 
 :root {
@@ -17,7 +8,7 @@
     --sq-dark: #08090C;
     --sq-white: #FFFFFF;
     --sq-offwhite: #F9F9FB;
-    --sq-gray-light: #EEEEF2;
+    --sq-gray-light: #F3F4F6;
     --sq-border-light: rgba(0, 0, 0, 0.08);
 
     --sq-card-dark: #101218;
@@ -207,7 +198,7 @@ a {
 }
 
 /* ==========================================================================
-   2. HERO COM FUNDO FOTOGRÁFICO BRONZE & CARROSSEL FULL-BLEED 100VW
+   2. HERO CINEMATOGRÁFICO COM FOTO ARTÍSTICA & CAPAS EDITORIAIS
    ========================================================================== */
 .sq_hero_cinema {
     position: relative;
@@ -215,7 +206,7 @@ a {
     padding-bottom: 50px;
     background-color: #000000;
     background-image: 
-        linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.8) 50%, #000000 100%),
+        linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.8) 55%, #000000 100%),
         url('../../assets/images/sqsp-hero-bg.jpg');
     background-size: cover;
     background-position: center top;
@@ -225,21 +216,21 @@ a {
 }
 
 .hero_header_block {
-    max-width: 960px;
-    margin: 0 auto 40px;
+    max-width: 860px;
+    margin: 0 auto 36px;
     padding: 0 24px;
     position: relative;
     z-index: 2;
 }
 
 .hero_cinema_title {
-    font-size: clamp(42px, 6.4vw, 78px);
+    font-size: clamp(44px, 6.6vw, 80px);
     font-weight: 800;
-    line-height: 1.04;
+    line-height: 1.03;
     letter-spacing: -0.04em;
     color: #FFFFFF;
-    margin-bottom: 24px;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    margin-bottom: 20px;
+    text-shadow: 0 4px 25px rgba(0, 0, 0, 0.7);
 }
 
 .hero_cinema_title em {
@@ -247,11 +238,11 @@ a {
 }
 
 .hero_cinema_desc {
-    font-size: clamp(16px, 1.8vw, 20px);
+    font-size: clamp(16px, 1.8vw, 19px);
     color: rgba(255, 255, 255, 0.85);
     line-height: 1.6;
-    max-width: 680px;
-    margin: 0 auto 36px;
+    max-width: 640px;
+    margin: 0 auto 32px;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
 }
 
@@ -259,7 +250,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: 14px;
 }
 
 .btn_cinema_primary {
@@ -270,7 +261,7 @@ a {
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    padding: 16px 36px;
+    padding: 15px 34px;
     border-radius: var(--radius-sm);
     display: inline-flex;
     align-items: center;
@@ -290,7 +281,7 @@ a {
     color: rgba(255, 255, 255, 0.75);
 }
 
-/* CARROSSEL MONUMENTAL DE BORDA A BORDA (100VW - IDENTICO AO SQUARESPACE) */
+/* CARROSSEL MONUMENTAL DE CAPAS EDITORIAIS (ASPECT-RATIO 3:4 / 4:5) */
 .hero_fullbleed_showcase {
     position: relative;
     width: 100vw;
@@ -307,15 +298,16 @@ a {
     display: none;
 }
 
-.showcase_track {
+.showcase_track_centered {
     display: flex;
-    gap: 28px;
-    width: max-content;
-    padding: 0 max(24px, calc(50vw - 440px));
+    justify-content: center;
     align-items: center;
+    gap: 32px;
+    width: 100%;
+    min-width: 1200px;
 }
 
-.carousel_item {
+.editorial_cover_card {
     flex-shrink: 0;
     border-radius: var(--radius-sm);
     overflow: hidden;
@@ -324,53 +316,57 @@ a {
     box-shadow: 0 30px 80px rgba(0, 0, 0, 0.85);
     cursor: pointer;
     transition: var(--transition);
+    position: relative;
 }
 
-.carousel_item:hover {
+.editorial_cover_card:hover {
     border-color: rgba(255, 255, 255, 0.4);
-    transform: translateY(-4px);
+    transform: translateY(-6px);
 }
 
-.carousel_item.center_monumental {
-    width: min(840px, 86vw);
+.editorial_cover_card.center_star {
+    width: min(520px, 78vw);
     border-color: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 35px 90px rgba(0, 0, 0, 0.95);
+    z-index: 2;
 }
 
-.carousel_item.side_peek {
-    width: min(560px, 65vw);
-    opacity: 0.7;
+.editorial_cover_card.side_cover {
+    width: min(390px, 58vw);
+    opacity: 0.75;
 }
 
-.carousel_item.side_peek:hover {
+.editorial_cover_card.side_cover:hover {
     opacity: 1;
 }
 
-.carousel_item img {
+.editorial_cover_card img {
     width: 100%;
     height: auto;
     display: block;
+    aspect-ratio: 3 / 4;
     object-fit: cover;
 }
 
-.carousel_item_footer {
+.editorial_card_footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 24px;
+    padding: 14px 20px;
     background: #080A0E;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.carousel_item_footer span {
-    font-size: 11.5px;
+.editorial_card_footer span {
+    font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.14em;
     color: var(--sq-text-dark-secondary);
 }
 
-.carousel_item_footer strong {
-    font-size: 12.5px;
+.editorial_card_footer strong {
+    font-size: 12px;
     font-weight: 700;
     color: #FFFFFF;
     display: flex;
@@ -381,7 +377,7 @@ a {
 /* FAIXA DE ESTATÍSTICAS NO FUNDO PRETO */
 .sq_stats_section {
     background: #000000;
-    padding: 50px 0 80px;
+    padding: 60px 0 80px;
     text-align: center;
 }
 
@@ -475,26 +471,45 @@ a {
     font-weight: 700;
 }
 
-/* Banner de Luxo Travertino com Mockup e Floating Badges */
-.showcase_banner_travertine {
+/* Carrossel de 3 Banners Panorâmicos de Estúdio */
+.panoramic_studio_track {
+    display: flex;
+    gap: 32px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    padding: 10px 0 30px;
+    margin-bottom: 20px;
+}
+
+.panoramic_studio_track::-webkit-scrollbar {
+    display: none;
+}
+
+.studio_banner_item {
     position: relative;
     border-radius: var(--radius-md);
     overflow: hidden;
-    background-image: 
-        linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.4) 100%),
-        url('../../assets/images/sqsp-showcase-bg.jpg');
     background-size: cover;
     background-position: center;
-    padding: 80px 48px;
+    padding: 70px 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    flex-shrink: 0;
+    width: min(920px, 88vw);
+}
+
+.studio_banner_item.travertine {
+    background-image: 
+        linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.35) 100%),
+        url('../../assets/images/sqsp-showcase-bg.jpg');
 }
 
 .browser_window_mockup {
     position: relative;
-    width: min(720px, 90vw);
+    width: min(680px, 86vw);
     background: #FFFFFF;
     border-radius: var(--radius-md);
     overflow: hidden;
@@ -558,13 +573,13 @@ a {
 }
 
 .badge_float_corner.left_top {
-    top: 40px;
-    left: 40px;
+    top: 36px;
+    left: 36px;
 }
 
 .badge_float_corner.right_bottom {
-    bottom: 40px;
-    right: 40px;
+    bottom: 36px;
+    right: 36px;
 }
 
 .badge_float_corner i {
@@ -572,7 +587,7 @@ a {
 }
 
 /* ==========================================================================
-   4. "TUDO O QUE VOCÊ PRECISA EM UMA SÓ PLATAFORMA" (4 PÔSTERES ESCUROS)
+   4. "TUDO O QUE VOCÊ PRECISA EM UMA SÓ PLATAFORMA" (4 PÔSTERES COM FOTO)
    ========================================================================== */
 .posters_header_split {
     display: grid;
@@ -600,30 +615,57 @@ a {
     gap: 20px;
 }
 
-.sq_dark_poster {
-    background: #111319;
+.sq_rich_poster {
     border-radius: var(--radius-sm);
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 440px;
+    min-height: 460px;
     transition: var(--transition);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    position: relative;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    background-size: cover;
+    background-position: center;
 }
 
-.sq_dark_poster:hover {
+.sq_rich_poster:hover {
     transform: translateY(-6px);
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
 }
 
+.sq_rich_poster::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.2) 40%, rgba(0, 0, 0, 0.6) 100%);
+    z-index: 1;
+}
+
+.sq_rich_poster.poster_1 {
+    background-image: url('../../assets/images/sqsp-poster-1.jpg');
+}
+
+.sq_rich_poster.poster_2 {
+    background-image: url('../../assets/images/sqsp-poster-2.jpg');
+}
+
+.sq_rich_poster.poster_3 {
+    background-image: url('../../assets/images/sqsp-poster-3.jpg');
+}
+
+.sq_rich_poster.poster_4 {
+    background-image: url('../../assets/images/sqsp-poster-4.jpg');
+}
+
 .poster_top_content {
+    position: relative;
+    z-index: 2;
     padding: 28px 24px 16px;
 }
 
 .poster_h4 {
-    font-size: 20px;
+    font-size: 21px;
     font-weight: 700;
     color: #FFFFFF;
     margin-bottom: 8px;
@@ -632,21 +674,29 @@ a {
 
 .poster_p {
     font-size: 13.5px;
-    color: #9CA3AF;
+    color: rgba(255, 255, 255, 0.85);
     line-height: 1.6;
 }
 
 .poster_bottom_art {
+    position: relative;
+    z-index: 2;
     margin-top: auto;
     padding: 20px;
-    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
 }
 
-.poster_ui_box {
-    background: #1A1E27;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 4px;
-    padding: 16px;
+.poster_badge_pill {
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 8px 14px;
+    border-radius: var(--radius-full);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11.5px;
+    font-weight: 700;
+    color: #FFFFFF;
 }
 
 /* ==========================================================================
@@ -774,127 +824,7 @@ a {
 }
 
 /* ==========================================================================
-   7. PLANOS & PREÇOS (CARDS ESCUROS DE LUXO)
-   ========================================================================== */
-.sq_section_pricing_dark {
-    background: #000000;
-    padding: 140px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.pricing_grid_dark {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-    margin-top: 50px;
-}
-
-.plan_box_dark {
-    background: #0C0E13;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: var(--radius-sm);
-    padding: 44px 34px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: var(--transition);
-    position: relative;
-}
-
-.plan_box_dark:hover {
-    transform: translateY(-4px);
-    border-color: rgba(255, 255, 255, 0.3);
-}
-
-.plan_box_dark.highlight_plan {
-    background: #11141D;
-    border: 2px solid #FFFFFF;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-}
-
-.plan_pill_badge {
-    position: absolute;
-    top: -14px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #FFFFFF;
-    color: #000000;
-    font-size: 10.5px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    padding: 5px 14px;
-    border-radius: var(--radius-full);
-    white-space: nowrap;
-}
-
-.plan_h3 {
-    font-size: 22px;
-    color: #FFFFFF;
-    margin-bottom: 8px;
-}
-
-.plan_sub {
-    font-size: 13.5px;
-    color: var(--sq-text-dark-secondary);
-    line-height: 1.5;
-    margin-bottom: 24px;
-}
-
-.plan_price_row {
-    padding: 20px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    margin-bottom: 28px;
-}
-
-.price_big {
-    font-size: 40px;
-    font-weight: 800;
-    color: #FFFFFF;
-    line-height: 1;
-    margin-bottom: 6px;
-}
-
-.price_big span {
-    font-size: 15px;
-    font-weight: 400;
-    color: var(--sq-text-dark-secondary);
-}
-
-.price_setup_info {
-    font-size: 12.5px;
-    color: var(--sq-text-dark-secondary);
-}
-
-.price_setup_info strong {
-    color: #FFFFFF;
-}
-
-.plan_features_ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-bottom: 36px;
-    flex-grow: 1;
-}
-
-.plan_features_ul li {
-    font-size: 13.5px;
-    color: #D1D5DB;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.plan_features_ul li i {
-    color: var(--sq-accent-emerald);
-    font-size: 12px;
-}
-
-/* ==========================================================================
-   8. FAQ EM LINHAS MINIMALISTAS NO PRETO (SQUARESPACE FAQ LINES)
+   7. FAQ EM LINHAS MINIMALISTAS NO PRETO (SQUARESPACE FAQ LINES)
    ========================================================================== */
 .sq_section_faq_lines {
     background: #000000;
@@ -953,7 +883,7 @@ a {
 }
 
 /* ==========================================================================
-   9. CTA COM A ESFERA DE PARTÍCULAS CÓSMICA (SPHERE OF LIGHTS)
+   8. CTA COM A ESFERA DE PARTÍCULAS CÓSMICA (SPHERE OF LIGHTS)
    ========================================================================== */
 .sq_section_sphere_cta {
     position: relative;
@@ -1005,7 +935,7 @@ a {
 }
 
 /* ==========================================================================
-   10. RODAPÉ INSTITUCIONAL NO PRETO ABSOLUTO
+   9. RODAPÉ INSTITUCIONAL NO PRETO ABSOLUTO
    ========================================================================== */
 .sq_footer_cinema {
     background: #000000;
@@ -1070,7 +1000,7 @@ a {
 }
 
 /* ==========================================================================
-   11. PREVIEW MODAL INTERATIVO
+   10. PREVIEW MODAL INTERATIVO
    ========================================================================== */
 .preview_modal_overlay {
     position: fixed;
@@ -1198,18 +1128,19 @@ a {
 }
 
 /* ==========================================================================
-   12. RESPONSIVIDADE
+   11. RESPONSIVIDADE
    ========================================================================== */
 @media (max-width: 1080px) {
+    .showcase_track_centered {
+        justify-content: flex-start;
+        padding: 0 32px;
+    }
     .posters_header_split {
         grid-template-columns: 1fr;
         gap: 20px;
     }
     .posters_grid_4 {
         grid-template-columns: repeat(2, 1fr);
-    }
-    .pricing_grid_dark {
-        grid-template-columns: 1fr;
     }
     .footer_cinema_grid {
         grid-template-columns: 1fr 1fr;
@@ -1255,7 +1186,7 @@ a {
     .posters_grid_4 {
         grid-template-columns: 1fr;
     }
-    .showcase_banner_travertine {
+    .studio_banner_item {
         padding: 40px 16px;
     }
     .badge_float_corner {
