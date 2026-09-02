@@ -1,0 +1,841 @@
+{
+  "imgs": [
+    {
+      "src": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/creative-services-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/creative-services-1500w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "global-navigation__solutions-submenu-details-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/professional-services-1-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/professional-services-1-1500w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "global-navigation__solutions-submenu-details-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/education-training-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/education-training-1500w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "global-navigation__solutions-submenu-details-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/beauty-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/beauty-1500w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "global-navigation__solutions-submenu-details-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/sports-fitness-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/sports-fitness-1500w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "global-navigation__solutions-submenu-details-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/health-wellness-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/health-wellness-1500w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "global-navigation__solutions-submenu-details-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/home-services-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/home-services-1500w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "global-navigation__solutions-submenu-details-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/events-experiences-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/events-experiences-1500w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "global-navigation__solutions-submenu-details-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/charities-nonprofits-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/charities-nonprofits-1500w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "global-navigation__solutions-submenu-details-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/personal-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/personal-1500w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "global-navigation__solutions-submenu-details-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/site-navigation/2025/onemag-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/site-navigation/2025/onemag-500w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "global-navigation__resources-menu-carousel-image global-navigation__resources-menu-carousel-image--is-active"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/pages/showcase-2025/stretchsquared-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/pages/showcase-2025/stretchsquared-500w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "global-navigation__resources-menu-carousel-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/pages/showcase-2025/franklygoodcoffee-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/pages/showcase-2025/franklygoodcoffee-500w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "global-navigation__resources-menu-carousel-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/pages/showcase-2025/fieldtheory-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/pages/showcase-2025/fieldtheory-500w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "global-navigation__resources-menu-carousel-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/creative-services-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/creative-services-1500w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "global-navigation__solutions-submenu-details-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/professional-services-1-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/professional-services-1-1500w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "global-navigation__solutions-submenu-details-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/education-training-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/education-training-1500w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "global-navigation__solutions-submenu-details-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/beauty-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/beauty-1500w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "global-navigation__solutions-submenu-details-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/sports-fitness-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/sports-fitness-1500w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "global-navigation__solutions-submenu-details-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/health-wellness-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/health-wellness-1500w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "global-navigation__solutions-submenu-details-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/home-services-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/home-services-1500w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "global-navigation__solutions-submenu-details-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/events-experiences-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/events-experiences-1500w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "global-navigation__solutions-submenu-details-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/charities-nonprofits-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/charities-nonprofits-1500w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "global-navigation__solutions-submenu-details-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/personal-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/site-navigation/2025/solutions/personal-1500w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "global-navigation__solutions-submenu-details-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/site-navigation/2025/onemag-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/site-navigation/2025/onemag-500w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "global-navigation__resources-menu-carousel-image global-navigation__resources-menu-carousel-image--is-active"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/pages/showcase-2025/stretchsquared-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/pages/showcase-2025/stretchsquared-500w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "global-navigation__resources-menu-carousel-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/pages/showcase-2025/franklygoodcoffee-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/pages/showcase-2025/franklygoodcoffee-500w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "global-navigation__resources-menu-carousel-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/pages/showcase-2025/fieldtheory-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/pages/showcase-2025/fieldtheory-500w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "global-navigation__resources-menu-carousel-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/pages/homepage-2025/hero/videos/july-2026/plants-desktop-poster-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/pages/homepage-2025/hero/videos/july-2026/plants-desktop-poster-1500w.webp",
+      "srcset": "",
+      "alt": "plants",
+      "className": "dynamic-background__poster"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/auto/f1f95a06/tutor-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/auto/f1f95a06/tutor-750w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "angled-carousel__card-background-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/auto/c7c32ead/creative-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/auto/c7c32ead/creative-750w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "angled-carousel__card-background-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/auto/9e9d7f8d/plants-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/auto/9e9d7f8d/plants-750w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "angled-carousel__card-background-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/auto/f2051f0f/barber-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/auto/f2051f0f/barber-750w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "angled-carousel__card-background-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/auto/b37c49fb/wellness-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/auto/b37c49fb/wellness-750w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "angled-carousel__card-background-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/pages/homepage-2025/grow-your-business/services-mobile-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/pages/homepage-2025/grow-your-business/services-desktop-1500w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "king-carousel__card-background-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/pages/homepage-2025/grow-your-business/online-store-mobile-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/pages/homepage-2025/grow-your-business/online-store-desktop-1500w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "king-carousel__card-background-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/pages/homepage-2025/grow-your-business/invoicing-mobile-500w.jpg",
+      "currentSrc": "",
+      "srcset": "",
+      "alt": "",
+      "className": "king-carousel__card-background-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/pages/homepage-2025/grow-your-business/scheduling-mobile-500w.jpg",
+      "currentSrc": "",
+      "srcset": "",
+      "alt": "",
+      "className": "king-carousel__card-background-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/pages/homepage-2025/grow-your-business/donations-mobile-500w.jpg",
+      "currentSrc": "",
+      "srcset": "",
+      "alt": "",
+      "className": "king-carousel__card-background-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/pages/homepage-2025/grow-your-business/memberships-mobile-500w.jpg",
+      "currentSrc": "",
+      "srcset": "",
+      "alt": "",
+      "className": "king-carousel__card-background-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/pages/homepage-2025/grow-your-business/blog-mobile-500w.jpg",
+      "currentSrc": "",
+      "srcset": "",
+      "alt": "",
+      "className": "king-carousel__card-background-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/pages/homepage-2025/grow-your-business/portfolio-mobile-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/pages/homepage-2025/grow-your-business/portfolio-desktop-1500w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "king-carousel__card-background-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/pages/homepage-2025/grow-your-business/services-mobile-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/pages/homepage-2025/grow-your-business/services-desktop-1500w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "king-carousel__card-background-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/pages/homepage-2025/grow-your-business/online-store-mobile-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/pages/homepage-2025/grow-your-business/online-store-desktop-1500w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "king-carousel__card-background-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/pages/homepage-2025/grow-your-business/invoicing-mobile-500w.jpg",
+      "currentSrc": "",
+      "srcset": "",
+      "alt": "",
+      "className": "king-carousel__card-background-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/pages/homepage-2025/grow-your-business/scheduling-mobile-500w.jpg",
+      "currentSrc": "",
+      "srcset": "",
+      "alt": "",
+      "className": "king-carousel__card-background-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/pages/homepage-2025/grow-your-business/donations-mobile-500w.jpg",
+      "currentSrc": "",
+      "srcset": "",
+      "alt": "",
+      "className": "king-carousel__card-background-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/pages/homepage-2025/grow-your-business/memberships-mobile-500w.jpg",
+      "currentSrc": "",
+      "srcset": "",
+      "alt": "",
+      "className": "king-carousel__card-background-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/pages/homepage-2025/grow-your-business/blog-mobile-500w.jpg",
+      "currentSrc": "",
+      "srcset": "",
+      "alt": "",
+      "className": "king-carousel__card-background-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/pages/homepage-2025/grow-your-business/portfolio-mobile-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/pages/homepage-2025/grow-your-business/portfolio-desktop-1500w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "king-carousel__card-background-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/pages/homepage-2025/grow-your-business/services-mobile-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/pages/homepage-2025/grow-your-business/services-desktop-1500w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "king-carousel__card-background-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/pages/homepage-2025/grow-your-business/online-store-mobile-500w.jpg",
+      "currentSrc": "https://media-www.sqspcdn.com/images/pages/homepage-2025/grow-your-business/online-store-desktop-1500w.webp",
+      "srcset": "",
+      "alt": "",
+      "className": "king-carousel__card-background-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/components/card-carousel/extensions-500w.jpg",
+      "currentSrc": "",
+      "srcset": "",
+      "alt": "",
+      "className": "card-carousel-card__asset-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/components/card-carousel/payment-2-500w.jpg",
+      "currentSrc": "",
+      "srcset": "",
+      "alt": "",
+      "className": "card-carousel-card__asset-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/components/card-carousel/capital-500w.jpg",
+      "currentSrc": "",
+      "srcset": "",
+      "alt": "",
+      "className": "card-carousel-card__asset-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/components/card-carousel/analytics-500w.jpg",
+      "currentSrc": "",
+      "srcset": "",
+      "alt": "",
+      "className": "card-carousel-card__asset-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/components/card-carousel/website-editing-500w.jpg",
+      "currentSrc": "",
+      "srcset": "",
+      "alt": "",
+      "className": "card-carousel-card__asset-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/components/card-carousel/design-intelligence-3-500w.jpg",
+      "currentSrc": "",
+      "srcset": "",
+      "alt": "",
+      "className": "card-carousel-card__background-video-poster"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/auto/1e3e42c2/business-email-500w.jpg",
+      "currentSrc": "",
+      "srcset": "",
+      "alt": "",
+      "className": "card-carousel-card__asset-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/components/card-carousel/domains-500w.jpg",
+      "currentSrc": "",
+      "srcset": "",
+      "alt": "",
+      "className": "card-carousel-card__asset-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/components/card-carousel/ai-seo-500w.jpg",
+      "currentSrc": "",
+      "srcset": "",
+      "alt": "",
+      "className": "card-carousel-card__asset-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/pages/homepage-2025/get-started/entrypoint-bg-500w.png",
+      "currentSrc": "",
+      "srcset": "",
+      "alt": "",
+      "className": "get-started__background"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/mpp-starting-points/en/rotate-500w.jpg",
+      "currentSrc": "",
+      "srcset": "",
+      "alt": "",
+      "className": "templates__mobile-carousel-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/mpp-starting-points/en/reseda-500w.jpg",
+      "currentSrc": "",
+      "srcset": "",
+      "alt": "",
+      "className": "templates__mobile-carousel-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/mpp-starting-points/en/altaloma-500w.jpg",
+      "currentSrc": "",
+      "srcset": "",
+      "alt": "",
+      "className": "templates__mobile-carousel-image"
+    },
+    {
+      "src": "",
+      "currentSrc": "",
+      "srcset": "https://images.squarespace-cdn.com/content/6661cc8350300d6c8b3895a8/110d5d9f-4a1f-4c40-996e-763cd9cca179/image-asset.jpeg?content-type=image%2Fjpeg?format=100w 100w,\nhttps://images.squarespace-cdn.com/content/6661cc8350300d6c8b3895a8/110d5d9f-4a1f-4c40-996e-763cd9cca179/image-asset.jpeg?content-type=image%2Fjpeg?format=300w 300w,\nhttps://images.squarespace-cdn.com/content/6661cc8350300d6c8b3895a8/110d5d9f-4a1f-4c40-996e-763cd9cca179/image-asset.jpeg?content-type=image%2Fjpeg?format=500w 500w,\nhttps://images.squarespace-cdn.com/content/6661cc8350300d6c8b3895a8/110d5d9f-4a1f-4c40-996e-763cd9cca179/image-asset.jpeg?content-type=image%2Fjpeg?format=750w 750w,\nhttps://images.squarespace-cdn.com/content/6661cc8350300d6c8b3895a8/110d5d9f-4a1f-4c40-996e-763cd9cca179/image-asset.jpeg?content-type=image%2Fjpeg?format=1000w 1000w,\nhttps://images.squarespace-cdn.com/content/6661cc8350300d6c8b3895a8/110d5d9f-4a1f-4c40-996e-763cd9cca179/image-asset.jpeg?content-type=image%2Fjpeg?format=1500w 1500w,\nhttps://images.squarespace-cdn.com/content/6661cc8350300d6c8b3895a8/110d5d9f-4a1f-4c40-996e-763cd9cca179/image-asset.jpeg?content-type=image%2Fjpeg?format=2500w 2500w",
+      "alt": "",
+      "className": "template-carousel__thumbnail-background-image"
+    },
+    {
+      "src": "",
+      "currentSrc": "",
+      "srcset": "https://images.squarespace-cdn.com/content/66f43fd38d69da1c30aaefd9/0e6ad052-446e-4446-9c01-75959eccc8a5/image-asset.jpeg?content-type=image%2Fjpeg?format=100w 100w,\nhttps://images.squarespace-cdn.com/content/66f43fd38d69da1c30aaefd9/0e6ad052-446e-4446-9c01-75959eccc8a5/image-asset.jpeg?content-type=image%2Fjpeg?format=300w 300w,\nhttps://images.squarespace-cdn.com/content/66f43fd38d69da1c30aaefd9/0e6ad052-446e-4446-9c01-75959eccc8a5/image-asset.jpeg?content-type=image%2Fjpeg?format=500w 500w,\nhttps://images.squarespace-cdn.com/content/66f43fd38d69da1c30aaefd9/0e6ad052-446e-4446-9c01-75959eccc8a5/image-asset.jpeg?content-type=image%2Fjpeg?format=750w 750w,\nhttps://images.squarespace-cdn.com/content/66f43fd38d69da1c30aaefd9/0e6ad052-446e-4446-9c01-75959eccc8a5/image-asset.jpeg?content-type=image%2Fjpeg?format=1000w 1000w,\nhttps://images.squarespace-cdn.com/content/66f43fd38d69da1c30aaefd9/0e6ad052-446e-4446-9c01-75959eccc8a5/image-asset.jpeg?content-type=image%2Fjpeg?format=1500w 1500w,\nhttps://images.squarespace-cdn.com/content/66f43fd38d69da1c30aaefd9/0e6ad052-446e-4446-9c01-75959eccc8a5/image-asset.jpeg?content-type=image%2Fjpeg?format=2500w 2500w",
+      "alt": "",
+      "className": "template-carousel__thumbnail-background-image"
+    },
+    {
+      "src": "",
+      "currentSrc": "",
+      "srcset": "https://images.squarespace-cdn.com/content/64a43d22f0fe8426170f26b3/c570c963-44e9-4d15-bf01-4e33fbd41047/image-asset.jpeg?content-type=image%2Fjpeg?format=100w 100w,\nhttps://images.squarespace-cdn.com/content/64a43d22f0fe8426170f26b3/c570c963-44e9-4d15-bf01-4e33fbd41047/image-asset.jpeg?content-type=image%2Fjpeg?format=300w 300w,\nhttps://images.squarespace-cdn.com/content/64a43d22f0fe8426170f26b3/c570c963-44e9-4d15-bf01-4e33fbd41047/image-asset.jpeg?content-type=image%2Fjpeg?format=500w 500w,\nhttps://images.squarespace-cdn.com/content/64a43d22f0fe8426170f26b3/c570c963-44e9-4d15-bf01-4e33fbd41047/image-asset.jpeg?content-type=image%2Fjpeg?format=750w 750w,\nhttps://images.squarespace-cdn.com/content/64a43d22f0fe8426170f26b3/c570c963-44e9-4d15-bf01-4e33fbd41047/image-asset.jpeg?content-type=image%2Fjpeg?format=1000w 1000w,\nhttps://images.squarespace-cdn.com/content/64a43d22f0fe8426170f26b3/c570c963-44e9-4d15-bf01-4e33fbd41047/image-asset.jpeg?content-type=image%2Fjpeg?format=1500w 1500w,\nhttps://images.squarespace-cdn.com/content/64a43d22f0fe8426170f26b3/c570c963-44e9-4d15-bf01-4e33fbd41047/image-asset.jpeg?content-type=image%2Fjpeg?format=2500w 2500w",
+      "alt": "",
+      "className": "template-carousel__thumbnail-background-image"
+    },
+    {
+      "src": "",
+      "currentSrc": "",
+      "srcset": "https://images.squarespace-cdn.com/content/6442a1caf32b560b0c3c1b03/a01cfbf8-6ed6-4447-bfc7-fa05a7f51603/image-asset.jpeg?content-type=image%2Fjpeg?format=100w 100w,\nhttps://images.squarespace-cdn.com/content/6442a1caf32b560b0c3c1b03/a01cfbf8-6ed6-4447-bfc7-fa05a7f51603/image-asset.jpeg?content-type=image%2Fjpeg?format=300w 300w,\nhttps://images.squarespace-cdn.com/content/6442a1caf32b560b0c3c1b03/a01cfbf8-6ed6-4447-bfc7-fa05a7f51603/image-asset.jpeg?content-type=image%2Fjpeg?format=500w 500w,\nhttps://images.squarespace-cdn.com/content/6442a1caf32b560b0c3c1b03/a01cfbf8-6ed6-4447-bfc7-fa05a7f51603/image-asset.jpeg?content-type=image%2Fjpeg?format=750w 750w,\nhttps://images.squarespace-cdn.com/content/6442a1caf32b560b0c3c1b03/a01cfbf8-6ed6-4447-bfc7-fa05a7f51603/image-asset.jpeg?content-type=image%2Fjpeg?format=1000w 1000w,\nhttps://images.squarespace-cdn.com/content/6442a1caf32b560b0c3c1b03/a01cfbf8-6ed6-4447-bfc7-fa05a7f51603/image-asset.jpeg?content-type=image%2Fjpeg?format=1500w 1500w,\nhttps://images.squarespace-cdn.com/content/6442a1caf32b560b0c3c1b03/a01cfbf8-6ed6-4447-bfc7-fa05a7f51603/image-asset.jpeg?content-type=image%2Fjpeg?format=2500w 2500w",
+      "alt": "",
+      "className": "template-carousel__thumbnail-background-image"
+    },
+    {
+      "src": "",
+      "currentSrc": "",
+      "srcset": "https://images.squarespace-cdn.com/content/65328a9fe08d9b592388078c/79ed5e9c-ce31-47b1-b809-9d9ef49a2f5a/image-asset.jpeg?content-type=image%2Fjpeg?format=100w 100w,\nhttps://images.squarespace-cdn.com/content/65328a9fe08d9b592388078c/79ed5e9c-ce31-47b1-b809-9d9ef49a2f5a/image-asset.jpeg?content-type=image%2Fjpeg?format=300w 300w,\nhttps://images.squarespace-cdn.com/content/65328a9fe08d9b592388078c/79ed5e9c-ce31-47b1-b809-9d9ef49a2f5a/image-asset.jpeg?content-type=image%2Fjpeg?format=500w 500w,\nhttps://images.squarespace-cdn.com/content/65328a9fe08d9b592388078c/79ed5e9c-ce31-47b1-b809-9d9ef49a2f5a/image-asset.jpeg?content-type=image%2Fjpeg?format=750w 750w,\nhttps://images.squarespace-cdn.com/content/65328a9fe08d9b592388078c/79ed5e9c-ce31-47b1-b809-9d9ef49a2f5a/image-asset.jpeg?content-type=image%2Fjpeg?format=1000w 1000w,\nhttps://images.squarespace-cdn.com/content/65328a9fe08d9b592388078c/79ed5e9c-ce31-47b1-b809-9d9ef49a2f5a/image-asset.jpeg?content-type=image%2Fjpeg?format=1500w 1500w,\nhttps://images.squarespace-cdn.com/content/65328a9fe08d9b592388078c/79ed5e9c-ce31-47b1-b809-9d9ef49a2f5a/image-asset.jpeg?content-type=image%2Fjpeg?format=2500w 2500w",
+      "alt": "",
+      "className": "template-carousel__thumbnail-background-image"
+    },
+    {
+      "src": "",
+      "currentSrc": "",
+      "srcset": "https://images.squarespace-cdn.com/content/68404a5c28a754064735a1f0/a0c02ee4-8c40-40c6-be39-2ed90a8a27d3/image-asset.jpeg?content-type=image%2Fjpeg?format=100w 100w,\nhttps://images.squarespace-cdn.com/content/68404a5c28a754064735a1f0/a0c02ee4-8c40-40c6-be39-2ed90a8a27d3/image-asset.jpeg?content-type=image%2Fjpeg?format=300w 300w,\nhttps://images.squarespace-cdn.com/content/68404a5c28a754064735a1f0/a0c02ee4-8c40-40c6-be39-2ed90a8a27d3/image-asset.jpeg?content-type=image%2Fjpeg?format=500w 500w,\nhttps://images.squarespace-cdn.com/content/68404a5c28a754064735a1f0/a0c02ee4-8c40-40c6-be39-2ed90a8a27d3/image-asset.jpeg?content-type=image%2Fjpeg?format=750w 750w,\nhttps://images.squarespace-cdn.com/content/68404a5c28a754064735a1f0/a0c02ee4-8c40-40c6-be39-2ed90a8a27d3/image-asset.jpeg?content-type=image%2Fjpeg?format=1000w 1000w,\nhttps://images.squarespace-cdn.com/content/68404a5c28a754064735a1f0/a0c02ee4-8c40-40c6-be39-2ed90a8a27d3/image-asset.jpeg?content-type=image%2Fjpeg?format=1500w 1500w,\nhttps://images.squarespace-cdn.com/content/68404a5c28a754064735a1f0/a0c02ee4-8c40-40c6-be39-2ed90a8a27d3/image-asset.jpeg?content-type=image%2Fjpeg?format=2500w 2500w",
+      "alt": "",
+      "className": "template-carousel__thumbnail-background-image"
+    },
+    {
+      "src": "",
+      "currentSrc": "",
+      "srcset": "https://images.squarespace-cdn.com/content/68404a5c7b42820f3c152876/79d0bb20-9b75-4c97-aa8d-2dfbb4546c3a/image-asset.jpeg?content-type=image%2Fjpeg?format=100w 100w,\nhttps://images.squarespace-cdn.com/content/68404a5c7b42820f3c152876/79d0bb20-9b75-4c97-aa8d-2dfbb4546c3a/image-asset.jpeg?content-type=image%2Fjpeg?format=300w 300w,\nhttps://images.squarespace-cdn.com/content/68404a5c7b42820f3c152876/79d0bb20-9b75-4c97-aa8d-2dfbb4546c3a/image-asset.jpeg?content-type=image%2Fjpeg?format=500w 500w,\nhttps://images.squarespace-cdn.com/content/68404a5c7b42820f3c152876/79d0bb20-9b75-4c97-aa8d-2dfbb4546c3a/image-asset.jpeg?content-type=image%2Fjpeg?format=750w 750w,\nhttps://images.squarespace-cdn.com/content/68404a5c7b42820f3c152876/79d0bb20-9b75-4c97-aa8d-2dfbb4546c3a/image-asset.jpeg?content-type=image%2Fjpeg?format=1000w 1000w,\nhttps://images.squarespace-cdn.com/content/68404a5c7b42820f3c152876/79d0bb20-9b75-4c97-aa8d-2dfbb4546c3a/image-asset.jpeg?content-type=image%2Fjpeg?format=1500w 1500w,\nhttps://images.squarespace-cdn.com/content/68404a5c7b42820f3c152876/79d0bb20-9b75-4c97-aa8d-2dfbb4546c3a/image-asset.jpeg?content-type=image%2Fjpeg?format=2500w 2500w",
+      "alt": "",
+      "className": "template-carousel__thumbnail-background-image"
+    },
+    {
+      "src": "",
+      "currentSrc": "",
+      "srcset": "https://images.squarespace-cdn.com/content/666af2449f398d3d003865ac/c52d95c2-ed32-4a03-b203-d3fa738e55ab/image-asset.jpeg?content-type=image%2Fjpeg?format=100w 100w,\nhttps://images.squarespace-cdn.com/content/666af2449f398d3d003865ac/c52d95c2-ed32-4a03-b203-d3fa738e55ab/image-asset.jpeg?content-type=image%2Fjpeg?format=300w 300w,\nhttps://images.squarespace-cdn.com/content/666af2449f398d3d003865ac/c52d95c2-ed32-4a03-b203-d3fa738e55ab/image-asset.jpeg?content-type=image%2Fjpeg?format=500w 500w,\nhttps://images.squarespace-cdn.com/content/666af2449f398d3d003865ac/c52d95c2-ed32-4a03-b203-d3fa738e55ab/image-asset.jpeg?content-type=image%2Fjpeg?format=750w 750w,\nhttps://images.squarespace-cdn.com/content/666af2449f398d3d003865ac/c52d95c2-ed32-4a03-b203-d3fa738e55ab/image-asset.jpeg?content-type=image%2Fjpeg?format=1000w 1000w,\nhttps://images.squarespace-cdn.com/content/666af2449f398d3d003865ac/c52d95c2-ed32-4a03-b203-d3fa738e55ab/image-asset.jpeg?content-type=image%2Fjpeg?format=1500w 1500w,\nhttps://images.squarespace-cdn.com/content/666af2449f398d3d003865ac/c52d95c2-ed32-4a03-b203-d3fa738e55ab/image-asset.jpeg?content-type=image%2Fjpeg?format=2500w 2500w",
+      "alt": "",
+      "className": "template-carousel__thumbnail-background-image"
+    },
+    {
+      "src": "",
+      "currentSrc": "",
+      "srcset": "https://images.squarespace-cdn.com/content/62bdaf732e7762137aa53aa9/caf5fffa-dc35-4fe3-bfb5-f10221b4a7f8/image-asset.jpeg?content-type=image%2Fjpeg?format=100w 100w,\nhttps://images.squarespace-cdn.com/content/62bdaf732e7762137aa53aa9/caf5fffa-dc35-4fe3-bfb5-f10221b4a7f8/image-asset.jpeg?content-type=image%2Fjpeg?format=300w 300w,\nhttps://images.squarespace-cdn.com/content/62bdaf732e7762137aa53aa9/caf5fffa-dc35-4fe3-bfb5-f10221b4a7f8/image-asset.jpeg?content-type=image%2Fjpeg?format=500w 500w,\nhttps://images.squarespace-cdn.com/content/62bdaf732e7762137aa53aa9/caf5fffa-dc35-4fe3-bfb5-f10221b4a7f8/image-asset.jpeg?content-type=image%2Fjpeg?format=750w 750w,\nhttps://images.squarespace-cdn.com/content/62bdaf732e7762137aa53aa9/caf5fffa-dc35-4fe3-bfb5-f10221b4a7f8/image-asset.jpeg?content-type=image%2Fjpeg?format=1000w 1000w,\nhttps://images.squarespace-cdn.com/content/62bdaf732e7762137aa53aa9/caf5fffa-dc35-4fe3-bfb5-f10221b4a7f8/image-asset.jpeg?content-type=image%2Fjpeg?format=1500w 1500w,\nhttps://images.squarespace-cdn.com/content/62bdaf732e7762137aa53aa9/caf5fffa-dc35-4fe3-bfb5-f10221b4a7f8/image-asset.jpeg?content-type=image%2Fjpeg?format=2500w 2500w",
+      "alt": "",
+      "className": "template-carousel__thumbnail-background-image"
+    },
+    {
+      "src": "",
+      "currentSrc": "",
+      "srcset": "https://images.squarespace-cdn.com/content/68404a5ceee5ca4668307fc4/33e54672-c66e-4bc8-9056-261678ab02c3/image-asset.jpeg?content-type=image%2Fjpeg?format=100w 100w,\nhttps://images.squarespace-cdn.com/content/68404a5ceee5ca4668307fc4/33e54672-c66e-4bc8-9056-261678ab02c3/image-asset.jpeg?content-type=image%2Fjpeg?format=300w 300w,\nhttps://images.squarespace-cdn.com/content/68404a5ceee5ca4668307fc4/33e54672-c66e-4bc8-9056-261678ab02c3/image-asset.jpeg?content-type=image%2Fjpeg?format=500w 500w,\nhttps://images.squarespace-cdn.com/content/68404a5ceee5ca4668307fc4/33e54672-c66e-4bc8-9056-261678ab02c3/image-asset.jpeg?content-type=image%2Fjpeg?format=750w 750w,\nhttps://images.squarespace-cdn.com/content/68404a5ceee5ca4668307fc4/33e54672-c66e-4bc8-9056-261678ab02c3/image-asset.jpeg?content-type=image%2Fjpeg?format=1000w 1000w,\nhttps://images.squarespace-cdn.com/content/68404a5ceee5ca4668307fc4/33e54672-c66e-4bc8-9056-261678ab02c3/image-asset.jpeg?content-type=image%2Fjpeg?format=1500w 1500w,\nhttps://images.squarespace-cdn.com/content/68404a5ceee5ca4668307fc4/33e54672-c66e-4bc8-9056-261678ab02c3/image-asset.jpeg?content-type=image%2Fjpeg?format=2500w 2500w",
+      "alt": "",
+      "className": "template-carousel__thumbnail-background-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/pages/flagship/blueprint-ai/design-partner/time-logo-500w.png",
+      "currentSrc": "",
+      "srcset": "",
+      "alt": "",
+      "className": "get-started__time-logo-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/pages/homepage-2025/customers-served/headshot-2-500w.jpg",
+      "currentSrc": "",
+      "srcset": "",
+      "alt": "",
+      "className": "faces__face"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/pages/homepage-2025/customers-served/headshot-3-500w.jpg",
+      "currentSrc": "",
+      "srcset": "",
+      "alt": "",
+      "className": "faces__face"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/pages/homepage-2025/customers-served/headshot-5-500w.jpg",
+      "currentSrc": "",
+      "srcset": "",
+      "alt": "",
+      "className": "faces__face"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/pages/homepage-2025/customers-served/headshot-1-500w.jpg",
+      "currentSrc": "",
+      "srcset": "",
+      "alt": "",
+      "className": "faces__face"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/pages/homepage-2025/customers-served/headshot-4-500w.jpg",
+      "currentSrc": "",
+      "srcset": "",
+      "alt": "",
+      "className": "faces__face"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/pages/homepage-2025/made-with-sqsp/fallback-mobile-1-500w.png",
+      "currentSrc": "",
+      "srcset": "",
+      "alt": "Uma grade de sites de clientes Squarespace.",
+      "className": "made-with-sqsp__fallback-image"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/components/conversion/conversion-centered-poster-500w.png",
+      "currentSrc": "",
+      "srcset": "",
+      "alt": "",
+      "className": "video-base__poster conversion__centered-video-poster"
+    },
+    {
+      "src": "https://media-www.sqspcdn.com/images/components/conversion/conversion-centered-mobile-poster-500w.png",
+      "currentSrc": "",
+      "srcset": "",
+      "alt": "",
+      "className": "video-base__poster conversion__centered-video-poster"
+    }
+  ],
+  "videos": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "https://media-www.sqspcdn.com/images/pages/homepage-2025/hero/videos/july-2026/plants-desktop.webm",
+    "https://media-www.sqspcdn.com/images/pages/homepage-2025/hero/videos/july-2026/plants-mobile.webm",
+    "https://media-www.sqspcdn.com/images/pages/homepage-2025/hero/videos/july-2026/plants-desktop.mp4",
+    "https://media-www.sqspcdn.com/images/pages/homepage-2025/hero/videos/july-2026/plants-mobile.mp4",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "https://media-www.sqspcdn.com/images/components/card-carousel/design-intelligence-3.mp4",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "https://media-www.sqspcdn.com/images/pages/homepage-2025/comece-agora/blueprint-ai.webm",
+    "https://media-www.sqspcdn.com/images/pages/homepage-2025/get-started/blueprint-ai.mp4",
+    "",
+    "",
+    "",
+    "https://media-www.sqspcdn.com/images/pages/homepage-2025/comece-agora/templates.webm",
+    "https://media-www.sqspcdn.com/images/pages/homepage-2025/get-started/templates.mp4",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "https://media-www.sqspcdn.com/images/components/conversion/conversion-centered.mp4",
+    "",
+    "",
+    "",
+    "https://media-www.sqspcdn.com/images/components/conversion/conversion-centered-mobile.mp4",
+    "",
+    ""
+  ]
+}
