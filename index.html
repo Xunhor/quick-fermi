@@ -557,6 +557,112 @@ html, body {
   overflow-x: clip !important;
   max-width: 100% !important;
 }
+
+/* Boomo Mobile Drawer */
+.boomo-mobile-drawer {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  background-color: #000000 !important;
+  z-index: 999999 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+  transform: translateY(-8px) !important;
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s !important;
+}
+.boomo-mobile-drawer.is-open {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+}
+.boomo-mobile-drawer-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 24px 24px 32px 24px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+.boomo-mobile-drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  margin-bottom: 28px;
+}
+.boomo-drawer-close {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  line-height: 1;
+  transition: background 0.2s;
+}
+.boomo-drawer-close:active {
+  background: rgba(255, 255, 255, 0.25);
+}
+.boomo-mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+.boomo-mobile-nav a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  transition: color 0.2s;
+}
+.boomo-mobile-nav a:hover,
+.boomo-mobile-nav a:active {
+  color: #10B981;
+}
+.boomo-mobile-nav a .drawer-arrow {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 1.1rem;
+}
+.boomo-mobile-drawer-footer {
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  margin-top: auto;
+}
+.boomo-mobile-drawer-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  background: #10B981;
+  color: #000000 !important;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
 .boomo-floating-wa {
   position: fixed;
   bottom: 28px;
@@ -583,7 +689,113 @@ html, body {
   transform: scale(0.96);
 }
 @media (max-width: 768px) {
-  .boomo-floating-wa {
+  
+/* Boomo Mobile Drawer */
+.boomo-mobile-drawer {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  background-color: #000000 !important;
+  z-index: 999999 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+  transform: translateY(-8px) !important;
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s !important;
+}
+.boomo-mobile-drawer.is-open {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+}
+.boomo-mobile-drawer-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 24px 24px 32px 24px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+.boomo-mobile-drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  margin-bottom: 28px;
+}
+.boomo-drawer-close {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  line-height: 1;
+  transition: background 0.2s;
+}
+.boomo-drawer-close:active {
+  background: rgba(255, 255, 255, 0.25);
+}
+.boomo-mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+.boomo-mobile-nav a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  transition: color 0.2s;
+}
+.boomo-mobile-nav a:hover,
+.boomo-mobile-nav a:active {
+  color: #10B981;
+}
+.boomo-mobile-nav a .drawer-arrow {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 1.1rem;
+}
+.boomo-mobile-drawer-footer {
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  margin-top: auto;
+}
+.boomo-mobile-drawer-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  background: #10B981;
+  color: #000000 !important;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.boomo-floating-wa {
     bottom: 20px;
     right: 20px;
     width: 52px;
@@ -636,25 +848,7 @@ html, body {
       <span class="global-navigation__hamburger-bar"></span>
     </button>
   </div>
-  <div class="global-navigation__mobile-menu" id="boomoMobileMenu" style="display: none; position: fixed; top: 60px; left: 0; width: 100%; height: calc(100vh - 60px); background: #000000; z-index: 99999; padding: 32px 24px; box-sizing: border-box; overflow-y: auto;">
-    <div style="display: flex; flex-direction: column; height: 100%; justify-content: space-between;">
-      <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 24px;">
-        <li><a href="#one-platform" style="text-decoration: none; color: #FFFFFF; font-size: 1.35rem; font-weight: 600; display: block;" onclick="closeBoomoMenu()">Recursos</a></li>
-        <li><a href="#get-started" style="text-decoration: none; color: #FFFFFF; font-size: 1.35rem; font-weight: 600; display: block;" onclick="closeBoomoMenu()">Modelos Demonstrativos</a></li>
-        <li><a href="#planos" style="text-decoration: none; color: #FFFFFF; font-size: 1.35rem; font-weight: 600; display: block;" onclick="closeBoomoMenu()">Planos &amp; Preços</a></li>
-        <li><a href="/sobre.html" style="text-decoration: none; color: #FFFFFF; font-size: 1.35rem; font-weight: 600; display: block;">Sobre a Boomo</a></li>
-        <li><a href="#homepage-faq" style="text-decoration: none; color: #FFFFFF; font-size: 1.35rem; font-weight: 600; display: block;" onclick="closeBoomoMenu()">Dúvidas Frequentes</a></li>
-        <li><a href="/termos-privacidade.html" style="text-decoration: none; color: rgba(255, 255, 255, 0.6); font-size: 1rem; display: block;">Termos &amp; Privacidade (LGPD)</a></li>
-      </ul>
-      <div style="padding-top: 32px; border-top: 1px solid rgba(255, 255, 255, 0.15);">
-        <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Gostaria%20de%20um%20site%20profissional%20para%20minha%20empresa." target="_blank" style="display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 16px; background: #10B981; color: #000000; text-decoration: none; font-weight: 700; font-size: 15px; border-radius: 8px; box-sizing: border-box;">
-          <span>Falar no WhatsApp</span>
-          <span aria-hidden="true">→</span>
-        </a>
-      </div>
-    </div>
-  </div>
-</header>
+  </header>
 <main data-content-field="main-content" id="content" role="main"><section class="homepage-hero" id="homepage-hero" translate="yes"><div class="homepage-hero__background"><div class="dynamic-background"><div class="dynamic-background__item dynamic-background__item--active"><picture><source height="2004" media="(max-width: 743px)" srcset="assets/images/sqsp/images_pages_homepage-2025_hero_videos_j_709b1af6.webp 100w, assets/images/sqsp/images_pages_homepage-2025_hero_videos_j_41fd1350.webp 300w, assets/images/sqsp/images_pages_homepage-2025_hero_videos_j_c5cdddd1.webp 500w, assets/images/sqsp/images_pages_homepage-2025_hero_videos_j_8a45843a.webp 750w, assets/images/sqsp/images_pages_homepage-2025_hero_videos_j_e8b85380.webp 1000w, assets/images/sqsp/images_pages_homepage-2025_hero_videos_j_07ce033e.webp 1500w, assets/images/sqsp/images_pages_homepage-2025_hero_videos_j_a15d5c7c.webp 2500w" type="image/webp" width="1128"/><source height="2004" media="(max-width: 743px)" srcset="assets/images/sqsp/images_pages_homepage-2025_hero_videos_j_3ac61034.jpg 100w, assets/images/sqsp/images_pages_homepage-2025_hero_videos_j_72ff389b.jpg 300w, assets/images/sqsp/images_pages_homepage-2025_hero_videos_j_a31daf81.jpg 500w, assets/images/sqsp/images_pages_homepage-2025_hero_videos_j_fe08eac9.jpg 750w, assets/images/sqsp/images_pages_homepage-2025_hero_videos_j_ff05b6e8.jpg 1000w, assets/images/sqsp/images_pages_homepage-2025_hero_videos_j_45cf5010.jpg 1500w, assets/images/sqsp/images_pages_homepage-2025_hero_videos_j_6cdc08a4.jpg 2500w" width="1128"/><source height="2560" srcset="assets/images/sqsp/images_pages_homepage-2025_hero_videos_j_b6b49996.webp 100w, assets/images/sqsp/images_pages_homepage-2025_hero_videos_j_56d2c415.webp 300w, assets/images/sqsp/images_pages_homepage-2025_hero_videos_j_a66853d2.webp 500w, assets/images/sqsp/images_pages_homepage-2025_hero_videos_j_d924730b.webp 750w, assets/images/sqsp/images_pages_homepage-2025_hero_videos_j_6c1efebf.webp 1000w, assets/images/sqsp/images_pages_homepage-2025_hero_videos_j_9c943a57.webp 1500w, assets/images/sqsp/images_pages_homepage-2025_hero_videos_j_c5f5b40d.webp 2500w" type="image/webp" width="4096"/><source height="2560" srcset="assets/images/sqsp/images_pages_homepage-2025_hero_videos_j_baf63114.jpg 100w, assets/images/sqsp/images_pages_homepage-2025_hero_videos_j_a8accac3.jpg 300w, assets/images/sqsp/images_pages_homepage-2025_hero_videos_j_7847c21f.jpg 500w, assets/images/sqsp/images_pages_homepage-2025_hero_videos_j_c969ab45.jpg 750w, assets/images/sqsp/images_pages_homepage-2025_hero_videos_j_964a98cf.jpg 1000w, assets/images/sqsp/images_pages_homepage-2025_hero_videos_j_13d98c6e.jpg 1500w, assets/images/sqsp/images_pages_homepage-2025_hero_videos_j_1735665f.jpg 2500w" type="image/jpeg" width="4096"/><img alt="plants" class="dynamic-background__poster" decoding="async" fetchpriority="high" height="2560" loading="eager" src="assets/images/sqsp/images_pages_homepage-2025_hero_videos_j_c1bd6bf9.jpg" width="4096"/></picture><video autoplay="" class="dynamic-background__video" loop="" muted="" playsinline="" poster="assets/images/sqsp/images_pages_homepage-2025_hero_videos_j_c1bd6bf9.jpg" preload="auto"><source src="assets/videos/hero-desktop.mp4" type="video/mp4"/></video></div><div class="dynamic-background__item"><video autoplay="true" class="dynamic-background__video" loop="true" muted="true" playsinline="true" preload="auto"></video></div><div class="dynamic-background__item"><video autoplay="true" class="dynamic-background__video" loop="true" muted="true" playsinline="true" preload="auto"></video></div><div class="dynamic-background__item"><video autoplay="true" class="dynamic-background__video" loop="true" muted="true" playsinline="true" preload="auto"></video></div><div class="dynamic-background__item"><video autoplay="true" class="dynamic-background__video" loop="true" muted="true" playsinline="true" preload="auto"></video></div><div class="dynamic-background__overlay-gradient"></div></div></div><div class="homepage-hero__text-container"><div class="homepage-hero__text-container-localized-hero-text" style="opacity: 1; transform: none;"><h1 class="text text--title3 text--light hero-text" data-force-mobile-view="false">Um site profissional para o seu negócio acontecer</h1></div><div style="transform: none;"><a class="cta cta--primary cta--light homepage-hero__cta" href="#planos" style="background-color: #FFFFFF !important; color: #000000 !important; font-family: Clarkson, -apple-system, sans-serif !important; font-weight: 700 !important; border-radius: 4px !important; padding: 16px 36px !important; font-size: 14px !important; letter-spacing: 0.06em !important; text-transform: uppercase !important; box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important; display: inline-flex !important; align-items: center !important; justify-content: center !important;" target="_blank"><span style="color: #000000 !important; font-weight: 700 !important;">QUERO MEU SITE</span></a></div><div style="transform: none;"><p class="text text--body text--light">Aprovação do design antes de pagar o setup. Sem fidelidade.</p></div></div><div class="angled-carousel"><div class="angled-carousel__track" id="angled-track"><div class="angled-carousel__card card-index-0" data-card-id="creative"><img alt="Creative Agency" loading="eager" src="assets/images/sqsp/images_auto_c7c32ead_creative-500w.jpg"/></div><div class="angled-carousel__card card-index-1" data-card-id="plants"><img alt="Botanica" loading="eager" src="assets/images/sqsp/images_auto_9e9d7f8d_plants-500w.jpg"/></div><div class="angled-carousel__card card-index-2" data-card-id="barber"><img alt="Borough Barber" loading="eager" src="assets/images/sqsp/images_auto_f2051f0f_barber-500w.jpg"/></div><div class="angled-carousel__card card-index-3" data-card-id="wellness"><img alt="Balance" loading="eager" src="assets/images/sqsp/images_auto_b37c49fb_wellness-500w.jpg"/></div><div class="angled-carousel__card card-index-4" data-card-id="tutor"><img alt="Academic Lessons" loading="eager" src="assets/images/sqsp/images_auto_f1f95a06_tutor-500w.jpg"/></div></div><button aria-label="Slide anterior" class="angled-carousel__control angled-carousel__control--left" id="hero-prev"><svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24"><polyline points="15 18 9 12 15 6"></polyline></svg></button><button aria-label="Próximo slide" class="angled-carousel__control angled-carousel__control--right" id="hero-next"><svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24"><polyline points="9 18 15 12 9 6"></polyline></svg></button></div><div class="homepage-hero__stats"><div class="homepage-hero__stats-header"><p class="text text--body text--light homepage-hero__stats-header-text">O modelo por assinatura que simplifica a presença digital da sua marca.</p></div><div class="stats homepage-hero__stats stats--no-padding-top" style="--stats-width: 192px;"><div class="stats__card" data-has-localized-counter="true" style=""><p aria-label="14M+" class="text text--title3 text--light stats__counter"><span></span><span class="stats__digit"><span aria-hidden="true" class="stats__number" style="transform: none;">0</span><span aria-hidden="true" class="stats__number" style="transform: none;">1</span><span aria-hidden="true" class="stats__number" style="transform: none;">2</span><span aria-hidden="true" class="stats__number" style="transform: none;">3</span><span aria-hidden="true" class="stats__number" style="transform: none;">4</span><span aria-hidden="true" class="stats__number" style="transform: none;">5</span><span aria-hidden="true" class="stats__number" style="transform: none;">6</span><span aria-hidden="true" class="stats__number" style="transform: none;">7</span><span aria-hidden="true" class="stats__number" style="transform: none;">8</span><span aria-hidden="true" class="stats__number" style="transform: none;">9</span></span><span class="">M+</span></p><p class="text text--title3 text--light stats__counter stats__counter--static">100%</p><p class="text text--subtitle1 text--light stats__card-localized-counter" data-sl-variant="12294d4b090b5e85d7d7238ab0c33912">100%</p><p class="text text--footnote text--light" data-sl-variant="71935f2914d3e26956192eba7a5ec300">aprovação antes do setup</p></div><div class="stats__card" data-has-localized-counter="true" style=""><p aria-label="$36B+" class="text text--title3 text--light stats__counter"><span>$</span><span class="stats__digit"><span aria-hidden="true" class="stats__number" style="transform: none;">0</span><span aria-hidden="true" class="stats__number" style="transform: none;">1</span><span aria-hidden="true" class="stats__number" style="transform: none;">2</span><span aria-hidden="true" class="stats__number" style="transform: none;">3</span><span aria-hidden="true" class="stats__number" style="transform: none;">4</span><span aria-hidden="true" class="stats__number" style="transform: none;">5</span><span aria-hidden="true" class="stats__number" style="transform: none;">6</span><span aria-hidden="true" class="stats__number" style="transform: none;">7</span><span aria-hidden="true" class="stats__number" style="transform: none;">8</span><span aria-hidden="true" class="stats__number" style="transform: none;">9</span></span><span class="stats__digit"><span aria-hidden="true" class="stats__number" style="transform: none;">0</span><span aria-hidden="true" class="stats__number" style="transform: none;">1</span><span aria-hidden="true" class="stats__number" style="transform: none;">2</span><span aria-hidden="true" class="stats__number" style="transform: none;">3</span><span aria-hidden="true" class="stats__number" style="transform: none;">4</span><span aria-hidden="true" class="stats__number" style="transform: none;">5</span><span aria-hidden="true" class="stats__number" style="transform: none;">6</span><span aria-hidden="true" class="stats__number" style="transform: none;">7</span><span aria-hidden="true" class="stats__number" style="transform: none;">8</span><span aria-hidden="true" class="stats__number" style="transform: none;">9</span></span><span class="">B+</span></p><p class="text text--title3 text--light stats__counter stats__counter--static">Zero</p><p class="text text--subtitle1 text--light stats__card-localized-counter" data-sl-variant="911784c523af0d4cbc0a9d3484ba5b46">Zero</p><p class="text text--footnote text--light" data-sl-variant="789544df48107c560474d484e753b7a8">preocupação técnica</p></div><div class="stats__card" data-has-localized-counter="true" style=""><p aria-label="200+" class="text text--title3 text--light stats__counter"><span></span><span class="stats__digit"><span aria-hidden="true" class="stats__number" style="transform: none;">0</span><span aria-hidden="true" class="stats__number" style="transform: none;">1</span><span aria-hidden="true" class="stats__number" style="transform: none;">2</span><span aria-hidden="true" class="stats__number" style="transform: none;">3</span><span aria-hidden="true" class="stats__number" style="transform: none;">4</span><span aria-hidden="true" class="stats__number" style="transform: none;">5</span><span aria-hidden="true" class="stats__number" style="transform: none;">6</span><span aria-hidden="true" class="stats__number" style="transform: none;">7</span><span aria-hidden="true" class="stats__number" style="transform: none;">8</span><span aria-hidden="true" class="stats__number" style="transform: none;">9</span></span><span class="stats__digit"><span aria-hidden="true" class="stats__number" style="transform: none;">0</span><span aria-hidden="true" class="stats__number" style="transform: none;">1</span><span aria-hidden="true" class="stats__number" style="transform: none;">2</span><span aria-hidden="true" class="stats__number" style="transform: none;">3</span><span aria-hidden="true" class="stats__number" style="transform: none;">4</span><span aria-hidden="true" class="stats__number" style="transform: none;">5</span><span aria-hidden="true" class="stats__number" style="transform: none;">6</span><span aria-hidden="true" class="stats__number" style="transform: none;">7</span><span aria-hidden="true" class="stats__number" style="transform: none;">8</span><span aria-hidden="true" class="stats__number" style="transform: none;">9</span></span><span class="stats__digit"><span aria-hidden="true" class="stats__number" style="transform: none;">0</span><span aria-hidden="true" class="stats__number" style="transform: none;">1</span><span aria-hidden="true" class="stats__number" style="transform: none;">2</span><span aria-hidden="true" class="stats__number" style="transform: none;">3</span><span aria-hidden="true" class="stats__number" style="transform: none;">4</span><span aria-hidden="true" class="stats__number" style="transform: none;">5</span><span aria-hidden="true" class="stats__number" style="transform: none;">6</span><span aria-hidden="true" class="stats__number" style="transform: none;">7</span><span aria-hidden="true" class="stats__number" style="transform: none;">8</span><span aria-hidden="true" class="stats__number" style="transform: none;">9</span></span><span class="">+</span></p><p class="text text--title3 text--light stats__counter stats__counter--static">24/7</p><p class="text text--subtitle1 text--light stats__card-localized-counter" data-sl-variant="9b75c4ae0cef3ecf8b23c32d4910dd99">24/7</p><p class="text text--footnote text--light" data-sl-variant="df5c164ec57f4b319d59c388da730e51">hospedagem e SSL inclusos</p></div></div></div><div class="homepage-hero__controls-container"><button aria-label="Pausar" aria-pressed="true" class="cta cta--inline cta--light controls controls--light controls--has-blur homepage-hero__controls" data-sl-attr-variant="aria-label:170da5346f5d149a8b560d7a02fc9380,aria-label:12e564b479dc0e58e384ea8be1ca8c94" style=""><svg class="pause-icon pause-icon--theme-light controls__button-svg" fill="none" height="10" viewbox="0 0 8 10" width="8" xmlns="http://www.w3.org/2000/svg"><g fill="currentColor"><rect height="9" rx=".2" width="3" y=".500244"></rect><rect height="9" rx=".2" width="3" x="5" y=".500244"></rect></g></svg></button></div></section><section class="grow-your-business" id="grow-your-business"><div class="headline headline--centered grow-your-business__headline"><h2 class="text text--subtitle1 headline__title headline__title--centered" data-sl-variant="0ac8024a72d2d41f751618b42bf493ea" style="">Amplie seus negócios</h2><p class="text text--body headline__body headline__body--center grow-your-business__headline-body" data-sl-variant="f8486fc8eb3bcbe6ef36eede79bcd680" style="">Você merece um site que faça tudo isso.</p></div><div class="pills-container grow-your-business__pills"><ul class="pills" style="--background-color: rgba(0, 0, 0, 0.05);"><li class="pills__pill-container" style=""><div class="pills__pill-indicator pills__pill-indicator--dark" style="opacity: 1;"></div><button class="cta cta--inline pills__pill"><p class="text text--body" data-sl-variant="9cc20469ea8378153cd882461c44f82c">Serviços</p></button></li><li class="pills__pill-container" style=""><button class="cta cta--inline pills__pill"><p class="text text--body" data-sl-variant="85f1aa895754b9d3e363f1672534494e">Loja on-line</p></button></li><li class="pills__pill-container" style=""><button class="cta cta--inline pills__pill"><p class="text text--body" data-sl-variant="7e3d00e13fe3bb6cf137d86ee20ffed4">Emissão de faturas</p></button></li><li class="pills__pill-container" style=""><button class="cta cta--inline pills__pill"><p class="text text--body" data-sl-variant="8affcecefba1f4c371f1e98550af8ad8">Scheduling</p></button></li><li class="pills__pill-container" style=""><button class="cta cta--inline pills__pill"><p class="text text--body" data-sl-variant="aba10daa4e8d479e744575861b2e3960">Doações</p></button></li><li class="pills__pill-container" style=""><button class="cta cta--inline pills__pill"><p class="text text--body" data-sl-variant="8df1bd4b8aebf25d6f067917c466b8cd">Filiações</p></button></li><li class="pills__pill-container" style=""><button class="cta cta--inline pills__pill"><p class="text text--body" data-sl-variant="e498f56a888c500f6d39acc1f9dd5364">Blog</p></button></li><li class="pills__pill-container" style=""><button class="cta cta--inline pills__pill"><p class="text text--body" data-sl-variant="d91117b11830a9d39af3232548fc5128">Portfólio</p></button></li></ul></div><div class="king-carousel"><div class="king-carousel__cards"><div class="king-carousel__card king-carousel__card--clone" data-clone-of="7"><a class="cta cta--inline cta--light king-carousel__card-cta" data-is-active="false" href="/websites/criar-um-portfolio" style="opacity: 0;" tabindex="-1"><picture><source height="1116" media="(min-width: 744px) and (max-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_7aca2554.webp 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_ffae4bf6.webp 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_814bfe8b.webp 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_25d4a6f2.webp 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_ee897e6a.webp 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_dc648b02.webp 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_a00a1498.webp 2500w" type="image/webp" width="1488"/><source height="1116" media="(min-width: 744px) and (max-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_98da2772.jpg 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_22fd1b39.jpg 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_37c4fdf0.jpg 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_aaa0f332.jpg 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_0f12a873.jpg 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_1ce55cca.jpg 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_716e76a9.jpg 2500w" type="image/jpeg" width="1488"/><source height="1006" media="(min-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_fc0a8991.webp 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_c8e7caf6.webp 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_05a99542.webp 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_4d168c41.webp 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_5c42a593.webp 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_37221e82.webp 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_f3506785.webp 2500w" type="image/webp" width="1788"/><source height="1006" media="(min-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_4424d3aa.jpg 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_c3aa4035.jpg 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_2e960343.jpg 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_007ca1b7.jpg 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_a4694715.jpg 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_b517f43e.jpg 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_9b642c87.jpg 2500w" type="image/jpeg" width="1788"/><source height="1000" sizes="(min-width: 1280px) 25vw, (min-width: 1020px) 30vw, (min-width: 744px) 40vw, 90vw" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_2b5768d5.webp 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_876a654e.webp 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_e0670142.webp 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_c0a4fef1.webp 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_d2c3df2e.webp 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_da99f174.webp 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_b71f3e56.webp 2500w" type="image/webp" width="750"/><source height="1000" sizes="(min-width: 1280px) 25vw, (min-width: 1020px) 30vw, (min-width: 744px) 40vw, 90vw" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_3f91b7b9.jpg 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_a0caa736.jpg 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_f00be598.jpg 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_5754535e.jpg 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_2c44d4d1.jpg 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_a74078c3.jpg 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_7cf22257.jpg 2500w" type="image/jpeg" width="750"/><img alt="" class="king-carousel__card-background-image" decoding="async" height="1000" loading="lazy" src="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_f00be598.jpg" width="750"/></picture><h3 class="text text--subtitle2 text--light king-carousel__card-title text--font-clarkson-serif" data-sl-variant="e217ec3f65281b09bfaf562c4e861eb8">Exponha seus trabalhos</h3><p class="text text--body text--light king-carousel__card-body" data-sl-variant="3ce07bbb0219270933d372d20d486da0">Monte um site de portfólio para destacar projetos, contar sua história e ajudar os clientes a entrarem em contato.</p><p class="text text--footnote text--light king-carousel__card-footnote" data-sl-variant="ee895a3a2e1a8d132658fdbf8baf2f31">Recomendado para: designers · fotógrafos · artistas e ilustradores</p><p class="text text--subtitle3 text--light king-carousel__card-arrow">→</p></a></div><div class="king-carousel__card"><a class="cta cta--inline cta--light king-carousel__card-cta" data-is-active="false" href="/servicos" tabindex="-1"><picture><source height="1116" media="(min-width: 744px) and (max-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_eff7d44e.webp 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_1bc7a76b.webp 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_e6dc726a.webp 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_eb7b7f12.webp 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_3eb03bf7.webp 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_c17362b3.webp 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_441840d5.webp 2500w" type="image/webp" width="1488"/><source height="1116" media="(min-width: 744px) and (max-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_b458f81d.jpg 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_b192f60b.jpg 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_75bc2079.jpg 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_5250c9da.jpg 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_56936f2f.jpg 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_dd32db01.jpg 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_988e6dde.jpg 2500w" type="image/jpeg" width="1488"/><source height="1006" media="(min-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_0ca7b75f.webp 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_d6b2b16c.webp 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_79049fc9.webp 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_26c30f8c.webp 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_7a5e0e97.webp 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_2342ddfb.webp 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_57bb2137.webp 2500w" type="image/webp" width="1788"/><source height="1006" media="(min-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_12b94f7c.jpg 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_d9e54781.jpg 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_7b2578d0.jpg 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_2dbd3c38.jpg 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_cdbadb19.jpg 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_8285e24c.jpg 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_79bbbfeb.jpg 2500w" type="image/jpeg" width="1788"/><source height="1000" sizes="(min-width: 1280px) 25vw, (min-width: 1020px) 30vw, (min-width: 744px) 40vw, 90vw" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_fc657176.webp 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_756b3c3b.webp 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_dc4cc5f1.webp 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_75e300a3.webp 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_2d9bf061.webp 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_91b8402c.webp 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_4b00018a.webp 2500w" type="image/webp" width="750"/><source height="1000" sizes="(min-width: 1280px) 25vw, (min-width: 1020px) 30vw, (min-width: 744px) 40vw, 90vw" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_4fcb0a8d.jpg 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_968c3d05.jpg 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_b9caf343.jpg 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_45d61170.jpg 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_2709c56d.jpg 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_f0a9ac4b.jpg 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_e5cc301c.jpg 2500w" type="image/jpeg" width="750"/><img alt="" class="king-carousel__card-background-image" decoding="async" height="1000" loading="eager" src="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_b9caf343.jpg" width="750"/></picture><h3 class="text text--subtitle2 text--light king-carousel__card-title text--font-clarkson-serif" data-sl-variant="5ce638d26d747a15a71171aa85c8846d">Ofereça serviços</h3><p class="text text--body text--light king-carousel__card-body" data-sl-variant="e72d89cc2f53541e98c79fd286a0add5">Divulgue suas experiências e serviços, recolha informações sobre os participantes e receba pelo seu trabalho.</p><p class="text text--footnote text--light king-carousel__card-footnote" data-sl-variant="f0833fa2b06351415baef333e4791c3e">Recomendado para: acampamentos · consultores · organizadores de eventos</p><p class="text text--subtitle3 text--light king-carousel__card-arrow">→</p></a></div><div class="king-carousel__card"><a class="cta cta--inline cta--light king-carousel__card-cta" data-is-active="false" href="/lojas-online" tabindex="-1"><picture><source height="1116" media="(min-width: 744px) and (max-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_b7fa0daa.webp 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_fb3caaaa.webp 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_ecb5232c.webp 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_4884e87e.webp 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_dfffcafd.webp 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_4fa588b7.webp 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_0f4cb148.webp 2500w" type="image/webp" width="1488"/><source height="1116" media="(min-width: 744px) and (max-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_620712e4.jpg 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_c03d43d9.jpg 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_bf9ba05f.jpg 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_47e61b1d.jpg 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_a50c335e.jpg 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_f043eee1.jpg 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_95334e58.jpg 2500w" type="image/jpeg" width="1488"/><source height="1006" media="(min-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_fe89b942.webp 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_79e0d9b8.webp 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_9d806d2e.webp 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_b5c5a5f3.webp 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_b0220c1e.webp 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_1be13136.webp 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_d290ab8f.webp 2500w" type="image/webp" width="1788"/><source height="1006" media="(min-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_2a815546.jpg 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_c75aed98.jpg 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_25ff90a6.jpg 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_f2511b93.jpg 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_46ec7719.jpg 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_cfdf1cd6.jpg 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_9d5fe48c.jpg 2500w" type="image/jpeg" width="1788"/><source height="1000" sizes="(min-width: 1280px) 25vw, (min-width: 1020px) 30vw, (min-width: 744px) 40vw, 90vw" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_83faa045.webp 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_5fd21edf.webp 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_2bd9848e.webp 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_7a70a41f.webp 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_e4c81bf2.webp 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_f44f4dec.webp 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_34aa70d7.webp 2500w" type="image/webp" width="750"/><source height="1000" sizes="(min-width: 1280px) 25vw, (min-width: 1020px) 30vw, (min-width: 744px) 40vw, 90vw" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_cd511024.jpg 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_c0312cc8.jpg 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_1221a5cc.jpg 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_64b15c2e.jpg 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_e533e9e1.jpg 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_2891f921.jpg 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_d2826a0a.jpg 2500w" type="image/jpeg" width="750"/><img alt="" class="king-carousel__card-background-image" decoding="async" height="1000" loading="eager" src="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_1221a5cc.jpg" width="750"/></picture><h3 class="text text--subtitle2 text--light king-carousel__card-title text--font-clarkson-serif" data-sl-variant="7b7acbb5a7867d11031d853b046b77d9">Venda produtos</h3><p class="text text--body text--light king-carousel__card-body" data-sl-variant="743658ca5e95c0d7ee5d6a18a6cb614d">Divulgue seus produtos, aceite pagamentos, gerencie pedidos e envios e muito mais.</p><p class="text text--footnote text--light king-carousel__card-footnote" data-sl-variant="3b1ce61974a37e634182cc7eb89d98d9">Recomendado para: artesãos · varejistas · lançamentos limitados</p><p class="text text--subtitle3 text--light king-carousel__card-arrow">→</p></a></div><div class="king-carousel__card"><a class="cta cta--inline cta--light king-carousel__card-cta" data-is-active="false" href="/emissaodefaturas" tabindex="-1"><picture><source height="1116" media="(min-width: 744px) and (max-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_d81a72fd.webp 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_a7579ab2.webp 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_59f56e71.webp 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_75f8ba9d.webp 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_67c27289.webp 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_5ccbbe8c.webp 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_b9394444.webp 2500w" type="image/webp" width="1488"/><source height="1116" media="(min-width: 744px) and (max-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_c9fc2409.jpg 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_4a4d6c57.jpg 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_22d10594.jpg 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_bf0908af.jpg 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_5d5a3c38.jpg 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_8f89ba9e.jpg 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_413cd120.jpg 2500w" type="image/jpeg" width="1488"/><source height="1006" media="(min-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_9d830e27.webp 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_74e2abb2.webp 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_a83fba92.webp 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_dbe168bf.webp 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_10b7e9a7.webp 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_35436148.webp 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_18ecc54e.webp 2500w" type="image/webp" width="1788"/><source height="1006" media="(min-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_627d95ae.jpg 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_dd3a09ca.jpg 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_84109ec5.jpg 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_4cc03b88.jpg 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_1f45e877.jpg 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_c7f9f6f4.jpg 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_a83d6ace.jpg 2500w" type="image/jpeg" width="1788"/><source height="1000" sizes="(min-width: 1280px) 25vw, (min-width: 1020px) 30vw, (min-width: 744px) 40vw, 90vw" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_3d696850.webp 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_a7e06e71.webp 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_e60d1fbd.webp 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_60cad11f.webp 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_7a3674c7.webp 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_7633c343.webp 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_c81d5795.webp 2500w" type="image/webp" width="750"/><source height="1000" sizes="(min-width: 1280px) 25vw, (min-width: 1020px) 30vw, (min-width: 744px) 40vw, 90vw" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_b26bcddf.jpg 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_0e3d90ec.jpg 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_520a385d.jpg 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_8293973a.jpg 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_f861a167.jpg 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_788ffbdf.jpg 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_0ff65cfe.jpg 2500w" type="image/jpeg" width="750"/><img alt="" class="king-carousel__card-background-image" decoding="async" height="1000" loading="eager" src="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_520a385d.jpg" width="750"/></picture><h3 class="text text--subtitle2 text--light king-carousel__card-title text--font-clarkson-serif" data-sl-variant="dd46bb32f3631a87eb0b50d5c1a8b0b1">Emita uma fatura para os clientes</h3><p class="text text--body text--light king-carousel__card-body" data-sl-variant="339fb52f718ec1f62de977cc42322097">Use propostas, contratos e faturas profissionais para legitimar sua empresa e receber pagamentos.</p><p class="text text--footnote text--light king-carousel__card-footnote" data-sl-variant="ed68bffbdbf77e716cc919005a3201a0">Recomendado para: prestadores · freelancers · planejadores de eventos</p><p class="text text--subtitle3 text--light king-carousel__card-arrow">→</p></a></div><div class="king-carousel__card"><a class="cta cta--inline cta--light king-carousel__card-cta" data-is-active="false" href="/scheduling" tabindex="-1"><picture><source height="1116" media="(min-width: 744px) and (max-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_06781686.webp 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_83c5c2bf.webp 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_d88ef653.webp 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_bdbb0065.webp 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_db0aa0ba.webp 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_8bb745c8.webp 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_c28d66a3.webp 2500w" type="image/webp" width="1488"/><source height="1116" media="(min-width: 744px) and (max-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_cd3e7e85.jpg 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_a5bebf37.jpg 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_937b212b.jpg 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_b063c37e.jpg 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_645d14dc.jpg 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_f09c3ea8.jpg 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_dcaa2aa6.jpg 2500w" type="image/jpeg" width="1488"/><source height="1006" media="(min-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_0562956c.webp 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_fc3a093e.webp 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_a2175213.webp 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_d215c0a8.webp 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_c8fddf73.webp 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_ec25a7ad.webp 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_f9faaad7.webp 2500w" type="image/webp" width="1788"/><source height="1006" media="(min-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_60499d41.jpg 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_d33ba092.jpg 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_590f6367.jpg 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_71c87423.jpg 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_0d1c4eb3.jpg 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_0c6f702e.jpg 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_81d79e11.jpg 2500w" type="image/jpeg" width="1788"/><source height="1000" sizes="(min-width: 1280px) 25vw, (min-width: 1020px) 30vw, (min-width: 744px) 40vw, 90vw" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_c36c8601.webp 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_5694c690.webp 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_9d1016b7.webp 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_0b93efae.webp 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_20a6073e.webp 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_a6d45804.webp 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_48b7892f.webp 2500w" type="image/webp" width="750"/><source height="1000" sizes="(min-width: 1280px) 25vw, (min-width: 1020px) 30vw, (min-width: 744px) 40vw, 90vw" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_fd1e8674.jpg 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_2fd61fa3.jpg 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_5f579722.jpg 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_5bfa1901.jpg 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_06467ee2.jpg 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_b86440d4.jpg 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_45eacd45.jpg 2500w" type="image/jpeg" width="750"/><img alt="" class="king-carousel__card-background-image" decoding="async" height="1000" loading="eager" src="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_5f579722.jpg" width="750"/></picture><h3 class="text text--subtitle2 text--light king-carousel__card-title text--font-clarkson-serif" data-sl-variant="9b57d2c699bef6d3a6f689bcbcb66aca">Agende</h3><p class="text text--body text--light king-carousel__card-body" data-sl-variant="538138f347eff9d539f03bd834c53a09">Agendamento tranquilo, gestão automatizada de calendários e pagamentos integrados.</p><p class="text text--footnote text--light king-carousel__card-footnote" data-sl-variant="f2504c095c01b2406db497c2e66ecec2">Recomendado para: profissionais de beleza · prestadores de bem-estar · fotógrafos</p><p class="text text--subtitle3 text--light king-carousel__card-arrow">→</p></a></div><div class="king-carousel__card"><a class="cta cta--inline cta--light king-carousel__card-cta" data-is-active="false" href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Gostaria%20de%20um%20site%20profissional%20para%20minha%20empresa." tabindex="-1" target="_blank"><picture><source height="1116" media="(min-width: 744px) and (max-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_6b7ff156.webp 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_f2795b86.webp 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_b000a5e4.webp 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_77670118.webp 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_201450a7.webp 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_0609f8dc.webp 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_87cfd73b.webp 2500w" type="image/webp" width="1488"/><source height="1116" media="(min-width: 744px) and (max-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_be2aac01.jpg 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_104af4ef.jpg 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_da6e18f3.jpg 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_c802cac5.jpg 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_1244711d.jpg 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_11e62bf2.jpg 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_84229b16.jpg 2500w" type="image/jpeg" width="1488"/><source height="1006" media="(min-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_3bfa7efa.webp 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_d81396f6.webp 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_64d3fa34.webp 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_d3fd6b5c.webp 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_836e4a34.webp 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_e4e51534.webp 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_a47bb898.webp 2500w" type="image/webp" width="1788"/><source height="1006" media="(min-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_ed52db9a.jpg 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_9cfe5022.jpg 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_60956740.jpg 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_48a9a7ed.jpg 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_8cfd014f.jpg 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_f1f22437.jpg 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_6273e96c.jpg 2500w" type="image/jpeg" width="1788"/><source height="1000" sizes="(min-width: 1280px) 25vw, (min-width: 1020px) 30vw, (min-width: 744px) 40vw, 90vw" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_e02344cc.webp 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_6ac52010.webp 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_6848ab1d.webp 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_6335662a.webp 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_0b5f97f0.webp 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_f46c7da6.webp 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_b36cb90a.webp 2500w" type="image/webp" width="750"/><source height="1000" sizes="(min-width: 1280px) 25vw, (min-width: 1020px) 30vw, (min-width: 744px) 40vw, 90vw" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_ae31cd39.jpg 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_2d48e32d.jpg 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_8e6b2a21.jpg 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_5b8e602d.jpg 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_2d656740.jpg 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_42d0a7f1.jpg 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_9ec897f2.jpg 2500w" type="image/jpeg" width="750"/><img alt="" class="king-carousel__card-background-image" decoding="async" height="1000" loading="eager" src="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_8e6b2a21.jpg" width="750"/></picture><h3 class="text text--subtitle2 text--light king-carousel__card-title text--font-clarkson-serif" data-sl-variant="fb070b30a7110f1d246aa725bbeb0307">Receba doações</h3><p class="text text--body text--light king-carousel__card-body" data-sl-variant="8335c07d29c7551125dfc53cfebd1289">Crie uma campanha de arrecadação de fundos; aceite doações no seu site; e envie e-mails direcionados aos doadores.</p><p class="text text--footnote text--light king-carousel__card-footnote" data-sl-variant="8f7b96a92ae1e96b303facea6b0c03fc">Recomendado para: grupos de defesa · ONGs · arrecadação de fundos</p><p class="text text--subtitle3 text--light king-carousel__card-arrow">→</p></a></div><div class="king-carousel__card"><a class="cta cta--inline cta--light king-carousel__card-cta" data-is-active="false" href="/content" tabindex="-1"><picture><source height="1116" media="(min-width: 744px) and (max-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_5f6572c4.webp 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_ccb5837a.webp 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_6d9e39a1.webp 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_de2f695f.webp 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_2318b4be.webp 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_a2acdfe7.webp 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_aac1922f.webp 2500w" type="image/webp" width="1488"/><source height="1116" media="(min-width: 744px) and (max-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_c4118cb1.jpg 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_a26f8515.jpg 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_c5880537.jpg 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_a84c8309.jpg 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_adf2ad3f.jpg 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_fbe84449.jpg 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_f142e20b.jpg 2500w" type="image/jpeg" width="1488"/><source height="1006" media="(min-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_8b8ebfa7.webp 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_3748a968.webp 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_dda7b5a9.webp 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_9e2caf6c.webp 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_d0edf12f.webp 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_01bbd43a.webp 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_f6719d70.webp 2500w" type="image/webp" width="1788"/><source height="1006" media="(min-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_3485d9da.jpg 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_719c6007.jpg 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_7917b1bd.jpg 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_2913597b.jpg 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_f2fa6778.jpg 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_e4a271fa.jpg 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_c00be8fb.jpg 2500w" type="image/jpeg" width="1788"/><source height="1000" sizes="(min-width: 1280px) 25vw, (min-width: 1020px) 30vw, (min-width: 744px) 40vw, 90vw" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_c796d380.webp 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_8261335c.webp 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_a42d5e94.webp 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_4fbebd71.webp 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_617bf6d1.webp 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_1d296527.webp 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_a7618946.webp 2500w" type="image/webp" width="750"/><source height="1000" sizes="(min-width: 1280px) 25vw, (min-width: 1020px) 30vw, (min-width: 744px) 40vw, 90vw" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_c977967b.jpg 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_e5b308fe.jpg 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_fe5c8a19.jpg 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_cf20a190.jpg 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_6a33823d.jpg 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_634cef84.jpg 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_87c90e12.jpg 2500w" type="image/jpeg" width="750"/><img alt="" class="king-carousel__card-background-image" decoding="async" height="1000" loading="eager" src="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_fe5c8a19.jpg" width="750"/></picture><h3 class="text text--subtitle2 text--light king-carousel__card-title text--font-clarkson-serif" data-sl-variant="ce6d55a01695a0f4c11b917439caf43e">Monetize seu conteúdo</h3><p class="text text--body text--light king-carousel__card-body" data-sl-variant="7c13dd84a50cf1b7796987eb39a22444">Dê acesso exclusivo aos seus trabalhos, gere receita constante e interaja com sua comunidade.</p><p class="text text--footnote text--light king-carousel__card-footnote" data-sl-variant="d8be9616e93fe6f31cd02accbcb8d1cc">Recomendado para: instrutores · criadores de conteúdo · líderes comunitários</p><p class="text text--subtitle3 text--light king-carousel__card-arrow">→</p></a></div><div class="king-carousel__card"><a class="cta cta--inline cta--light king-carousel__card-cta" data-is-active="false" href="/websites/crie-um-blog" tabindex="-1"><picture><source height="1116" media="(min-width: 744px) and (max-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_81f97721.webp 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_93bf90da.webp 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_b2f03c40.webp 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_863f8a19.webp 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_7c12f2af.webp 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_f0461b7d.webp 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_e6f0f4b9.webp 2500w" type="image/webp" width="1488"/><source height="1116" media="(min-width: 744px) and (max-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_0c340b2f.jpg 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_ed55f8bf.jpg 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_137246f5.jpg 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_f89bb01e.jpg 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_1f39e642.jpg 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_b091b93e.jpg 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_73aa4f9d.jpg 2500w" type="image/jpeg" width="1488"/><source height="1006" media="(min-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_9ae90f7a.webp 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_fe6fb435.webp 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_c17d4008.webp 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_8db54e7d.webp 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_2338d3d7.webp 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_06b0532e.webp 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_2135257f.webp 2500w" type="image/webp" width="1788"/><source height="1006" media="(min-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_9c7d6319.jpg 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_be3fd42f.jpg 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_7317d4d5.jpg 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_14dfbeac.jpg 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_0d84998c.jpg 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_91a1b155.jpg 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_43d716bc.jpg 2500w" type="image/jpeg" width="1788"/><source height="1000" sizes="(min-width: 1280px) 25vw, (min-width: 1020px) 30vw, (min-width: 744px) 40vw, 90vw" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_65f4d9b0.webp 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_9fb2505d.webp 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_4ca93652.webp 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_de17d923.webp 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_b73af91c.webp 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_42dbf02b.webp 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_13a5e9dc.webp 2500w" type="image/webp" width="750"/><source height="1000" sizes="(min-width: 1280px) 25vw, (min-width: 1020px) 30vw, (min-width: 744px) 40vw, 90vw" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_757a3a5c.jpg 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_70f4042b.jpg 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_4664b36e.jpg 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_cf695832.jpg 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_568533f0.jpg 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_8b441358.jpg 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_0a3a72b5.jpg 2500w" type="image/jpeg" width="750"/><img alt="" class="king-carousel__card-background-image" decoding="async" height="1000" loading="eager" src="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_4664b36e.jpg" width="750"/></picture><h3 class="text text--subtitle2 text--light king-carousel__card-title text--font-clarkson-serif" data-sl-variant="af165bbfde9bc73f2e39626b35b592a2">Publique suas ideias</h3><p class="text text--body text--light king-carousel__card-body" data-sl-variant="51fbb94e95d0aca2e05d2c99dadb55e2">Monte um blog, aumente seus leitores e use paywall para monetizar o acesso.</p><p class="text text--footnote text--light king-carousel__card-footnote" data-sl-variant="a93c65c03660e78c11d60b8cbf03f287">Recomendado para: escritores de gastronomia · coaches de bem-estar · viajantes influenciadores</p><p class="text text--subtitle3 text--light king-carousel__card-arrow">→</p></a></div><div class="king-carousel__card"><a class="cta cta--inline cta--light king-carousel__card-cta" data-is-active="false" href="/websites/criar-um-portfolio" style="opacity: 0;" tabindex="-1"><picture><source height="1116" media="(min-width: 744px) and (max-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_7aca2554.webp 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_ffae4bf6.webp 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_814bfe8b.webp 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_25d4a6f2.webp 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_ee897e6a.webp 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_dc648b02.webp 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_a00a1498.webp 2500w" type="image/webp" width="1488"/><source height="1116" media="(min-width: 744px) and (max-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_98da2772.jpg 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_22fd1b39.jpg 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_37c4fdf0.jpg 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_aaa0f332.jpg 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_0f12a873.jpg 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_1ce55cca.jpg 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_716e76a9.jpg 2500w" type="image/jpeg" width="1488"/><source height="1006" media="(min-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_fc0a8991.webp 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_c8e7caf6.webp 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_05a99542.webp 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_4d168c41.webp 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_5c42a593.webp 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_37221e82.webp 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_f3506785.webp 2500w" type="image/webp" width="1788"/><source height="1006" media="(min-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_4424d3aa.jpg 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_c3aa4035.jpg 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_2e960343.jpg 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_007ca1b7.jpg 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_a4694715.jpg 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_b517f43e.jpg 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_9b642c87.jpg 2500w" type="image/jpeg" width="1788"/><source height="1000" sizes="(min-width: 1280px) 25vw, (min-width: 1020px) 30vw, (min-width: 744px) 40vw, 90vw" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_2b5768d5.webp 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_876a654e.webp 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_e0670142.webp 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_c0a4fef1.webp 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_d2c3df2e.webp 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_da99f174.webp 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_b71f3e56.webp 2500w" type="image/webp" width="750"/><source height="1000" sizes="(min-width: 1280px) 25vw, (min-width: 1020px) 30vw, (min-width: 744px) 40vw, 90vw" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_3f91b7b9.jpg 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_a0caa736.jpg 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_f00be598.jpg 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_5754535e.jpg 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_2c44d4d1.jpg 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_a74078c3.jpg 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_7cf22257.jpg 2500w" type="image/jpeg" width="750"/><img alt="" class="king-carousel__card-background-image" decoding="async" height="1000" loading="lazy" src="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_f00be598.jpg" width="750"/></picture><h3 class="text text--subtitle2 text--light king-carousel__card-title text--font-clarkson-serif" data-sl-variant="e217ec3f65281b09bfaf562c4e861eb8">Exponha seus trabalhos</h3><p class="text text--body text--light king-carousel__card-body" data-sl-variant="3ce07bbb0219270933d372d20d486da0">Monte um site de portfólio para destacar projetos, contar sua história e ajudar os clientes a entrarem em contato.</p><p class="text text--footnote text--light king-carousel__card-footnote" data-sl-variant="ee895a3a2e1a8d132658fdbf8baf2f31">Recomendado para: designers · fotógrafos · artistas e ilustradores</p><p class="text text--subtitle3 text--light king-carousel__card-arrow">→</p></a></div><div class="king-carousel__card king-carousel__card--clone" data-clone-of="0"><a class="cta cta--inline cta--light king-carousel__card-cta" data-is-active="false" href="/servicos" tabindex="-1"><picture><source height="1116" media="(min-width: 744px) and (max-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_eff7d44e.webp 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_1bc7a76b.webp 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_e6dc726a.webp 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_eb7b7f12.webp 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_3eb03bf7.webp 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_c17362b3.webp 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_441840d5.webp 2500w" type="image/webp" width="1488"/><source height="1116" media="(min-width: 744px) and (max-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_b458f81d.jpg 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_b192f60b.jpg 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_75bc2079.jpg 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_5250c9da.jpg 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_56936f2f.jpg 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_dd32db01.jpg 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_988e6dde.jpg 2500w" type="image/jpeg" width="1488"/><source height="1006" media="(min-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_0ca7b75f.webp 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_d6b2b16c.webp 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_79049fc9.webp 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_26c30f8c.webp 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_7a5e0e97.webp 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_2342ddfb.webp 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_57bb2137.webp 2500w" type="image/webp" width="1788"/><source height="1006" media="(min-width: 1020px)" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_12b94f7c.jpg 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_d9e54781.jpg 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_7b2578d0.jpg 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_2dbd3c38.jpg 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_cdbadb19.jpg 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_8285e24c.jpg 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_79bbbfeb.jpg 2500w" type="image/jpeg" width="1788"/><source height="1000" sizes="(min-width: 1280px) 25vw, (min-width: 1020px) 30vw, (min-width: 744px) 40vw, 90vw" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_fc657176.webp 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_756b3c3b.webp 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_dc4cc5f1.webp 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_75e300a3.webp 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_2d9bf061.webp 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_91b8402c.webp 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_4b00018a.webp 2500w" type="image/webp" width="750"/><source height="1000" sizes="(min-width: 1280px) 25vw, (min-width: 1020px) 30vw, (min-width: 744px) 40vw, 90vw" srcset="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_4fcb0a8d.jpg 100w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_968c3d05.jpg 300w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_b9caf343.jpg 500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_45d61170.jpg 750w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_2709c56d.jpg 1000w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_f0a9ac4b.jpg 1500w, assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_e5cc301c.jpg 2500w" type="image/jpeg" width="750"/><img alt="" class="king-carousel__card-background-image" decoding="async" height="1000" loading="eager" src="assets/images/sqsp/images_pages_homepage-2025_grow-your-bus_b9caf343.jpg" width="750"/></picture><h3 class="text text--subtitle2 text--light king-carousel__card-title text--font-clarkson-serif" data-sl-variant="5ce638d26d747a15a71171aa85c8846d">Ofereça serviços</h3><p class="text text--body text--light king-carousel__card-body" data-sl-variant="e72d89cc2f53541e98c79fd286a0add5">Divulgue suas experiências e serviços, recolha informações sobre os participantes e receba pelo seu trabalho.</p><p class="text text--footnote text--light king-carousel__card-footnote" data-sl-variant="f0833fa2b06351415baef333e4791c3e">Recomendado para: acampamentos · consultores · organizadores de eventos</p><p class="text text--subtitle3 text--light king-carousel__card-arrow">→</p></a></div></div><div class="king-carousel__controls-prev-area"><div class="cursor-follow"><button aria-label="Anterior" class="cta cta--inline cursor-follow__area" data-sl-attr-variant="aria-label:f99f5d5f29922a7bd177a93f03b699b0" tabindex="-1"><div class="cursor-follow__content-sr-only"><p class="text text--body" data-sl-variant="f99f5d5f29922a7bd177a93f03b699b0">Anterior</p></div></button></div></div><div class="king-carousel__controls-next-area"><div class="cursor-follow"><button aria-label="Próximo" class="cta cta--inline cursor-follow__area" data-sl-attr-variant="aria-label:9803c411fdfb55c84281e68fd511c394" tabindex="-1"><div class="cursor-follow__content-sr-only"><p class="text text--body" data-sl-variant="9803c411fdfb55c84281e68fd511c394">Próximo</p></div></button></div></div><div class="king-carousel__toolbar"><div class="paging-indicator king-carousel__paging-indicator" style=""><div class="paging-indicator__dot" style="opacity: 1; --paging-indicator-dot-width: 4px; --paging-indicator-dot-height: 4px;"><div class="paging-indicator__dot-progress" style="--indicator-progress: 4.66%;"></div></div><div class="paging-indicator__dot" style="opacity: 1; --paging-indicator-dot-width: 5px; --paging-indicator-dot-height: 5px;"><div class="paging-indicator__dot-progress" style="--indicator-progress: 4.66%;"></div></div><div class="paging-indicator__dot" style="opacity: 1; --paging-indicator-dot-width: 32px; --paging-indicator-dot-height: 6px;"><div class="paging-indicator__dot-progress" style="--indicator-progress: 4.66%; opacity: 1;"></div></div><div class="paging-indicator__dot" style="opacity: 1; --paging-indicator-dot-width: 5px; --paging-indicator-dot-height: 5px;"><div class="paging-indicator__dot-progress" style="--indicator-progress: 4.66%;"></div></div><div class="paging-indicator__dot" style="opacity: 1; --paging-indicator-dot-width: 4px; --paging-indicator-dot-height: 4px;"><div class="paging-indicator__dot-progress" style="--indicator-progress: 4.66%;"></div></div></div><button aria-label="Reproduzir" class="cta cta--inline king-carousel__toolbar-button" data-sl-attr-variant="aria-label:170da5346f5d149a8b560d7a02fc9380,aria-label:12e564b479dc0e58e384ea8be1ca8c94" style="" tabindex="-1"><svg class="play-icon king-carousel__toolbar-button-svg" fill="none" height="10" viewbox="0 0 6 10" width="6" xmlns="http://www.w3.org/2000/svg"><path d="m.319988 9.26029c-.131849.09887-.319988.00479-.319988-.16001v-8.199999c0-.164816.188166-.258891.320011-.159992l5.466669 4.100621c.10666.08001.10665.24001-.00003.32z" fill="currentColor"></path></svg></button></div></div></section><section class="one-platform" id="one-platform"><div class="headline headline--no-padding-top"><h2 class="text text--subtitle1 headline__title" data-sl-variant="639ac7c4b5891f1d1465f0686fbcc1f5" style="">Tudo o que você precisa em uma só plataforma</h2><p class="text text--body headline__body" data-sl-variant="4c4c0821c15ac098a10653944827f3b4" style="">Alivie sua rotina com todas as ferramentas e orientações por IA para gerenciar sua empresa — perfeitamente integradas em um só lugar.</p></div><div class="card-carousel card-carousel--no-padding-top card-carousel--is-carousel"><div class="card-carousel__cards card-carousel__cards--is-carousel" style=""><div class="card-carousel-card card-carousel-card--is-carousel" style=""><a class="cta cta--inline cta--light card-carousel-card__cta" data-is-active="true" href="/design-de-sites" style="" tabindex="0"><div class="card-carousel-card__asset"><picture><source height="1680" sizes="(min-width: 1280px) 21vw, (min-width: 1020px) 30vw, (min-width: 744px) 37vw, 75vw" srcset="assets/images/sqsp/images_components_card-carousel_website-editing-100w.webp 100w, assets/images/sqsp/images_components_card-carousel_website-editing-300w.webp 300w, assets/images/sqsp/images_components_card-carousel_website-editing-500w.webp 500w, assets/images/sqsp/images_components_card-carousel_website-editing-750w.webp 750w, assets/images/sqsp/images_components_card-carousel_website-editing-1000w.webp 1000w, assets/images/sqsp/images_components_card-carousel_website-editing-1500w.webp 1500w, assets/images/sqsp/images_components_card-carousel_website-editing-2500w.webp 2500w" type="image/webp" width="1240"/><source height="1680" sizes="(min-width: 1280px) 21vw, (min-width: 1020px) 30vw, (min-width: 744px) 37vw, 75vw" srcset="assets/images/sqsp/images_components_card-carousel_website-editing-100w.jpg 100w, assets/images/sqsp/images_components_card-carousel_website-editing-300w.jpg 300w, assets/images/sqsp/images_components_card-carousel_website-editing-500w.jpg 500w, assets/images/sqsp/images_components_card-carousel_website-editing-750w.jpg 750w, assets/images/sqsp/images_components_card-carousel_website-editing-1000w.jpg 1000w, assets/images/sqsp/images_components_card-carousel_website-editing-1500w.jpg 1500w, assets/images/sqsp/images_components_card-carousel_website-editing-2500w.jpg 2500w" type="image/jpeg" width="1240"/><img alt="" class="card-carousel-card__asset-image" decoding="async" height="1680" loading="eager" src="assets/images/sqsp/images_components_card-carousel_website-editing-500w.jpg" width="1240"/></picture></div><div class="card-carousel-card__content"><h3 class="text text--subtitle3 text--light" data-sl-variant="8a03c54547213eb58adea3dae906c4d1">Edição de sites</h3><p class="text text--footnote text--light card-carousel-card__body" data-sl-variant="aae6bc45c304bfccbd9f60fb281a2e23">
             Use nosso editor de arrastar e soltar de ponta para personalizar cada detalhe do design.
           </p></div><svg class="arrow-right-icon arrow-right-icon--theme-light card-carousel-card__arrow" fill="none" height="22" viewbox="0 0 22 22" width="22" xmlns="http://www.w3.org/2000/svg"><path d="M9.25 18H12l7-7-7-7H9.25l6 6H3v2h12.25l-6 6z" fill="currentColor"></path></svg></a></div><div class="card-carousel-card card-carousel-card--is-carousel" style=""><a class="cta cta--inline cta--light card-carousel-card__cta" data-is-active="false" href="/design-inteligente" style="" tabindex="-1"><div class="card-carousel-card__asset"><video autoplay="true" class="card-carousel-card__background-video" disablepictureinpicture="" loop="true" muted="true" playsinline="true" preload="none"><source src="assets/videos/design-intelligence.mp4" type="video/mp4"/></video><picture><source height="1680" sizes="(min-width: 1280px) 21vw, (min-width: 1020px) 30vw, (min-width: 744px) 37vw, 75vw" srcset="assets/images/sqsp/images_components_card-carousel_design-i_9101be63.webp 100w, assets/images/sqsp/images_components_card-carousel_design-i_f80265ad.webp 300w, assets/images/sqsp/images_components_card-carousel_design-i_df55c920.webp 500w, assets/images/sqsp/images_components_card-carousel_design-i_58f54b80.webp 750w, assets/images/sqsp/images_components_card-carousel_design-i_77e27e60.webp 1000w, assets/images/sqsp/images_components_card-carousel_design-i_88407d72.webp 1500w, assets/images/sqsp/images_components_card-carousel_design-i_8932465e.webp 2500w" type="image/webp" width="1240"/><source height="1680" sizes="(min-width: 1280px) 21vw, (min-width: 1020px) 30vw, (min-width: 744px) 37vw, 75vw" srcset="assets/images/sqsp/images_components_card-carousel_design-i_11ab3f32.jpg 100w, assets/images/sqsp/images_components_card-carousel_design-i_b77d4a46.jpg 300w, assets/images/sqsp/images_components_card-carousel_design-i_8307dab8.jpg 500w, assets/images/sqsp/images_components_card-carousel_design-i_2a7ea6c4.jpg 750w, assets/images/sqsp/images_components_card-carousel_design-i_b032e4fe.jpg 1000w, assets/images/sqsp/images_components_card-carousel_design-i_0de12daf.jpg 1500w, assets/images/sqsp/images_components_card-carousel_design-i_ecd75fea.jpg 2500w" type="image/jpeg" width="1240"/><img alt="" class="card-carousel-card__background-video-poster" decoding="async" height="1680" loading="eager" src="assets/images/sqsp/images_components_card-carousel_design-i_8307dab8.jpg" width="1240"/></picture></div><div class="card-carousel-card__content"><h3 class="text text--subtitle3 text--light" data-sl-variant="390308c7cf67db292c118eaceb1a1ffb">Design Inteligente</h3><p class="text text--footnote text--light card-carousel-card__body" data-sl-variant="f9ce7e724d411164669323cb32662b56">
@@ -1110,50 +1304,6 @@ String.prototype.slice = function(...args) {
 
         updatePositions();
     });
-</script><div class="boomo-mobile-drawer" id="boomo-mobile-drawer">
-<div class="boomo-mobile-drawer-inner">
-<div class="boomo-mobile-drawer-header">
-<span style="font-family: Clarkson, -apple-system, sans-serif; font-size: 22px; font-weight: 800; letter-spacing: -0.04em; color: #FFFFFF;">BOOMO<span style="color: #10B981;">.</span></span>
-<button aria-label="Fechar menu" class="boomo-drawer-close" id="mobile-menu-close">✕</button>
-</div>
-<nav class="boomo-mobile-nav">
-<a href="#grow-your-business">Modelos</a>
-<a href="#one-platform">Recursos</a>
-<a href="#your-domain">Domínios</a>
-<a href="#homepage-faq">Perguntas Frequentes</a>
-<a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20os%20planos%20da%20Boomo." target="_blank">Falar no WhatsApp</a>
-</nav>
-<div class="boomo-mobile-drawer-footer">
-<a class="boomo-mobile-drawer-cta" href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Quero%20colocar%20meu%20site%20no%20ar%20com%20a%20Boomo." target="_blank">Comece Já →</a>
-</div>
-</div>
-</div><script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const toggleBtn = document.getElementById('mobile-menu-toggle');
-        const closeBtn = document.getElementById('mobile-menu-close');
-        const drawer = document.getElementById('boomo-mobile-drawer');
-
-        if (toggleBtn && drawer) {
-            toggleBtn.addEventListener('click', () => {
-                drawer.classList.add('is-open');
-                document.body.style.overflow = 'hidden';
-            });
-        }
-        if (closeBtn && drawer) {
-            closeBtn.addEventListener('click', () => {
-                drawer.classList.remove('is-open');
-                document.body.style.overflow = '';
-            });
-        }
-        if (drawer) {
-            drawer.querySelectorAll('nav a').forEach(link => {
-                link.addEventListener('click', () => {
-                    drawer.classList.remove('is-open');
-                    document.body.style.overflow = '';
-                });
-            });
-        }
-    });
 </script><script>
     function initGybCarousel() {
         const section = document.getElementById('grow-your-business');
@@ -1264,25 +1414,7 @@ String.prototype.slice = function(...args) {
     } else {
         initGybCarousel();
     }
-    </script><script>
-  (function() {
-    var toggleBtn = document.getElementById('mobile-menu-toggle');
-    var mobileMenu = document.getElementById('boomoMobileMenu');
-    if (toggleBtn && mobileMenu) {
-      toggleBtn.addEventListener('click', function() {
-        var isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
-        toggleBtn.setAttribute('aria-expanded', !isExpanded);
-        mobileMenu.style.display = isExpanded ? 'none' : 'block';
-        document.body.style.overflow = isExpanded ? '' : 'hidden';
-      });
-    }
-    window.closeBoomoMenu = function() {
-      if (mobileMenu) mobileMenu.style.display = 'none';
-      if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    };
-  })();
-</script>
+    </script>
 <!-- Floating WhatsApp Button -->
 <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20os%20sites%20da%20Boomo." target="_blank" rel="noopener noreferrer" class="boomo-floating-wa" aria-label="Falar no WhatsApp" title="Falar no WhatsApp">
   <svg viewBox="0 0 32 32" width="30" height="30" fill="currentColor">
@@ -1308,4 +1440,155 @@ String.prototype.slice = function(...args) {
     }
   })();
 </script>
+
+<!-- Boomo Mobile Drawer -->
+<div class="boomo-mobile-drawer" id="boomo-mobile-drawer">
+  <div class="boomo-mobile-drawer-inner">
+    <div class="boomo-mobile-drawer-header">
+      <a href="/" style="text-decoration: none; display: inline-flex; align-items: center;">
+        <span style="font-family: Clarkson, -apple-system, sans-serif; font-size: 24px; font-weight: 800; letter-spacing: -0.04em; color: #FFFFFF;">BOOMO<span style="color: #10B981;">.</span></span>
+      </a>
+      <button aria-label="Fechar menu" class="boomo-drawer-close" id="mobile-menu-close">✕</button>
+    </div>
+    <nav class="boomo-mobile-nav">
+      <a href="#one-platform"><span>Recursos</span><span class="drawer-arrow">→</span></a>
+      <a href="#get-started"><span>Modelos Demonstrativos</span><span class="drawer-arrow">→</span></a>
+      <a href="#planos"><span>Planos &amp; Preços</span><span class="drawer-arrow">→</span></a>
+      <a href="/sobre.html"><span>Sobre a Boomo</span><span class="drawer-arrow">→</span></a>
+      <a href="#homepage-faq"><span>Dúvidas Frequentes</span><span class="drawer-arrow">→</span></a>
+      <a href="/termos-privacidade.html" style="font-size: 1rem; color: rgba(255, 255, 255, 0.6);"><span>Termos &amp; Privacidade</span><span class="drawer-arrow">→</span></a>
+    </nav>
+    <div class="boomo-mobile-drawer-footer">
+      <a class="boomo-mobile-drawer-cta" href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Gostaria%20de%20um%20site%20profissional%20para%20minha%20empresa." target="_blank">
+        <span>Falar no WhatsApp</span>
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function() {
+    function initMobileMenu() {
+      var toggleBtn = document.getElementById('mobile-menu-toggle');
+      var drawer = document.getElementById('boomo-mobile-drawer');
+      var closeBtn = document.getElementById('mobile-menu-close');
+      
+      if (!toggleBtn || !drawer) return;
+      
+      function openMenu(e) {
+        if (e) { e.preventDefault(); e.stopPropagation(); }
+        drawer.classList.add('is-open');
+        toggleBtn.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      }
+      
+      function closeMenu(e) {
+        if (e) { e.preventDefault(); e.stopPropagation(); }
+        drawer.classList.remove('is-open');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+      
+      toggleBtn.addEventListener('click', function(e) {
+        if (drawer.classList.contains('is-open')) {
+          closeMenu(e);
+        } else {
+          openMenu(e);
+        }
+      });
+      
+      if (closeBtn) {
+        closeBtn.addEventListener('click', closeMenu);
+      }
+      
+      var links = drawer.querySelectorAll('a');
+      for (var i = 0; i < links.length; i++) {
+        links[i].addEventListener('click', function() {
+          var href = this.getAttribute('href');
+          closeMenu();
+          if (href && href.startsWith('#')) {
+            var targetEl = document.querySelector(href);
+            if (targetEl) {
+              setTimeout(function() {
+                targetEl.scrollIntoView({ behavior: 'smooth' });
+              }, 150);
+            }
+          }
+        });
+      }
+    }
+    
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initMobileMenu);
+    } else {
+      initMobileMenu();
+    }
+  })();
+</script>
+
+
+<script>
+  (function() {
+    function initAccordions() {
+      // 1. FAQ Accordions
+      const accordionButtons = document.querySelectorAll('.accordion-headline__title');
+      accordionButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+          const contentId = btn.getAttribute('aria-controls');
+          const contentEl = document.getElementById(contentId);
+          const icon = btn.querySelector('.accordion-headline__icon svg');
+          
+          if (isExpanded) {
+            btn.setAttribute('aria-expanded', 'false');
+            if (contentEl) {
+              contentEl.style.cssText = 'height: 0px; overflow: hidden;';
+              contentEl.setAttribute('hidden', 'until-found');
+              contentEl.setAttribute('aria-hidden', 'true');
+            }
+            if (icon) icon.style.transform = 'rotate(0deg)';
+          } else {
+            btn.setAttribute('aria-expanded', 'true');
+            if (contentEl) {
+              contentEl.removeAttribute('hidden');
+              contentEl.setAttribute('aria-hidden', 'false');
+              contentEl.style.cssText = 'height: auto; overflow: visible;';
+            }
+            if (icon) icon.style.transform = 'rotate(45deg)';
+          }
+        });
+      });
+
+      // 2. Footer Mobile Accordions
+      const footerMobileHeadings = document.querySelectorAll('.footer__column-group-heading--mobile');
+      footerMobileHeadings.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const group = btn.closest('.footer__column-group');
+          if (!group) return;
+          const list = group.querySelector('.footer__column-group-list');
+          const arrow = btn.querySelector('.footer__column-group-arrow');
+          if (!list) return;
+
+          const isExpanded = list.classList.contains('footer__column-group-list--expanded');
+          if (isExpanded) {
+            list.classList.remove('footer__column-group-list--expanded');
+            if (arrow) arrow.classList.remove('footer__column-group-arrow--expanded');
+          } else {
+            list.style.setProperty('--footer-column-group-list-height', list.scrollHeight + 'px');
+            list.classList.add('footer__column-group-list--expanded');
+            if (arrow) arrow.classList.add('footer__column-group-arrow--expanded');
+          }
+        });
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initAccordions);
+    } else {
+      initAccordions();
+    }
+  })();
+</script>
+
 </body></html>
