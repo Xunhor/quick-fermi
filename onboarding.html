@@ -24,6 +24,14 @@
     </script>
 
     <style>
+        html {
+            overflow-x: hidden !important;
+            overflow-y: auto !important;
+        }
+        body {
+            overflow-x: clip !important;
+            overflow-y: visible !important;
+        }
         /* Form Specific Styles */
         .onboarding-section {
             padding: 60px 20px 100px 20px;
@@ -216,15 +224,23 @@
 
     <section class="onboarding-section">
         <div class="onboarding-container reveal">
-                <div class="onboarding-header">
-                    <i class="fa-regular fa-circle-check" style="color: #10B981;"></i>
-                    <h1>Pagamento Confirmado.</h1>
-                    <p>Agora precisamos de algumas informações para que nossa engenharia comece a construir a sua máquina de vendas.</p>
+                <div style="margin-bottom: 24px; text-align: left;">
+                    <a href="/" style="display: inline-flex; align-items: center; gap: 8px; color: var(--text-muted); text-decoration: none; font-size: 0.88rem; transition: color 0.2s;">
+                        <i class="fa-solid fa-arrow-left"></i> Voltar para a página inicial
+                    </a>
                 </div>
 
-                <div class="alert-box">
-                    <i class="fa-solid fa-stopwatch"></i>
-                    <p><strong>Atenção ao Prazo:</strong> O seu prazo de entrega de <strong>3 dias úteis</strong> começará a ser contado automaticamente assim que você enviar este formulário completo.</p>
+                <div class="onboarding-header">
+                    <i class="fa-regular fa-circle-check" style="color: #10B981;"></i>
+                    <h1>Inicie o seu projeto Boomo.</h1>
+                    <p>Preencha as informações essenciais para que nossa equipe desenvolva o design profissional exclusivo da sua empresa.</p>
+                </div>
+
+                <div class="alert-box" style="background: rgba(16, 185, 129, 0.08); border-color: rgba(16, 185, 129, 0.25);">
+                    <i class="fa-solid fa-shield-halved" style="color: #10B981;"></i>
+                    <p style="margin: 0; font-size: 0.88rem; line-height: 1.5; color: var(--text-main);">
+                        <strong>Garantia de Aprovação:</strong> Nós criamos a primeira versão completa do seu site. Você avalia e aprova cada detalhe antes de pagar a taxa de setup. Se não aprovar, não paga nada.
+                    </p>
                 </div>
 
                 <form action="https://formspree.io/f/mzepwvpa" method="POST" enctype="multipart/form-data">
@@ -356,6 +372,26 @@
                     submitBtn.disabled = false;
                 }
             });
+
+            // Automatic Phone / WhatsApp Mask
+            const phoneInput = document.getElementById('whatsapp');
+            if (phoneInput) {
+                phoneInput.addEventListener('input', (e) => {
+                    let v = e.target.value.replace(/\D/g, '');
+                    if (v.length > 11) v = v.slice(0, 11);
+                    if (v.length > 10) {
+                        e.target.value = `(${v.slice(0, 2)}) ${v.slice(2, 7)}-${v.slice(7)}`;
+                    } else if (v.length > 6) {
+                        e.target.value = `(${v.slice(0, 2)}) ${v.slice(2, 6)}-${v.slice(6)}`;
+                    } else if (v.length > 2) {
+                        e.target.value = `(${v.slice(0, 2)}) ${v.slice(2)}`;
+                    } else if (v.length > 0) {
+                        e.target.value = `(${v}`;
+                    } else {
+                        e.target.value = '';
+                    }
+                });
+            }
 
             // Close dropdown when clicking outside
             document.addEventListener('click', (e) => {
