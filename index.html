@@ -699,6 +699,344 @@ body {
 }
 
 
+
+/* ==========================================================================
+   REFINED TOP MENU (CENTERED NAVIGATION)
+   ========================================================================== */
+@media (min-width: 993px) {
+    .global-navigation__header {
+        position: relative !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+        max-width: 1440px !important;
+        margin: 0 auto !important;
+        padding: 0 40px !important;
+        height: 76px !important;
+    }
+    .global-navigation__logo-container {
+        flex: 0 0 auto !important;
+        z-index: 2 !important;
+    }
+    .global-navigation__nav {
+        position: absolute !important;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 36px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        z-index: 1 !important;
+    }
+    .global-navigation__header-link-item {
+        background: transparent !important;
+        border: none !important;
+        padding: 8px 4px !important;
+        cursor: pointer !important;
+        text-decoration: none !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        transition: opacity 0.2s ease !important;
+    }
+    .global-navigation__header-link-item:hover {
+        opacity: 1 !important;
+    }
+    .global-navigation__header-link-item .text--eyebrow {
+        font-family: Clarkson, -apple-system, sans-serif !important;
+        font-size: 13px !important;
+        font-weight: 500 !important;
+        letter-spacing: 0.04em !important;
+        color: rgba(255, 255, 255, 0.72) !important;
+        transition: color 0.2s ease !important;
+    }
+    .global-navigation__header-link-item:hover .text--eyebrow {
+        color: #FFFFFF !important;
+    }
+}
+
+/* ==========================================================================
+   SUBTLE & INTERACTIVE PRICING CARDS
+   ========================================================================== */
+.boomo-pricing-section {
+    padding: 100px 24px !important;
+}
+.boomo-pricing-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+    align-items: stretch !important;
+    margin-bottom: 40px !important;
+}
+.boomo-pricing-card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.035) 0%, rgba(255, 255, 255, 0.01) 100%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.09) !important;
+    border-radius: 16px !important;
+    padding: 36px 28px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    position: relative !important;
+    backdrop-filter: blur(12px) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease !important;
+}
+.boomo-pricing-card:hover {
+    transform: translateY(-6px) !important;
+    border-color: rgba(255, 255, 255, 0.28) !important;
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.7), 0 0 1px rgba(255, 255, 255, 0.4) !important;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.055) 0%, rgba(255, 255, 255, 0.015) 100%) !important;
+}
+.boomo-pricing-card.is-featured {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.065) 0%, rgba(255, 255, 255, 0.02) 100%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.22) !important;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6) !important;
+}
+.boomo-pricing-card.is-featured:hover {
+    transform: translateY(-8px) !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+    box-shadow: 0 28px 60px rgba(0, 0, 0, 0.8), 0 0 1px rgba(255, 255, 255, 0.6) !important;
+}
+.boomo-pricing-btn {
+    border-radius: 6px !important;
+    transition: transform 0.2s ease, opacity 0.2s ease, background-color 0.2s ease !important;
+}
+.boomo-pricing-btn:hover {
+    transform: scale(1.02) !important;
+    opacity: 0.92 !important;
+}
+
+/* ==========================================================================
+   ELEGANT CENTERED FAQ & HOW-TO ACCORDIONS
+   ========================================================================== */
+.homepage-how-to,
+.homepage-faq,
+.homepage-support {
+    background-color: #000000 !important;
+    padding: 0 32px !important;
+    position: relative !important;
+}
+.accordion-headline {
+    max-width: 1040px !important;
+    margin: 0 auto !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+    width: 100% !important;
+}
+.accordion-headline__title {
+    padding: 36px 0 !important;
+    max-width: 1040px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    cursor: pointer !important;
+    width: 100% !important;
+    background: transparent !important;
+    border: none !important;
+    text-align: left !important;
+}
+.accordion-headline__title h2 {
+    font-size: clamp(24px, 3.2vw, 32px) !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.03em !important;
+    color: #FFFFFF !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+}
+.accordion-headline__icon {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-left: 20px !important;
+    flex-shrink: 0 !important;
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 50% !important;
+    background: rgba(255, 255, 255, 0.06) !important;
+    transition: transform 0.3s ease, background-color 0.2s ease !important;
+}
+.accordion-headline__title:hover .accordion-headline__icon {
+    background: rgba(255, 255, 255, 0.12) !important;
+}
+.accordion-headline__content {
+    max-width: 1040px !important;
+    margin: 0 auto !important;
+    padding: 0 0 56px 0 !important;
+    width: 100% !important;
+}
+
+/* Steps in "Como criar um site": 2-column balanced grid */
+.homepage-how-to__steps {
+    justify-content: stretch !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.steps__list {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 32px 40px !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+.steps__list-item {
+    position: relative !important;
+    padding: 24px 26px !important;
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 12px !important;
+    transition: transform 0.2s ease, border-color 0.2s ease !important;
+}
+.steps__list-item:hover {
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    background: rgba(255, 255, 255, 0.035) !important;
+}
+.steps__list-header {
+    font-size: 17px !important;
+    font-weight: 700 !important;
+    color: #FFFFFF !important;
+    letter-spacing: -0.015em !important;
+    margin: 0 0 10px 0 !important;
+    line-height: 1.3 !important;
+}
+.steps__list-description {
+    font-size: 14px !important;
+    color: rgba(255, 255, 255, 0.65) !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+}
+.steps__list-description a {
+    color: #FFFFFF !important;
+    text-decoration: underline !important;
+    text-underline-offset: 3px !important;
+}
+
+/* Perguntas Frequentes (FAQ list) */
+.homepage-faq .faq {
+    width: 100% !important;
+    max-width: 1040px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    display: block !important;
+}
+.homepage-faq .faq__accordion {
+    width: 100% !important;
+    max-width: 1040px !important;
+    margin: 0 auto !important;
+}
+.homepage-faq .faq__accordion-item {
+    width: 100% !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.09) !important;
+    transition: border-color 0.2s ease !important;
+}
+.homepage-faq .faq__accordion-item:last-child {
+    border-bottom: none !important;
+}
+.homepage-faq .faq__accordion-title {
+    padding: 24px 0 !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    color: #FFFFFF !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    background: transparent !important;
+    border: none !important;
+    cursor: pointer !important;
+    text-align: left !important;
+    letter-spacing: -0.01em !important;
+    transition: color 0.2s ease !important;
+}
+.homepage-faq .faq__accordion-title::after {
+    content: '+';
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.5);
+    transition: transform 0.2s ease, color 0.2s ease;
+    margin-left: 20px;
+    flex-shrink: 0;
+}
+.homepage-faq .faq__accordion-title[aria-expanded="true"]::after {
+    content: '−';
+    color: #FFFFFF;
+}
+.homepage-faq .faq__accordion-title:hover {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+.homepage-faq .faq__accordion-body {
+    padding: 0 0 28px 0 !important;
+    color: rgba(255, 255, 255, 0.65) !important;
+    font-size: 15px !important;
+    line-height: 1.65 !important;
+    max-width: 920px !important;
+}
+
+/* Suporte Humanizado Boomo */
+.homepage-support .support {
+    padding: 0 !important;
+}
+.homepage-support .support__links {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 24px !important;
+    width: 100% !important;
+    max-width: 1040px !important;
+    margin: 0 auto !important;
+}
+.homepage-support .support__links-cta {
+    padding: 32px 28px !important;
+    background: rgba(255, 255, 255, 0.025) !important;
+    border: 1px solid rgba(255, 255, 255, 0.09) !important;
+    border-radius: 12px !important;
+    text-decoration: none !important;
+    display: block !important;
+    transition: transform 0.2s ease, border-color 0.2s ease !important;
+}
+.homepage-support .support__links-cta:hover {
+    transform: translateY(-3px) !important;
+    border-color: rgba(255, 255, 255, 0.25) !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+}
+.homepage-support .support__links-cta h3 {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: #FFFFFF !important;
+    margin: 0 0 8px 0 !important;
+}
+.homepage-support .support__links-cta p {
+    font-size: 14px !important;
+    color: rgba(255, 255, 255, 0.65) !important;
+    margin: 0 !important;
+    line-height: 1.5 !important;
+}
+.homepage-support .support__links-cta-arrow {
+    display: inline-block !important;
+    margin-top: 14px !important;
+    color: #FFFFFF !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+}
+
+@media (max-width: 768px) {
+    .steps__list {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+    .homepage-support .support__links {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+    .homepage-how-to, .homepage-faq, .homepage-support {
+        padding: 0 20px !important;
+    }
+}
+
 /* 3D Interactive Cosmic Planet */
 #conversion {
   position: relative !important;
@@ -886,6 +1224,7 @@ body {
   text-decoration: none;
   box-sizing: border-box;
 }
+
 
 
 /* 3D Interactive Cosmic Planet */
@@ -1697,6 +2036,32 @@ String.prototype.slice = function(...args) {
               contentEl.style.cssText = 'height: auto; overflow: visible;';
             }
             if (icon) icon.style.transform = 'rotate(45deg)';
+          }
+        });
+      });
+
+      // 1.5 Individual FAQ Questions Accordion
+      const faqQuestionButtons = document.querySelectorAll('.faq__accordion-title');
+      faqQuestionButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+          const bodyId = btn.getAttribute('aria-controls');
+          const bodyEl = document.getElementById(bodyId);
+
+          if (isExpanded) {
+            btn.setAttribute('aria-expanded', 'false');
+            if (bodyEl) {
+              bodyEl.style.cssText = 'height: 0px; overflow: hidden;';
+              bodyEl.setAttribute('hidden', 'until-found');
+              bodyEl.setAttribute('aria-hidden', 'true');
+            }
+          } else {
+            btn.setAttribute('aria-expanded', 'true');
+            if (bodyEl) {
+              bodyEl.removeAttribute('hidden');
+              bodyEl.setAttribute('aria-hidden', 'false');
+              bodyEl.style.cssText = 'height: auto; overflow: visible;';
+            }
           }
         });
       });
