@@ -663,6 +663,62 @@ html, body {
   box-sizing: border-box;
 }
 
+
+/* 3D Interactive Cosmic Planet */
+#conversion {
+  position: relative !important;
+  overflow: hidden !important;
+  background-color: #000000 !important;
+}
+.conversion__planet-canvas {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 1400px !important;
+  max-height: 1000px !important;
+  pointer-events: auto !important;
+  z-index: 1 !important;
+  cursor: grab !important;
+}
+
+.conversion-component__cta {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  background: #FFFFFF !important;
+  color: #000000 !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  letter-spacing: 0.06em !important;
+  padding: 16px 36px !important;
+  border-radius: 4px !important;
+  text-decoration: none !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6) !important;
+  margin-top: 8px !important;
+}
+.mobile-cta {
+  display: none !important;
+}
+
+.conversion__planet-canvas:active {
+  cursor: grabbing !important;
+}
+#conversion > *:not(.conversion__planet-canvas) {
+  position: relative !important;
+  z-index: 2 !important;
+  pointer-events: none !important;
+}
+#conversion a,
+#conversion button {
+  pointer-events: auto !important;
+}
+
 .boomo-floating-wa {
   position: fixed;
   bottom: 28px;
@@ -795,6 +851,62 @@ html, body {
   box-sizing: border-box;
 }
 
+
+/* 3D Interactive Cosmic Planet */
+#conversion {
+  position: relative !important;
+  overflow: hidden !important;
+  background-color: #000000 !important;
+}
+.conversion__planet-canvas {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 1400px !important;
+  max-height: 1000px !important;
+  pointer-events: auto !important;
+  z-index: 1 !important;
+  cursor: grab !important;
+}
+
+.conversion-component__cta {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  background: #FFFFFF !important;
+  color: #000000 !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  letter-spacing: 0.06em !important;
+  padding: 16px 36px !important;
+  border-radius: 4px !important;
+  text-decoration: none !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6) !important;
+  margin-top: 8px !important;
+}
+.mobile-cta {
+  display: none !important;
+}
+
+.conversion__planet-canvas:active {
+  cursor: grabbing !important;
+}
+#conversion > *:not(.conversion__planet-canvas) {
+  position: relative !important;
+  z-index: 2 !important;
+  pointer-events: none !important;
+}
+#conversion a,
+#conversion button {
+  pointer-events: auto !important;
+}
+
 .boomo-floating-wa {
     bottom: 20px;
     right: 20px;
@@ -835,14 +947,7 @@ html, body {
         <span class="text text--eyebrow text--light">FAQ</span>
       </button>
     </nav>
-    <div class="global-navigation__account-container">
-      <div class="global-navigation__account-info-container global-navigation__account-info-container--is-visible">
-        <a class="cta cta--primary-subtle cta--light cta--has-arrow" href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Gostaria%20de%20um%20site%20profissional%20para%20minha%20empresa." target="_blank" style="padding: 10px 22px; font-weight: 700; border-radius: 999px; background: rgba(255, 255, 255, 0.12); color: #FFFFFF; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; font-size: 13px; border: 1px solid rgba(255, 255, 255, 0.2); transition: all 0.2s;">
-          <span>Falar no WhatsApp</span>
-          <span aria-hidden="true" style="font-size: 14px;">→</span>
-        </a>
-      </div>
-    </div>
+
     <button aria-expanded="false" aria-label="Menu de navegação" class="cta cta--inline cta--light global-navigation__hamburger" id="mobile-menu-toggle">
       <span class="global-navigation__hamburger-bar"></span>
       <span class="global-navigation__hamburger-bar"></span>
@@ -1194,7 +1299,7 @@ html, body {
 <div class="faq__accordion-item faq__accordion-item--light"><button aria-controls=":r1o:-body" aria-expanded="false" class="faq__accordion-title" id=":r1o:-title">Posso cancelar a assinatura quando quiser?</button><section aria-hidden="true" aria-labelledby=":r1o:-title" class="faq__accordion-body-wrapper" hidden="until-found" id=":r1o:-body" style="height: 0px; overflow: hidden;"><div class="faq__accordion-body"><p class="text text--body text--light homepage-faq__accordion-item-body">Sim. Nossos planos não possuem contrato de fidelidade forçada. Você pode solicitar o cancelamento a qualquer momento sem burocracia ou multas abusivas.</p></div></section></div>
 <div class="faq__accordion-item faq__accordion-item--light"><button aria-controls=":r1p:-body" aria-expanded="false" class="faq__accordion-title" id=":r1p:-title">E se eu já tiver um domínio registrado (.com.br ou .com)?</button><section aria-hidden="true" aria-labelledby=":r1p:-title" class="faq__accordion-body-wrapper" hidden="until-found" id=":r1p:-body" style="height: 0px; overflow: hidden;"><div class="faq__accordion-body"><p class="text text--body text--light homepage-faq__accordion-item-body">Nós configuramos e apontamos o seu domínio existente sem nenhum custo adicional. Se você ainda não tiver um domínio, nós orientamos e auxiliamos no registro oficial em seu nome ou no CNPJ da sua empresa.</p></div></section></div>
 <div class="faq__accordion-item faq__accordion-item--light"><button aria-controls=":r1q:-body" aria-expanded="false" class="faq__accordion-title" id=":r1q:-title">Em quanto tempo meu site fica pronto?</button><section aria-hidden="true" aria-labelledby=":r1q:-title" class="faq__accordion-body-wrapper" hidden="until-found" id=":r1q:-body" style="height: 0px; overflow: hidden;"><div class="faq__accordion-body"><p class="text text--body text--light homepage-faq__accordion-item-body">Após você nos enviar as informações e materiais essenciais da sua empresa, entregamos a primeira versão completa do site para a sua aprovação em poucos dias úteis.</p></div></section></div>
-</div></div></div></section></div></div></section></section><section class="homepage-support" id="homepage-support"><div class="accordion-headline"><div class="accordion-headline__item accordion-headline__item--light"><button aria-controls=":r20:-content" aria-expanded="false" class="accordion-headline__title" id=":r20:-title"><h2 class="text text--subtitle1 text--light">Suporte Humanizado Boomo</h2><div class="accordion-headline__icon"><svg aria-hidden="true" fill="none" height="16" style="transform: rotate(0deg);" viewbox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M8 6.185V0H6.185V6.185L0 6.185V8L6.185 8V14H8V8L14 8V6.185L8 6.185Z" fill="white" fill-rule="evenodd" stroke="none"></path></svg></div></button><section aria-hidden="true" aria-labelledby=":r20:-title" class="accordion-headline__content-wrapper" hidden="until-found" id=":r20:-content" style="height: 0px; overflow: hidden;"><div class="accordion-headline__content"><section class="support support--no-padding-top" id="support"><div class="support__links"><a class="cta cta--inline cta--light support__links-cta support--is-desktop" href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Preciso%20de%20suporte%20t%C3%A9cnico%20com%20meu%20site." target="_blank"><div class="support__links-cta-inner"><h3 class="text text--subtitle2 text--light">WhatsApp Direto</h3><p class="text text--body text--light support__links-cta-body">Fale diretamente com os responsáveis pelo seu site para alterações rápidas e suporte prioritário.</p><p class="text text--body text--light support__links-cta-arrow">→</p></div></a><a class="cta cta--inline cta--light support__links-cta support--is-desktop" href="mailto:contato@boomo.com.br"><div class="support__links-cta-inner"><h3 class="text text--subtitle2 text--light">E-mail de Contato</h3><p class="text text--body text--light support__links-cta-body">Envie solicitações detalhadas, novos conteúdos ou dúvidas para contato@boomo.com.br.</p><p class="text text--body text--light support__links-cta-arrow">→</p></div></a></div></section></div></section></div></div></section></section><div><section class="conversion conversion--centered" id="conversion"><h2 class="text text--title4 text--light conversion__title conversion__title--centered" data-sl-variant="9b9769a88d4ecf587a3a28c6a37d1d7e" style="">Coloque o seu site profissional no ar</h2><p class="text text--body-medium text--light conversion__body conversion__body--centered" data-sl-variant="e3c0b7ad1c4f3c6d268bcd60a22ec5bd" style="">Fale conosco no WhatsApp, aprove o design primeiro e tenha seu site completo por assinatura mensal.</p><a class="cta cta--primary-subtle cta--light cta--has-arrow conversion-component__cta" data-sl-variant="cd58ecf73e998d90133e51fa197019ca" href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Quero%20colocar%20meu%20site%20profissional%20no%20ar%20com%20a%20Boomo." style="" target="_blank">COMECE AGORA →</a><div class="mobile-cta mobile-cta--is-sticky"><div style="width: 100%;"><a class="cta cta--primary cta--has-arrow mobile-cta__link" data-sl-variant="get-started-colloquial" href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Gostaria%20de%20um%20site%20profissional%20para%20minha%20empresa." target="_blank"><span class="cta__label">Comece agora</span><span aria-hidden="true" data-arrow="true"><span class="cta__arrow-icon">→</span></span></a></div></div><div class="mobile-cta__sticky-spacer" style="--height: 0px;"></div><div class="mobile-cta__sticky-ref mobile-cta__sticky-ref--is-centered-variant"></div></section></div></main>
+</div></div></div></section></div></div></section></section><section class="homepage-support" id="homepage-support"><div class="accordion-headline"><div class="accordion-headline__item accordion-headline__item--light"><button aria-controls=":r20:-content" aria-expanded="false" class="accordion-headline__title" id=":r20:-title"><h2 class="text text--subtitle1 text--light">Suporte Humanizado Boomo</h2><div class="accordion-headline__icon"><svg aria-hidden="true" fill="none" height="16" style="transform: rotate(0deg);" viewbox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M8 6.185V0H6.185V6.185L0 6.185V8L6.185 8V14H8V8L14 8V6.185L8 6.185Z" fill="white" fill-rule="evenodd" stroke="none"></path></svg></div></button><section aria-hidden="true" aria-labelledby=":r20:-title" class="accordion-headline__content-wrapper" hidden="until-found" id=":r20:-content" style="height: 0px; overflow: hidden;"><div class="accordion-headline__content"><section class="support support--no-padding-top" id="support"><div class="support__links"><a class="cta cta--inline cta--light support__links-cta support--is-desktop" href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Preciso%20de%20suporte%20t%C3%A9cnico%20com%20meu%20site." target="_blank"><div class="support__links-cta-inner"><h3 class="text text--subtitle2 text--light">WhatsApp Direto</h3><p class="text text--body text--light support__links-cta-body">Fale diretamente com os responsáveis pelo seu site para alterações rápidas e suporte prioritário.</p><p class="text text--body text--light support__links-cta-arrow">→</p></div></a><a class="cta cta--inline cta--light support__links-cta support--is-desktop" href="mailto:contato@boomo.com.br"><div class="support__links-cta-inner"><h3 class="text text--subtitle2 text--light">E-mail de Contato</h3><p class="text text--body text--light support__links-cta-body">Envie solicitações detalhadas, novos conteúdos ou dúvidas para contato@boomo.com.br.</p><p class="text text--body text--light support__links-cta-arrow">→</p></div></a></div></section></div></section></div></div></section></section><div><section class="conversion conversion--centered" id="conversion"><canvas id="boomo-planet-canvas" class="conversion__planet-canvas" aria-hidden="true"></canvas><h2 class="text text--title4 text--light conversion__title conversion__title--centered" data-sl-variant="9b9769a88d4ecf587a3a28c6a37d1d7e" style="">Coloque o seu site profissional no ar</h2><p class="text text--body-medium text--light conversion__body conversion__body--centered" data-sl-variant="e3c0b7ad1c4f3c6d268bcd60a22ec5bd" style="">Fale conosco no WhatsApp, aprove o design primeiro e tenha seu site completo por assinatura mensal.</p><a class="cta cta--primary-subtle cta--light cta--has-arrow conversion-component__cta" data-sl-variant="cd58ecf73e998d90133e51fa197019ca" href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Quero%20colocar%20meu%20site%20profissional%20no%20ar%20com%20a%20Boomo." style="" target="_blank">COMECE AGORA →</a><div class="mobile-cta mobile-cta--is-sticky"><div style="width: 100%;"><a class="cta cta--primary cta--has-arrow mobile-cta__link" data-sl-variant="get-started-colloquial" href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Gostaria%20de%20um%20site%20profissional%20para%20minha%20empresa." target="_blank"><span class="cta__label">Comece agora</span><span aria-hidden="true" data-arrow="true"><span class="cta__arrow-icon">→</span></span></a></div></div><div class="mobile-cta__sticky-spacer" style="--height: 0px;"></div><div class="mobile-cta__sticky-ref mobile-cta__sticky-ref--is-centered-variant"></div></section></div></main>
 <footer class="footer" id="footer"><div class="footer__content"><div class="footer-auxiliary"><div class="footer-auxiliary__tagline"><a aria-label="Página inicial da Boomo" class="cta cta--inline cta--light" data-sl-attr-variant="aria-label:db6b810bb9790c80e8043e87fe404905" href="/"><span style="font-family: Clarkson, -apple-system, sans-serif; font-size: 22px; font-weight: 800; letter-spacing: -0.04em; color: #FFFFFF; display: block; margin-bottom: 8px;">BOOMO<span style="color: #10B981;">.</span></span></a><p class="text text--subtitle2 text--light footer-auxiliary__title" data-sl-variant="0ff239b68588a6e322a7798071c99164">Sites profissionais por assinatura.</p></div><div class="footer__locale-settings footer-auxiliary__locale-settings"><div class="footer__locale-setting"><div class="footer__locale-setting-button-spacer"></div><button aria-label="Selecionar idioma:" class="footer__locale-setting-button"><svg fill="none" height="15" viewbox="0 0 14 15" width="14" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M14 7.5C14 3.63401 10.866 0.5 7 0.5C3.13401 0.5 0 3.63401 0 7.5C0 11.366 3.13401 14.5 7 14.5C10.866 14.5 14 11.366 14 7.5ZM4.01702 8.25C4.09512 9.961 4.43743 11.4878 4.9469 12.604C3.14865 11.88 1.82111 10.2332 1.55071 8.25H4.01702ZM5.51872 8.25C5.59223 9.71106 5.87593 10.9688 6.2574 11.8589C6.4812 12.3811 6.70918 12.7079 6.88592 12.8823C6.93501 12.9307 6.97301 12.961 7 12.9796C7.02699 12.961 7.06499 12.9307 7.11408 12.8823C7.29082 12.7079 7.5188 12.3811 7.7426 11.8589C8.12407 10.9688 8.40777 9.71106 8.48128 8.25H5.51872ZM8.48128 6.75H5.51872C5.59223 5.28894 5.87593 4.03123 6.2574 3.14113C6.4812 2.61892 6.70918 2.29215 6.88592 2.11772C6.93501 2.06927 6.97301 2.03897 7 2.02038C7.02699 2.03897 7.06499 2.06927 7.11408 2.11772C7.29082 2.29215 7.5188 2.61892 7.7426 3.14113C8.12407 4.03123 8.40777 5.28894 8.48128 6.75ZM9.98298 8.25C9.90487 9.961 9.56257 11.4878 9.0531 12.604C10.8513 11.88 12.1789 10.2332 12.4493 8.25H9.98298ZM12.4493 6.75H9.98298C9.90488 5.039 9.56257 3.51221 9.0531 2.396C10.8513 3.12003 12.1789 4.76684 12.4493 6.75ZM4.01702 6.75H1.55071C1.82111 4.76684 3.14865 3.12003 4.9469 2.396C4.43743 3.51221 4.09512 5.039 4.01702 6.75Z" fill="white" fill-rule="evenodd"></path></svg><span class="text text--footnote text--light footer-text footer__locale-setting-button-title">Português</span><svg class="footer__locale-setting-button-caret" fill="none" height="7" viewbox="0 0 8 7" width="8" xmlns="http://www.w3.org/2000/svg"><path d="M0.363525 0.954102L0.363525 2.77228L3.99989 6.40865L7.63625 2.77228V0.954102L3.99989 4.59047L0.363525 0.954102Z" fill="white"></path></svg></button><div data-focus-lock="locale-settings" data-focus-lock-disabled="disabled"><div class="footer__locale-setting-menu"><div class="footer__locale-setting-menu-background"></div><div class="footer__locale-setting-menu-contents"><span class="text text--footnote text--light footer-text footer__locale-setting-title" data-sl-variant="d25b3b1104af501b5761f6b6ed22554c">Selecionar idioma:</span><ul class="footer__locale-setting-options-list"><li><a aria-label="English" class="footer__locale-setting-option" href="/"><span class="text text--footnote text--light footer-text">English</span></a></li><li><a aria-label="Deutsch" class="footer__locale-setting-option" href="#"><span class="text text--footnote text--light footer-text">Deutsch</span></a></li><li><a aria-label="Español" class="footer__locale-setting-option" href="#"><span class="text text--footnote text--light footer-text">Español</span></a></li><li><a aria-label="Français" class="footer__locale-setting-option" href="#"><span class="text text--footnote text--light footer-text">Français</span></a></li><li><a aria-label="Italiano" class="footer__locale-setting-option" href="#"><span class="text text--footnote text--light footer-text">Italiano</span></a></li><li><a aria-label="日本語" class="footer__locale-setting-option" href="#"><span class="text text--footnote text--light footer-text">日本語</span></a></li><li><a aria-label="Português" class="footer__locale-setting-option footer__locale-setting-option--is-active" disabled="" href="/" tabindex="-1"><span class="text text--footnote text--light footer-text">Português</span></a></li><li><a aria-label="한국어" class="footer__locale-setting-option" href="#"><span class="text text--footnote text--light footer-text">한국어</span></a></li></ul><svg class="footer__locale-setting-menu-caret" fill="none" height="13" style="--offset-left: -10px;" viewbox="0 0 20 13" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M8.03604 1.70084C9.16336 0.724555 10.8366 0.724556 11.964 1.70084L18.2067 7.10722C20.3064 8.92562 19.0204 12.375 16.2427 12.375H3.75725C0.979597 12.375 -0.306413 8.92562 1.7933 7.10721L8.03604 1.70084Z" fill="currentColor"></path></svg></div></div></div></div><div class="footer__locale-setting currency-selector currency-selector--is-visible"><div class="footer__locale-setting-button-spacer"></div><button aria-label="Selecionar moeda:" class="footer__locale-setting-button"><span class="text text--footnote text--light footer-text footer__locale-setting-button-title currency-selector__title">R$ BRL</span><span class="text text--footnote text--light footer-text footer__locale-setting-button-title currency-selector__title currency-selector__title--is-hidden" data-sl-variant="30e2c191d7ac9aa8b605eed45a40f957">Moeda:</span><svg class="footer__locale-setting-button-caret" fill="none" height="7" viewbox="0 0 8 7" width="8" xmlns="http://www.w3.org/2000/svg"><path d="M0.363525 0.954102L0.363525 2.77228L3.99989 6.40865L7.63625 2.77228V0.954102L3.99989 4.59047L0.363525 0.954102Z" fill="white"></path></svg></button><div data-focus-lock="locale-settings" data-focus-lock-disabled="disabled"><div class="footer__locale-setting-menu"><div class="footer__locale-setting-menu-background"></div><div class="footer__locale-setting-menu-contents"><span class="text text--footnote text--light footer-text footer__locale-setting-title" data-sl-variant="d46381e49438e2c7c0fded5f23ea793b">Selecionar moeda:</span><ul class="footer__locale-setting-options-list"><li><button aria-label="BRL" class="footer__locale-setting-option footer__locale-setting-option--is-active" disabled="" tabindex="-1"><span class="text text--footnote text--light footer-text">R$ BRL</span></button></li><li><button aria-label="USD" class="footer__locale-setting-option"><span class="text text--footnote text--light footer-text">$ USD</span></button></li></ul><svg class="footer__locale-setting-menu-caret" fill="none" height="13" style="--offset-left: 13px;" viewbox="0 0 20 13" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M8.03604 1.70084C9.16336 0.724555 10.8366 0.724556 11.964 1.70084L18.2067 7.10722C20.3064 8.92562 19.0204 12.375 16.2427 12.375H3.75725C0.979597 12.375 -0.306413 8.92562 1.7933 7.10721L8.03604 1.70084Z" fill="currentColor"></path></svg></div></div></div></div></div><div class="footer-auxiliary__badges"><div class="footer-auxiliary__ssl"><svg class="footer-auxiliary__ssl-logo" fill="none" height="29" viewbox="0 0 26 29" width="26" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M0.172852 0H25.5547V20.6227L12.8638 28.5545L0.172852 20.6227V0ZM3.89758 13.4238C4.1364 14.8775 5.22667 15.594 6.76342 15.594C8.41439 15.594 9.57734 14.6699 9.57734 13.2785C9.57734 11.9805 8.75705 11.5652 7.41758 11.1499L6.88802 10.9837C6.03658 10.7138 5.5174 10.5165 5.5174 9.89346C5.5174 9.34313 5.97428 8.94856 6.73227 8.94856C7.54218 8.94856 7.98867 9.31199 8.14442 9.93499L9.39044 9.83116C9.23469 8.61629 8.30017 7.82715 6.7738 7.82715C5.1436 7.82715 4.12602 8.72013 4.12602 9.96614C4.12602 11.1499 4.93593 11.7521 6.26501 12.1259L6.82572 12.2817C7.68755 12.5205 8.21711 12.697 8.21711 13.3719C8.21711 14.0468 7.69793 14.5037 6.80496 14.5037C5.90159 14.5037 5.30974 14.0468 5.16437 13.3096L3.89758 13.4238ZM10.296 13.4238C10.5348 14.8775 11.6251 15.594 13.1618 15.594C14.8128 15.594 15.9757 14.6699 15.9757 13.2785C15.9757 11.9805 15.1555 11.5652 13.816 11.1499L13.2864 10.9837C12.435 10.7138 11.9158 10.5165 11.9158 9.89346C11.9158 9.34313 12.3727 8.94856 13.1307 8.94856C13.9406 8.94856 14.3871 9.31199 14.5428 9.93499L15.7888 9.83116C15.6331 8.61629 14.6986 7.82715 13.1722 7.82715C11.542 7.82715 10.5244 8.72013 10.5244 9.96614C10.5244 11.1499 11.3343 11.7521 12.6634 12.1259L13.2241 12.2817C14.086 12.5205 14.6155 12.697 14.6155 13.3719C14.6155 14.0468 14.0963 14.5037 13.2034 14.5037C12.3 14.5037 11.7081 14.0468 11.5628 13.3096L10.296 13.4238ZM21.9069 15.4278H17.2136V7.97252H18.5219V14.2857H21.9069V15.4278Z" fill="white" fill-opacity="0.5" fill-rule="evenodd"></path></svg><p class="text text--footnote text--light footer-text footer-auxiliary__ssl-text" data-sl-variant="907c6a82e15f0644108cd9a683c7c61e">Tráfego de dados protegido por criptografia SSL</p></div></div></div><div class="footer__links"><div class="footer__column"><div class="footer__column-group"><button class="cta cta--inline cta--light footer__column-group-heading footer__column-group-heading--mobile"><span class="text text--footnote text--light footer-text footer__column-group-title footer__column-group-title--desktop">Produtos</span><span class="text text--body-medium text--light footer__column-group-title footer__column-group-title--mobile">Produtos</span><span class="text text--body-medium text--light footer__column-group-arrow">↓</span></button><div class="footer__column-group-heading footer__column-group-heading--desktop"><span class="text text--footnote text--light footer-text footer__column-group-title footer__column-group-title--desktop">Produtos</span><span class="text text--body-medium text--light footer__column-group-title footer__column-group-title--mobile">Produtos</span><span class="text text--body-medium text--light footer__column-group-arrow">↓</span></div><div class="footer__column-group-list" style="--footer-column-group-list-height: 478px;"><ul class="footer__column-group-list-items"><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#get-started"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="bc755034173438c907b9b5c2b3b7c799">Templates de site</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="bc755034173438c907b9b5c2b3b7c799">Templates de site</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#get-started"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="f2d30fd45465b866938f41da33c312db">Sites</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="f2d30fd45465b866938f41da33c312db">Sites</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#planos" target="_blank"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="6f89028c276fc56d57c9355ce8603ddd">Domínios</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="6f89028c276fc56d57c9355ce8603ddd">Domínios</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#one-platform"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="60901cb4cd3e74f7b9b553a02104ab24">Construtor de sites (com IA)</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="60901cb4cd3e74f7b9b553a02104ab24">Construtor de sites (com IA)</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#one-platform"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="390308c7cf67db292c118eaceb1a1ffb">Design Inteligente</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="390308c7cf67db292c118eaceb1a1ffb">Design Inteligente</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#planos"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="704ff61288dd8105194be7f1779ec955">Lojas on-line</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="704ff61288dd8105194be7f1779ec955">Lojas on-line</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#one-platform"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="9cc20469ea8378153cd882461c44f82c">Serviços</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="9cc20469ea8378153cd882461c44f82c">Serviços</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#planos"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="7e3d00e13fe3bb6cf137d86ee20ffed4">Emissão de faturas</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="7e3d00e13fe3bb6cf137d86ee20ffed4">Emissão de faturas</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#planos"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="8affcecefba1f4c371f1e98550af8ad8">Scheduling</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="8affcecefba1f4c371f1e98550af8ad8">Scheduling</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#one-platform"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="63e69ecffc142d851e2f00a51af2f9ba">Conteúdo e filiações</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="63e69ecffc142d851e2f00a51af2f9ba">Conteúdo e filiações</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#planos"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="aba10daa4e8d479e744575861b2e3960">Doações</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="aba10daa4e8d479e744575861b2e3960">Doações</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#planos"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="55f23ba6936994346e9f09f61858a00a">Pagamentos</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="55f23ba6936994346e9f09f61858a00a">Pagamentos</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#one-platform"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="cb291dd3acbdd361ec7b86746c867dfa">Ferramentas de marketing</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="cb291dd3acbdd361ec7b86746c867dfa">Ferramentas de marketing</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#one-platform"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="77b7aea97f025dd3dc76f2d0391c603e">E-mail profissional</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="77b7aea97f025dd3dc76f2d0391c603e">E-mail profissional</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#planos"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="907056de040d1a34441b10bf3560ab5c">Premium</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="907056de040d1a34441b10bf3560ab5c">Premium</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#one-platform"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="451e109e3325357e849a66edd8fcdc9c">Lista de recursos</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="451e109e3325357e849a66edd8fcdc9c">Lista de recursos</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="924a0a51a48c1c92671274ee9fbc0fb3">Atualização de produtos</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="924a0a51a48c1c92671274ee9fbc0fb3">Atualização de produtos</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#planos"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="f5458cda40820379ffc671d00c78bfeb">Preços</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="f5458cda40820379ffc671d00c78bfeb">Preços</span></a></li></ul></div></div></div><div class="footer__column"><div class="footer__column-group"><button class="cta cta--inline cta--light footer__column-group-heading footer__column-group-heading--mobile"><span class="text text--footnote text--light footer-text footer__column-group-title footer__column-group-title--desktop">Soluções</span><span class="text text--body-medium text--light footer__column-group-title footer__column-group-title--mobile">Soluções</span><span class="text text--body-medium text--light footer__column-group-arrow">↓</span></button><div class="footer__column-group-heading footer__column-group-heading--desktop"><span class="text text--footnote text--light footer-text footer__column-group-title footer__column-group-title--desktop">Soluções</span><span class="text text--body-medium text--light footer__column-group-title footer__column-group-title--mobile">Soluções</span><span class="text text--body-medium text--light footer__column-group-arrow">↓</span></div><div class="footer__column-group-list" style="--footer-column-group-list-height: 262px;"><ul class="footer__column-group-list-items"><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#get-started"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="4a63ae8fa3f46101e2fc9886e3cc832a">Serviços criativos</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="4a63ae8fa3f46101e2fc9886e3cc832a">Serviços criativos</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="/templates/advocacia"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="21cdbacd59723819ce7fc3c5c3bea2b8">Serviços profissionais</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="21cdbacd59723819ce7fc3c5c3bea2b8">Serviços profissionais</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#get-started"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="7ab3653f39c75dbfc169c0601b10bb7c">Educação e treino</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="7ab3653f39c75dbfc169c0601b10bb7c">Educação e treino</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="/templates/estetica"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="8ae9ee043eafd6f6a178e4147d6dd11c">Beleza</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="8ae9ee043eafd6f6a178e4147d6dd11c">Beleza</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#get-started"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="0d58367a16241ba5eb9560d78eadaad4">Esportes e fitness</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="0d58367a16241ba5eb9560d78eadaad4">Esportes e fitness</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="/templates/odontologia"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="96540d996400e80a2a63280801d887d1">Saúde e bem-estar</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="96540d996400e80a2a63280801d887d1">Saúde e bem-estar</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#get-started"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="d7ea72e9a81731207debdcbc43a2da93">Serviços domésticos</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="d7ea72e9a81731207debdcbc43a2da93">Serviços domésticos</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#get-started"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="a68c3a1043d9006cda18dbee5d307cef">Eventos e experiências</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="a68c3a1043d9006cda18dbee5d307cef">Eventos e experiências</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#get-started"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="b08d306b3dcb557ff61d3150ad4dea90">Caridade e OSFL</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="b08d306b3dcb557ff61d3150ad4dea90">Caridade e OSFL</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#get-started"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="personal-vertical-category-name">Pessoal</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="personal-vertical-category-name">Pessoal</span></a></li></ul></div></div><div class="footer__column-group"><button class="cta cta--inline cta--light footer__column-group-heading footer__column-group-heading--mobile"><span class="text text--footnote text--light footer-text footer__column-group-title footer__column-group-title--desktop">Recursos</span><span class="text text--body-medium text--light footer__column-group-title footer__column-group-title--mobile">Recursos</span><span class="text text--body-medium text--light footer__column-group-arrow">↓</span></button><div class="footer__column-group-heading footer__column-group-heading--desktop"><span class="text text--footnote text--light footer-text footer__column-group-title footer__column-group-title--desktop">Recursos</span><span class="text text--body-medium text--light footer__column-group-title footer__column-group-title--mobile">Recursos</span><span class="text text--body-medium text--light footer__column-group-arrow">↓</span></div><div class="footer__column-group-list" style="--footer-column-group-list-height: 194px;"><ul class="footer__column-group-list-items"><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#get-started"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="d223df8f4798aa9081ab91dd193376aa">Exemplos de clientes</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="d223df8f4798aa9081ab91dd193376aa">Exemplos de clientes</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#get-started"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="3bc5bdef4256aecee77cb16e1d2825f7">Boomo Collection</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="3bc5bdef4256aecee77cb16e1d2825f7">Boomo Collection</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#one-platform"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="6e3f03926773b2811d09fd4ccc0eeb6d">Extensões</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="6e3f03926773b2811d09fd4ccc0eeb6d">Extensões</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#one-platform"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="95ae7894415856eaa13ca4e9e2b1bd47">Boomo Blog</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="95ae7894415856eaa13ca4e9e2b1bd47">Boomo Blog</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="09c1db148e59aebd833c7f89ba90b2eb">Ferramentas gratuitas</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="09c1db148e59aebd833c7f89ba90b2eb">Ferramentas gratuitas</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="5196d5081b6716f5fd963c0891b26682">Gerador de nomes de empresas</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="5196d5081b6716f5fd963c0891b26682">Gerador de nomes de empresas</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#" target="_blank"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="e463d97c5ee53c78f7c2632b0a049962">Logo Maker</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="e463d97c5ee53c78f7c2632b0a049962">Logo Maker</span></a></li></ul></div></div></div><div class="footer__column"><div class="footer__column-group"><button class="cta cta--inline cta--light footer__column-group-heading footer__column-group-heading--mobile"><span class="text text--footnote text--light footer-text footer__column-group-title footer__column-group-title--desktop">Diferenciais Boomo</span><span class="text text--body-medium text--light footer__column-group-title footer__column-group-title--mobile">Diferenciais Boomo</span><span class="text text--body-medium text--light footer__column-group-arrow">↓</span></button><div class="footer__column-group-heading footer__column-group-heading--desktop"><span class="text text--footnote text--light footer-text footer__column-group-title footer__column-group-title--desktop">Diferenciais Boomo</span><span class="text text--body-medium text--light footer__column-group-title footer__column-group-title--mobile">Diferenciais Boomo</span><span class="text text--body-medium text--light footer__column-group-arrow">↓</span></div><div class="footer__column-group-list" style="--footer-column-group-list-height: 140px;"><ul class="footer__column-group-list-items"><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#planos" target="_blank"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="9347af4821a3c4e351387181d4ce13fd">Acuity Scheduling</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="9347af4821a3c4e351387181d4ce13fd">Acuity Scheduling</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#get-started" target="_blank"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="451285f9ebf87d125b597a277b41eae7">Bio Sites</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="451285f9ebf87d125b597a277b41eae7">Bio Sites</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#get-started" target="_blank"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="78af7bc446f310283bcb2383f76c892a">Unfold</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="78af7bc446f310283bcb2383f76c892a">Unfold</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#one-platform"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="d4106220a4fbf3a6cb08fd6593db3f1f">Campanhas por e-mail</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="d4106220a4fbf3a6cb08fd6593db3f1f">Campanhas por e-mail</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#get-started"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="8618b0e9f3eb6e22c91fada9c5c1eb18">Boomo para empresas</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="8618b0e9f3eb6e22c91fada9c5c1eb18">Boomo para empresas</span></a></li></ul></div></div><div class="footer__column-group"><button class="cta cta--inline cta--light footer__column-group-heading footer__column-group-heading--mobile"><span class="text text--footnote text--light footer-text footer__column-group-title footer__column-group-title--desktop">Programas</span><span class="text text--body-medium text--light footer__column-group-title footer__column-group-title--mobile">Programas</span><span class="text text--body-medium text--light footer__column-group-arrow">↓</span></button><div class="footer__column-group-heading footer__column-group-heading--desktop"><span class="text text--footnote text--light footer-text footer__column-group-title footer__column-group-title--desktop">Programas</span><span class="text text--body-medium text--light footer__column-group-title footer__column-group-title--mobile">Programas</span><span class="text text--body-medium text--light footer__column-group-arrow">↓</span></div><div class="footer__column-group-list" style="--footer-column-group-list-height: 73px;"><ul class="footer__column-group-list-items"><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#planos"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="a2f9f998cddb71c1ba1f9cb28f6f18cf">Circle</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="a2f9f998cddb71c1ba1f9cb28f6f18cf">Circle</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#planos"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="fd4b8b235d6d380628402ad8e932258b">Afiliados</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="fd4b8b235d6d380628402ad8e932258b">Afiliados</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#planos"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="2bd48772836ed5474deb8e0e4426f14c">Estudantes</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="2bd48772836ed5474deb8e0e4426f14c">Estudantes</span></a></li></ul></div></div><div class="footer__column-group"><button class="cta cta--inline cta--light footer__column-group-heading footer__column-group-heading--mobile"><span class="text text--footnote text--light footer-text footer__column-group-title footer__column-group-title--desktop">Suporte</span><span class="text text--body-medium text--light footer__column-group-title footer__column-group-title--mobile">Suporte</span><span class="text text--body-medium text--light footer__column-group-arrow">↓</span></button><div class="footer__column-group-heading footer__column-group-heading--desktop"><span class="text text--footnote text--light footer-text footer__column-group-title footer__column-group-title--desktop">Suporte</span><span class="text text--body-medium text--light footer__column-group-title footer__column-group-title--mobile">Suporte</span><span class="text text--body-medium text--light footer__column-group-arrow">↓</span></div><div class="footer__column-group-list" style="--footer-column-group-list-height: 181px;"><ul class="footer__column-group-list-items"><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="https://wa.me/559192432044" target="_blank"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="d4f2e8a213d740c56edf9386986e4155">Central de Ajuda</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="d4f2e8a213d740c56edf9386986e4155">Central de Ajuda</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="https://wa.me/559192432044" target="_blank"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="efa547fb5c72cb2b5fbffa73302b675c">Forum</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="efa547fb5c72cb2b5fbffa73302b675c">Forum</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="https://wa.me/559192432044" target="_blank"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="d7228462a145302d48ec17ebdd83db56">Webinars</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="d7228462a145302d48ec17ebdd83db56">Webinars</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#" target="_blank"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="01dfb586f0c6d038cb636bd6e481a013">Contrate um Expert</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="01dfb586f0c6d038cb636bd6e481a013">Contrate um Expert</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="/sobre.html" target="_blank"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="10d7f6d46af5d7ab324de734a91ebe26">Blog do desenvolvedor</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="10d7f6d46af5d7ab324de734a91ebe26">Blog do desenvolvedor</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="/sobre.html" target="_blank"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="d585ae6c7a867c6cf053e1a1ee0d8e7f">Plataforma de desenvolvedor</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="d585ae6c7a867c6cf053e1a1ee0d8e7f">Plataforma de desenvolvedor</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="#planos" target="_blank"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="01d8e26afb0eaa52157f1f69ac6fb731">Status do sistema</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="01d8e26afb0eaa52157f1f69ac6fb731">Status do sistema</span></a></li></ul></div></div></div><div class="footer__column"><div class="footer__column-group"><button class="cta cta--inline cta--light footer__column-group-heading footer__column-group-heading--mobile"><span class="text text--footnote text--light footer-text footer__column-group-title footer__column-group-title--desktop">Empresa</span><span class="text text--body-medium text--light footer__column-group-title footer__column-group-title--mobile">Empresa</span><span class="text text--body-medium text--light footer__column-group-arrow">↓</span></button><div class="footer__column-group-heading footer__column-group-heading--desktop"><span class="text text--footnote text--light footer-text footer__column-group-title footer__column-group-title--desktop">Empresa</span><span class="text text--body-medium text--light footer__column-group-title footer__column-group-title--mobile">Empresa</span><span class="text text--body-medium text--light footer__column-group-arrow">↓</span></div><div class="footer__column-group-list" style="--footer-column-group-list-height: 181px;"><ul class="footer__column-group-list-items"><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="/sobre.html"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="8b84354d4eda653a8230bae5366741cb">Sobre</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="8b84354d4eda653a8230bae5366741cb">Sobre</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="/sobre.html"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="06136598f349ec77039a7a97100d46d1">Carreiras</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="06136598f349ec77039a7a97100d46d1">Carreiras</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="/sobre.html" target="_blank"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="0d3c93b1c80c4b8a6710cfff230632b1">Nossa marca</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="0d3c93b1c80c4b8a6710cfff230632b1">Nossa marca</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="/termos-privacidade.html"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="1c689342fc752d12a73b61fa086ee444">Acessibilidade</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="1c689342fc752d12a73b61fa086ee444">Acessibilidade</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="/sobre.html" target="_blank"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="75c003f9ee5fe90ab7dcdda93eba41f0">Imprensa</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="75c003f9ee5fe90ab7dcdda93eba41f0">Imprensa</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="/sobre.html"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="edf9c925215e43b0647d3edd44a30e87">Imprensa e Mídia</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="edf9c925215e43b0647d3edd44a30e87">Imprensa e Mídia</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20com%20a%20Boomo." target="_blank"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="96a304ff37cc4550b311270b82686489">Fale conosco</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="96a304ff37cc4550b311270b82686489">Fale conosco</span></a></li></ul></div></div><div class="footer__column-group"><button class="cta cta--inline cta--light footer__column-group-heading footer__column-group-heading--mobile"><span class="text text--footnote text--light footer-text footer__column-group-title footer__column-group-title--desktop">Siga a gente</span><span class="text text--body-medium text--light footer__column-group-title footer__column-group-title--mobile">Siga a gente</span><span class="text text--body-medium text--light footer__column-group-arrow">↓</span></button><div class="footer__column-group-heading footer__column-group-heading--desktop"><span class="text text--footnote text--light footer-text footer__column-group-title footer__column-group-title--desktop">Siga a gente</span><span class="text text--body-medium text--light footer__column-group-title footer__column-group-title--mobile">Siga a gente</span><span class="text text--body-medium text--light footer__column-group-arrow">↓</span></div><div class="footer__column-group-list" style="--footer-column-group-list-height: 127px;"><ul class="footer__column-group-list-items"><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="https://wa.me/559192432044" target="_blank"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="6b53ddeceb013c5bac6bbfd267a6f08a">Instagram</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="6b53ddeceb013c5bac6bbfd267a6f08a">Instagram</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="https://wa.me/559192432044" target="_blank"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="f7d33020038bd5e741d7219799c05823">YouTube</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="f7d33020038bd5e741d7219799c05823">YouTube</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="https://wa.me/559192432044" target="_blank"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="18602775d3f5fd39cdd1c8d8e08a752b">LinkedIn</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="18602775d3f5fd39cdd1c8d8e08a752b">LinkedIn</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="https://wa.me/559192432044" target="_blank"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="3273011573aacd768988ad4b2103caab">Facebook</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="3273011573aacd768988ad4b2103caab">Facebook</span></a></li><li class="footer__link-item"><a class="cta cta--inline cta--light footer__link-item-link" href="https://wa.me/559192432044" target="_blank"><span class="text text--footnote text--light footer-text footer__link-item-title footer__link-item-title--desktop" data-sl-variant="4932061efdb34a54dac6c52e43161870">X</span><span class="text text--body text--light footer__link-item-title footer__link-item-title--mobile" data-sl-variant="4932061efdb34a54dac6c52e43161870">X</span></a></li></ul></div></div></div></div></div></div></div><div class="footer__locale-setting currency-selector currency-selector--is-visible"><div class="footer__locale-setting-button-spacer"></div><button aria-label="Selecionar moeda:" class="footer__locale-setting-button"><span class="text text--footnote text--light footer-text footer__locale-setting-button-title currency-selector__title">R$ BRL</span><span class="text text--footnote text--light footer-text footer__locale-setting-button-title currency-selector__title currency-selector__title--is-hidden" data-sl-variant="30e2c191d7ac9aa8b605eed45a40f957">Moeda:</span><svg class="footer__locale-setting-button-caret" fill="none" height="7" viewbox="0 0 8 7" width="8" xmlns="http://www.w3.org/2000/svg"><path d="M0.363525 0.954102L0.363525 2.77228L3.99989 6.40865L7.63625 2.77228V0.954102L3.99989 4.59047L0.363525 0.954102Z" fill="white"></path></svg></button><div data-focus-lock="locale-settings" data-focus-lock-disabled="disabled"><div class="footer__locale-setting-menu"><div class="footer__locale-setting-menu-background"></div><div class="footer__locale-setting-menu-contents"><span class="text text--footnote text--light footer-text footer__locale-setting-title" data-sl-variant="d46381e49438e2c7c0fded5f23ea793b">Selecionar moeda:</span><ul class="footer__locale-setting-options-list"><li><button aria-label="BRL" class="footer__locale-setting-option footer__locale-setting-option--is-active" disabled="" tabindex="-1"><span class="text text--footnote text--light footer-text">R$ BRL</span></button></li><li><button aria-label="USD" class="footer__locale-setting-option"><span class="text text--footnote text--light footer-text">$ USD</span></button></li></ul><svg class="footer__locale-setting-menu-caret" fill="none" height="13" style="--offset-left: 13px;" viewbox="0 0 20 13" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M8.03604 1.70084C9.16336 0.724555 10.8366 0.724556 11.964 1.70084L18.2067 7.10722C20.3064 8.92562 19.0204 12.375 16.2427 12.375H3.75725C0.979597 12.375 -0.306413 8.92562 1.7933 7.10721L8.03604 1.70084Z" fill="currentColor"></path></svg></div></div></div></div></div><div><ul class="footer-fineprint__list"><li class="footer-fineprint__item--non-turkish"><a class="cta cta--inline cta--light" href="/termos-privacidade.html"><span class="text text--footnote text--light footer-text footer-fineprint-item__title" data-sl-variant="ae0db7613e91ed000a247143f8b2185f">Termos</span></a></li><li class="footer-fineprint__item--non-turkish"><a class="cta cta--inline cta--light" href="/termos-privacidade.html"><span class="text text--footnote text--light footer-text footer-fineprint-item__title" data-sl-variant="66c35be56f33c828f194585096330296">Privacidade</span></a></li><li class="footer-fineprint__item--turkish"><a class="cta cta--inline cta--light" href="/termos-privacidade.html"><span class="text text--footnote text--light footer-text footer-fineprint-item__title" data-sl-variant="ae0db7613e91ed000a247143f8b2185f">Termos</span></a></li><li class="footer-fineprint__item--turkish"><a class="cta cta--inline cta--light" href="/termos-privacidade.html"><span class="text text--footnote text--light footer-text footer-fineprint-item__title" data-sl-variant="66c35be56f33c828f194585096330296">Privacidade</span></a></li><li class="footer-fineprint__item--german"><a class="cta cta--inline cta--light" href="/termos-privacidade.html"><span class="text text--footnote text--light footer-text footer-fineprint-item__title" data-sl-variant="310fa5e45a146ed2065e7b30c84a7c90">Privacidade dos dados</span></a></li><li class="footer-fineprint__item-locale-specific"><a class="cta cta--inline cta--light" href="/termos-privacidade.html"><span class="text text--footnote text--light footer-text footer-fineprint-item__title" data-sl-variant="3892d2f23f33557380dd29089d9c4738">Jurídico da UE</span></a></li><li class="footer-fineprint__item-locale-specific"><a class="cta cta--inline cta--light" href="/termos-privacidade.html"><span class="text text--footnote text--light footer-text footer-fineprint-item__title" data-sl-variant="ea557f437d80c2f62f9c1dd21d579c7c">Divulgação da SCTA</span></a></li><li class="footer-fineprint__item-locale-specific footer-fineprint__item-locale-specific--visible"><a class="cta cta--inline cta--light"><span class="text text--footnote text--light footer-text footer-fineprint-item__title"></span></a></li><li class="footer-fineprint__item-locale-specific"><a class="cta cta--inline cta--light" href="/termos-privacidade.html"><span class="text text--footnote text--light footer-text footer-fineprint-item__title" data-sl-variant="eb1684760e7b023a056323f5ccb02bcb">Aviso de privacidade específico</span></a></li><li class="footer-fineprint__item-locale-specific"><a class="cta cta--inline cta--light" href="/termos-privacidade.html"><span class="text text--footnote text--light footer-text footer-fineprint-item__title" data-sl-variant="eb1684760e7b023a056323f5ccb02bcb">Aviso de privacidade específico</span></a></li><li class=""><a class="cta cta--inline cta--light" href="/termos-privacidade.html"><span class="text text--footnote text--light footer-text footer-fineprint-item__title" data-sl-variant="f0a482a7a26f6652f98084fc6f0db6af">Medidas de segurança</span></a></li><li class=""><a class="cta cta--inline cta--light" href="/sitemap.xml"><span class="text text--footnote text--light footer-text footer-fineprint-item__title" data-sl-variant="728f036644000b47325ca4f0d63535a9">Mapa do site</span></a></li><li class="footer-fineprint__item--copyright"><span class="text text--footnote text--light footer-text" data-sl-variant="7c29155355c99b8f1539200752f963a8">© 2026 Boomo Tecnologia. Todos os direitos reservados.</span></li></ul></div></div></div></footer>
 <script>
 window.slOriginalSlice = String.prototype.slice;
@@ -1587,6 +1692,221 @@ String.prototype.slice = function(...args) {
       document.addEventListener('DOMContentLoaded', initAccordions);
     } else {
       initAccordions();
+    }
+  })();
+</script>
+
+
+<!-- 3D Interactive Cosmic Planet Engine -->
+<script>
+  (function() {
+    function initPlanet() {
+      const section = document.getElementById('conversion');
+      const canvas = document.getElementById('boomo-planet-canvas');
+      if (!section || !canvas) return;
+
+      const ctx = canvas.getContext('2d');
+      let width = 0;
+      let height = 0;
+      let centerX = 0;
+      let centerY = 0;
+      let radius = 0;
+      let animationId = null;
+      let isVisible = false;
+
+      const isMobile = window.innerWidth < 768;
+      const PARTICLE_COUNT = isMobile ? 1200 : 2000;
+      const particles = [];
+      const goldenRatio = (1 + Math.sqrt(5)) / 2;
+
+      function resize() {
+        const rect = section.getBoundingClientRect();
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        width = canvas.width = rect.width * dpr;
+        height = canvas.height = rect.height * dpr;
+        centerX = width / 2;
+        centerY = height / 2;
+        radius = Math.min(width, height) * (window.innerWidth < 768 ? 0.36 : 0.38);
+
+        if (particles.length === 0) {
+          for (let i = 0; i < PARTICLE_COUNT; i++) {
+            const theta = 2 * Math.PI * i / goldenRatio;
+            const phi = Math.acos(1 - 2 * (i + 0.5) / PARTICLE_COUNT);
+            const r = 1.0 + (Math.random() - 0.5) * 0.08;
+            particles.push({
+              theta: theta,
+              phi: phi,
+              r: r,
+              baseSize: 1.1 + Math.random() * 1.5,
+              alpha: 0.35 + Math.random() * 0.65
+            });
+          }
+        }
+      }
+
+      window.addEventListener('resize', resize);
+      resize();
+
+      let rotX = 0.25;
+      let rotY = 0;
+      let velX = 0;
+      let velY = 0.0028;
+      let isDragging = false;
+      let lastX = 0;
+      let lastY = 0;
+
+      section.addEventListener('mousedown', function(e) {
+        if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON') return;
+        isDragging = true;
+        lastX = e.clientX;
+        lastY = e.clientY;
+      });
+
+      window.addEventListener('mousemove', function(e) {
+        if (isDragging) {
+          const dx = e.clientX - lastX;
+          const dy = e.clientY - lastY;
+          rotY += dx * 0.005;
+          rotX += dy * 0.005;
+          velY = dx * 0.003;
+          velX = dy * 0.003;
+          lastX = e.clientX;
+          lastY = e.clientY;
+        } else if (isVisible) {
+          const rect = section.getBoundingClientRect();
+          if (e.clientY >= rect.top && e.clientY <= rect.bottom) {
+            const dx = (e.clientX - (rect.left + rect.width / 2)) / rect.width;
+            const dy = (e.clientY - (rect.top + rect.height / 2)) / rect.height;
+            velY = 0.0028 + dx * 0.002;
+            velX = dy * 0.0015;
+          }
+        }
+      });
+
+      window.addEventListener('mouseup', function() {
+        isDragging = false;
+      });
+
+      section.addEventListener('touchstart', function(e) {
+        if (e.touches.length === 1) {
+          if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON') return;
+          isDragging = true;
+          lastX = e.touches[0].clientX;
+          lastY = e.touches[0].clientY;
+        }
+      }, { passive: true });
+
+      window.addEventListener('touchmove', function(e) {
+        if (isDragging && e.touches.length === 1) {
+          const dx = e.touches[0].clientX - lastX;
+          const dy = e.touches[0].clientY - lastY;
+          rotY += dx * 0.006;
+          rotX += dy * 0.006;
+          velY = dx * 0.004;
+          velX = dy * 0.004;
+          lastX = e.touches[0].clientX;
+          lastY = e.touches[0].clientY;
+        }
+      }, { passive: true });
+
+      window.addEventListener('touchend', function() {
+        isDragging = false;
+      });
+
+      function render() {
+        if (!isVisible) {
+          animationId = null;
+          return;
+        }
+
+        ctx.clearRect(0, 0, width, height);
+
+        if (!isDragging) {
+          rotY += velY;
+          rotX += velX;
+          velX *= 0.96;
+          velY = velY * 0.98 + 0.0028 * 0.02;
+        }
+
+        const cosX = Math.cos(rotX);
+        const sinX = Math.sin(rotX);
+        const cosY = Math.cos(rotY);
+        const sinY = Math.sin(rotY);
+
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        const fov = 700 * dpr;
+        const projected = [];
+
+        for (let i = 0; i < particles.length; i++) {
+          const p = particles[i];
+          const currR = radius * p.r;
+          
+          const x0 = currR * Math.sin(p.phi) * Math.cos(p.theta);
+          const y0 = currR * Math.sin(p.phi) * Math.sin(p.theta);
+          const z0 = currR * Math.cos(p.phi);
+
+          const x1 = x0 * cosY + z0 * sinY;
+          const y1 = y0;
+          const z1 = -x0 * sinY + z0 * cosY;
+
+          const x2 = x1;
+          const y2 = y1 * cosX - z1 * sinX;
+          const z2 = y1 * sinX + z1 * cosX;
+
+          const scale = fov / (fov + z2);
+          const px = centerX + x2 * scale;
+          const py = centerY + y2 * scale;
+          
+          const depth = (z2 + radius) / (2 * radius);
+          const alpha = Math.max(0.08, Math.min(1.0, 0.12 + depth * 0.88 * p.alpha));
+          const size = p.baseSize * scale * dpr * (0.6 + depth * 0.6);
+
+          projected.push({ px: px, py: py, z: z2, size: size, alpha: alpha, depth: depth });
+        }
+
+        projected.sort(function(a, b) { return a.z - b.z; });
+
+        for (let i = 0; i < projected.length; i++) {
+          const pt = projected[i];
+          ctx.beginPath();
+          ctx.arc(pt.px, pt.py, pt.size, 0, Math.PI * 2);
+          
+          if (pt.depth > 0.75) {
+            ctx.fillStyle = 'rgba(255, 255, 255, ' + pt.alpha + ')';
+            ctx.shadowColor = 'rgba(255, 255, 255, 0.5)';
+            ctx.shadowBlur = 4 * dpr;
+          } else {
+            ctx.fillStyle = 'rgba(210, 220, 235, ' + pt.alpha + ')';
+            ctx.shadowBlur = 0;
+          }
+          ctx.fill();
+        }
+
+        ctx.shadowBlur = 0;
+        animationId = requestAnimationFrame(render);
+      }
+
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            isVisible = entry.isIntersecting;
+            if (isVisible && !animationId) {
+              resize();
+              animationId = requestAnimationFrame(render);
+            }
+          });
+        }, { threshold: 0.05 });
+        observer.observe(section);
+      } else {
+        isVisible = true;
+        animationId = requestAnimationFrame(render);
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initPlanet);
+    } else {
+      initPlanet();
     }
   })();
 </script>
