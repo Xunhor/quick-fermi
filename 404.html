@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página não encontrada (404) | Boomo</title>
+    <meta name="description" content="A página solicitada não foi encontrada. Retorne à página inicial da Boomo.">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/base/global.css">
+    <link rel="stylesheet" href="/css/desktop/style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            color: #FFFFFF;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-sizing: border-box;
+        }
+
+        .error-nav {
+            padding: 24px 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .error-logo {
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            color: #FFFFFF;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .error-logo span {
+            color: #10B981;
+        }
+
+        .error-main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 24px;
+            text-align: center;
+        }
+
+        .error-container {
+            max-width: 540px;
+            margin: 0 auto;
+        }
+
+        .error-code {
+            font-size: 14px;
+            font-weight: 700;
+            color: #10B981;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .error-title {
+            font-size: clamp(32px, 5vw, 44px);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.15;
+            margin: 0 0 16px 0;
+            color: #FFFFFF;
+        }
+
+        .error-desc {
+            font-size: 16px;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.65);
+            margin: 0 0 36px 0;
+        }
+
+        .error-actions {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #FFFFFF;
+            color: #000000;
+            font-weight: 700;
+            font-size: 14px;
+            padding: 14px 28px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-home:hover {
+            background: rgba(255, 255, 255, 0.85);
+            transform: translateY(-1px);
+        }
+
+        .btn-wa {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #FFFFFF;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 14px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-wa:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .error-footer {
+            padding: 24px;
+            text-align: center;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.4);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .boomo-floating-wa {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            width: 58px;
+            height: 58px;
+            background-color: #25D366;
+            color: #FFFFFF;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 18px rgba(37, 211, 102, 0.45);
+            z-index: 99998;
+            text-decoration: none;
+            transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+        }
+
+        .boomo-floating-wa:hover {
+            transform: scale(1.08) translateY(-2px);
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.6);
+        }
+
+        @media (max-width: 600px) {
+            .error-nav {
+                padding: 18px 20px;
+            }
+            .error-actions {
+                flex-direction: column;
+                width: 100%;
+            }
+            .btn-home, .btn-wa {
+                width: 100%;
+                justify-content: center;
+                box-sizing: border-box;
+            }
+            .boomo-floating-wa {
+                bottom: 20px;
+                right: 20px;
+                width: 52px;
+                height: 52px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="error-nav">
+        <a href="/" class="error-logo">
+            BOOMO<span>.</span>
+        </a>
+        <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Preciso%20de%20ajuda%20no%20site%20da%20Boomo." target="_blank" rel="noopener noreferrer" class="btn-wa" style="padding: 8px 16px; font-size: 13px;">
+            Ajuda via WhatsApp
+        </a>
+    </nav>
+
+    <main class="error-main">
+        <div class="error-container">
+            <p class="error-code">Erro 404</p>
+            <h1 class="error-title">Página não encontrada</h1>
+            <p class="error-desc">O endereço que você tentou acessar não existe, foi removido ou está temporariamente indisponível.</p>
+            <div class="error-actions">
+                <a href="/" class="btn-home">
+                    Voltar para o Início →
+                </a>
+                <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Acessei%20um%20link%20que%20n%C3%A3o%20encontrei%20no%20site%20da%20Boomo." target="_blank" rel="noopener noreferrer" class="btn-wa">
+                    Falar com Suporte
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="error-footer">
+        © 2026 Boomo Tecnologia. Todos os direitos reservados.
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Preciso%20de%20ajuda%20com%20um%20link%20no%20site%20da%20Boomo." target="_blank" rel="noopener noreferrer" class="boomo-floating-wa" aria-label="Falar no WhatsApp" title="Falar no WhatsApp">
+        <svg viewBox="0 0 32 32" width="30" height="30" fill="currentColor">
+            <path d="M16 2a13.9 13.9 0 0 0-12 21l-1.9 6.9 7.1-1.9A13.9 13.9 0 1 0 16 2zm0 25.5a11.5 11.5 0 0 1-5.9-1.6l-.4-.3-4.4 1.1 1.2-4.3-.3-.4A11.6 11.6 0 1 1 16 27.5zm6.4-8.7c-.3-.2-2-.1-2.3-1.1-.3-.2-.5-.3-.7.1s-.8 1-1 1.2c-.2.2-.4.3-.7.1a9.2 9.2 0 0 1-2.7-1.7 10.2 10.2 0 0 1-1.9-2.3c-.2-.3 0-.5.2-.7l.5-.6c.2-.2.3-.4.4-.6.1-.2 0-.4 0-.6s-.7-1.7-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.2-1.2 2.9c0 1.7 1.2 3.3 1.4 3.5.2.3 2.4 3.7 5.9 5.2.8.4 1.5.6 2 .8.8.3 1.6.2 2.2.1.7-.1 2.1-.9 2.4-1.7.3-.8.3-1.6.2-1.7-.1-.2-.3-.3-.6-.5z"/>
+        </svg>
+    </a>
+
+</body>
+</html>
