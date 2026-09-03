@@ -71,23 +71,22 @@
             
 /* Boomo Pricing Hover & Interaction */
 .boomo-pricing-card {
-  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s ease, box-shadow 0.28s ease !important;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.25s ease !important;
 }
 .boomo-pricing-card:hover {
-  transform: translateY(-6px) !important;
-  border-color: rgba(16, 185, 129, 0.45) !important;
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.8), 0 0 24px rgba(16, 185, 129, 0.15) !important;
+  transform: translateY(-4px) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6) !important;
 }
 .boomo-pricing-card.is-featured:hover {
-  border-color: rgba(16, 185, 129, 0.95) !important;
-  box-shadow: 0 24px 54px rgba(0, 0, 0, 0.85), 0 0 36px rgba(16, 185, 129, 0.28) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.75) !important;
 }
 .boomo-pricing-btn {
-  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease !important;
+  transition: opacity 0.2s ease, background-color 0.2s ease !important;
 }
 .boomo-pricing-btn:hover {
-  transform: scale(1.02) !important;
-  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3) !important;
+  opacity: 0.88 !important;
 }
 
         .boomo-pricing-grid {
@@ -671,7 +670,8 @@ body {
 }
 .boomo-mobile-nav a:hover,
 .boomo-mobile-nav a:active {
-  color: #10B981;
+  color: #FFFFFF;
+  opacity: 0.7;
 }
 .boomo-mobile-nav a .drawer-arrow {
   color: rgba(255, 255, 255, 0.35);
@@ -688,7 +688,7 @@ body {
   justify-content: center;
   gap: 10px;
   width: 100%;
-  background: #10B981;
+  background: #FFFFFF;
   color: #000000 !important;
   font-weight: 700;
   font-size: 15px;
@@ -859,7 +859,8 @@ body {
 }
 .boomo-mobile-nav a:hover,
 .boomo-mobile-nav a:active {
-  color: #10B981;
+  color: #FFFFFF;
+  opacity: 0.7;
 }
 .boomo-mobile-nav a .drawer-arrow {
   color: rgba(255, 255, 255, 0.35);
@@ -876,7 +877,7 @@ body {
   justify-content: center;
   gap: 10px;
   width: 100%;
-  background: #10B981;
+  background: #FFFFFF;
   color: #000000 !important;
   font-weight: 700;
   font-size: 15px;
@@ -1146,7 +1147,7 @@ body {
 <div style="max-width: 1200px; margin: 0 auto;">
 <!-- Header -->
 <div style="text-align: center; max-width: 680px; margin: 0 auto 64px auto;">
-<p style="font-size: 13px; text-transform: uppercase; letter-spacing: 0.15em; color: #10B981; font-weight: 700; margin-bottom: 12px;">Planos &amp; Assinaturas</p>
+<p style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255, 255, 255, 0.5); font-weight: 600; margin-bottom: 12px;">Planos &amp; Assinaturas</p>
 <h2 style="font-size: clamp(32px, 4vw, 44px); font-weight: 700; letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 20px; color: #FFFFFF;">
                 Planos transparentes. Sem surpresas.
             </h2>
@@ -1173,19 +1174,19 @@ body {
                     </p>
 <ul style="list-style: none; padding: 0; margin: 0 0 32px 0; display: flex; flex-direction: column; gap: 14px; font-size: 14px; color: rgba(255, 255, 255, 0.85);">
 <li style="display: flex; align-items: center; gap: 10px;">
-<span style="color: #10B981; font-weight: bold;">✓</span> Site One-Page profissional
+<span style="color: rgba(255, 255, 255, 0.85); font-weight: 600;">•</span> Site One-Page profissional
                         </li>
 <li style="display: flex; align-items: center; gap: 10px;">
-<span style="color: #10B981; font-weight: bold;">✓</span> 100% responsivo (desktop e mobile)
+<span style="color: rgba(255, 255, 255, 0.85); font-weight: 600;">•</span> 100% responsivo (desktop e mobile)
                         </li>
 <li style="display: flex; align-items: center; gap: 10px;">
-<span style="color: #10B981; font-weight: bold;">✓</span> Hospedagem rápida e SSL inclusos
+<span style="color: rgba(255, 255, 255, 0.85); font-weight: 600;">•</span> Hospedagem rápida e SSL inclusos
                         </li>
 <li style="display: flex; align-items: center; gap: 10px;">
-<span style="color: #10B981; font-weight: bold;">✓</span> Integração direta com WhatsApp
+<span style="color: rgba(255, 255, 255, 0.85); font-weight: 600;">•</span> Integração direta com WhatsApp
                         </li>
 <li style="display: flex; align-items: center; gap: 10px;">
-<span style="color: #10B981; font-weight: bold;">✓</span> Manutenção e suporte mensal
+<span style="color: rgba(255, 255, 255, 0.85); font-weight: 600;">•</span> Manutenção e suporte mensal
                         </li>
 </ul>
 </div>
@@ -1194,8 +1195,8 @@ body {
                 </a>
 </div>
 <!-- Plano Pro Negócios Locais (Featured) -->
-<div class="boomo-pricing-card is-featured" style="background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(16, 185, 129, 0.6); border-radius: 8px; padding: 40px 32px; display: flex; flex-direction: column; justify-content: space-between; position: relative; box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(16, 185, 129, 0.2);">
-<div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #10B981; color: #000000; font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 16px; border-radius: 999px;">
+<div class="boomo-pricing-card is-featured" style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 8px; padding: 40px 32px; display: flex; flex-direction: column; justify-content: space-between; position: relative; box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7);">
+<div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #FFFFFF; color: #000000; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 14px; border-radius: 999px;">
                     Mais Escolhido
                 </div>
 <div>
@@ -1213,22 +1214,22 @@ body {
                     </p>
 <ul style="list-style: none; padding: 0; margin: 0 0 32px 0; display: flex; flex-direction: column; gap: 14px; font-size: 14px; color: rgba(255, 255, 255, 0.9);">
 <li style="display: flex; align-items: center; gap: 10px;">
-<span style="color: #10B981; font-weight: bold;">✓</span> <strong>Tudo do plano Essencial</strong>
+<span style="color: rgba(255, 255, 255, 0.85); font-weight: 600;">•</span> <strong>Tudo do plano Essencial</strong>
 </li>
 <li style="display: flex; align-items: center; gap: 10px;">
-<span style="color: #10B981; font-weight: bold;">✓</span> Estrutura Multi-páginas (até 5 páginas)
+<span style="color: rgba(255, 255, 255, 0.85); font-weight: 600;">•</span> Estrutura Multi-páginas (até 5 páginas)
                         </li>
 <li style="display: flex; align-items: center; gap: 10px;">
-<span style="color: #10B981; font-weight: bold;">✓</span> Otimização para SEO e Google Meu Negócio
+<span style="color: rgba(255, 255, 255, 0.85); font-weight: 600;">•</span> Otimização para SEO e Google Meu Negócio
                         </li>
 <li style="display: flex; align-items: center; gap: 10px;">
-<span style="color: #10B981; font-weight: bold;">✓</span> Formulário de contato e agendamento
+<span style="color: rgba(255, 255, 255, 0.85); font-weight: 600;">•</span> Formulário de contato e agendamento
                         </li>
 <li style="display: flex; align-items: center; gap: 10px;">
-<span style="color: #10B981; font-weight: bold;">✓</span> Alterações mensais de conteúdo inclusas
+<span style="color: rgba(255, 255, 255, 0.85); font-weight: 600;">•</span> Alterações mensais de conteúdo inclusas
                         </li>
 <li style="display: flex; align-items: center; gap: 10px;">
-<span style="color: #10B981; font-weight: bold;">✓</span> Suporte prioritário via WhatsApp
+<span style="color: rgba(255, 255, 255, 0.85); font-weight: 600;">•</span> Suporte prioritário via WhatsApp
                         </li>
 </ul>
 </div>
@@ -1253,19 +1254,19 @@ body {
                     </p>
 <ul style="list-style: none; padding: 0; margin: 0 0 32px 0; display: flex; flex-direction: column; gap: 14px; font-size: 14px; color: rgba(255, 255, 255, 0.85);">
 <li style="display: flex; align-items: center; gap: 10px;">
-<span style="color: #10B981; font-weight: bold;">✓</span> <strong>Design 100% exclusivo e sob medida</strong>
+<span style="color: rgba(255, 255, 255, 0.85); font-weight: 600;">•</span> <strong>Design 100% exclusivo e sob medida</strong>
 </li>
 <li style="display: flex; align-items: center; gap: 10px;">
-<span style="color: #10B981; font-weight: bold;">✓</span> Catálogo de produtos ou portfólio rico
+<span style="color: rgba(255, 255, 255, 0.85); font-weight: 600;">•</span> Catálogo de produtos ou portfólio rico
                         </li>
 <li style="display: flex; align-items: center; gap: 10px;">
-<span style="color: #10B981; font-weight: bold;">✓</span> Integrações com CRMs e ferramentas externas
+<span style="color: rgba(255, 255, 255, 0.85); font-weight: 600;">•</span> Integrações com CRMs e ferramentas externas
                         </li>
 <li style="display: flex; align-items: center; gap: 10px;">
-<span style="color: #10B981; font-weight: bold;">✓</span> Consultoria de conversão dedicada
+<span style="color: rgba(255, 255, 255, 0.85); font-weight: 600;">•</span> Consultoria de conversão dedicada
                         </li>
 <li style="display: flex; align-items: center; gap: 10px;">
-<span style="color: #10B981; font-weight: bold;">✓</span> Suporte e alterações sob demanda
+<span style="color: rgba(255, 255, 255, 0.85); font-weight: 600;">•</span> Suporte e alterações sob demanda
                         </li>
 </ul>
 </div>
@@ -1275,16 +1276,16 @@ body {
 </div>
 </div>
 <!-- Trust Guarantee Banner (Regra 13) -->
-<div style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 8px; padding: 28px 36px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+<div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 8px; padding: 28px 36px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
 <div style="max-width: 760px;">
-<h4 style="font-size: 17px; font-weight: 700; color: #FFFFFF; margin-bottom: 6px; display: flex; align-items: center; gap: 8px;">
-<span style="color: #10B981; font-size: 20px;">🛡️</span> Garantia de Aprovação Risco Zero
+<h4 style="font-size: 17px; font-weight: 700; color: #FFFFFF; margin-bottom: 6px;">
+                    Garantia de Aprovação
                 </h4>
-<p style="font-size: 14px; color: rgba(255, 255, 255, 0.7); margin: 0; line-height: 1.5;">
-                    Nós desenhamos o site da sua empresa primeiro. Você avalia e aprova cada detalhe visual antes de pagar a taxa de setup. Se não aprovar, não paga nada.
+<p style="font-size: 14px; color: rgba(255, 255, 255, 0.65); margin: 0; line-height: 1.6;">
+                    Nós desenhamos a primeira versão do site da sua empresa. Você avalia e aprova cada detalhe visual antes de pagar a taxa de setup. Se não aprovar, não paga nada.
                 </p>
 </div>
-<a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Quero%20iniciar%20meu%20site%20com%20a%20Garantia%20de%20Aprova%C3%A7%C3%A3o%20da%20Boomo." style="display: inline-flex; align-items: center; gap: 8px; background: #10B981; color: #000000; font-weight: 700; font-size: 13px; text-decoration: none; padding: 12px 24px; border-radius: 4px; white-space: nowrap;" target="_blank">
+<a href="https://wa.me/559192432044?text=Ol%C3%A1%21%20Quero%20iniciar%20meu%20site%20com%20a%20Garantia%20de%20Aprova%C3%A7%C3%A3o%20da%20Boomo." style="display: inline-flex; align-items: center; gap: 8px; background: #FFFFFF; color: #000000; font-weight: 700; font-size: 13px; text-decoration: none; padding: 12px 24px; border-radius: 4px; white-space: nowrap; transition: opacity 0.2s;" target="_blank">
                 Iniciar sem compromisso →
             </a>
 </div>
@@ -1575,7 +1576,7 @@ String.prototype.slice = function(...args) {
           domainInput.value = val;
         }
         var waMsg = encodeURIComponent('Olá! Pesquisei o domínio ' + val + ' no site da Boomo e gostaria de saber sobre o registro para minha empresa.');
-        domainSubtext.innerHTML = 'Consultando <strong>' + val + '</strong> no Registro.br. Prefere que a Boomo registre e configure tudo para você? <a href="https://wa.me/559192432044?text=' + waMsg + '" target="_blank" style="color: #10B981; font-weight: 700; text-decoration: underline;">Falar no WhatsApp →</a>';
+        domainSubtext.innerHTML = 'Consultando <strong>' + val + '</strong> no Registro.br. Prefere que a Boomo registre e configure tudo para você? <a href="https://wa.me/559192432044?text=' + waMsg + '" target="_blank" style="color: #FFFFFF; font-weight: 700; text-decoration: underline;">Falar no WhatsApp →</a>';
       });
     }
   })();
