@@ -2,38 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://boomo.com.br/</loc>
-    <lastmod>2026-08-03</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://boomo.com.br/termos-privacidade.html</loc>
-    <lastmod>2026-08-03</lastmod>
+    <loc>https://boomo.com.br/sobre</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://boomo.com.br/templates/pediatria/index.html</loc>
-    <lastmod>2026-08-03</lastmod>
+    <loc>https://boomo.com.br/termos-privacidade</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://boomo.com.br/templates/odontologia/index.html</loc>
-    <lastmod>2026-08-03</lastmod>
+    <loc>https://boomo.com.br/templates/estetica</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://boomo.com.br/templates/advocacia/index.html</loc>
-    <lastmod>2026-08-03</lastmod>
+    <loc>https://boomo.com.br/templates/odontologia</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://boomo.com.br/templates/gastronomia/index.html</loc>
-    <lastmod>2026-08-03</lastmod>
+    <loc>https://boomo.com.br/templates/advocacia</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://boomo.com.br/templates/contabilidade</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
