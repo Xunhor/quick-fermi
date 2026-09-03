@@ -1,0 +1,122 @@
+/* BOOMO DEMO PREVIEW BAR */
+.boomo-demo-bar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100000;
+  background: rgba(11, 15, 20, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1;
+  padding: 10px 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+.boomo-demo-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.boomo-demo-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.boomo-demo-brand {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.boomo-demo-logo {
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: -0.03em;
+  color: #FFFFFF;
+}
+
+.boomo-demo-logo span {
+  color: #10B981;
+}
+
+.boomo-demo-sep {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.boomo-demo-tag {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.boomo-demo-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.boomo-demo-back {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.boomo-demo-back:hover {
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.boomo-demo-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #10B981;
+  color: #0B0F14;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+}
+
+.boomo-demo-cta:hover {
+  background: #059669;
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .boomo-demo-bar {
+    padding: 8px 12px;
+  }
+  .boomo-demo-tag,
+  .boomo-demo-sep,
+  .boomo-demo-back {
+    display: none;
+  }
+  .boomo-demo-actions {
+    margin-left: auto;
+  }
+  .boomo-demo-cta {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+}
