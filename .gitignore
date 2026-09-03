@@ -1,1 +1,15 @@
 node_modules/
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.py
+
+# Inspection & temporary files in root
+/*.png
+/*.jpg
+/*.jpeg
+/scratch/
